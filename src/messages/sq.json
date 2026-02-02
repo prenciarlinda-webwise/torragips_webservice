@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "title": "Torra Gips - Punime Gipsi, Patinim & Lyerje në Tiranë dhe Durrës",
+    "description": "Torra Gips ofron shërbime profesionale të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës. Cilësi e lartë, çmime konkurruese.",
+    "keywords": "punime gipsi, patinim, lyerje, gips, Tiranë, Durrës, ndërtim, rinovim"
+  },
+  "common": {
+    "companyName": "Torra Gips",
+    "phone": "+355 68 858 0058",
+    "email": "torragips@gmail.com",
+    "locations": "Tiranë, Durrës",
+    "readMore": "Lexo më shumë",
+    "learnMore": "Mëso më shumë",
+    "contactUs": "Na Kontaktoni",
+    "getQuote": "Merr Ofertë",
+    "freeConsultation": "Konsultë Falas",
+    "viewAll": "Shiko të gjitha",
+    "backToHome": "Kthehu në Kryefaqe",
+    "loading": "Duke ngarkuar...",
+    "error": "Ndodhi një gabim",
+    "success": "Sukses!",
+    "send": "Dërgo",
+    "close": "Mbyll",
+    "menu": "Menu",
+    "search": "Kërko",
+    "language": "Gjuha"
+  },
+  "nav": {
+    "home": "Kryefaqja",
+    "services": "Shërbimet",
+    "servicesItems": {
+      "gypsum": "Punime Gipsi",
+      "plastering": "Patinim",
+      "painting": "Lyerje"
+    },
+    "gallery": "Galeria",
+    "pricing": "Çmimet",
+    "about": "Rreth Nesh",
+    "contact": "Kontakt",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Punime Profesionale Gipsi, Patinim & Lyerje",
+    "subtitle": "Transformojmë hapësirat tuaja me cilësi të lartë dhe çmime konkurruese",
+    "cta": "Merr Ofertë Falas",
+    "secondaryCta": "Shiko Punimet Tona",
+    "trustedBy": "Klientë të kënaqur në Tiranë dhe Durrës"
+  },
+  "services": {
+    "title": "Shërbimet Tona",
+    "subtitle": "Zgjidhje profesionale për çdo projekt ndërtimi dhe rinovimi",
+    "gypsum": {
+      "title": "Punime Gipsi",
+      "shortDescription": "Tavane, ndarja dhomash, dekorime dhe izolime akustike me gips cilësor.",
+      "description": "Ofrojmë zgjidhje të plota për punime gipsi duke përfshirë tavane të varura, ndarja dhomash, dekorime moderne dhe izolime akustike. Përdorim materiale cilësore dhe teknika të avancuara për rezultate të shkëlqyera."
+    },
+    "plastering": {
+      "title": "Patinim",
+      "shortDescription": "Patinim i brendshëm dhe i jashtëm me material cilësor për sipërfaqe të lëmuara.",
+      "description": "Shërbime profesionale patinimit për sipërfaqe të brendshme dhe të jashtme. Përdorim teknika tradicionale dhe moderne për të arritur përfundime të përsosura dhe të qëndrueshme."
+    },
+    "painting": {
+      "title": "Lyerje",
+      "shortDescription": "Lyerje profesionale e mureve të brendshme dhe të jashtme me bojëra cilësore.",
+      "description": "Ofrojmë shërbime lyerjeje të brendshme dhe të jashtme duke përdorur bojëra të cilësisë së lartë. Përfundime të pastëra dhe të qëndrueshme për çdo lloj sipërfaqeje."
+    },
+    "features": {
+      "quality": "Cilësi e Lartë",
+      "experience": "Eksperiencë",
+      "warranty": "Garanci",
+      "timing": "Afate të Shpejta"
+    }
+  },
+  "whyUs": {
+    "title": "Pse të Na Zgjidhni?",
+    "subtitle": "Cilësi, besueshmëri dhe profesionalizëm në çdo projekt",
+    "experience": {
+      "title": "Eksperiencë e Gjatë",
+      "description": "Vite eksperiencë në sektorin e ndërtimit dhe rinovimit"
+    },
+    "quality": {
+      "title": "Materiale Cilësore",
+      "description": "Përdorim vetëm materiale të certifikuara dhe të cilësisë së lartë"
+    },
+    "team": {
+      "title": "Ekip Profesional",
+      "description": "Punëtorë të kualifikuar dhe me eksperiencë të gjatë"
+    },
+    "pricing": {
+      "title": "Çmime Konkurruese",
+      "description": "Ofrojmë cilësi të lartë me çmime të arsyeshme"
+    },
+    "warranty": {
+      "title": "Garanci Pune",
+      "description": "Garantojmë cilësinë e punës sonë"
+    },
+    "support": {
+      "title": "Mbështetje 24/7",
+      "description": "Jemi gjithmonë të gatshëm për klientët tanë"
+    }
+  },
+  "testimonials": {
+    "title": "Çfarë Thonë Klientët",
+    "subtitle": "Përvojat e klientëve tanë të kënaqur"
+  },
+  "gallery": {
+    "title": "Galeria e Punimeve",
+    "subtitle": "Shikoni projektet tona të përfunduara",
+    "categories": {
+      "all": "Të Gjitha",
+      "gypsum": "Punime Gipsi",
+      "plastering": "Patinim",
+      "painting": "Lyerje"
+    },
+    "viewProject": "Shiko Projektin"
+  },
+  "pricing": {
+    "title": "Çmimet Tona",
+    "subtitle": "Çmime transparente dhe konkurruese",
+    "perSquareMeter": "për m²",
+    "startingFrom": "Duke filluar nga",
+    "requestQuote": "Kërko Ofertë",
+    "includes": "Përfshin",
+    "note": "Çmimet mund të ndryshojnë sipas kompleksitetit të projektit dhe gjendjes së sipërfaqes."
+  },
+  "faq": {
+    "title": "Pyetje të Shpeshta",
+    "subtitle": "Gjeni përgjigje për pyetjet më të zakonshme"
+  },
+  "cta": {
+    "title": "Gati për të Filluar Projektin Tuaj?",
+    "subtitle": "Na kontaktoni sot për një konsultë falas dhe ofertë pa detyrim",
+    "button": "Na Kontaktoni Tani"
+  },
+  "areas": {
+    "title": "Zonat e Shërbimit",
+    "subtitle": "Ofrojmë shërbime në Tiranë, Durrës dhe rrethinat",
+    "tirana": "Tiranë",
+    "durres": "Durrës"
+  },
+  "contact": {
+    "title": "Na Kontaktoni",
+    "subtitle": "Jemi këtu për t'ju ndihmuar me projektin tuaj",
+    "form": {
+      "name": "Emri Juaj",
+      "namePlaceholder": "Shkruani emrin tuaj",
+      "email": "Email",
+      "emailPlaceholder": "email@shembull.com",
+      "phone": "Telefoni",
+      "phonePlaceholder": "+355 6X XXX XXXX",
+      "service": "Shërbimi",
+      "selectService": "Zgjidhni shërbimin",
+      "message": "Mesazhi",
+      "messagePlaceholder": "Përshkruani projektin tuaj...",
+      "submit": "Dërgo Mesazhin",
+      "submitting": "Duke dërguar...",
+      "successMessage": "Mesazhi u dërgua me sukses! Do t'ju kontaktojmë së shpejti.",
+      "errorMessage": "Ndodhi një gabim. Ju lutemi provoni përsëri."
+    },
+    "info": {
+      "address": "Adresa",
+      "phone": "Telefoni",
+      "email": "Email",
+      "hours": "Orari",
+      "hoursValue": "E Hënë - E Shtunë: 08:00 - 18:00"
+    }
+  },
+  "whatsapp": {
+    "greeting": "Përshëndetje! Si mund t'ju ndihmoj?",
+    "defaultMessage": "Përshëndetje! Jam i/e interesuar për shërbimet tuaja.",
+    "buttonLabel": "Na shkruani në WhatsApp",
+    "quickContact": "Kontakt i Shpejtë"
+  },
+  "about": {
+    "title": "Rreth Nesh",
+    "subtitle": "Njihuni me ekipin tonë profesional",
+    "story": {
+      "title": "Historia Jonë",
+      "content": "Torra Gips është themeluar me misionin për të ofruar shërbime cilësore të punimeve të gipsit, patinimit dhe lyerjes. Me vite eksperiencë në sektorin e ndërtimit, ne kemi ndërtuar një reputacion të fortë për cilësi dhe besueshmëri."
+    },
+    "mission": {
+      "title": "Misioni Ynë",
+      "content": "Të ofrojmë zgjidhje profesionale që transformojnë hapësirat duke kombinuar cilësinë, inovacionin dhe kujdesin ndaj detajeve."
+    },
+    "values": {
+      "title": "Vlerat Tona",
+      "quality": "Cilësi pa Kompromis",
+      "integrity": "Integriteti",
+      "innovation": "Inovacioni",
+      "customer": "Klienti në Qendër"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Këshilla dhe artikuj për rinovimin dhe ndërtimin",
+    "readMore": "Lexo më shumë",
+    "recentPosts": "Postime të Fundit",
+    "categories": "Kategoritë",
+    "tags": "Etiketat",
+    "publishedOn": "Publikuar më",
+    "author": "Autor",
+    "sharePost": "Shpërndaj"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Politika e Privatësisë",
+      "lastUpdated": "Përditësuar së fundmi"
+    },
+    "terms": {
+      "title": "Kushtet dhe Termat",
+      "lastUpdated": "Përditësuar së fundmi"
+    }
+  },
+  "footer": {
+    "description": "Shërbime profesionale të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës.",
+    "quickLinks": "Lidhje të Shpejta",
+    "services": "Shërbimet",
+    "contact": "Kontakti",
+    "followUs": "Na Ndiqni",
+    "copyright": "© {year} Torra Gips. Të gjitha të drejtat e rezervuara.",
+    "privacy": "Privatësia",
+    "terms": "Kushtet"
+  },
+  "notFound": {
+    "title": "Faqja Nuk u Gjet",
+    "description": "Na vjen keq, faqja që kërkoni nuk ekziston.",
+    "backHome": "Kthehu në Kryefaqe"
+  },
+  "breadcrumbs": {
+    "home": "Kryefaqja"
+  }
+}

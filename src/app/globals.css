@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 26 54 93;
+    --color-dark: 31 41 55;
+    --color-accent: 217 119 6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-text antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-dark-800;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-dark-800 mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-text-light max-w-2xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-700 focus:ring-primary shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply btn bg-dark-800 text-white hover:bg-dark-700 focus:ring-dark shadow-md hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-dark-800 text-dark-800 hover:bg-dark-800 hover:text-white focus:ring-dark;
+  }
+
+  .btn-ghost {
+    @apply btn text-dark-800 hover:bg-neutral-100 focus:ring-dark;
+  }
+
+  .btn-accent {
+    @apply btn bg-accent text-white hover:bg-accent-700 focus:ring-accent shadow-md hover:shadow-lg;
+  }
+
+  .card {
+    @apply bg-white rounded-2xl shadow-soft hover:shadow-medium transition-shadow duration-300;
+  }
+
+  .card-hover {
+    @apply card hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors outline-none;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/20;
+  }
+
+  .label {
+    @apply block text-sm font-medium text-text mb-2;
+  }
+
+  .link {
+    @apply text-primary hover:text-primary-700 transition-colors underline-offset-2 hover:underline;
+  }
+
+  .gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-700;
+  }
+
+  .gradient-accent {
+    @apply bg-gradient-to-r from-accent to-accent-600;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+
+  .slide-up {
+    animation: slideUp 0.5s ease-out forwards;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-500;
+}
+
+/* Focus visible styles */
+:focus-visible {
+  @apply outline-2 outline-offset-2 outline-primary;
+}
+
+/* Selection */
+::selection {
+  @apply bg-primary/20 text-dark-800;
+}

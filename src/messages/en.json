@@ -1,0 +1,232 @@
+{
+  "metadata": {
+    "title": "Torra Gips - Gypsum Works, Plastering & Painting in Tirana and Durrës",
+    "description": "Torra Gips offers professional gypsum works, plastering and painting services in Tirana and Durrës. High quality, competitive prices.",
+    "keywords": "gypsum works, plastering, painting, gypsum, Tirana, Durrës, construction, renovation"
+  },
+  "common": {
+    "companyName": "Torra Gips",
+    "phone": "+355 68 858 0058",
+    "email": "torragips@gmail.com",
+    "locations": "Tirana, Durrës",
+    "readMore": "Read more",
+    "learnMore": "Learn more",
+    "contactUs": "Contact Us",
+    "getQuote": "Get Quote",
+    "freeConsultation": "Free Consultation",
+    "viewAll": "View all",
+    "backToHome": "Back to Home",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "send": "Send",
+    "close": "Close",
+    "menu": "Menu",
+    "search": "Search",
+    "language": "Language"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "servicesItems": {
+      "gypsum": "Gypsum Works",
+      "plastering": "Wall Plastering",
+      "painting": "Painting"
+    },
+    "gallery": "Gallery",
+    "pricing": "Pricing",
+    "about": "About Us",
+    "contact": "Contact",
+    "blog": "Blog"
+  },
+  "hero": {
+    "title": "Professional Gypsum Works, Plastering & Painting",
+    "subtitle": "Transforming your spaces with high quality and competitive prices",
+    "cta": "Get Free Quote",
+    "secondaryCta": "View Our Work",
+    "trustedBy": "Satisfied clients in Tirana and Durrës"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Professional solutions for every construction and renovation project",
+    "gypsum": {
+      "title": "Gypsum Works",
+      "shortDescription": "Ceilings, room partitions, decorations and acoustic insulation with quality gypsum.",
+      "description": "We offer complete solutions for gypsum works including suspended ceilings, room partitions, modern decorations and acoustic insulation. We use quality materials and advanced techniques for excellent results."
+    },
+    "plastering": {
+      "title": "Wall Plastering",
+      "shortDescription": "Interior and exterior plastering with quality materials for smooth surfaces.",
+      "description": "Professional plastering services for interior and exterior surfaces. We use traditional and modern techniques to achieve perfect and durable finishes."
+    },
+    "painting": {
+      "title": "Painting",
+      "shortDescription": "Professional painting of interior and exterior walls with quality paints.",
+      "description": "We offer interior and exterior painting services using high-quality paints. Clean and durable finishes for any type of surface."
+    },
+    "features": {
+      "quality": "High Quality",
+      "experience": "Experience",
+      "warranty": "Warranty",
+      "timing": "Fast Delivery"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "Quality, reliability and professionalism in every project",
+    "experience": {
+      "title": "Years of Experience",
+      "description": "Years of experience in the construction and renovation sector"
+    },
+    "quality": {
+      "title": "Quality Materials",
+      "description": "We use only certified and high-quality materials"
+    },
+    "team": {
+      "title": "Professional Team",
+      "description": "Qualified workers with extensive experience"
+    },
+    "pricing": {
+      "title": "Competitive Prices",
+      "description": "We offer high quality at reasonable prices"
+    },
+    "warranty": {
+      "title": "Work Guarantee",
+      "description": "We guarantee the quality of our work"
+    },
+    "support": {
+      "title": "24/7 Support",
+      "description": "We are always ready for our clients"
+    }
+  },
+  "testimonials": {
+    "title": "What Clients Say",
+    "subtitle": "Experiences from our satisfied customers"
+  },
+  "gallery": {
+    "title": "Project Gallery",
+    "subtitle": "View our completed projects",
+    "categories": {
+      "all": "All",
+      "gypsum": "Gypsum Works",
+      "plastering": "Plastering",
+      "painting": "Painting"
+    },
+    "viewProject": "View Project"
+  },
+  "pricing": {
+    "title": "Our Pricing",
+    "subtitle": "Transparent and competitive prices",
+    "perSquareMeter": "per m²",
+    "startingFrom": "Starting from",
+    "requestQuote": "Request Quote",
+    "includes": "Includes",
+    "note": "Prices may vary depending on project complexity and surface condition."
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions"
+  },
+  "cta": {
+    "title": "Ready to Start Your Project?",
+    "subtitle": "Contact us today for a free consultation and no-obligation quote",
+    "button": "Contact Us Now"
+  },
+  "areas": {
+    "title": "Service Areas",
+    "subtitle": "We offer services in Tirana, Durrës and surrounding areas",
+    "tirana": "Tirana",
+    "durres": "Durrës"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We are here to help you with your project",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Enter your name",
+      "email": "Email",
+      "emailPlaceholder": "email@example.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+355 6X XXX XXXX",
+      "service": "Service",
+      "selectService": "Select service",
+      "message": "Message",
+      "messagePlaceholder": "Describe your project...",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "successMessage": "Message sent successfully! We will contact you soon.",
+      "errorMessage": "An error occurred. Please try again."
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours",
+      "hoursValue": "Monday - Saturday: 08:00 - 18:00"
+    }
+  },
+  "whatsapp": {
+    "greeting": "Hello! How can I help you?",
+    "defaultMessage": "Hello! I am interested in your services.",
+    "buttonLabel": "Message us on WhatsApp",
+    "quickContact": "Quick Contact"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Meet our professional team",
+    "story": {
+      "title": "Our Story",
+      "content": "Torra Gips was founded with the mission to provide quality gypsum works, plastering and painting services. With years of experience in the construction sector, we have built a strong reputation for quality and reliability."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "content": "To provide professional solutions that transform spaces by combining quality, innovation and attention to detail."
+    },
+    "values": {
+      "title": "Our Values",
+      "quality": "Uncompromising Quality",
+      "integrity": "Integrity",
+      "innovation": "Innovation",
+      "customer": "Customer Focus"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips and articles about renovation and construction",
+    "readMore": "Read more",
+    "recentPosts": "Recent Posts",
+    "categories": "Categories",
+    "tags": "Tags",
+    "publishedOn": "Published on",
+    "author": "Author",
+    "sharePost": "Share"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated"
+    },
+    "terms": {
+      "title": "Terms and Conditions",
+      "lastUpdated": "Last updated"
+    }
+  },
+  "footer": {
+    "description": "Professional gypsum works, plastering and painting services in Tirana and Durrës.",
+    "quickLinks": "Quick Links",
+    "services": "Services",
+    "contact": "Contact",
+    "followUs": "Follow Us",
+    "copyright": "© {year} Torra Gips. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "Sorry, the page you are looking for does not exist.",
+    "backHome": "Back to Home"
+  },
+  "breadcrumbs": {
+    "home": "Home"
+  }
+}
