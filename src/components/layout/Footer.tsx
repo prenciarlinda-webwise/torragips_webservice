@@ -19,15 +19,27 @@ export default function Footer() {
   const services = [
     {
       href: locale === 'sq' ? '/punime-gipsi' : '/gypsum-works',
-      label: t('nav.servicesItems.gypsum')
+      label: t('nav.servicesItems.gypsum'),
+      locations: [
+        { href: locale === 'sq' ? '/punime-gipsi-tirane' : '/gypsum-works-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
+        { href: locale === 'sq' ? '/punime-gipsi-durres' : '/gypsum-works-durres', label: 'Durrës' },
+      ],
     },
     {
       href: locale === 'sq' ? '/patinim' : '/wall-plastering',
-      label: t('nav.servicesItems.plastering')
+      label: t('nav.servicesItems.plastering'),
+      locations: [
+        { href: locale === 'sq' ? '/patinim-tirane' : '/wall-plastering-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
+        { href: locale === 'sq' ? '/patinim-durres' : '/wall-plastering-durres', label: 'Durrës' },
+      ],
     },
     {
       href: locale === 'sq' ? '/lyerje' : '/painting',
-      label: t('nav.servicesItems.painting')
+      label: t('nav.servicesItems.painting'),
+      locations: [
+        { href: locale === 'sq' ? '/lyerje-tirane' : '/painting-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
+        { href: locale === 'sq' ? '/lyerje-durres' : '/painting-durres', label: 'Durrës' },
+      ],
     },
   ];
 
@@ -133,7 +145,7 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h3 className="font-bold text-lg mb-4 text-white">{t('footer.services')}</h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {services.map((service) => (
                 <li key={service.href}>
                   <Link
@@ -142,6 +154,23 @@ export default function Footer() {
                   >
                     {service.label}
                   </Link>
+                  {service.locations && (
+                    <div className="flex gap-2 mt-1">
+                      {service.locations.map((loc, i) => (
+                        <span key={loc.href} className="flex items-center">
+                          <Link
+                            href={loc.href}
+                            className="text-xs text-neutral-400 hover:text-white transition-colors"
+                          >
+                            {loc.label}
+                          </Link>
+                          {i < service.locations.length - 1 && (
+                            <span className="text-neutral-600 mx-1 text-xs">·</span>
+                          )}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </li>
               ))}
             </ul>
@@ -189,9 +218,23 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-neutral-400 text-sm">
-              {t('footer.copyright', { year: currentYear })}
-            </p>
+            <div className="flex flex-col sm:flex-row items-center gap-1 sm:gap-2">
+              <p className="text-neutral-400 text-sm">
+                {t('footer.copyright', { year: currentYear })}
+              </p>
+              <span className="hidden sm:inline text-neutral-600 text-sm">|</span>
+              <p className="text-neutral-500 text-sm">
+                {locale === 'sq' ? 'Ndërtuar nga' : 'Built by'}{' '}
+                <a
+                  href="https://www.websiteandseoagency.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 hover:text-white transition-colors"
+                >
+                  Website & SEO Agency
+                </a>
+              </p>
+            </div>
             <div className="flex space-x-6">
               {legalLinks.map((link) => (
                 <Link

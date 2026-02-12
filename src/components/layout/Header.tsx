@@ -44,15 +44,27 @@ export default function Header() {
       children: [
         {
           href: locale === 'sq' ? '/punime-gipsi' : '/gypsum-works',
-          label: t('servicesItems.gypsum')
+          label: t('servicesItems.gypsum'),
+          children: [
+            { href: locale === 'sq' ? '/punime-gipsi-tirane' : '/gypsum-works-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
+            { href: locale === 'sq' ? '/punime-gipsi-durres' : '/gypsum-works-durres', label: 'Durrës' },
+          ],
         },
         {
           href: locale === 'sq' ? '/patinim' : '/wall-plastering',
-          label: t('servicesItems.plastering')
+          label: t('servicesItems.plastering'),
+          children: [
+            { href: locale === 'sq' ? '/patinim-tirane' : '/wall-plastering-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
+            { href: locale === 'sq' ? '/patinim-durres' : '/wall-plastering-durres', label: 'Durrës' },
+          ],
         },
         {
           href: locale === 'sq' ? '/lyerje' : '/painting',
-          label: t('servicesItems.painting')
+          label: t('servicesItems.painting'),
+          children: [
+            { href: locale === 'sq' ? '/lyerje-tirane' : '/painting-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
+            { href: locale === 'sq' ? '/lyerje-durres' : '/painting-durres', label: 'Durrës' },
+          ],
         },
       ],
     },
@@ -118,15 +130,33 @@ export default function Header() {
                 </Link>
                 {item.children && (
                   <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white rounded-xl shadow-medium py-2 min-w-[200px]">
+                    <div className="bg-white rounded-xl shadow-medium py-2 min-w-[240px]">
                       {item.children.map((child) => (
-                        <Link
-                          key={child.href}
-                          href={child.href}
-                          className="block px-4 py-2 text-dark-800 hover:text-primary hover:bg-primary/5 transition-colors"
-                        >
-                          {child.label}
-                        </Link>
+                        <div key={child.href}>
+                          <Link
+                            href={child.href}
+                            className="block px-4 py-2 text-dark-800 font-medium hover:text-primary hover:bg-primary/5 transition-colors"
+                          >
+                            {child.label}
+                          </Link>
+                          {child.children && (
+                            <div className="flex gap-1 px-4 pb-2">
+                              {child.children.map((loc, i) => (
+                                <span key={loc.href} className="flex items-center">
+                                  <Link
+                                    href={loc.href}
+                                    className="text-xs text-text-light hover:text-primary transition-colors"
+                                  >
+                                    {loc.label}
+                                  </Link>
+                                  {i < (child.children?.length ?? 0) - 1 && (
+                                    <span className="text-neutral-300 mx-1 text-xs">·</span>
+                                  )}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
                       ))}
                     </div>
                   </div>

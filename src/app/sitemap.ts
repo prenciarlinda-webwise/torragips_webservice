@@ -4,98 +4,104 @@ import { getAllPosts } from '@/lib/blog';
 
 export const dynamic = 'force-static';
 
-// Money pages: homepage + service pages + location pages — crawl daily, highest priority
-const moneyPages = [
-  '', '/punime-gipsi', '/patinim', '/lyerje',
-  '/punime-gipsi-tirane', '/punime-gipsi-durres',
-  '/patinim-tirane', '/patinim-durres',
-  '/lyerje-tirane', '/lyerje-durres',
-];
-const moneyPagesEn = [
-  '', '/gypsum-works', '/wall-plastering', '/painting',
-  '/gypsum-works-tirana', '/gypsum-works-durres',
-  '/wall-plastering-tirana', '/wall-plastering-durres',
-  '/painting-tirana', '/painting-durres',
-];
+// Stable date for pages (updated manually when content changes)
+const LAST_UPDATED = '2026-02-12';
 
-// Supporting pages — crawl weekly
-const supportPages = ['/sherbime', '/galeri', '/cmime', '/rreth-nesh', '/kontakt', '/blog'];
-const supportPagesEn = ['/services', '/gallery', '/pricing', '/about', '/contact', '/blog'];
+interface PageEntry {
+  sq: string;
+  en: string;
+  priority: number;
+  changeFrequency: 'daily' | 'weekly' | 'monthly' | 'yearly';
+}
 
-// Low-priority pages — crawl monthly
-const legalPages = ['/politika-privatesia', '/kushtet-dhe-termat'];
-const legalPagesEn = ['/privacy-policy', '/terms-conditions'];
+// All pages grouped by priority tier
+const pages: PageEntry[] = [
+  // Homepage — highest priority
+  { sq: '', en: '', priority: 1.0, changeFrequency: 'weekly' },
+
+  // Main service pages
+  { sq: '/punime-gipsi', en: '/gypsum-works', priority: 0.9, changeFrequency: 'weekly' },
+  { sq: '/patinim', en: '/wall-plastering', priority: 0.9, changeFrequency: 'weekly' },
+  { sq: '/lyerje', en: '/painting', priority: 0.9, changeFrequency: 'weekly' },
+
+  // Location pages
+  { sq: '/punime-gipsi-tirane', en: '/gypsum-works-tirana', priority: 0.8, changeFrequency: 'monthly' },
+  { sq: '/punime-gipsi-durres', en: '/gypsum-works-durres', priority: 0.8, changeFrequency: 'monthly' },
+  { sq: '/patinim-tirane', en: '/wall-plastering-tirana', priority: 0.8, changeFrequency: 'monthly' },
+  { sq: '/patinim-durres', en: '/wall-plastering-durres', priority: 0.8, changeFrequency: 'monthly' },
+  { sq: '/lyerje-tirane', en: '/painting-tirana', priority: 0.8, changeFrequency: 'monthly' },
+  { sq: '/lyerje-durres', en: '/painting-durres', priority: 0.8, changeFrequency: 'monthly' },
+
+  // Support pages
+  { sq: '/sherbime', en: '/services', priority: 0.7, changeFrequency: 'monthly' },
+  { sq: '/galeri', en: '/gallery', priority: 0.7, changeFrequency: 'monthly' },
+  { sq: '/cmime', en: '/pricing', priority: 0.7, changeFrequency: 'monthly' },
+  { sq: '/rreth-nesh', en: '/about', priority: 0.7, changeFrequency: 'monthly' },
+  { sq: '/kontakt', en: '/contact', priority: 0.7, changeFrequency: 'monthly' },
+  { sq: '/blog', en: '/blog', priority: 0.6, changeFrequency: 'weekly' },
+
+  // Legal pages
+  { sq: '/politika-privatesia', en: '/privacy-policy', priority: 0.3, changeFrequency: 'yearly' },
+  { sq: '/kushtet-dhe-termat', en: '/terms-conditions', priority: 0.3, changeFrequency: 'yearly' },
+];
 
 // Blog post hreflang mapping (sq slug -> en slug)
 const blogAlternates: Record<string, string> = {
   'si-te-zgjidhni-tavane-gipsi': 'how-to-choose-gypsum-ceiling',
   'perfitimet-patinimit-profesional': 'benefits-professional-plastering',
+  'si-te-pergatisni-muret-per-lyerje': 'how-to-prepare-walls-for-painting',
+  'llojet-e-tavaneve-gipsi-modern': 'types-of-modern-gypsum-ceilings',
+  'udhezues-rinovimi-apartamenti': 'apartment-renovation-guide',
+  'zgjedhja-e-ngjyrave-per-shtepine': 'choosing-paint-colors-for-your-home',
 };
-
-function getPageConfig(page: string, moneyList: string[]) {
-  if (moneyList.includes(page)) {
-    return { changeFrequency: 'daily' as const, priority: 1.0 };
-  }
-  if (page === '/blog') {
-    return { changeFrequency: 'weekly' as const, priority: 0.8 };
-  }
-  if (page.includes('politika') || page.includes('kushtet') || page.includes('privacy') || page.includes('terms')) {
-    return { changeFrequency: 'yearly' as const, priority: 0.3 };
-  }
-  return { changeFrequency: 'weekly' as const, priority: 0.8 };
-}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = SITE_CONFIG.url;
+  const entries: MetadataRoute.Sitemap = [];
 
-  const allPagesSq = [...moneyPages, ...supportPages, ...legalPages];
-  const allPagesEn = [...moneyPagesEn, ...supportPagesEn, ...legalPagesEn];
-
-  const sitemap: MetadataRoute.Sitemap = [];
-
-  // Albanian pages
-  allPagesSq.forEach((page, index) => {
-    const config = getPageConfig(page, moneyPages);
-    sitemap.push({
-      url: `${baseUrl}/sq${page}/`,
-      lastModified: new Date(),
-      changeFrequency: config.changeFrequency,
-      priority: config.priority,
+  // Static pages (both locales with hreflang alternates)
+  for (const page of pages) {
+    // Albanian version
+    entries.push({
+      url: `${baseUrl}/sq${page.sq}/`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
       alternates: {
         languages: {
-          sq: `${baseUrl}/sq${page}/`,
-          en: `${baseUrl}/en${allPagesEn[index]}/`,
+          sq: `${baseUrl}/sq${page.sq}/`,
+          en: `${baseUrl}/en${page.en}/`,
         },
       },
     });
-  });
 
-  // English pages
-  allPagesEn.forEach((page, index) => {
-    const config = getPageConfig(page, moneyPagesEn);
-    sitemap.push({
-      url: `${baseUrl}/en${page}/`,
-      lastModified: new Date(),
-      changeFrequency: config.changeFrequency,
-      priority: config.priority,
+    // English version
+    entries.push({
+      url: `${baseUrl}/en${page.en}/`,
+      lastModified: LAST_UPDATED,
+      changeFrequency: page.changeFrequency,
+      priority: page.priority,
       alternates: {
         languages: {
-          sq: `${baseUrl}/sq${allPagesSq[index]}/`,
-          en: `${baseUrl}/en${page}/`,
+          sq: `${baseUrl}/sq${page.sq}/`,
+          en: `${baseUrl}/en${page.en}/`,
         },
       },
     });
-  });
+  }
 
-  // Blog posts - Albanian (with hreflang alternates)
-  const sqPosts = getAllPosts('sq');
-  sqPosts.forEach((post) => {
+  // Blog posts
+  const enSlugsToSq = Object.fromEntries(
+    Object.entries(blogAlternates).map(([sq, en]) => [en, sq])
+  );
+
+  for (const post of getAllPosts('sq')) {
     const enSlug = blogAlternates[post.slug];
-    sitemap.push({
+    entries.push({
       url: `${baseUrl}/sq/blog/${post.slug}/`,
-      lastModified: new Date(post.date),
+      lastModified: post.date,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.6,
       ...(enSlug && {
         alternates: {
           languages: {
@@ -105,20 +111,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       }),
     });
-  });
+  }
 
-  // Blog posts - English (with hreflang alternates)
-  const enSlugsToSq = Object.fromEntries(
-    Object.entries(blogAlternates).map(([sq, en]) => [en, sq])
-  );
-  const enPosts = getAllPosts('en');
-  enPosts.forEach((post) => {
+  for (const post of getAllPosts('en')) {
     const sqSlug = enSlugsToSq[post.slug];
-    sitemap.push({
+    entries.push({
       url: `${baseUrl}/en/blog/${post.slug}/`,
-      lastModified: new Date(post.date),
+      lastModified: post.date,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.6,
       ...(sqSlug && {
         alternates: {
           languages: {
@@ -128,7 +129,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       }),
     });
-  });
+  }
 
-  return sitemap;
+  return entries;
 }

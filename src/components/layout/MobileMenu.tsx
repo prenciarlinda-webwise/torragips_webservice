@@ -94,6 +94,20 @@ export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProp
                           >
                             {child.label}
                           </Link>
+                          {child.children && (
+                            <div className="flex gap-3 ml-4 px-4 pb-1">
+                              {child.children.map((loc) => (
+                                <Link
+                                  key={loc.href}
+                                  href={loc.href}
+                                  onClick={onClose}
+                                  className="text-xs text-text-light/70 hover:text-accent transition-colors"
+                                >
+                                  {loc.label}
+                                </Link>
+                              ))}
+                            </div>
+                          )}
                         </li>
                       ))}
                     </ul>
