@@ -17,14 +17,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Lyerje Profesionale Tiranë & Durrës | Lyerje Brendshme & Jashtme | Torra Gips'
-      : 'Professional Painting Tirana & Durrës | Interior & Exterior Painting | Torra Gips',
+      ? 'Lyerje Profesionale Tiranë & Durrës - +355 68 858 0058 - Torra Gips'
+      : 'Professional Painting Tirana & Durrës - +355 68 858 0058 - Torra Gips',
     description: locale === 'sq'
-      ? 'Shërbime lyerjeje profesionale për projekte komerciale dhe rezidenciale. Lyerje brendshme dhe jashtme, bojëra ekologjike, efekte dekorative. Aeroporti i Vlorës, hotele, zyra. Ofertë falas!'
-      : 'Professional painting services for commercial and residential projects. Interior and exterior painting, eco-friendly paints, decorative effects. Vlora Airport, hotels, offices. Free quote!',
-    keywords: locale === 'sq'
-      ? 'lyerje, bojë, lyerje muri, lyerje profesionale, lyerje brendshme, lyerje jashtme, lyerje Tiranë, lyerje Durrës, lyerje komerciale, lyerje hotel'
-      : 'painting, paint, wall painting, professional painting, interior painting, exterior painting, painting Tirana, painting Durrës, commercial painting, hotel painting',
+      ? 'Lyerje profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
+      : 'Professional painting for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
+    alternates: {
+      canonical: `/${locale}/${locale === 'sq' ? 'lyerje' : 'painting'}/`,
+    },
+    openGraph: {
+      title: locale === 'sq'
+        ? 'Lyerje Profesionale Tiranë & Durrës - Torra Gips'
+        : 'Professional Painting Tirana & Durrës - Torra Gips',
+      description: locale === 'sq'
+        ? 'Lyerje profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara.'
+        : 'Professional painting for commercial and residential projects in Tirana and Durrës. 100+ completed projects.',
+      images: [{ url: '/images/services/painting/commercial-exterior-2.webp' }],
+    },
   };
 }
 
@@ -79,16 +88,16 @@ export default async function PaintingPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Lyerje',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Lyerje Profesionale për Projekte Komerciale dhe Rezidenciale',
-    heroSubtitle: 'Ekspertë në lyerje brendshme dhe jashtme, bojëra ekologjike dhe efekte dekorative për aeroportet, hotelet, zyrat, qendrat tregtare dhe ambientet rezidenciale. Ngjyra të qëndrueshme me materiale premium.',
+    heroTitle: 'Lyerje Profesionale në Tiranë dhe Durrës',
+    heroSubtitle: 'Lyerje brendshme dhe jashtme, bojëra ekologjike dhe efekte dekorative për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Bojëra Dulux, Jotun dhe Caparol. Konsultë falas.',
     introContent: [
-      'Torra Gips ofron shërbime lyerjeje të nivelit më të lartë për projekte komerciale dhe rezidenciale në Tiranë, Durrës dhe gjithë Shqipërinë qendrore. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort dhe Rolling Hills, ne garantojmë cilësi vizuale që bën përshtypje.',
+      'Lyerja profesionale është faza përfundimtare që jep jetë çdo projekti. Torra Gips ofron shërbime lyerjeje të nivelit më të lartë për projekte komerciale dhe rezidenciale në Tiranë, Durrës dhe gjithë Shqipërinë qendrore. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort dhe Rolling Hills, ne garantojmë cilësi vizuale që bën përshtypje.',
       'Lyerja është faza përfundimtare që jep jetë çdo projekti. Ekipi ynë i specializuar kombinon teknikat tradicionale me teknologjitë moderne të aplikimit për rezultate të përsosura. Përdorim vetëm bojëra premium nga prodhuesit më të njohur për ngjyra që ruhen të gjalla me vite.',
       'Në projektet komerciale, lyerja profesionale është vendimtare për imazhin e biznesit tuaj. Ngjyrat e zgjedhura siç duhet ndikojnë në perceptimin e klientëve dhe krijojnë atmosferën e duhur për çdo lloj ambienti, qoftë zyrë, hotel, dyqan ose restorant.',
     ],
     contentSections: [
       {
-        title: 'Lyerje Brendshme - Transformim Total',
+        title: 'Çfarë Përfshin Lyerja Brendshme Profesionale?',
         content: 'Lyerja brendshme transformon plotësisht ambientet, duke krijuar atmosferën e dëshiruar dhe duke reflektuar identitetin e biznesit ose stilin personal. Ne ofrojmë konsultim ngjyrash profesional dhe ekzekutim të përsosur.',
         listItems: [
           'Lyerje murash, tavanesh dhe elementeve arkitekturore',
@@ -100,7 +109,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Lyerje Jashtme - Mbrojtje dhe Pamje',
+        title: 'Pse Është e Rëndësishme Lyerja Jashtme?',
         content: 'Lyerja jashtme duhet të kombinojë estetikën me mbrojtjen afatgjatë. Bojërat tona të specializuara mbrojnë fasadat nga kushtet e ashpra atmosferike të Shqipërisë, duke ruajtur ngjyrat e gjalla për vite.',
         listItems: [
           'Bojëra elastike që përballojnë ndryshimet e temperaturës',
@@ -112,7 +121,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Efekte Dekorative - Stile Unike',
+        title: 'Çfarë Efektesh Dekorative Ofrojmë?',
         content: 'Për klientët që kërkojnë diçka më shumë se lyerja e thjeshtë, ofrojmë efekte dekorative që transformojnë muret në vepra arti. Ideale për lobi hotele, restorante, dyqane luksoze dhe ambiente të veçanta.',
         listItems: [
           'Efekt mermeri dhe guri natyral',
@@ -124,7 +133,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Lyerje Industriale dhe Speciale',
+        title: 'Kur Keni Nevojë për Lyerje Industriale?',
         content: 'Për ambiente industriale dhe aplikime të veçanta, ofrojmë zgjidhje të specializuara që plotësojnë kërkesat teknike më të rrepta.',
         listItems: [
           'Lyerje dyshemesh epoksi për garazhe dhe magazine',
@@ -191,19 +200,32 @@ export default async function PaintingPage({ params }: Props) {
         answer: 'Po, ofrojmë garanci të plotë. Bojërat cilësore që përdorim zgjasin 5-10+ vite pa probleme kur aplikohen siç duhet.',
       },
     ],
+    sectionTitles: {
+      whatWeOffer: 'Çfarë Shërbimesh Lyerjeje Ofrojmë?',
+      commercialExperience: 'Ku Kemi Kryer Lyerje Komerciale?',
+      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Lyerjen?',
+      howWeWork: 'Si Funksionon Procesi i Lyerjes?',
+      serviceAreas: 'Ku Ofrojmë Shërbime Lyerjeje?',
+      faq: 'Pyetje të Shpeshta për Lyerjen',
+      readyToStart: 'Gati për Projektin Tuaj të Lyerjes?',
+    },
+    relatedLinks: [
+      { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
+      { href: '/patinim', label: 'Patinim Profesional Murash' },
+    ],
   } : {
     serviceName: 'Painting',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Professional Painting for Commercial and Residential Projects',
-    heroSubtitle: 'Experts in interior and exterior painting, eco-friendly paints and decorative effects for airports, hotels, offices, shopping centers and residential environments. Long-lasting colors with premium materials.',
+    heroTitle: 'Professional Painting in Tirana and Durrës',
+    heroSubtitle: 'Interior and exterior painting, eco-friendly paints and decorative effects for commercial and residential projects. 100+ completed projects including Vlora Airport. Dulux, Jotun and Caparol paints. Free consultation.',
     introContent: [
-      'Torra Gips offers the highest level painting services for commercial and residential projects in Tirana, Durrës and all of central Albania. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort and Rolling Hills, we guarantee visual quality that impresses.',
+      'Professional painting is the final phase that brings every project to life. Torra Gips offers the highest level painting services for commercial and residential projects in Tirana, Durrës and all of central Albania. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort and Rolling Hills, we guarantee visual quality that impresses.',
       'Painting is the final phase that brings every project to life. Our specialized team combines traditional techniques with modern application technologies for perfect results. We use only premium paints from the most renowned manufacturers for colors that stay vibrant for years.',
       'In commercial projects, professional painting is crucial for your business image. Properly chosen colors influence customer perception and create the right atmosphere for any type of environment, whether office, hotel, store or restaurant.',
     ],
     contentSections: [
       {
-        title: 'Interior Painting - Total Transformation',
+        title: 'What Does Professional Interior Painting Include?',
         content: 'Interior painting completely transforms environments, creating the desired atmosphere and reflecting business identity or personal style. We offer professional color consultation and perfect execution.',
         listItems: [
           'Painting of walls, ceilings and architectural elements',
@@ -215,7 +237,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Exterior Painting - Protection and Appearance',
+        title: 'Why Is Exterior Painting Important?',
         content: 'Exterior painting must combine aesthetics with long-term protection. Our specialized paints protect facades from harsh Albanian weather conditions, keeping colors vibrant for years.',
         listItems: [
           'Elastic paints that withstand temperature changes',
@@ -227,7 +249,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Decorative Effects - Unique Styles',
+        title: 'What Decorative Painting Effects Do We Offer?',
         content: 'For clients seeking more than simple painting, we offer decorative effects that transform walls into works of art. Ideal for hotel lobbies, restaurants, luxury stores and special environments.',
         listItems: [
           'Marble and natural stone effects',
@@ -239,7 +261,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Industrial and Special Painting',
+        title: 'When Do You Need Industrial Painting?',
         content: 'For industrial environments and special applications, we offer specialized solutions that meet the strictest technical requirements.',
         listItems: [
           'Epoxy floor painting for garages and warehouses',
@@ -305,6 +327,19 @@ export default async function PaintingPage({ params }: Props) {
         question: 'Do you offer warranty for painting?',
         answer: 'Yes, we offer full warranty. The quality paints we use last 5-10+ years without problems when properly applied.',
       },
+    ],
+    sectionTitles: {
+      whatWeOffer: 'What Painting Services Do We Offer?',
+      commercialExperience: 'Where Have We Done Commercial Painting?',
+      whyChooseUs: 'Why Choose Torra Gips for Painting?',
+      howWeWork: 'How Does the Painting Process Work?',
+      serviceAreas: 'Where Do We Offer Painting Services?',
+      faq: 'Frequently Asked Questions About Painting',
+      readyToStart: 'Ready for Your Painting Project?',
+    },
+    relatedLinks: [
+      { href: '/gypsum-works', label: 'Professional Gypsum Works' },
+      { href: '/wall-plastering', label: 'Professional Wall Plastering' },
     ],
   };
 

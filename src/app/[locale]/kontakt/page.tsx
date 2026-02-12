@@ -17,11 +17,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'contact' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'Kontaktoni Torra Gips - Punime Gipsi Tiranë - +355 68 858 0058',
+    description: 'Kontaktoni Torra Gips për punime gipsi, patinim dhe lyerje në Tiranë dhe Durrës. Telefononi +355 68 858 0058 ose dërgoni mesazh për konsultë falas.',
+    alternates: {
+      canonical: `/${locale}/kontakt/`,
+    },
   };
 }
 

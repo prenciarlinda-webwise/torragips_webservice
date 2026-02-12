@@ -17,19 +17,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Punime Gipsi Profesionale Tiranë & Durrës | Tavane, Ndarja, Dekorime | Torra Gips'
-      : 'Professional Gypsum Works Tirana & Durrës | Ceilings, Partitions, Decorations | Torra Gips',
+      ? 'Punime Gipsi Profesionale Tiranë & Durrës - +355 68 858 0058 - Torra Gips'
+      : 'Professional Gypsum Works Tirana & Durrës - +355 68 858 0058 - Torra Gips',
     description: locale === 'sq'
-      ? 'Punime gipsi profesionale për projekte komerciale dhe rezidenciale në Tiranë dhe Durrës. Tavane të varura, ndarja dhomash, dekorime arkitekturore. Aeroporti i Vlorës, Green Coast, Rolling Hills. Ofertë falas!'
-      : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. Suspended ceilings, room partitions, architectural decorations. Vlora Airport, Green Coast, Rolling Hills. Free quote!',
-    keywords: locale === 'sq'
-      ? 'punime gipsi, tavan gipsi, gips komercial, ndarja gipsi, gips Tiranë, gips Durrës, tavan i varur, dekorime gipsi, izolim akustik, gips zyre, gips hotel, gips aeroport'
-      : 'gypsum works, gypsum ceiling, commercial gypsum, gypsum partition, gypsum Tirana, gypsum Durrës, suspended ceiling, gypsum decorations, acoustic insulation, office gypsum, hotel gypsum, airport gypsum',
+      ? 'Punime gipsi profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
+      : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
+    alternates: {
+      canonical: `/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`,
+    },
     openGraph: {
-      title: locale === 'sq' ? 'Punime Gipsi Profesionale | Torra Gips' : 'Professional Gypsum Works | Torra Gips',
+      title: locale === 'sq'
+        ? 'Punime Gipsi Profesionale Tiranë & Durrës - Torra Gips'
+        : 'Professional Gypsum Works Tirana & Durrës - Torra Gips',
       description: locale === 'sq'
-        ? 'Ekspertë në punime gipsi për projekte komerciale të mëdha. Aeroporti i Vlorës, hotele, zyra, qendra tregtare.'
-        : 'Experts in gypsum works for large commercial projects. Vlora Airport, hotels, offices, shopping centers.',
+        ? 'Punime gipsi profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës.'
+        : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport.',
+      images: [{ url: '/images/services/gypsum/commercial-space-1.webp' }],
     },
   };
 }
@@ -85,16 +88,16 @@ export default async function GypsumWorksPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Punime Gipsi',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Punime Gipsi Profesionale për Projekte Komerciale dhe Rezidenciale',
-    heroSubtitle: 'Specializohemi në tavane moderne, ndarja elegante dhe dekorime arkitekturore për aeroportet, hotelet, zyrat, qendrat tregtare dhe ambientet rezidenciale luksoze. Cilësi e garantuar me materiale premium.',
+    heroTitle: 'Punime Gipsi Profesionale në Tiranë dhe Durrës',
+    heroSubtitle: 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Materiale Knauf dhe Rigips. Konsultë falas.',
     introContent: [
-      'Torra Gips është kompania lider për punime gipsi profesionale në Shqipëri, me fokus të veçantë në projektet komerciale të mëdha. Kemi pasur nderin të punojmë në disa nga projektet më prestigjioze të vendit, duke përfshirë Aeroportin Ndërkombëtar të Vlorës, resortin Green Coast, kompleksin Rolling Hills, qendrën komerciale Lion Park dhe shumë projekte të tjera të rëndësishme.',
+      'Punimet e gipsit profesionale janë zgjidhja ideale për projekte moderne komerciale dhe rezidenciale. Torra Gips është kompania lider për punime gipsi në Shqipëri, me fokus të veçantë në projektet komerciale të mëdha. Kemi pasur nderin të punojmë në disa nga projektet më prestigjioze të vendit, duke përfshirë Aeroportin Ndërkombëtar të Vlorës, resortin Green Coast, kompleksin Rolling Hills dhe qendrën komerciale Lion Park.',
       'Me vite eksperiencë në industrinë e ndërtimit, ne kemi ndërtuar një reputacion të fortë për cilësi të jashtëzakonshme, respektim të afateve dhe profesionalizëm në çdo detaj. Ekipi ynë i specializuar përbëhet nga mjeshtër me përvojë të gjatë që përdorin teknikat më të avancuara dhe materialet më cilësore nga prodhues të njohur si Knauf dhe Rigips.',
       'Gipsi është materiali ideal për projekte moderne për shkak të vetive të tij unike: është i lehtë por shumë i qëndrueshëm, ofron izolim të shkëlqyer termik dhe akustik, është rezistent ndaj zjarrit dhe lejon krijimin e dizajneve të pakufizuara. Qoftë për një zyrë moderne, një hotel luksoz, një qendër tregtare ose një shtëpi private, ne ofrojmë zgjidhje të personalizuara që plotësojnë çdo nevojë.',
     ],
     contentSections: [
       {
-        title: 'Tavane të Varura me Gips - Elegancë dhe Funksionalitet',
+        title: 'Çfarë Janë Tavanet e Varura me Gips?',
         content: 'Tavanet e varura me gips janë specialiteti ynë kryesor dhe një nga shërbimet më të kërkuara për projekte komerciale. Në aeroportet, hotelet dhe zyrat moderne, tavanet e gipsit luajnë një rol kyç në estetikë dhe funksionalitet. Ne ofrojmë dizajne të personalizuara që integrojnë sisteme ndriçimi, ajrimi dhe zjarri në mënyrë elegante.',
         listItems: [
           'Tavane me nivele të shumta për efekt vizual dramatik',
@@ -106,7 +109,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Ndarja Hapësirash me Panel Gipsi',
+        title: 'Si Funksionojnë Ndarjet e Hapësirash me Gips?',
         content: 'Ndarjet me panel gipsi janë zgjidhja ideale për riorganizimin e hapësirave komerciale dhe rezidenciale. Për zyra moderne që kërkojnë fleksibilitet, hotele që kanë nevojë për dhoma shtesë, ose qendra tregtare që ndryshojnë konfigurimin, ndarjet tona ofrojnë instalim të shpejtë pa ndërhyrje strukturore.',
         listItems: [
           'Instalim i shpejtë dhe i pastër - minimizojmë ndërprerjen e aktivitetit tuaj',
@@ -118,7 +121,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Dekorime Arkitekturore Prestigjioze',
+        title: 'Çfarë Dekorimesh Arkitekturore Ofron Gipsi?',
         content: 'Për projekte që kërkojnë diçka të veçantë, ofrojmë dekorime arkitekturore me gips që shtojnë karakter dhe elegancë hapësirave. Nga lobi-t e hoteleve deri te sallat e konferencave, detajet dekorative krijojnë atmosferë unike.',
         listItems: [
           'Korniza dhe profile dekorative për ambiente elegante',
@@ -130,7 +133,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Izolim Akustik dhe Termik Profesional',
+        title: 'Pse Është i Rëndësishëm Izolimi Akustik me Gips?',
         content: 'Izolimi është veçanërisht i rëndësishëm për projekte komerciale ku komforti dhe funksionaliteti janë prioritet. Ne ofrojmë zgjidhje të specializuara që përmirësojnë ndjeshëm performancën e ndërtesave.',
         listItems: [
           'Izolim akustik për zyra, studio regjistrimi dhe ambiente konferencash',
@@ -197,19 +200,32 @@ export default async function GypsumWorksPage({ params }: Props) {
         answer: 'Po, ofrojmë garanci të plotë për të gjitha punimet tona. Garancia mbulon çdo defekt në instalim dhe material. Ne jemi të përkushtuar ndaj cilësisë dhe kënaqësisë së klientit.',
       },
     ],
+    sectionTitles: {
+      whatWeOffer: 'Çfarë Shërbimesh Gipsi Ofrojmë?',
+      commercialExperience: 'Ku Kemi Punuar me Gips Komercial?',
+      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Punime Gipsi?',
+      howWeWork: 'Si Funksionon Procesi i Punimeve të Gipsit?',
+      serviceAreas: 'Ku Ofrojmë Shërbime Punimesh Gipsi?',
+      faq: 'Pyetje të Shpeshta për Punimet e Gipsit',
+      readyToStart: 'Gati për Projektin Tuaj të Gipsit?',
+    },
+    relatedLinks: [
+      { href: '/patinim', label: 'Patinim Profesional Murash' },
+      { href: '/lyerje', label: 'Lyerje Profesionale' },
+    ],
   } : {
     serviceName: 'Gypsum Works',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Professional Gypsum Works for Commercial and Residential Projects',
-    heroSubtitle: 'We specialize in modern ceilings, elegant partitions and architectural decorations for airports, hotels, offices, shopping centers and luxury residential environments. Guaranteed quality with premium materials.',
+    heroTitle: 'Professional Gypsum Works in Tirana and Durrës',
+    heroSubtitle: 'Suspended ceilings, space partitions, architectural decorations and acoustic insulation for commercial and residential projects. 100+ completed projects including Vlora Airport. Knauf and Rigips materials. Free consultation.',
     introContent: [
-      'Torra Gips is the leading company for professional gypsum works in Albania, with a special focus on large commercial projects. We have had the honor of working on some of the most prestigious projects in the country, including Vlora International Airport, Green Coast Resort, Rolling Hills complex, Lion Park commercial center and many other important projects.',
+      'Professional gypsum works are the ideal solution for modern commercial and residential projects. Torra Gips is the leading company for gypsum works in Albania, with a special focus on large commercial projects. We have had the honor of working on some of the most prestigious projects in the country, including Vlora International Airport, Green Coast Resort, Rolling Hills complex and Lion Park commercial center.',
       'With years of experience in the construction industry, we have built a strong reputation for exceptional quality, deadline compliance and professionalism in every detail. Our specialized team consists of experienced craftsmen who use the most advanced techniques and highest quality materials from renowned manufacturers like Knauf and Rigips.',
       'Gypsum is the ideal material for modern projects due to its unique properties: it is lightweight yet very durable, offers excellent thermal and acoustic insulation, is fire resistant and allows for unlimited design possibilities. Whether for a modern office, a luxury hotel, a shopping center or a private home, we offer customized solutions that meet every need.',
     ],
     contentSections: [
       {
-        title: 'Suspended Gypsum Ceilings - Elegance and Functionality',
+        title: 'What Are Suspended Gypsum Ceilings?',
         content: 'Suspended gypsum ceilings are our main specialty and one of the most requested services for commercial projects. In airports, hotels and modern offices, gypsum ceilings play a key role in aesthetics and functionality. We offer customized designs that elegantly integrate lighting, ventilation and fire systems.',
         listItems: [
           'Multi-level ceilings for dramatic visual effect',
@@ -221,7 +237,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Space Partitions with Gypsum Panels',
+        title: 'How Do Gypsum Space Partitions Work?',
         content: 'Gypsum panel partitions are the ideal solution for reorganizing commercial and residential spaces. For modern offices requiring flexibility, hotels needing extra rooms, or shopping centers changing configurations, our partitions offer quick installation without structural intervention.',
         listItems: [
           'Fast and clean installation - we minimize disruption to your business',
@@ -233,7 +249,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Prestigious Architectural Decorations',
+        title: 'What Architectural Decorations Does Gypsum Offer?',
         content: 'For projects that require something special, we offer architectural gypsum decorations that add character and elegance to spaces. From hotel lobbies to conference halls, decorative details create a unique atmosphere.',
         listItems: [
           'Decorative frames and profiles for elegant environments',
@@ -245,7 +261,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Professional Acoustic and Thermal Insulation',
+        title: 'Why Is Acoustic Insulation with Gypsum Important?',
         content: 'Insulation is especially important for commercial projects where comfort and functionality are priorities. We offer specialized solutions that significantly improve building performance.',
         listItems: [
           'Acoustic insulation for offices, recording studios and conference rooms',
@@ -311,6 +327,19 @@ export default async function GypsumWorksPage({ params }: Props) {
         question: 'Do you offer warranty for your work?',
         answer: 'Yes, we offer full warranty for all our work. The warranty covers any defects in installation and materials. We are committed to quality and customer satisfaction.',
       },
+    ],
+    sectionTitles: {
+      whatWeOffer: 'What Gypsum Services Do We Offer?',
+      commercialExperience: 'Where Have We Done Commercial Gypsum Work?',
+      whyChooseUs: 'Why Choose Torra Gips for Gypsum Works?',
+      howWeWork: 'How Does the Gypsum Works Process Work?',
+      serviceAreas: 'Where Do We Offer Gypsum Works Services?',
+      faq: 'Frequently Asked Questions About Gypsum Works',
+      readyToStart: 'Ready for Your Gypsum Project?',
+    },
+    relatedLinks: [
+      { href: '/wall-plastering', label: 'Professional Wall Plastering' },
+      { href: '/painting', label: 'Professional Painting Services' },
     ],
   };
 

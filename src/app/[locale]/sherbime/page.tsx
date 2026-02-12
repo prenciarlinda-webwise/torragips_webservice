@@ -17,11 +17,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'services' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'Shërbime Ndërtimi Tiranë & Durrës - +355 68 858 0058 - Torra Gips',
+    description: 'Punime gipsi, patinim murash dhe lyerje profesionale në Tiranë dhe Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Konsultë falas.',
+    alternates: {
+      canonical: `/${locale}/sherbime/`,
+    },
   };
 }
 

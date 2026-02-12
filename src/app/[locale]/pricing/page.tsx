@@ -19,8 +19,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   return {
-    title: 'Request Quote for Gypsum Works, Plastering and Painting - Torra Gips',
-    description: 'Get a free quote for gypsum works, plastering and painting in Tirana and Durrës. Free consultation and professional assessment.',
+    title: 'Request Free Quote Gypsum & Painting Tirana - +355 68 858 0058 - Torra Gips',
+    description: 'Get a free quote for gypsum works, plastering and painting in Tirana and Durrës. Free consultation and on-site visit.',
+    alternates: {
+      canonical: `/${locale}/pricing/`,
+    },
   };
 }
 

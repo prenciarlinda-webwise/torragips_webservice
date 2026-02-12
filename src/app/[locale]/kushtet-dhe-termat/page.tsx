@@ -19,6 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t('title'),
+    description: 'Kushtet dhe termat për shërbimet e Torra Gips. Lexoni për kushtet e shërbimit, garancinë, çmimet dhe politikën e anulimit.',
+    alternates: {
+      canonical: `/${locale}/kushtet-dhe-termat/`,
+    },
   };
 }
 

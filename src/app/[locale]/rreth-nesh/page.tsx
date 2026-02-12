@@ -17,11 +17,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'about' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'Rreth Torra Gips - Kompani Gipsi në Shqipëri - +355 68 858 0058',
+    description: 'Torra Gips është kompani lider për punime gipsi, patinim dhe lyerje në Tiranë dhe Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës.',
+    alternates: {
+      canonical: `/${locale}/rreth-nesh/`,
+    },
   };
 }
 

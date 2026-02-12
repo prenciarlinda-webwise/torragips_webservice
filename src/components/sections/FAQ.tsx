@@ -22,46 +22,46 @@ export default function FAQ({ items }: FAQProps) {
   const defaultItems: FAQItem[] = locale === 'sq'
     ? [
         {
-          question: 'A punoni me projekte komerciale të mëdha?',
-          answer: 'Po, specializohemi në projekte komerciale të çdo shkalle - nga zyra dhe dyqane deri tek aeroportet, hotelet dhe qendrat tregtare. Kemi përvojë me projekte si Aeroporti i Vlorës, Green Coast Resort dhe Rolling Hills.',
+          question: 'Çfarë shërbimesh ofron Torra Gips në Tiranë dhe Durrës?',
+          answer: 'Torra Gips ofron punime gipsi profesionale, patinim murash dhe lyerje për projekte komerciale dhe rezidenciale. Kemi përfunduar 100+ projekte përfshirë Aeroportin e Vlorës, Green Coast Resort dhe Rolling Hills.',
         },
         {
-          question: 'Sa kohë zgjat një projekt komercial?',
-          answer: 'Koha varet nga madhësia dhe kompleksiteti i projektit. Për projekte të vogla komerciale 1-2 javë, për projekte mesatare 2-4 javë, ndërsa për projekte të mëdha mund të zgjasin disa muaj. Punojmë sipas afateve tuaja.',
+          question: 'Sa kohë zgjat një projekt punimesh gipsi ose patinimi?',
+          answer: 'Koha varet nga madhësia dhe kompleksiteti. Projekte të vogla zgjasin 1-2 javë, mesatare 2-4 javë, ndërsa projekte të mëdha komerciale mund të kërkojnë disa muaj. Punojmë sipas afateve tuaja.',
         },
         {
-          question: 'A mund të punoni jashtë orarit të punës?',
-          answer: 'Po, për projekte komerciale ofrojmë fleksibilitet të plotë. Mund të punojmë natën ose në fundjavë për të minimizuar ndërprerjen e aktivitetit tuaj të biznesit.',
+          question: 'Cilat materiale përdor Torra Gips?',
+          answer: 'Përdorim vetëm materiale premium të certifikuara nga Knauf dhe Rigips për punime gipsi, dhe bojëra Dulux, Jotun dhe Caparol për lyerje. Zgjedhim materialin optimal për çdo projekt.',
         },
         {
-          question: 'Cilat standarde sigurie ndiqni?',
-          answer: 'Ndjekim të gjitha standardet e sigurisë në punë. Ekipi ynë është i trajnuar për projekte komerciale dhe përdorim pajisje mbrojtëse. Jemi të siguruar plotësisht.',
+          question: 'A punoni jashtë orarit për projekte komerciale?',
+          answer: 'Po, për projekte komerciale ofrojmë fleksibilitet të plotë. Punojmë natën dhe në fundjavë për të minimizuar ndërprerjen e aktivitetit të biznesit tuaj.',
         },
         {
-          question: 'Si funksionon procesi i ofertës për projekte të mëdha?',
-          answer: 'Për projekte komerciale, ofrojmë vizitë falas në vend, vlerësim të detajuar dhe ofertë të personalizuar. Mund të punojmë me arkitektët dhe kontraktorët tuaj.',
+          question: 'Si mund të marr një ofertë falas nga Torra Gips?',
+          answer: 'Na kontaktoni me telefon në +355 68 858 0058, email ose WhatsApp. Ofrojmë vizitë falas në vend dhe vlerësim të detajuar pa detyrim.',
         },
       ]
     : [
         {
-          question: 'Do you work on large commercial projects?',
-          answer: 'Yes, we specialize in commercial projects of all scales - from offices and retail stores to airports, hotels and shopping centers. We have experience with projects like Vlora Airport, Green Coast Resort and Rolling Hills.',
+          question: 'What services does Torra Gips offer in Tirana and Durrës?',
+          answer: 'Torra Gips offers professional gypsum works, wall plastering and painting for commercial and residential projects. We have completed 100+ projects including Vlora Airport, Green Coast Resort and Rolling Hills.',
         },
         {
-          question: 'How long does a commercial project take?',
-          answer: 'Duration depends on project size and complexity. Small commercial projects take 1-2 weeks, medium projects 2-4 weeks, while large projects can take several months. We work according to your deadlines.',
+          question: 'How long does a gypsum works or plastering project take?',
+          answer: 'Duration depends on size and complexity. Small projects take 1-2 weeks, medium 2-4 weeks, while large commercial projects may require several months. We work according to your deadlines.',
         },
         {
-          question: 'Can you work outside business hours?',
-          answer: 'Yes, for commercial projects we offer full flexibility. We can work nights or weekends to minimize disruption to your business operations.',
+          question: 'What materials does Torra Gips use?',
+          answer: 'We use only premium certified materials from Knauf and Rigips for gypsum works, and Dulux, Jotun and Caparol paints for painting. We choose the optimal material for each project.',
         },
         {
-          question: 'What safety standards do you follow?',
-          answer: 'We follow all workplace safety standards. Our team is trained for commercial projects and we use protective equipment. We are fully insured.',
+          question: 'Do you work outside business hours for commercial projects?',
+          answer: 'Yes, for commercial projects we offer full flexibility. We work nights and weekends to minimize disruption to your business operations.',
         },
         {
-          question: 'How does the quoting process work for large projects?',
-          answer: 'For commercial projects, we offer a free on-site visit, detailed assessment and personalized quote. We can work with your architects and contractors.',
+          question: 'How can I get a free quote from Torra Gips?',
+          answer: 'Contact us by phone at +355 68 858 0058, email or WhatsApp. We offer free on-site visits and detailed assessments with no obligation.',
         },
       ];
 

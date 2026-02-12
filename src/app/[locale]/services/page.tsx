@@ -17,11 +17,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'services' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'Construction Services Tirana & Durrës - +355 68 858 0058 - Torra Gips',
+    description: 'Professional gypsum works, wall plastering and painting in Tirana and Durrës. 100+ completed projects including Vlora Airport. Free consultation.',
+    alternates: {
+      canonical: `/${locale}/services/`,
+    },
   };
 }
 

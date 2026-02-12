@@ -20,11 +20,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Kërko Ofertë për Punime Gipsi, Patinim dhe Lyerje - Torra Gips'
-      : 'Request Quote for Gypsum Works, Plastering and Painting - Torra Gips',
+      ? 'Kërko Ofertë Falas Gips & Lyerje Tiranë - +355 68 858 0058 - Torra Gips'
+      : 'Request Free Quote Gypsum & Painting Tirana - +355 68 858 0058 - Torra Gips',
     description: locale === 'sq'
-      ? 'Merrni ofertë falas për punime gipsi, patinim dhe lyerje në Tiranë dhe Durrës. Konsultë pa detyrim dhe vlerësim profesional.'
-      : 'Get a free quote for gypsum works, plastering and painting in Tirana and Durrës. Free consultation and professional assessment.',
+      ? 'Merrni ofertë falas për punime gipsi, patinim dhe lyerje në Tiranë dhe Durrës. Konsultë pa detyrim dhe vizitë falas në vend.'
+      : 'Get a free quote for gypsum works, plastering and painting in Tirana and Durrës. Free consultation and on-site visit.',
+    alternates: {
+      canonical: `/${locale}/cmime/`,
+    },
   };
 }
 

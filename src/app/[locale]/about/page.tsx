@@ -17,11 +17,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'about' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'About Torra Gips - Gypsum Company in Albania - +355 68 858 0058',
+    description: 'Torra Gips is a leading company for gypsum works, plastering and painting in Tirana and Durrës. 100+ completed projects including Vlora Airport.',
+    alternates: {
+      canonical: `/${locale}/about/`,
+    },
   };
 }
 

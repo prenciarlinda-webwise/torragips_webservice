@@ -16,11 +16,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'gallery' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'Project Gallery Gypsum Works & Painting - +355 68 858 0058 - Torra Gips',
+    description: 'View our completed gypsum works, plastering and painting projects in Tirana and Durrës. Vlora Airport, Green Coast, Rolling Hills.',
+    alternates: {
+      canonical: `/${locale}/gallery/`,
+    },
   };
 }
 

@@ -5,7 +5,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { Breadcrumbs } from '@/components/layout';
 import { CTA } from '@/components/sections';
-import { BreadcrumbSchema } from '@/components/seo';
+import { BreadcrumbSchema, ArticleSchema } from '@/components/seo';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 
 type Props = {
@@ -37,6 +37,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: {
+      canonical: `/${locale}/blog/${slug}/`,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: 'article',
+      ...(post.image && { images: [{ url: post.image }] }),
+    },
   };
 }
 
@@ -57,7 +66,9 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const contentHtml = await markdownToHtml(post.content);
+  // Strip first # heading from content to prevent duplicate H1
+  const contentWithoutH1 = post.content.replace(/^#\s+.+\n+/, '');
+  const contentHtml = await markdownToHtml(contentWithoutH1);
 
   const breadcrumbs = [
     { label: tNav('blog'), href: '/blog' },
@@ -72,6 +83,14 @@ export default async function BlogPostPage({ params }: Props) {
           { name: t('title'), url: `/${locale}/blog/` },
           { name: post.title, url: `/${locale}/blog/${slug}/` },
         ]}
+      />
+      <ArticleSchema
+        headline={post.title}
+        description={post.excerpt}
+        url={`/${locale}/blog/${slug}/`}
+        image={post.image}
+        datePublished={post.date}
+        author={post.author}
       />
 
       {/* Hero */}
@@ -110,6 +129,27 @@ export default async function BlogPostPage({ params }: Props) {
               className="prose prose-lg prose-primary max-w-none"
               dangerouslySetInnerHTML={{ __html: contentHtml }}
             />
+
+            {/* Related Service Link */}
+            <div className="mt-12 p-6 bg-primary-50 rounded-xl">
+              <p className="text-text font-medium">
+                {locale === 'sq'
+                  ? 'Keni nevojë për ndihmë profesionale? Shikoni '
+                  : 'Need professional help? Check out our '}
+                {post.tags.includes('gypsum') || post.tags.includes('gips') || post.tags.includes('ceiling') || post.tags.includes('tavan') ? (
+                  <a href={`/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`} className="text-primary font-semibold hover:underline">
+                    {locale === 'sq' ? 'shërbimet tona të punimeve të gipsit' : 'gypsum works services'}
+                  </a>
+                ) : (
+                  <a href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`} className="text-primary font-semibold hover:underline">
+                    {locale === 'sq' ? 'shërbimet tona të patinimit profesional' : 'professional plastering services'}
+                  </a>
+                )}
+                {locale === 'sq' ? ' ose telefononi ' : ' or call us at '}
+                <a href="tel:+355688580058" className="text-primary font-semibold hover:underline">+355 68 858 0058</a>
+                {locale === 'sq' ? ' për konsultë falas.' : ' for a free consultation.'}
+              </p>
+            </div>
 
             {/* Tags */}
             {post.tags.length > 0 && (

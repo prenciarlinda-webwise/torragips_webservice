@@ -45,13 +45,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: descriptions[locale as keyof typeof descriptions] || descriptions.sq,
     metadataBase: new URL(SITE_CONFIG.url),
-    alternates: {
-      canonical: `/${locale}/`,
-      languages: {
-        sq: '/sq/',
-        en: '/en/',
-      },
-    },
     openGraph: {
       type: 'website',
       locale: locale === 'sq' ? 'sq_AL' : 'en_US',
@@ -59,6 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: COMPANY.name,
       title: titles[locale as keyof typeof titles] || titles.sq,
       description: descriptions[locale as keyof typeof descriptions] || descriptions.sq,
+      images: [{ url: '/images/og-default.webp', width: 1200, height: 630, alt: COMPANY.name }],
     },
     twitter: {
       card: 'summary_large_image',

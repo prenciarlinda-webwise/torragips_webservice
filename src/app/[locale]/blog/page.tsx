@@ -13,11 +13,16 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'blog' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: locale === 'sq'
+      ? 'Blog - Punime Gipsi, Patinim & Lyerje Këshilla - Torra Gips'
+      : 'Blog - Gypsum Works, Plastering & Painting Tips - Torra Gips',
+    description: locale === 'sq'
+      ? 'Këshilla dhe udhëzues profesionale për punime gipsi, patinim murash dhe lyerje. Mësoni më shumë nga ekspertët e Torra Gips.'
+      : 'Professional tips and guides for gypsum works, wall plastering and painting. Learn more from Torra Gips experts.',
+    alternates: {
+      canonical: `/${locale}/blog/`,
+    },
   };
 }
 

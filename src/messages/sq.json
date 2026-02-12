@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Torra Gips - Punime Gipsi, Patinim & Lyerje në Tiranë dhe Durrës",
-    "description": "Torra Gips ofron shërbime profesionale të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës. Cilësi e lartë, çmime konkurruese.",
+    "title": "Punime Gipsi, Patinim & Lyerje Tiranë & Durrës - +355 68 858 0058 - Torra Gips",
+    "description": "Punime gipsi, patinim murash dhe lyerje profesionale në Tiranë dhe Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për konsultë falas.",
     "keywords": "punime gipsi, patinim, lyerje, gips, Tiranë, Durrës, ndërtim, rinovim"
   },
   "common": {
@@ -40,14 +40,14 @@
     "blog": "Blog"
   },
   "hero": {
-    "title": "Punime Profesionale Gipsi, Patinim & Lyerje",
-    "subtitle": "Transformojmë hapësirat tuaja me cilësi të lartë dhe çmime konkurruese",
+    "title": "Punime Gipsi, Patinim & Lyerje në Tiranë dhe Durrës",
+    "subtitle": "Kryejmë punime gipsi, patinim murash dhe lyerje për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës dhe Green Coast Resort. Kontaktoni për konsultë falas.",
     "cta": "Merr Ofertë Falas",
     "secondaryCta": "Shiko Punimet Tona",
     "trustedBy": "Klientë të kënaqur në Tiranë dhe Durrës"
   },
   "services": {
-    "title": "Shërbimet Tona",
+    "title": "Cilat Shërbime Ofron Torra Gips?",
     "subtitle": "Zgjidhje profesionale për çdo projekt ndërtimi dhe rinovimi",
     "gypsum": {
       "title": "Punime Gipsi",
@@ -72,7 +72,7 @@
     }
   },
   "whyUs": {
-    "title": "Pse të Na Zgjidhni?",
+    "title": "Pse të Zgjidhni Torra Gips?",
     "subtitle": "Cilësi, besueshmëri dhe profesionalizëm në çdo projekt",
     "experience": {
       "title": "Eksperiencë e Gjatë",
@@ -100,7 +100,7 @@
     }
   },
   "testimonials": {
-    "title": "Çfarë Thonë Klientët",
+    "title": "Çfarë Thonë Klientët për Torra Gips?",
     "subtitle": "Përvojat e klientëve tanë të kënaqur"
   },
   "gallery": {

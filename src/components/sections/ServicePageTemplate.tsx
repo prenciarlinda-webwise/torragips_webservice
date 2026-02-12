@@ -30,6 +30,21 @@ type ContentSection = {
   listItems?: string[];
 };
 
+type RelatedLink = {
+  href: string;
+  label: string;
+};
+
+type SectionTitles = {
+  whatWeOffer?: string;
+  commercialExperience?: string;
+  whyChooseUs?: string;
+  howWeWork?: string;
+  serviceAreas?: string;
+  faq?: string;
+  readyToStart?: string;
+};
+
 type ServicePageProps = {
   locale: string;
   serviceName: string;
@@ -43,6 +58,8 @@ type ServicePageProps = {
   faqItems: FAQItem[];
   introContent?: string[];
   contentSections?: ContentSection[];
+  sectionTitles?: SectionTitles;
+  relatedLinks?: RelatedLink[];
 };
 
 const icons = {
@@ -104,6 +121,8 @@ export default function ServicePageTemplate({
   faqItems,
   introContent,
   contentSections,
+  sectionTitles,
+  relatedLinks,
 }: ServicePageProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const isAlbanian = locale === 'sq';
@@ -179,7 +198,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
-              {isAlbanian ? 'Çfarë Ofrojmë' : 'What We Offer'}
+              {sectionTitles?.whatWeOffer || (isAlbanian ? 'Çfarë Ofrojmë' : 'What We Offer')}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -226,7 +245,7 @@ export default function ServicePageTemplate({
             <div className="space-y-12">
               {contentSections.map((section, index) => (
                 <div key={index} className="max-w-4xl mx-auto">
-                  <h3 className="text-2xl font-bold text-dark-800 mb-4">{section.title}</h3>
+                  <h2 className="text-2xl font-bold text-dark-800 mb-4">{section.title}</h2>
                   <p className="text-text-light leading-relaxed mb-6">{section.content}</p>
                   {section.listItems && section.listItems.length > 0 && (
                     <div className="bg-white rounded-xl p-6 border border-neutral-200">
@@ -254,7 +273,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {isAlbanian ? 'Përvojë në Projekte Komerciale' : 'Commercial Project Experience'}
+              {sectionTitles?.commercialExperience || (isAlbanian ? 'Përvojë në Projekte Komerciale' : 'Commercial Project Experience')}
             </h2>
             <p className="text-neutral-400 max-w-2xl mx-auto">
               {isAlbanian
@@ -283,7 +302,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
-              {isAlbanian ? 'Pse të Na Zgjidhni' : 'Why Choose Us'}
+              {sectionTitles?.whyChooseUs || (isAlbanian ? 'Pse të Na Zgjidhni' : 'Why Choose Us')}
             </h2>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -309,7 +328,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
-              {isAlbanian ? 'Si Punojmë' : 'How We Work'}
+              {sectionTitles?.howWeWork || (isAlbanian ? 'Si Punojmë' : 'How We Work')}
             </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
@@ -331,7 +350,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
-              {isAlbanian ? 'Zonat e Shërbimit' : 'Service Areas'}
+              {sectionTitles?.serviceAreas || (isAlbanian ? 'Zonat e Shërbimit' : 'Service Areas')}
             </h2>
             <p className="text-text-light max-w-2xl mx-auto">
               {isAlbanian
@@ -427,7 +446,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
-              {isAlbanian ? 'Pyetje të Shpeshta' : 'Frequently Asked Questions'}
+              {sectionTitles?.faq || (isAlbanian ? 'Pyetje të Shpeshta' : 'Frequently Asked Questions')}
             </h2>
           </div>
 
@@ -468,11 +487,38 @@ export default function ServicePageTemplate({
         </div>
       </section>
 
+      {/* Related Services */}
+      {relatedLinks && relatedLinks.length > 0 && (
+        <section className="py-16 bg-white">
+          <div className="container-custom">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-dark-800 mb-8">
+                {isAlbanian ? 'Shërbime të Lidhura' : 'Related Services'}
+              </h2>
+              <div className="flex flex-wrap justify-center gap-4">
+                {relatedLinks.map((link, index) => (
+                  <Link
+                    key={index}
+                    href={link.href}
+                    className="inline-flex items-center px-6 py-3 bg-primary/10 text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-colors"
+                  >
+                    {link.label}
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Final CTA */}
       <section className="py-16 bg-dark-900">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            {isAlbanian ? 'Gati për të Filluar?' : 'Ready to Start?'}
+            {sectionTitles?.readyToStart || (isAlbanian ? 'Gati për të Filluar?' : 'Ready to Start?')}
           </h2>
           <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
             {isAlbanian

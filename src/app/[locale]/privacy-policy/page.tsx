@@ -19,6 +19,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: t('title'),
+    description: 'Privacy policy for Torra Gips website. Learn how we collect, use and protect your personal data.',
+    alternates: {
+      canonical: `/${locale}/privacy-policy/`,
+    },
   };
 }
 

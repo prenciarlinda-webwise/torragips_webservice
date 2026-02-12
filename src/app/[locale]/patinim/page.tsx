@@ -17,14 +17,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Patinim Profesional Tiranë & Durrës | Suva Dekorative, Patinim Muri | Torra Gips'
-      : 'Professional Plastering Tirana & Durrës | Decorative Plaster, Wall Plastering | Torra Gips',
+      ? 'Patinim Profesional Murash Tiranë & Durrës - +355 68 858 0058 - Torra Gips'
+      : 'Professional Wall Plastering Tirana & Durrës - +355 68 858 0058 - Torra Gips',
     description: locale === 'sq'
-      ? 'Shërbime Patinimi profesionale për projekte komerciale dhe rezidenciale. Patinim brendshëm dhe jashtëm, suva dekorative, riparime muraturash. Aeroporti i Vlorës, hotele, zyra. Ofertë falas!'
-      : 'Professional plastering services for commercial and residential projects. Interior and exterior plastering, decorative plaster, wall repairs. Vlora Airport, hotels, offices. Free quote!',
-    keywords: locale === 'sq'
-      ? 'patinim, suva, patinim muri, patinim profesional, suva dekorative, patinim Tiranë, patinim Durrës, patinim komercial, patinim hotel'
-      : 'plastering, plaster, wall plastering, professional plastering, decorative plaster, plastering Tirana, plastering Durrës, commercial plastering, hotel plastering',
+      ? 'Patinim profesional murash për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
+      : 'Professional wall plastering for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
+    alternates: {
+      canonical: `/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`,
+    },
+    openGraph: {
+      title: locale === 'sq'
+        ? 'Patinim Profesional Murash Tiranë & Durrës - Torra Gips'
+        : 'Professional Wall Plastering Tirana & Durrës - Torra Gips',
+      description: locale === 'sq'
+        ? 'Patinim profesional murash për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara.'
+        : 'Professional wall plastering for commercial and residential projects in Tirana and Durrës. 100+ completed projects.',
+      images: [{ url: '/images/services/plastering/accent-wall.webp' }],
+    },
   };
 }
 
@@ -79,16 +88,16 @@ export default async function PlasteringPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Patinim',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Patinim Profesional për Projekte Komerciale dhe Rezidenciale',
-    heroSubtitle: 'Ekspertë në patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për aeroportet, hotelet, zyrat, qendrat tregtare dhe ambientet rezidenciale. Përfundime të përsosura me materiale premium.',
+    heroTitle: 'Patinim Profesional Murash në Tiranë dhe Durrës',
+    heroSubtitle: 'Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Materiale premium europiane. Konsultë falas.',
     introContent: [
-      'Torra Gips ofron shërbime Patinimi të nivelit më të lartë për projekte komerciale dhe rezidenciale në Tiranë, Durrës dhe gjithë Shqipërinë qendrore. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort dhe Rolling Hills, ne garantojmë cilësi që tejkalon pritshmëritë.',
+      'Patinimi profesional i mureve është baza për çdo projekt ndërtimi cilësor. Torra Gips ofron shërbime Patinimi të nivelit më të lartë për projekte komerciale dhe rezidenciale në Tiranë, Durrës dhe gjithë Shqipërinë qendrore. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort dhe Rolling Hills, ne garantojmë cilësi që tejkalon pritshmëritë.',
       'Patinimi është një art që kërkon mjeshtëri, durim dhe vëmendje ndaj detajeve. Ekipi ynë i specializuar ka vite përvojë në teknikat tradicionale dhe moderne të patinimit, duke përdorur materialet më cilësore për rezultate që zgjasin me dekada. Qoftë për një ndërtesë të re ose rinovim, ne ofrojmë zgjidhje të personalizuara.',
       'Në projektet komerciale, Patinimi luan një rol vendimtar në estetikën dhe funksionalitetin e ndërtesave. Sipërfaqet e patinuara siç duhet jo vetëm duken elegante, por gjithashtu mbrojnë muraturën nga lagështia, krijonjë bazë të shkëlqyer për lyerje dhe kontribuojnë në izolimin termik të ndërtesës.',
     ],
     contentSections: [
       {
-        title: 'Patinim Brendshëm - Sipërfaqe të Përsosura',
+        title: 'Çfarë Përfshini Patinimin Brendshëm?',
         content: 'Patinimi brendshëm është baza për çdo përfundim të brendshëm cilësor. Ne ofrojmë sipërfaqe të lëmuara dhe uniforme që janë perfekte për lyerje, tapiceri ose çdo përfundim tjetër. Për ambiente komerciale, sigurojmë që çdo cep dhe qoshe të jetë e përsosur.',
         listItems: [
           'Patinim me gips për sipërfaqe ultra të lëmuara',
@@ -100,7 +109,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Patinim Jashtëm - Mbrojtje dhe Estetikë',
+        title: 'Pse Është i Rëndësishëm Patinimi Jashtëm?',
         content: 'Patinimi jashtëm duhet të kombinojë estetikën me funksionalitetin. Produktet tona të specializuara mbrojnë muraturën nga kushtet atmosferike të Shqipërisë, duke ruajtur pamjen elegante për vite të tëra.',
         listItems: [
           'Suva e jashtme rezistente ndaj kushteve atmosferike',
@@ -112,7 +121,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Suva Dekorative - Efekte Artistike',
+        title: 'Çfarë Efektesh Ofrojnë Suvat Dekorative?',
         content: 'Suvaja dekorative transformon muraturën e zakonshme në vepra arti. Ne ofrojmë një gamë të gjerë efektesh dhe teksturash për ambiente komerciale dhe rezidenciale që kërkojnë diçka të veçantë.',
         listItems: [
           'Efekt mermeri venecian (stucco veneziano)',
@@ -124,7 +133,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Riparime dhe Restaurime Profesionale',
+        title: 'Kur Keni Nevojë për Riparime Patinimi?',
         content: 'Jo çdo projekt ka nevojë për patinim të plotë. Ne ofrojmë shërbime riparimesh dhe restaurimesh për muratura ekzistuese, duke rivendosur pamjen origjinale pa pasur nevojë për ndërhyrje të mëdha.',
         listItems: [
           'Riparime çarjesh dhe plasaritjesh',
@@ -191,19 +200,32 @@ export default async function PlasteringPage({ params }: Props) {
         answer: 'Po, ofrojmë garanci të plotë për punën dhe materialet. Patinimi i kryer siç duhet zgjat me dekada pa probleme.',
       },
     ],
+    sectionTitles: {
+      whatWeOffer: 'Çfarë Shërbimesh Patinimi Ofrojmë?',
+      commercialExperience: 'Ku Kemi Kryer Patinim Komercial?',
+      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Patinimin?',
+      howWeWork: 'Si Funksionon Procesi i Patinimit?',
+      serviceAreas: 'Ku Ofrojmë Shërbime Patinimi?',
+      faq: 'Pyetje të Shpeshta për Patinimin',
+      readyToStart: 'Gati për Projektin Tuaj të Patinimit?',
+    },
+    relatedLinks: [
+      { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
+      { href: '/lyerje', label: 'Lyerje Profesionale' },
+    ],
   } : {
     serviceName: 'Plastering',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Professional Plastering for Commercial and Residential Projects',
-    heroSubtitle: 'Experts in interior and exterior plastering, decorative plaster and wall repairs for airports, hotels, offices, shopping centers and residential environments. Perfect finishes with premium materials.',
+    heroTitle: 'Professional Wall Plastering in Tirana and Durrës',
+    heroSubtitle: 'Interior and exterior plastering, decorative plaster and wall repairs for commercial and residential projects. 100+ completed projects including Vlora Airport. Premium European materials. Free consultation.',
     introContent: [
-      'Torra Gips offers the highest level plastering services for commercial and residential projects in Tirana, Durrës and all of central Albania. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort and Rolling Hills, we guarantee quality that exceeds expectations.',
+      'Professional wall plastering is the foundation of every quality construction project. Torra Gips offers the highest level plastering services for commercial and residential projects in Tirana, Durrës and all of central Albania. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort and Rolling Hills, we guarantee quality that exceeds expectations.',
       'Plastering is an art that requires craftsmanship, patience and attention to detail. Our specialized team has years of experience in traditional and modern plastering techniques, using the highest quality materials for results that last decades. Whether for a new building or renovation, we offer customized solutions.',
       'In commercial projects, plastering plays a decisive role in the aesthetics and functionality of buildings. Properly plastered surfaces not only look elegant, but also protect the masonry from moisture, create an excellent base for painting and contribute to the thermal insulation of the building.',
     ],
     contentSections: [
       {
-        title: 'Interior Plastering - Perfect Surfaces',
+        title: 'What Does Interior Plastering Include?',
         content: 'Interior plastering is the foundation for any quality interior finish. We offer smooth and uniform surfaces that are perfect for painting, wallpaper or any other finish. For commercial environments, we ensure that every corner is perfect.',
         listItems: [
           'Gypsum plastering for ultra-smooth surfaces',
@@ -215,7 +237,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Exterior Plastering - Protection and Aesthetics',
+        title: 'Why Is Exterior Plastering Important?',
         content: 'Exterior plastering must combine aesthetics with functionality. Our specialized products protect masonry from Albanian weather conditions, maintaining an elegant appearance for years.',
         listItems: [
           'Weather-resistant exterior plaster',
@@ -227,7 +249,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Decorative Plaster - Artistic Effects',
+        title: 'What Effects Do Decorative Plasters Offer?',
         content: 'Decorative plaster transforms ordinary masonry into works of art. We offer a wide range of effects and textures for commercial and residential environments that require something special.',
         listItems: [
           'Venetian marble effect (stucco veneziano)',
@@ -239,7 +261,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Professional Repairs and Restorations',
+        title: 'When Do You Need Plastering Repairs?',
         content: 'Not every project needs complete plastering. We offer repair and restoration services for existing walls, restoring the original appearance without major interventions.',
         listItems: [
           'Crack and split repairs',
@@ -305,6 +327,19 @@ export default async function PlasteringPage({ params }: Props) {
         question: 'Do you offer warranty for plastering?',
         answer: 'Yes, we offer full warranty for work and materials. Properly done plastering lasts decades without problems.',
       },
+    ],
+    sectionTitles: {
+      whatWeOffer: 'What Plastering Services Do We Offer?',
+      commercialExperience: 'Where Have We Done Commercial Plastering?',
+      whyChooseUs: 'Why Choose Torra Gips for Plastering?',
+      howWeWork: 'How Does the Plastering Process Work?',
+      serviceAreas: 'Where Do We Offer Plastering Services?',
+      faq: 'Frequently Asked Questions About Plastering',
+      readyToStart: 'Ready for Your Plastering Project?',
+    },
+    relatedLinks: [
+      { href: '/gypsum-works', label: 'Professional Gypsum Works' },
+      { href: '/painting', label: 'Professional Painting Services' },
     ],
   };
 

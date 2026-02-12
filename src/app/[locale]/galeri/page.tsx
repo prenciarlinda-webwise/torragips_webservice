@@ -16,11 +16,12 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'gallery' });
-
   return {
-    title: t('title'),
-    description: t('subtitle'),
+    title: 'Galeri Projektesh Punime Gipsi & Lyerje - +355 68 858 0058 - Torra Gips',
+    description: 'Shikoni projektet tona të përfunduara të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës. Aeroporti i Vlorës, Green Coast, Rolling Hills.',
+    alternates: {
+      canonical: `/${locale}/galeri/`,
+    },
   };
 }
 
