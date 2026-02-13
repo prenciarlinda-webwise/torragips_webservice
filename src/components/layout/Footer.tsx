@@ -52,6 +52,11 @@ export default function Footer() {
       href: locale === 'sq' ? '/kushtet-dhe-termat' : '/terms-conditions',
       label: t('footer.terms')
     },
+    {
+      href: '/sitemap.xml',
+      label: 'Sitemap',
+      external: true,
+    },
   ];
 
   return (
@@ -237,13 +242,23 @@ export default function Footer() {
             </div>
             <div className="flex space-x-6">
               {legalLinks.map((link) => (
-                <Link
-                  key={link.href}
-                  href={link.href}
-                  className="text-neutral-400 text-sm hover:text-white transition-colors"
-                >
-                  {link.label}
-                </Link>
+                'external' in link ? (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="text-neutral-400 text-sm hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="text-neutral-400 text-sm hover:text-white transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                )
               ))}
             </div>
           </div>

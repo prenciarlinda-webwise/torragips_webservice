@@ -58,7 +58,7 @@ export const SOCIAL_LINKS = {
 } as const;
 
 export const SITE_CONFIG = {
-  url: `https://${COMPANY.domain}`,
+  url: `https://www.${COMPANY.domain}`,
   locales: ['sq', 'en'] as const,
   defaultLocale: 'sq' as const,
 } as const;
