@@ -4,7 +4,7 @@ export const COMPANY = {
   email: 'torragips@gmail.com',
   whatsapp: '+355688580058',
   locations: ['Tiranë', 'Durrës'],
-  domain: 'torragips.al',
+  domain: 'torragips.com',
   founded: 2020,
 } as const;
 

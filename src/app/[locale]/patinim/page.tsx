@@ -210,6 +210,8 @@ export default async function PlasteringPage({ params }: Props) {
       readyToStart: 'Gati për Projektin Tuaj të Patinimit?',
     },
     relatedLinks: [
+      { href: '/patinim-tirane', label: 'Patinim Profesional në Tiranë' },
+      { href: '/patinim-durres', label: 'Patinim Profesional në Durrës' },
       { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
       { href: '/lyerje', label: 'Lyerje Profesionale' },
     ],
@@ -338,6 +340,8 @@ export default async function PlasteringPage({ params }: Props) {
       readyToStart: 'Ready for Your Plastering Project?',
     },
     relatedLinks: [
+      { href: '/wall-plastering-tirana', label: 'Professional Plastering in Tirana' },
+      { href: '/wall-plastering-durres', label: 'Professional Plastering in Durrës' },
       { href: '/gypsum-works', label: 'Professional Gypsum Works' },
       { href: '/painting', label: 'Professional Painting Services' },
     ],

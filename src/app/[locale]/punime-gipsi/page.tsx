@@ -210,6 +210,8 @@ export default async function GypsumWorksPage({ params }: Props) {
       readyToStart: 'Gati për Projektin Tuaj të Gipsit?',
     },
     relatedLinks: [
+      { href: '/punime-gipsi-tirane', label: 'Punime Gipsi në Tiranë' },
+      { href: '/punime-gipsi-durres', label: 'Punime Gipsi në Durrës' },
       { href: '/patinim', label: 'Patinim Profesional Murash' },
       { href: '/lyerje', label: 'Lyerje Profesionale' },
     ],
@@ -338,6 +340,8 @@ export default async function GypsumWorksPage({ params }: Props) {
       readyToStart: 'Ready for Your Gypsum Project?',
     },
     relatedLinks: [
+      { href: '/gypsum-works-tirana', label: 'Gypsum Works in Tirana' },
+      { href: '/gypsum-works-durres', label: 'Gypsum Works in Durrës' },
       { href: '/wall-plastering', label: 'Professional Wall Plastering' },
       { href: '/painting', label: 'Professional Painting Services' },
     ],

@@ -210,6 +210,8 @@ export default async function PaintingPage({ params }: Props) {
       readyToStart: 'Gati për Projektin Tuaj të Lyerjes?',
     },
     relatedLinks: [
+      { href: '/lyerje-tirane', label: 'Lyerje Profesionale në Tiranë' },
+      { href: '/lyerje-durres', label: 'Lyerje Profesionale në Durrës' },
       { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
       { href: '/patinim', label: 'Patinim Profesional Murash' },
     ],
@@ -338,6 +340,8 @@ export default async function PaintingPage({ params }: Props) {
       readyToStart: 'Ready for Your Painting Project?',
     },
     relatedLinks: [
+      { href: '/painting-tirana', label: 'Professional Painting in Tirana' },
+      { href: '/painting-durres', label: 'Professional Painting in Durrës' },
       { href: '/gypsum-works', label: 'Professional Gypsum Works' },
       { href: '/wall-plastering', label: 'Professional Wall Plastering' },
     ],
