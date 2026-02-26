@@ -1,0 +1,32 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block title %}Raport Vjetor - Torra Gips{% endblock %}
+
+{% block dashboard_content %}
+<h1 class="section-title" style="margin-top:0;">Raport Vjetor</h1>
+
+<table class="report-table">
+    <thead>
+        <tr>
+            <th>Viti</th>
+            <th class="text-right">Te Ardhurat (ALL)</th>
+            <th class="text-right">Kostot (ALL)</th>
+            <th class="text-right">Fitimi (ALL)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for y in report %}
+        <tr>
+            <td>{{ y.year|date:"Y" }}</td>
+            <td class="text-right">{{ y.revenue|floatformat:0 }}</td>
+            <td class="text-right">{{ y.costs|floatformat:0 }}</td>
+            <td class="text-right {% if y.profit >= 0 %}profit-positive{% else %}profit-negative{% endif %}">
+                {{ y.profit|floatformat:0 }}
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" style="text-align:center;">Nuk ka te dhena.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

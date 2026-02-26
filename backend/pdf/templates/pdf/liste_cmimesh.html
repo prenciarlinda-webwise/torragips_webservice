@@ -1,0 +1,44 @@
+{% extends "pdf/base_pdf.html" %}
+{% block content %}
+<div class="doc-title">LISTE CMIMESH</div>
+
+<table class="meta-table">
+    <tr>
+        <td class="label">Klienti:</td>
+        <td>{{ client.name }}{% if client.business_name %} ({{ client.business_name }}){% endif %}</td>
+        <td class="label">Data:</td>
+        <td>{{ doc.date|date:"d/m/Y" }}</td>
+    </tr>
+    <tr>
+        <td class="label">Projekti:</td>
+        <td>{{ project.name }}</td>
+        <td class="label">Qyteti:</td>
+        <td>{{ doc.city|default:project.city }}</td>
+    </tr>
+</table>
+
+<table class="items">
+    <thead>
+        <tr>
+            <th style="width:30px;">#</th>
+            <th>Objekti / Sherbimi</th>
+            <th>Pershkrimi</th>
+            <th class="text-center">Njesia</th>
+            <th class="text-right">Cmimi (ALL)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+        <tr>
+            <td class="text-center">{{ forloop.counter }}</td>
+            <td>{{ item.service_name }}</td>
+            <td>{{ item.description }}</td>
+            <td class="text-center">{{ item.unit }}</td>
+            <td class="text-right">{{ item.price|floatformat:0 }}</td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="5" class="text-center">Nuk ka artikuj.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,113 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block title %}Dashboard - Torra Gips{% endblock %}
+
+{% block dashboard_content %}
+<h1 class="section-title" style="margin-top:0;">Dashboard</h1>
+
+<div class="dashboard-cards">
+    <div class="card">
+        <div class="card-label">Projekte Aktive</div>
+        <div class="card-value blue">{{ active_projects }}</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Klientet Total</div>
+        <div class="card-value">{{ total_clients }}</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Te Ardhurat</div>
+        <div class="card-value green">{{ total_revenue|floatformat:0 }} ALL</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Kostot</div>
+        <div class="card-value red">{{ total_costs|floatformat:0 }} ALL</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Fitimi</div>
+        <div class="card-value {% if profit >= 0 %}green{% else %}red{% endif %}">{{ profit|floatformat:0 }} ALL</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Pagesa ne Pritje</div>
+        <div class="card-value yellow">{{ pending_count }} ({{ pending_amount|floatformat:0 }} ALL)</div>
+    </div>
+</div>
+
+{% if chart_labels %}
+<div class="chart-container">
+    <h2 class="section-title" style="margin-top:0;">Te Ardhurat Mujore</h2>
+    <canvas id="revenueChart" height="80"></canvas>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
+<script>
+    new Chart(document.getElementById('revenueChart'), {
+        type: 'bar',
+        data: {
+            labels: {{ chart_labels|safe }},
+            datasets: [{
+                label: 'Te Ardhurat (ALL)',
+                data: {{ chart_data|safe }},
+                backgroundColor: '#1e3a5f',
+                borderRadius: 6,
+            }]
+        },
+        options: {
+            responsive: true,
+            plugins: { legend: { display: false } },
+            scales: { y: { beginAtZero: true } }
+        }
+    });
+</script>
+{% endif %}
+
+{% if top_clients %}
+<h2 class="section-title">Klientet Kryesore sipas te Ardhurave</h2>
+<table class="report-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Klienti</th>
+            <th class="text-right">Te Ardhurat (ALL)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for client in top_clients %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ client.name }}</td>
+            <td class="text-right">{{ client.revenue|floatformat:0 }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+
+{% if projects_pl %}
+<h2 class="section-title">Fitimi dhe Humbja per Projekt</h2>
+<table class="report-table">
+    <thead>
+        <tr>
+            <th>Projekti</th>
+            <th>Klienti</th>
+            <th class="text-right">Preventiv</th>
+            <th class="text-right">Te Ardhurat</th>
+            <th class="text-right">Kostot</th>
+            <th class="text-right">Fitimi</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for p in projects_pl %}
+        <tr>
+            <td>{{ p.name }}</td>
+            <td>{{ p.client }}</td>
+            <td class="text-right">{{ p.preventiv_total|floatformat:0 }}</td>
+            <td class="text-right">{{ p.revenue|floatformat:0 }}</td>
+            <td class="text-right">{{ p.costs|floatformat:0 }}</td>
+            <td class="text-right {% if p.profit >= 0 %}profit-positive{% else %}profit-negative{% endif %}">
+                {{ p.profit|floatformat:0 }}
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}

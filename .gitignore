@@ -42,3 +42,13 @@ next-env.d.ts
 .vscode/
 *.swp
 *.swo
+
+# Backend
+backend/venv/
+backend/db.sqlite3
+backend/.env
+backend/**/__pycache__/
+*.pyc
+
+# Misc
+*.mhtml

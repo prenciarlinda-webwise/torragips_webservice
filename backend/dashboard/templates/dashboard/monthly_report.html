@@ -1,0 +1,32 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block title %}Raport Mujor - Torra Gips{% endblock %}
+
+{% block dashboard_content %}
+<h1 class="section-title" style="margin-top:0;">Raport Mujor</h1>
+
+<table class="report-table">
+    <thead>
+        <tr>
+            <th>Muaji</th>
+            <th class="text-right">Te Ardhurat (ALL)</th>
+            <th class="text-right">Kostot (ALL)</th>
+            <th class="text-right">Fitimi (ALL)</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for m in report %}
+        <tr>
+            <td>{{ m.month|date:"F Y" }}</td>
+            <td class="text-right">{{ m.revenue|floatformat:0 }}</td>
+            <td class="text-right">{{ m.costs|floatformat:0 }}</td>
+            <td class="text-right {% if m.profit >= 0 %}profit-positive{% else %}profit-negative{% endif %}">
+                {{ m.profit|floatformat:0 }}
+            </td>
+        </tr>
+        {% empty %}
+        <tr><td colspan="4" style="text-align:center;">Nuk ka te dhena.</td></tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

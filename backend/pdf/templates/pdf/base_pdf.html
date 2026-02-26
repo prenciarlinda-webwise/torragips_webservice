@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+<meta charset="utf-8">
+<style>
+    @page {
+        size: A4;
+        margin: 1.5cm 2cm;
+    }
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        font-size: 10pt;
+        color: #222;
+        line-height: 1.4;
+    }
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 3px solid #1e3a5f;
+        padding-bottom: 15px;
+    }
+    .header h1 {
+        margin: 0;
+        font-size: 22pt;
+        color: #1e3a5f;
+        letter-spacing: 2px;
+    }
+    .header .subtitle {
+        font-size: 9pt;
+        color: #555;
+        margin-top: 5px;
+    }
+    .header .contact {
+        font-size: 8pt;
+        color: #777;
+        margin-top: 3px;
+    }
+    .doc-title {
+        text-align: center;
+        font-size: 16pt;
+        font-weight: bold;
+        color: #1e3a5f;
+        margin: 20px 0 10px;
+    }
+    .meta-table {
+        width: 100%;
+        margin-bottom: 20px;
+        font-size: 9pt;
+    }
+    .meta-table td {
+        padding: 3px 5px;
+    }
+    .meta-table .label {
+        font-weight: bold;
+        color: #555;
+        width: 120px;
+    }
+    table.items {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+    table.items thead th {
+        background-color: #1e3a5f;
+        color: white;
+        padding: 8px 6px;
+        font-size: 9pt;
+        text-align: left;
+        font-weight: bold;
+    }
+    table.items tbody td {
+        padding: 6px;
+        border-bottom: 1px solid #ddd;
+        font-size: 9pt;
+    }
+    table.items tfoot td {
+        padding: 10px 6px;
+        font-weight: bold;
+        font-size: 11pt;
+        border-top: 2px solid #1e3a5f;
+    }
+    .text-right { text-align: right; }
+    .text-center { text-align: center; }
+    .grand-total {
+        color: #1e3a5f;
+    }
+    .footer {
+        text-align: center;
+        font-size: 7pt;
+        color: #888;
+        margin-top: 40px;
+        border-top: 1px solid #ddd;
+        padding-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <div class="header">
+        <h1>TORRA GIPS</h1>
+        <div class="subtitle">Punime Gipsi, Lyerje &amp; Suvatime</div>
+        <div class="contact">
+            Durres, Shqiperi | Tel: +355 68 858 0058 | torragips@gmail.com | www.torragips.com
+        </div>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="footer">
+        Torra Gips - Durres, Shqiperi | +355 68 858 0058 | torragips@gmail.com
+    </div>
+</body>
+</html>
