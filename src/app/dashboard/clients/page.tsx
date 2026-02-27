@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { clientsApi } from '@/lib/api';
 import DataTable from '@/components/dashboard/DataTable';
 import FormModal from '@/components/dashboard/FormModal';
@@ -8,6 +9,7 @@ import FormModal from '@/components/dashboard/FormModal';
 const EMPTY = { name: '', business_name: '', phone: '', email: '', city: '', address: '', notes: '' };
 
 export default function ClientsPage() {
+  const router = useRouter();
   const [data, setData] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [modalOpen, setModalOpen] = useState(false);
@@ -66,7 +68,7 @@ export default function ClientsPage() {
         </button>
       </div>
 
-      <DataTable columns={columns} data={data} loading={loading} onEdit={openEdit} onDelete={handleDelete} />
+      <DataTable columns={columns} data={data} loading={loading} onRowClick={(item) => router.push(`/dashboard/clients/${item.id}/`)} onEdit={openEdit} onDelete={handleDelete} />
 
       <FormModal title={editId ? 'Ndrysho Klientin' : 'Shto Klient'} open={modalOpen} onClose={() => setModalOpen(false)} onSubmit={handleSubmit} loading={saving}>
         <div className="grid grid-cols-2 gap-4">

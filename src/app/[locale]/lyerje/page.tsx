@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional painting for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'lyerje' : 'painting'}/`,
+      languages: {
+        sq: '/sq/lyerje/',
+        en: '/en/painting/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

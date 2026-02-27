@@ -97,7 +97,7 @@ export default function ProjectsPage() {
         columns={columns}
         data={data}
         loading={loading}
-        onView={(item) => router.push(`/dashboard/projects/${item.id}/`)}
+        onRowClick={(item) => router.push(`/dashboard/projects/${item.id}/`)}
         onEdit={openEdit}
         onDelete={handleDelete}
       />

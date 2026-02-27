@@ -1,10 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { paymentsApi, projectsApi } from '@/lib/api';
 import DataTable from '@/components/dashboard/DataTable';
 
 export default function PaymentsPage() {
+  const router = useRouter();
   const [data, setData] = useState<any[]>([]);
   const [projects, setProjects] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -40,7 +42,7 @@ export default function PaymentsPage() {
         </p>
       </div>
 
-      <DataTable columns={columns} data={data} loading={loading} />
+      <DataTable columns={columns} data={data} loading={loading} onRowClick={(item: any) => router.push(`/dashboard/projects/${item.project}/`)} />
     </div>
   );
 }

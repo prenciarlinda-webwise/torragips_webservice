@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`,
+      languages: {
+        sq: '/sq/punime-gipsi/',
+        en: '/en/gypsum-works/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

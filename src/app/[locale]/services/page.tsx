@@ -22,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Professional gypsum works, wall plastering and painting in Tirana and Durrës. 100+ completed projects including Vlora Airport. Free consultation.',
     alternates: {
       canonical: `/${locale}/services/`,
+      languages: {
+        sq: '/sq/sherbime/',
+        en: '/en/services/',
+      },
     },
   };
 }

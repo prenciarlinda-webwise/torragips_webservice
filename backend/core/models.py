@@ -1,5 +1,6 @@
 from django.db import models
 from django.db.models import Sum
+from django.core.validators import MinValueValidator
 from decimal import Decimal
 
 
@@ -13,7 +14,7 @@ class ServiceCatalog(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True, default='')
     default_unit = models.CharField(max_length=10, choices=UNIT_CHOICES, default='m2')
-    default_price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    default_price = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(Decimal('0'))])
     is_active = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -35,6 +36,7 @@ class Client(models.Model):
     city = models.CharField(max_length=100, blank=True, default='')
     address = models.TextField(blank=True, default='')
     notes = models.TextField(blank=True, default='')
+    is_archived = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
@@ -71,11 +73,12 @@ class Project(models.Model):
         ('cancelled', 'Anulluar'),
     ]
 
-    client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='projects')
+    client = models.ForeignKey(Client, on_delete=models.PROTECT, related_name='projects')
     name = models.CharField(max_length=200)
     project_type = models.CharField(max_length=20, choices=PROJECT_TYPE_CHOICES, default='supply_work')
     city = models.CharField(max_length=100, blank=True, default='')
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='active')
+    is_archived = models.BooleanField(default=False)
     start_date = models.DateField(null=True, blank=True)
     notes = models.TextField(blank=True, default='')
     created_at = models.DateTimeField(auto_now_add=True)
@@ -148,7 +151,7 @@ class ListeCmimeshItem(models.Model):
     service_name = models.CharField(max_length=200)
     description = models.TextField(blank=True, default='')
     unit = models.CharField(max_length=20, default='m2')
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(Decimal('0'))])
     order = models.PositiveIntegerField(default=0)
 
     class Meta:
@@ -186,9 +189,9 @@ class PreventivItem(models.Model):
     service = models.ForeignKey(ServiceCatalog, on_delete=models.SET_NULL, null=True, blank=True)
     service_name = models.CharField(max_length=200)
     description = models.TextField(blank=True, default='')
-    quantity = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    quantity = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(Decimal('0'))])
     unit = models.CharField(max_length=20, default='m2')
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(Decimal('0'))])
     total = models.DecimalField(max_digits=12, decimal_places=2, default=0, editable=False)
     order = models.PositiveIntegerField(default=0)
 
@@ -238,9 +241,9 @@ class SituacionItem(models.Model):
     situacion = models.ForeignKey(Situacion, on_delete=models.CASCADE, related_name='items')
     service_name = models.CharField(max_length=200)
     description = models.TextField(blank=True, default='')
-    quantity = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    quantity = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(Decimal('0'))])
     unit = models.CharField(max_length=20, default='m2')
-    price = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    price = models.DecimalField(max_digits=10, decimal_places=2, default=0, validators=[MinValueValidator(Decimal('0'))])
     total = models.DecimalField(max_digits=12, decimal_places=2, default=0, editable=False)
     order = models.PositiveIntegerField(default=0)
 
@@ -286,7 +289,7 @@ class Cost(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE, related_name='costs', null=True, blank=True)
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='materials')
     description = models.CharField(max_length=300)
-    amount = models.DecimalField(max_digits=12, decimal_places=2)
+    amount = models.DecimalField(max_digits=12, decimal_places=2, validators=[MinValueValidator(Decimal('0'))])
     date = models.DateField()
     supplier = models.CharField(max_length=200, blank=True, default='')
     notes = models.TextField(blank=True, default='')

@@ -9,7 +9,7 @@ interface Column<T> {
 interface DataTableProps<T> {
   columns: Column<T>[];
   data: T[];
-  onView?: (item: T) => void;
+  onRowClick?: (item: T) => void;
   onEdit?: (item: T) => void;
   onDelete?: (item: T) => void;
   loading?: boolean;
@@ -18,12 +18,12 @@ interface DataTableProps<T> {
 export default function DataTable<T extends { id: number }>({
   columns,
   data,
-  onView,
+  onRowClick,
   onEdit,
   onDelete,
   loading,
 }: DataTableProps<T>) {
-  const hasActions = onView || onEdit || onDelete;
+  const hasActions = onEdit || onDelete;
 
   if (loading) {
     return (
@@ -60,7 +60,11 @@ export default function DataTable<T extends { id: number }>({
               </tr>
             ) : (
               data.map((item, idx) => (
-                <tr key={item.id} className={`transition-colors hover:bg-gray-50/80 ${idx % 2 === 0 ? '' : 'bg-gray-50/40'}`}>
+                <tr
+                  key={item.id}
+                  onClick={() => onRowClick?.(item)}
+                  className={`transition-colors hover:bg-gray-50/80 ${idx % 2 === 0 ? '' : 'bg-gray-50/40'} ${onRowClick ? 'cursor-pointer' : ''}`}
+                >
                   {columns.map((col) => (
                     <td key={col.key} className="px-4 py-3 text-sm text-gray-700">
                       {col.render ? col.render(item) : (item as any)[col.key]}
@@ -68,17 +72,9 @@ export default function DataTable<T extends { id: number }>({
                   ))}
                   {hasActions && (
                     <td className="px-4 py-3 text-right space-x-1.5">
-                      {onView && (
-                        <button
-                          onClick={() => onView(item)}
-                          className="text-xs px-3 py-1.5 bg-[#1a365d] text-white rounded-md hover:bg-[#1a365d]/90 transition-colors"
-                        >
-                          Shiko
-                        </button>
-                      )}
                       {onEdit && (
                         <button
-                          onClick={() => onEdit(item)}
+                          onClick={(e) => { e.stopPropagation(); onEdit(item); }}
                           className="text-xs px-3 py-1.5 bg-[#d97706]/10 text-[#d97706] rounded-md hover:bg-[#d97706]/20 transition-colors font-medium"
                         >
                           Ndrysho
@@ -86,7 +82,7 @@ export default function DataTable<T extends { id: number }>({
                       )}
                       {onDelete && (
                         <button
-                          onClick={() => onDelete(item)}
+                          onClick={(e) => { e.stopPropagation(); onDelete(item); }}
                           className="text-xs px-3 py-1.5 bg-red-50 text-red-500 rounded-md hover:bg-red-100 transition-colors"
                         >
                           Fshi

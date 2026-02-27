@@ -22,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Torra Gips is a leading company for gypsum works, plastering and painting in Tirana and Durrës. 100+ completed projects including Vlora Airport.',
     alternates: {
       canonical: `/${locale}/about/`,
+      languages: {
+        sq: '/sq/rreth-nesh/',
+        en: '/en/about/',
+      },
     },
   };
 }

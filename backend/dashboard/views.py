@@ -1,10 +1,10 @@
 from django.contrib.admin.views.decorators import staff_member_required
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.db.models import Sum, Count, Q, F
 from django.db.models.functions import TruncMonth, TruncYear
 from django.utils import timezone
 from decimal import Decimal
-from core.models import Client, Project, Payment, Cost, Situacion
+from core.models import Client, Project, Payment, Cost, Situacion, Preventiv, ListeCmimesh
 
 
 @staff_member_required
@@ -135,3 +135,70 @@ def yearly_report(request):
         })
 
     return render(request, 'dashboard/yearly_report.html', {'report': report})
+
+
+@staff_member_required
+def clients_list(request):
+    show_archived = request.GET.get('archived', '') == '1'
+    clients = (
+        Client.objects
+        .filter(is_archived=show_archived)
+        .annotate(
+            num_projects=Count('projects'),
+            revenue=Sum('projects__payments__amount'),
+        )
+        .order_by('-revenue')
+    )
+
+    context = {
+        'clients': clients,
+        'show_archived': show_archived,
+    }
+    return render(request, 'dashboard/clients_list.html', context)
+
+
+@staff_member_required
+def client_detail(request, client_id):
+    client = get_object_or_404(Client, pk=client_id)
+
+    projects = (
+        Project.objects
+        .filter(client=client)
+        .select_related('client')
+        .prefetch_related('payments', 'costs', 'situacions')
+        .order_by('-created_at')
+    )
+
+    projects_data = []
+    for p in projects:
+        situacions = p.situacions.all().order_by('situacion_number')
+        situacions_data = []
+        for s in situacions:
+            situacions_data.append({
+                'obj': s,
+                'total': s.grand_total,
+            })
+
+        projects_data.append({
+            'obj': p,
+            'revenue': p.total_revenue,
+            'costs': p.total_costs,
+            'profit': p.profit,
+            'preventiv_total': p.preventiv_total,
+            'situacions': situacions_data,
+            'payments': p.payments.all().order_by('-date'),
+            'cost_list': p.costs.all().order_by('-date'),
+        })
+
+    total_revenue = client.total_revenue
+    total_costs = sum(p['costs'] for p in projects_data)
+    total_profit = total_revenue - total_costs
+
+    context = {
+        'client': client,
+        'projects_data': projects_data,
+        'total_revenue': total_revenue,
+        'total_costs': total_costs,
+        'total_profit': total_profit,
+    }
+    return render(request, 'dashboard/client_detail.html', context)

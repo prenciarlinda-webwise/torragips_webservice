@@ -22,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Contact Torra Gips for gypsum works, plastering and painting in Tirana and Durrës. Call +355 68 858 0058 or send a message for a free consultation.',
     alternates: {
       canonical: `/${locale}/contact/`,
+      languages: {
+        sq: '/sq/kontakt/',
+        en: '/en/contact/',
+      },
     },
   };
 }

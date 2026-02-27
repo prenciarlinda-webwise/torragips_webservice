@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { clearToken } from '@/lib/api';
@@ -20,7 +21,7 @@ function NavIcon({ d }: { d: string }) {
   );
 }
 
-export default function Sidebar() {
+function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
   const pathname = usePathname();
 
   const handleLogout = () => {
@@ -29,7 +30,7 @@ export default function Sidebar() {
   };
 
   return (
-    <aside className="w-64 bg-[#1a365d] min-h-screen flex flex-col text-white">
+    <>
       <div className="p-5 border-b border-white/10">
         <div className="flex items-center gap-3">
           <img src="/images/logo.webp" alt="Torra Gips" className="w-9 h-9 object-contain brightness-0 invert" />
@@ -48,6 +49,7 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
+              onClick={onNavigate}
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-lg text-sm transition-all ${
                 isActive
                   ? 'bg-white/15 text-white font-medium shadow-sm border-l-2 border-[#d97706]'
@@ -71,6 +73,68 @@ export default function Sidebar() {
           Dil
         </button>
       </div>
-    </aside>
+    </>
+  );
+}
+
+export default function Sidebar() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Close on route change
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [pathname]);
+
+  // Prevent scroll when open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => { document.body.style.overflow = ''; };
+  }, [mobileOpen]);
+
+  return (
+    <>
+      {/* Mobile top bar */}
+      <div className="lg:hidden fixed top-0 left-0 right-0 z-40 bg-[#1a365d] flex items-center justify-between px-4 py-3">
+        <div className="flex items-center gap-3">
+          <button onClick={() => setMobileOpen(true)} className="text-white p-1">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+          <img src="/images/logo.webp" alt="Torra Gips" className="w-7 h-7 object-contain brightness-0 invert" />
+          <span className="text-sm font-bold tracking-widest text-white">TORRA GIPS</span>
+        </div>
+        <div className="w-1 h-4 bg-[#d97706] rounded-full" />
+      </div>
+
+      {/* Mobile overlay */}
+      {mobileOpen && (
+        <div className="lg:hidden fixed inset-0 z-50">
+          <div className="absolute inset-0 bg-black/40" onClick={() => setMobileOpen(false)} />
+          <aside className="absolute left-0 top-0 bottom-0 w-72 bg-[#1a365d] flex flex-col text-white shadow-xl">
+            {/* Close button */}
+            <button
+              onClick={() => setMobileOpen(false)}
+              className="absolute top-4 right-4 text-white/60 hover:text-white z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <SidebarContent onNavigate={() => setMobileOpen(false)} />
+          </aside>
+        </div>
+      )}
+
+      {/* Desktop sidebar */}
+      <aside className="hidden lg:flex w-64 bg-[#1a365d] min-h-screen flex-col text-white flex-shrink-0">
+        <SidebarContent />
+      </aside>
+    </>
   );
 }

@@ -8,6 +8,19 @@ import { CTA } from '@/components/sections';
 import { BreadcrumbSchema, ArticleSchema } from '@/components/seo';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 
+// Blog post hreflang mapping (sq slug -> en slug)
+const blogSlugMap: Record<string, string> = {
+  'si-te-zgjidhni-tavane-gipsi': 'how-to-choose-gypsum-ceiling',
+  'perfitimet-patinimit-profesional': 'benefits-professional-plastering',
+  'si-te-pergatisni-muret-per-lyerje': 'how-to-prepare-walls-for-painting',
+  'llojet-e-tavaneve-gipsi-modern': 'types-of-modern-gypsum-ceilings',
+  'udhezues-rinovimi-apartamenti': 'apartment-renovation-guide',
+  'zgjedhja-e-ngjyrave-per-shtepine': 'choosing-paint-colors-for-your-home',
+};
+const enToSqSlugMap = Object.fromEntries(
+  Object.entries(blogSlugMap).map(([sq, en]) => [en, sq])
+);
+
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
@@ -39,6 +52,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.excerpt,
     alternates: {
       canonical: `/${locale}/blog/${slug}/`,
+      languages: {
+        ...(locale === 'sq' && blogSlugMap[slug] && {
+          sq: `/sq/blog/${slug}/`,
+          en: `/en/blog/${blogSlugMap[slug]}/`,
+        }),
+        ...(locale === 'en' && enToSqSlugMap[slug] && {
+          sq: `/sq/blog/${enToSqSlugMap[slug]}/`,
+          en: `/en/blog/${slug}/`,
+        }),
+      },
     },
     openGraph: {
       title: post.title,

@@ -53,9 +53,10 @@ class ServiceCatalogAdmin(ModelAdmin):
 
 @admin.register(Client)
 class ClientAdmin(ModelAdmin):
-    list_display = ['name', 'business_name', 'phone', 'city', 'display_project_count', 'display_total_revenue']
+    list_display = ['name', 'business_name', 'phone', 'city', 'display_project_count', 'display_total_revenue', 'display_archived']
     search_fields = ['name', 'phone', 'business_name', 'email']
-    list_filter = ['city']
+    list_filter = ['city', 'is_archived']
+    actions = ['archive_selected', 'unarchive_selected']
     fieldsets = (
         (None, {
             'fields': ('name', 'business_name', 'phone', 'email'),
@@ -67,6 +68,9 @@ class ClientAdmin(ModelAdmin):
             'fields': ('notes',),
             'classes': ('collapse',),
         }),
+        ('Statusi', {
+            'fields': ('is_archived',),
+        }),
     )
 
     @admin.display(description='Projekte')
@@ -77,19 +81,35 @@ class ClientAdmin(ModelAdmin):
     def display_total_revenue(self, obj):
         return f"{obj.total_revenue:,.0f} ALL"
 
+    @admin.display(description='Arkivuar', boolean=True)
+    def display_archived(self, obj):
+        return obj.is_archived
+
+    @admin.action(description='Arkivo klientet e zgjedhur')
+    def archive_selected(self, request, queryset):
+        queryset.update(is_archived=True)
+
+    @admin.action(description='Riaktivizo klientet e zgjedhur')
+    def unarchive_selected(self, request, queryset):
+        queryset.update(is_archived=False)
+
+    def has_delete_permission(self, request, obj=None):
+        return False
+
 
 # ── Project ──────────────────────────────────────────────────────
 
 @admin.register(Project)
 class ProjectAdmin(ModelAdmin):
-    list_display = ['name', 'client', 'project_type', 'status', 'display_revenue', 'display_costs', 'display_profit']
-    list_filter = ['status', 'project_type', 'city']
+    list_display = ['name', 'client', 'project_type', 'status', 'display_revenue', 'display_costs', 'display_profit', 'display_archived']
+    list_filter = ['status', 'project_type', 'city', 'is_archived']
     search_fields = ['name', 'client__name']
     autocomplete_fields = ['client']
     inlines = [CostInline]
+    actions = ['archive_selected', 'unarchive_selected']
     fieldsets = (
         ('Informacion', {
-            'fields': ('client', 'name', 'project_type', 'city', 'status', 'start_date', 'notes'),
+            'fields': ('client', 'name', 'project_type', 'city', 'status', 'is_archived', 'start_date', 'notes'),
         }),
         ('Permbledhje Financiare', {
             'fields': ('display_preventiv_total', 'display_revenue', 'display_costs', 'display_profit'),
@@ -131,6 +151,21 @@ class ProjectAdmin(ModelAdmin):
             '<span style="color: {}; font-weight: bold;">{:,.0f} ALL</span>',
             color, profit
         )
+
+    @admin.display(description='Arkivuar', boolean=True)
+    def display_archived(self, obj):
+        return obj.is_archived
+
+    @admin.action(description='Arkivo projektet e zgjedhura')
+    def archive_selected(self, request, queryset):
+        queryset.update(is_archived=True)
+
+    @admin.action(description='Riaktivizo projektet e zgjedhura')
+    def unarchive_selected(self, request, queryset):
+        queryset.update(is_archived=False)
+
+    def has_delete_permission(self, request, obj=None):
+        return False
 
     @admin.display(description='Dokumente')
     def display_documents(self, obj):

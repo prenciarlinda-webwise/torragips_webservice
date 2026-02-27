@@ -35,7 +35,7 @@
 {% if chart_labels %}
 <div class="chart-container">
     <h2 class="section-title" style="margin-top:0;">Te Ardhurat Mujore</h2>
-    <canvas id="revenueChart" height="80"></canvas>
+    <canvas id="revenueChart"></canvas>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4/dist/chart.umd.min.js"></script>
 <script>
@@ -52,6 +52,8 @@
         },
         options: {
             responsive: true,
+            maintainAspectRatio: true,
+            aspectRatio: window.innerWidth < 768 ? 1.2 : 2.5,
             plugins: { legend: { display: false } },
             scales: { y: { beginAtZero: true } }
         }
@@ -61,6 +63,7 @@
 
 {% if top_clients %}
 <h2 class="section-title">Klientet Kryesore sipas te Ardhurave</h2>
+<div class="table-wrapper">
 <table class="report-table">
     <thead>
         <tr>
@@ -79,10 +82,12 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
 {% endif %}
 
 {% if projects_pl %}
 <h2 class="section-title">Fitimi dhe Humbja per Projekt</h2>
+<div class="table-wrapper">
 <table class="report-table">
     <thead>
         <tr>
@@ -109,5 +114,6 @@
         {% endfor %}
     </tbody>
 </table>
+</div>
 {% endif %}
 {% endblock %}

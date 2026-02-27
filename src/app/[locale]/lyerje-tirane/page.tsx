@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional painting in Tirana. Interior and exterior painting, eco-friendly paints and decorative effects for commercial and residential projects. 100+ projects. Free consultation.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'lyerje-tirane' : 'painting-tirana'}/`,
+      languages: {
+        sq: '/sq/lyerje-tirane/',
+        en: '/en/painting-tirana/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

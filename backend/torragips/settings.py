@@ -58,12 +58,12 @@ WSGI_APPLICATION = 'torragips.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': config('DATABASE_ENGINE', default='django.db.backends.sqlite3'),
-        'NAME': config('DATABASE_NAME', default=str(BASE_DIR / 'db.sqlite3')),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': config('DATABASE_NAME', default='torragips_db'),
         'USER': config('DATABASE_USER', default=''),
         'PASSWORD': config('DATABASE_PASSWORD', default=''),
-        'HOST': config('DATABASE_HOST', default=''),
-        'PORT': config('DATABASE_PORT', default=''),
+        'HOST': config('DATABASE_HOST', default='localhost'),
+        'PORT': config('DATABASE_PORT', default='5432'),
     }
 }
 
@@ -104,6 +104,15 @@ REST_FRAMEWORK = {
     ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 25,
+    'DEFAULT_THROTTLE_CLASSES': [
+        'rest_framework.throttling.AnonRateThrottle',
+        'rest_framework.throttling.UserRateThrottle',
+    ],
+    'DEFAULT_THROTTLE_RATES': {
+        'anon': '20/minute',
+        'user': '200/minute',
+        'login': '5/minute',
+    },
 }
 
 # CORS
@@ -112,6 +121,59 @@ CORS_ALLOWED_ORIGINS = config(
     default='http://localhost:3000,http://localhost:3001',
     cast=Csv(),
 )
+# Logging
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '[{asctime}] {levelname} {name} {message}',
+            'style': '{',
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs' / 'django.log',
+            'formatter': 'verbose',
+        },
+        'security_file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'logs' / 'security.log',
+            'formatter': 'verbose',
+        },
+        'console': {
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        'django.security': {
+            'handlers': ['security_file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django.request': {
+            'handlers': ['file', 'console'],
+            'level': 'WARNING',
+            'propagate': False,
+        },
+        'core': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
+
 CORS_ALLOW_HEADERS = [
     'accept',
     'authorization',
@@ -126,6 +188,9 @@ UNFOLD = {
     "SITE_TITLE": "Torra Gips",
     "SITE_HEADER": "Torra Gips Management",
     "SITE_SYMBOL": "construction",
+    "STYLES": [
+        lambda request: "css/admin_custom.css",
+    ],
     "SIDEBAR": {
         "show_search": True,
         "navigation": [
@@ -136,6 +201,11 @@ UNFOLD = {
                         "title": "Dashboard",
                         "icon": "dashboard",
                         "link": "/admin/dashboard/",
+                    },
+                    {
+                        "title": "Te gjithe Klientet",
+                        "icon": "groups",
+                        "link": "/admin/dashboard/clients/",
                     },
                 ],
             },

@@ -22,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Punime gipsi, patinim murash dhe lyerje profesionale në Tiranë dhe Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Konsultë falas.',
     alternates: {
       canonical: `/${locale}/sherbime/`,
+      languages: {
+        sq: '/sq/sherbime/',
+        en: '/en/services/',
+      },
     },
   };
 }

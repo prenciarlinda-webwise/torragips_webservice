@@ -21,6 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'View our completed gypsum works, plastering and painting projects in Tirana and Durrës. Vlora Airport, Green Coast, Rolling Hills.',
     alternates: {
       canonical: `/${locale}/gallery/`,
+      languages: {
+        sq: '/sq/galeri/',
+        en: '/en/gallery/',
+      },
     },
   };
 }

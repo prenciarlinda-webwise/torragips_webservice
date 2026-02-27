@@ -27,6 +27,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Indicative prices for gypsum works, suspended ceilings, plastering and painting in Tirana and Durrës. Final price depends on the project. Call for a free quote.',
     alternates: {
       canonical: `/${locale}/cmime/`,
+      languages: {
+        sq: '/sq/cmime/',
+        en: '/en/pricing/',
+      },
     },
   };
 }

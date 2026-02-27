@@ -22,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Torra Gips është kompani lider për punime gipsi, patinim dhe lyerje në Tiranë dhe Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës.',
     alternates: {
       canonical: `/${locale}/rreth-nesh/`,
+      languages: {
+        sq: '/sq/rreth-nesh/',
+        en: '/en/about/',
+      },
     },
   };
 }

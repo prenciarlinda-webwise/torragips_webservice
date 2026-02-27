@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional wall plastering for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`,
+      languages: {
+        sq: '/sq/patinim/',
+        en: '/en/wall-plastering/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

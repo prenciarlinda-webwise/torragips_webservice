@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional wall plastering in Tirana. Interior and exterior plastering, decorative plaster and wall repairs for commercial and residential projects. 100+ projects. Free consultation.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'patinim-tirane' : 'wall-plastering-tirana'}/`,
+      languages: {
+        sq: '/sq/patinim-tirane/',
+        en: '/en/wall-plastering-tirana/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

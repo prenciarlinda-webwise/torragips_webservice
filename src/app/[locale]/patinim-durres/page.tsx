@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional wall plastering in Durrës. Interior and exterior plastering, decorative plaster and wall repairs for hotels, resorts and residential projects. 100+ projects. Free consultation.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'patinim-durres' : 'wall-plastering-durres'}/`,
+      languages: {
+        sq: '/sq/patinim-durres/',
+        en: '/en/wall-plastering-durres/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

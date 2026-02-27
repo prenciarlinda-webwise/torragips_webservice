@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional gypsum works in Durrës. Suspended ceilings, space partitions and decorations for hotels, resorts and residential projects. 100+ completed projects. Free consultation.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'punime-gipsi-durres' : 'gypsum-works-durres'}/`,
+      languages: {
+        sq: '/sq/punime-gipsi-durres/',
+        en: '/en/gypsum-works-durres/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

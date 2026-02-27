@@ -23,6 +23,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Get a free quote for gypsum works, plastering and painting in Tirana and Durrës. Free consultation and on-site visit.',
     alternates: {
       canonical: `/${locale}/pricing/`,
+      languages: {
+        sq: '/sq/cmime/',
+        en: '/en/pricing/',
+      },
     },
   };
 }

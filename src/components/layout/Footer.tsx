@@ -11,6 +11,8 @@ export default function Footer() {
   const quickLinks = [
     { href: '/', label: t('nav.home') },
     { href: locale === 'sq' ? '/sherbime' : '/services', label: t('nav.services') },
+    { href: locale === 'sq' ? '/galeri' : '/gallery', label: t('nav.gallery') },
+    { href: locale === 'sq' ? '/cmime' : '/pricing', label: locale === 'sq' ? 'Çmime' : 'Pricing' },
     { href: locale === 'sq' ? '/rreth-nesh' : '/about', label: t('nav.about') },
     { href: '/blog', label: t('nav.blog') },
     { href: locale === 'sq' ? '/kontakt' : '/contact', label: t('nav.contact') },

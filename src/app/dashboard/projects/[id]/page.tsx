@@ -142,6 +142,7 @@ function DocumentSection({
   title,
   type,
   projectId,
+  projectCity = '',
   documents,
   onReload,
   refItems,
@@ -150,6 +151,7 @@ function DocumentSection({
   title: string;
   type: 'liste-cmimesh' | 'preventiv' | 'situacion';
   projectId: number;
+  projectCity?: string;
   documents: any[];
   onReload: () => void;
   refItems?: any[];
@@ -197,7 +199,7 @@ function DocumentSection({
   const openNew = () => {
     setEditId(null);
     setDate(new Date().toISOString().split('T')[0]);
-    setCity('');
+    setCity(projectCity);
     setDocNumber(String((documents.length || 0) + 1));
     setPaymentStatus('pending');
     setPaidDate('');
@@ -620,7 +622,7 @@ export default function ProjectDetailPage() {
         </div>
 
         {/* Financial summary */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6 pt-4 border-t border-gray-100">
+        <div className="grid grid-cols-2 gap-4 mt-6 pt-4 border-t border-gray-100">
           <div>
             <p className="text-xs text-gray-500 uppercase tracking-wider">Te Ardhurat</p>
             <p className="text-lg font-bold text-emerald-600">{fmt(totalRevenue)} ALL</p>
@@ -643,12 +645,12 @@ export default function ProjectDetailPage() {
       </div>
 
       {/* Tabs */}
-      <div className="flex gap-1 bg-gray-100 p-1 rounded-lg w-fit">
+      <div className="flex gap-1 bg-gray-100 p-1 rounded-lg w-fit overflow-x-auto max-w-full">
         {TAB_CONFIG.map((t) => (
           <button
             key={t.key}
             onClick={() => setTab(t.key)}
-            className={`px-4 py-2 text-sm rounded-md transition-colors ${
+            className={`px-4 py-2 text-sm rounded-md transition-colors whitespace-nowrap flex-shrink-0 ${
               tab === t.key ? 'bg-white text-gray-800 shadow-sm font-medium' : 'text-gray-500 hover:text-gray-700'
             }`}
           >
@@ -666,13 +668,13 @@ export default function ProjectDetailPage() {
       {/* Tab Content */}
       <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
         {tab === 'liste-cmimesh' && (
-          <DocumentSection title="Liste Cmimesh" type="liste-cmimesh" projectId={projectId} documents={listeCmimesh} onReload={load} services={services} />
+          <DocumentSection title="Liste Cmimesh" type="liste-cmimesh" projectId={projectId} projectCity={project.city} documents={listeCmimesh} onReload={load} services={services} />
         )}
         {tab === 'preventiv' && (
-          <DocumentSection title="Preventiv" type="preventiv" projectId={projectId} documents={preventiv} onReload={load} refItems={listeCmimesh[0]?.items || []} services={services} />
+          <DocumentSection title="Preventiv" type="preventiv" projectId={projectId} projectCity={project.city} documents={preventiv} onReload={load} refItems={listeCmimesh[0]?.items || []} services={services} />
         )}
         {tab === 'situacion' && (
-          <DocumentSection title="Situacion" type="situacion" projectId={projectId} documents={situacions} onReload={load} refItems={preventiv[0]?.items || []} services={services} />
+          <DocumentSection title="Situacion" type="situacion" projectId={projectId} projectCity={project.city} documents={situacions} onReload={load} refItems={preventiv[0]?.items || []} services={services} />
         )}
         {tab === 'costs' && (
           <CostsSection projectId={projectId} costs={costs} onReload={load} />

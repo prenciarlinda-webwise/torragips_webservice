@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional gypsum works in Tirana. Suspended ceilings, space partitions and decorations for commercial and residential projects. 100+ completed projects. Free consultation.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'punime-gipsi-tirane' : 'gypsum-works-tirana'}/`,
+      languages: {
+        sq: '/sq/punime-gipsi-tirane/',
+        en: '/en/gypsum-works-tirana/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

@@ -21,6 +21,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: 'Shikoni projektet tona të përfunduara të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës. Aeroporti i Vlorës, Green Coast, Rolling Hills.',
     alternates: {
       canonical: `/${locale}/galeri/`,
+      languages: {
+        sq: '/sq/galeri/',
+        en: '/en/gallery/',
+      },
     },
   };
 }

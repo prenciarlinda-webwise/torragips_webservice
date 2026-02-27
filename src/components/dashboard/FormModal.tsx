@@ -27,7 +27,7 @@ export default function FormModal({ title, open, onClose, onSubmit, children, lo
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
       <div className="absolute inset-0 bg-[#1a365d]/30 backdrop-blur-[2px]" onClick={onClose} />
-      <div className={`relative bg-white rounded-xl shadow-xl w-full mx-4 max-h-[90vh] overflow-y-auto ${wide ? 'max-w-4xl' : 'max-w-lg'}`}>
+      <div className={`relative bg-white rounded-xl shadow-xl w-full mx-2 sm:mx-4 max-h-[85vh] overflow-y-auto ${wide ? 'max-w-4xl' : 'max-w-lg'}`}>
         <div className="sticky top-0 z-10 bg-[#1a365d] px-6 py-4 flex items-center justify-between rounded-t-xl">
           <h2 className="text-base font-semibold text-white">{title}</h2>
           <button onClick={onClose} className="text-white/60 hover:text-white text-xl leading-none transition-colors">&times;</button>

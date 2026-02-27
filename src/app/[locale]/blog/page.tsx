@@ -22,6 +22,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional tips and guides for gypsum works, wall plastering and painting. Learn more from Torra Gips experts.',
     alternates: {
       canonical: `/${locale}/blog/`,
+      languages: {
+        sq: '/sq/blog/',
+        en: '/en/blog/',
+      },
     },
   };
 }

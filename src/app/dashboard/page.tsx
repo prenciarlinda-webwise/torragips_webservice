@@ -91,15 +91,19 @@ export default function DashboardPage() {
             ) : (
               <div className="space-y-2">
                 {recentClients.map((c) => (
-                  <div key={c.id} className="flex items-center justify-between py-2.5 px-3 rounded-lg hover:bg-gray-50 transition-colors">
+                  <button
+                    key={c.id}
+                    onClick={() => router.push(`/dashboard/clients/${c.id}/`)}
+                    className="w-full flex items-center justify-between py-2.5 px-3 rounded-lg hover:bg-gray-50 transition-colors text-left group"
+                  >
                     <div>
-                      <p className="text-sm font-medium text-[#1f2937]">{c.name}</p>
+                      <p className="text-sm font-medium text-[#1f2937] group-hover:text-[#1a365d] transition-colors">{c.name}</p>
                       <p className="text-xs text-gray-400">{c.phone}{c.city ? ` - ${c.city}` : ''}</p>
                     </div>
                     {c.business_name && (
                       <span className="text-[10px] px-2 py-0.5 bg-[#d97706]/10 text-[#d97706] rounded font-medium">{c.business_name}</span>
                     )}
-                  </div>
+                  </button>
                 ))}
               </div>
             )}

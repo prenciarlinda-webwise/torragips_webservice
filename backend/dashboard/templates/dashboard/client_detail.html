@@ -1,0 +1,197 @@
+{% extends "dashboard/base_dashboard.html" %}
+
+{% block title %}{{ client.name }} - Torra Gips{% endblock %}
+
+{% block dashboard_content %}
+<div style="display:flex;align-items:center;gap:12px;margin-bottom:8px;flex-wrap:wrap;">
+    <a href="{% url 'dashboard-clients' %}" style="color:#1e3a5f;text-decoration:none;font-size:14px;">&larr; Te gjithe Klientet</a>
+    {% if client.is_archived %}
+        <span style="background:#f59e0b;color:white;padding:3px 10px;border-radius:12px;font-size:12px;">Arkivuar</span>
+    {% endif %}
+</div>
+
+<h1 class="section-title" style="margin-top:8px;">{{ client.name }}</h1>
+
+<!-- Client Info -->
+<div class="dashboard-cards">
+    <div class="card">
+        <div class="card-label">Biznesi</div>
+        <div class="card-value" style="font-size:16px;">{{ client.business_name|default:"-" }}</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Telefoni</div>
+        <div class="card-value" style="font-size:16px;">{{ client.phone }}</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Email</div>
+        <div class="card-value" style="font-size:16px;">{{ client.email|default:"-" }}</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Qyteti</div>
+        <div class="card-value" style="font-size:16px;">{{ client.city|default:"-" }}</div>
+    </div>
+</div>
+
+{% if client.address %}
+<div class="card" style="margin-bottom:16px;background:white;border-radius:12px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+    <div class="card-label">Adresa</div>
+    <div style="font-size:14px;color:#1e293b;">{{ client.address }}</div>
+</div>
+{% endif %}
+
+<!-- Financial Summary -->
+<div class="dashboard-cards">
+    <div class="card">
+        <div class="card-label">Te Ardhurat Totale</div>
+        <div class="card-value green">{{ total_revenue|floatformat:0 }} ALL</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Kostot Totale</div>
+        <div class="card-value red">{{ total_costs|floatformat:0 }} ALL</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Fitimi Total</div>
+        <div class="card-value {% if total_profit >= 0 %}green{% else %}red{% endif %}">{{ total_profit|floatformat:0 }} ALL</div>
+    </div>
+    <div class="card">
+        <div class="card-label">Projekte</div>
+        <div class="card-value blue">{{ projects_data|length }}</div>
+    </div>
+</div>
+
+<!-- Projects -->
+{% for pd in projects_data %}
+<div style="background:white;border-radius:12px;padding:20px;box-shadow:0 1px 3px rgba(0,0,0,0.1);margin-bottom:20px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
+        <h2 style="margin:0;font-size:16px;color:#1e293b;">
+            {{ pd.obj.name }}
+            {% if pd.obj.is_archived %}
+                <span style="background:#f59e0b;color:white;padding:2px 8px;border-radius:10px;font-size:11px;margin-left:6px;">Arkivuar</span>
+            {% endif %}
+        </h2>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+            <span style="background:{% if pd.obj.status == 'active' %}#2563eb{% elif pd.obj.status == 'completed' %}#16a34a{% else %}#dc2626{% endif %};color:white;padding:3px 10px;border-radius:12px;font-size:12px;">{{ pd.obj.get_status_display }}</span>
+            <span style="background:#e2e8f0;color:#475569;padding:3px 10px;border-radius:12px;font-size:12px;">{{ pd.obj.get_project_type_display }}</span>
+        </div>
+    </div>
+
+    <!-- Project financials -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:16px;">
+        <div style="text-align:center;padding:10px;background:#f8fafc;border-radius:8px;">
+            <div style="font-size:11px;color:#64748b;text-transform:uppercase;">Preventiv</div>
+            <div style="font-size:15px;font-weight:600;color:#1e293b;">{{ pd.preventiv_total|floatformat:0 }} ALL</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:#f8fafc;border-radius:8px;">
+            <div style="font-size:11px;color:#64748b;text-transform:uppercase;">Te Ardhurat</div>
+            <div style="font-size:15px;font-weight:600;color:#16a34a;">{{ pd.revenue|floatformat:0 }} ALL</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:#f8fafc;border-radius:8px;">
+            <div style="font-size:11px;color:#64748b;text-transform:uppercase;">Kostot</div>
+            <div style="font-size:15px;font-weight:600;color:#dc2626;">{{ pd.costs|floatformat:0 }} ALL</div>
+        </div>
+        <div style="text-align:center;padding:10px;background:#f8fafc;border-radius:8px;">
+            <div style="font-size:11px;color:#64748b;text-transform:uppercase;">Fitimi</div>
+            <div style="font-size:15px;font-weight:600;color:{% if pd.profit >= 0 %}#16a34a{% else %}#dc2626{% endif %};">{{ pd.profit|floatformat:0 }} ALL</div>
+        </div>
+    </div>
+
+    <!-- Situacions -->
+    {% if pd.situacions %}
+    <h3 style="font-size:14px;color:#475569;margin:12px 0 8px;">Situacione</h3>
+    <div class="table-wrapper" style="margin-bottom:12px;">
+    <table class="report-table">
+        <thead>
+            <tr>
+                <th>Nr.</th>
+                <th>Data</th>
+                <th class="text-right">Total (ALL)</th>
+                <th>Statusi</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s in pd.situacions %}
+            <tr>
+                <td>{{ s.obj.situacion_number }}</td>
+                <td>{{ s.obj.date|date:"d/m/Y" }}</td>
+                <td class="text-right">{{ s.total|floatformat:0 }}</td>
+                <td>
+                    {% if s.obj.payment_status == 'paid' %}
+                        <span style="background:#22c55e;color:white;padding:2px 8px;border-radius:10px;font-size:11px;">Paguar</span>
+                    {% else %}
+                        <span style="background:#eab308;color:white;padding:2px 8px;border-radius:10px;font-size:11px;">Ne pritje</span>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
+
+    <!-- Payments -->
+    {% if pd.payments %}
+    <h3 style="font-size:14px;color:#475569;margin:12px 0 8px;">Pagesat</h3>
+    <div class="table-wrapper" style="margin-bottom:12px;">
+    <table class="report-table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th class="text-right">Shuma (ALL)</th>
+                <th>Shenime</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pay in pd.payments %}
+            <tr>
+                <td>{{ pay.date|date:"d/m/Y" }}</td>
+                <td class="text-right">{{ pay.amount|floatformat:0 }}</td>
+                <td>{{ pay.notes|default:"-" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
+
+    <!-- Costs -->
+    {% if pd.cost_list %}
+    <h3 style="font-size:14px;color:#475569;margin:12px 0 8px;">Kostot</h3>
+    <div class="table-wrapper">
+    <table class="report-table">
+        <thead>
+            <tr>
+                <th>Data</th>
+                <th>Kategoria</th>
+                <th>Pershkrimi</th>
+                <th class="text-right">Shuma (ALL)</th>
+                <th>Furnitori</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for c in pd.cost_list %}
+            <tr>
+                <td>{{ c.date|date:"d/m/Y" }}</td>
+                <td>{{ c.get_category_display }}</td>
+                <td>{{ c.description }}</td>
+                <td class="text-right">{{ c.amount|floatformat:0 }}</td>
+                <td>{{ c.supplier|default:"-" }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    </div>
+    {% endif %}
+</div>
+{% empty %}
+<div style="background:white;border-radius:12px;padding:40px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,0.1);">
+    <p style="color:#64748b;">Ky klient nuk ka projekte.</p>
+</div>
+{% endfor %}
+
+{% if client.notes %}
+<div style="background:white;border-radius:12px;padding:16px;box-shadow:0 1px 3px rgba(0,0,0,0.1);margin-bottom:20px;">
+    <div class="card-label">Shenime per klientin</div>
+    <div style="font-size:14px;color:#1e293b;white-space:pre-wrap;">{{ client.notes }}</div>
+</div>
+{% endif %}
+{% endblock %}

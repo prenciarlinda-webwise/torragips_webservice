@@ -24,6 +24,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : 'Professional painting in Durrës. Interior and exterior painting for hotels, resorts and coastal properties. Paints resistant to maritime climate. 100+ projects. Free consultation.',
     alternates: {
       canonical: `/${locale}/${locale === 'sq' ? 'lyerje-durres' : 'painting-durres'}/`,
+      languages: {
+        sq: '/sq/lyerje-durres/',
+        en: '/en/painting-durres/',
+      },
     },
     openGraph: {
       title: locale === 'sq'

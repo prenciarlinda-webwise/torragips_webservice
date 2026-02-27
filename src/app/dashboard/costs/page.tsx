@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { costsApi, projectsApi } from '@/lib/api';
 import DataTable from '@/components/dashboard/DataTable';
 import FormModal from '@/components/dashboard/FormModal';
@@ -11,6 +12,7 @@ const CATEGORIES: Record<string, string> = {
 };
 
 export default function CostsPage() {
+  const router = useRouter();
   const [data, setData] = useState<any[]>([]);
   const [projects, setProjects] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
@@ -103,7 +105,7 @@ export default function CostsPage() {
         </button>
       </div>
 
-      <DataTable columns={columns} data={data} loading={loading} onEdit={openEdit} onDelete={handleDelete} />
+      <DataTable columns={columns} data={data} loading={loading} onRowClick={(item: any) => item.project && router.push(`/dashboard/projects/${item.project}/`)} onEdit={openEdit} onDelete={handleDelete} />
 
       <FormModal title={editId ? 'Ndrysho Koston' : 'Shto Kosto'} open={modalOpen} onClose={() => setModalOpen(false)} onSubmit={handleSubmit} loading={saving}>
         <div className="grid grid-cols-2 gap-4">
