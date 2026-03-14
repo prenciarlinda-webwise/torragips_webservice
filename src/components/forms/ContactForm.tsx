@@ -1,35 +1,21 @@
 'use client';
 
 import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { Button, Input, Textarea, Select } from '@/components/ui';
-
-const contactSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters'),
-  email: z.string().email('Invalid email address'),
-  phone: z.string().min(10, 'Phone number must be at least 10 characters'),
-  service: z.string().min(1, 'Please select a service'),
-  message: z.string().min(10, 'Message must be at least 10 characters'),
-});
-
-type ContactFormData = z.infer<typeof contactSchema>;
+import { COMPANY } from '@/lib/constants';
+import { getWhatsAppLink } from '@/lib/utils';
 
 export default function ContactForm() {
   const t = useTranslations('contact.form');
   const tNav = useTranslations('nav.servicesItems');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const locale = useLocale();
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<ContactFormData>({
-    resolver: zodResolver(contactSchema),
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    service: '',
+    message: '',
   });
 
   const serviceOptions = [
@@ -38,81 +24,66 @@ export default function ContactForm() {
     { value: 'painting', label: tNav('painting') },
   ];
 
-  const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
-    setSubmitStatus('idle');
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
 
-    try {
-      // For static export, we'll just simulate success
-      // In production, you'd integrate with an email service or form backend
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      console.log('Form submitted:', data);
-      setSubmitStatus('success');
-      reset();
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-    }
+    const serviceLabel = serviceOptions.find(s => s.value === formData.service)?.label || '';
+
+    const message = locale === 'sq'
+      ? `Përshëndetje! Quhem ${formData.name}.${formData.phone ? ` Numri im: ${formData.phone}.` : ''} Jam i/e interesuar për ${serviceLabel}.${formData.message ? ` ${formData.message}` : ''}`
+      : `Hello! My name is ${formData.name}.${formData.phone ? ` My number: ${formData.phone}.` : ''} I am interested in ${serviceLabel}.${formData.message ? ` ${formData.message}` : ''}`;
+
+    window.open(getWhatsAppLink(COMPANY.phone, message), '_blank');
   };
 
+  const isValid = formData.name.length >= 2 && formData.service;
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <Input
         label={t('name')}
         placeholder={t('namePlaceholder')}
-        error={errors.name?.message}
-        {...register('name')}
+        value={formData.name}
+        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+        required
       />
 
-      <div className="grid md:grid-cols-2 gap-6">
-        <Input
-          label={t('email')}
-          type="email"
-          placeholder={t('emailPlaceholder')}
-          error={errors.email?.message}
-          {...register('email')}
-        />
-
-        <Input
-          label={t('phone')}
-          type="tel"
-          placeholder={t('phonePlaceholder')}
-          error={errors.phone?.message}
-          {...register('phone')}
-        />
-      </div>
+      <Input
+        label={t('phone')}
+        type="tel"
+        placeholder={t('phonePlaceholder')}
+        value={formData.phone}
+        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+      />
 
       <Select
         label={t('service')}
         placeholder={t('selectService')}
         options={serviceOptions}
-        error={errors.service?.message}
-        {...register('service')}
+        value={formData.service}
+        onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+        required
       />
 
       <Textarea
         label={t('message')}
         placeholder={t('messagePlaceholder')}
-        rows={5}
-        error={errors.message?.message}
-        {...register('message')}
+        rows={4}
+        value={formData.message}
+        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
       />
 
-      {submitStatus === 'success' && (
-        <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700">
-          {t('successMessage')}
-        </div>
-      )}
-
-      {submitStatus === 'error' && (
-        <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700">
-          {t('errorMessage')}
-        </div>
-      )}
-
-      <Button type="submit" variant="primary" size="lg" isLoading={isSubmitting} className="w-full">
-        {isSubmitting ? t('submitting') : t('submit')}
+      <Button
+        type="submit"
+        variant="primary"
+        size="lg"
+        disabled={!isValid}
+        className="w-full !bg-green-500 hover:!bg-green-600"
+      >
+        <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        {locale === 'sq' ? 'Dërgo në WhatsApp' : 'Send via WhatsApp'}
       </Button>
     </form>
   );
