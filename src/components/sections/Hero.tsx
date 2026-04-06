@@ -70,47 +70,53 @@ export default function Hero() {
           <div className="relative hidden lg:block">
             <div className="grid grid-cols-2 gap-4">
               {/* Service Cards */}
-              <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-soft hover:shadow-medium transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" />
-                  </svg>
+              <Link href={locale === 'sq' ? '/punime-gipsi' : '/gypsum-works'}>
+                <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-soft hover:shadow-medium transition-shadow">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6z" />
+                    </svg>
+                  </div>
+                  <p className="text-dark-800 font-semibold mb-1">
+                    {locale === 'sq' ? 'Punime Gipsi' : 'Gypsum Works'}
+                  </p>
+                  <p className="text-text-light text-sm">
+                    {locale === 'sq' ? 'Tavane, ndarja, dekorime' : 'Ceilings, partitions, decorations'}
+                  </p>
                 </div>
-                <h3 className="text-dark-800 font-semibold mb-1">
-                  {locale === 'sq' ? 'Punime Gipsi' : 'Gypsum Works'}
-                </h3>
-                <p className="text-text-light text-sm">
-                  {locale === 'sq' ? 'Tavane, ndarja, dekorime' : 'Ceilings, partitions, decorations'}
-                </p>
-              </div>
+              </Link>
 
-              <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-soft hover:shadow-medium transition-shadow mt-8">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                  </svg>
+              <Link href={locale === 'sq' ? '/patinim' : '/wall-plastering'}>
+                <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-soft hover:shadow-medium transition-shadow mt-8">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                    </svg>
+                  </div>
+                  <p className="text-dark-800 font-semibold mb-1">
+                    {locale === 'sq' ? 'Patinim' : 'Plastering'}
+                  </p>
+                  <p className="text-text-light text-sm">
+                    {locale === 'sq' ? 'Suva, patinim muri' : 'Plaster, wall finishing'}
+                  </p>
                 </div>
-                <h3 className="text-dark-800 font-semibold mb-1">
-                  {locale === 'sq' ? 'Patinim' : 'Plastering'}
-                </h3>
-                <p className="text-text-light text-sm">
-                  {locale === 'sq' ? 'Suva, patinim muri' : 'Plaster, wall finishing'}
-                </p>
-              </div>
+              </Link>
 
-              <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-soft hover:shadow-medium transition-shadow">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-                  </svg>
+              <Link href={locale === 'sq' ? '/lyerje' : '/painting'}>
+                <div className="bg-white rounded-2xl p-6 border border-neutral-200 shadow-soft hover:shadow-medium transition-shadow">
+                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                    </svg>
+                  </div>
+                  <p className="text-dark-800 font-semibold mb-1">
+                    {locale === 'sq' ? 'Lyerje' : 'Painting'}
+                  </p>
+                  <p className="text-text-light text-sm">
+                    {locale === 'sq' ? 'Bojë, efekte dekorative' : 'Paint, decorative effects'}
+                  </p>
                 </div>
-                <h3 className="text-dark-800 font-semibold mb-1">
-                  {locale === 'sq' ? 'Lyerje' : 'Painting'}
-                </h3>
-                <p className="text-text-light text-sm">
-                  {locale === 'sq' ? 'Bojë, efekte dekorative' : 'Paint, decorative effects'}
-                </p>
-              </div>
+              </Link>
 
               <div className="bg-accent rounded-2xl p-6 shadow-medium mt-8">
                 <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center mb-4">
@@ -118,9 +124,9 @@ export default function Hero() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
                 </div>
-                <h3 className="text-white font-semibold mb-1">
+                <p className="text-white font-semibold mb-1">
                   {locale === 'sq' ? 'Cilësi e Garantuar' : 'Quality Guaranteed'}
-                </h3>
+                </p>
                 <p className="text-white/80 text-sm">
                   {locale === 'sq' ? 'Materiale premium Knauf & Rigips' : 'Premium Knauf & Rigips materials'}
                 </p>

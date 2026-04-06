@@ -5,7 +5,7 @@ import { getAllPosts } from '@/lib/blog';
 export const dynamic = 'force-static';
 
 // Stable date for pages (updated manually when content changes)
-const LAST_UPDATED = '2026-02-12';
+const LAST_UPDATED = '2026-04-06';
 
 interface PageEntry {
   sq: string;
@@ -53,6 +53,14 @@ const blogAlternates: Record<string, string> = {
   'llojet-e-tavaneve-gipsi-modern': 'types-of-modern-gypsum-ceilings',
   'udhezues-rinovimi-apartamenti': 'apartment-renovation-guide',
   'zgjedhja-e-ngjyrave-per-shtepine': 'choosing-paint-colors-for-your-home',
+  'punime-gipsi-per-sallone': 'gypsum-works-for-living-rooms',
+  'punime-gipsi-per-televizor': 'gypsum-tv-wall-designs',
+  'punime-gipsi-per-dhoma-gjumi': 'gypsum-works-for-bedrooms',
+  'koordinimi-gipsit-me-instalimet-elektrike': 'coordinating-gypsum-with-electrical-installations',
+  'ndertesa-te-reja-tirane-trende-arkitekturore': 'new-buildings-tirana-architectural-trends',
+  'si-te-planifikoni-buxhetin-rinovim': 'renovation-budget-planning-guide',
+  'pse-gipsi-material-kyc-ndertime-moderne': 'why-gypsum-key-material-modern-construction',
+  'rinovimi-apartamentit-cfare-duhet-te-dini': 'apartment-renovation-what-to-know',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -71,6 +79,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           sq: `${baseUrl}/sq${page.sq}/`,
           en: `${baseUrl}/en${page.en}/`,
+          'x-default': `${baseUrl}/sq${page.sq}/`,
         },
       },
     });
@@ -85,6 +94,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           sq: `${baseUrl}/sq${page.sq}/`,
           en: `${baseUrl}/en${page.en}/`,
+          'x-default': `${baseUrl}/sq${page.sq}/`,
         },
       },
     });
@@ -107,6 +117,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             sq: `${baseUrl}/sq/blog/${post.slug}/`,
             en: `${baseUrl}/en/blog/${enSlug}/`,
+            'x-default': `${baseUrl}/sq/blog/${post.slug}/`,
           },
         },
       }),
@@ -125,6 +136,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             sq: `${baseUrl}/sq/blog/${sqSlug}/`,
             en: `${baseUrl}/en/blog/${post.slug}/`,
+            'x-default': `${baseUrl}/sq/blog/${sqSlug}/`,
           },
         },
       }),

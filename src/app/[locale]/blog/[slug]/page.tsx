@@ -16,6 +16,14 @@ const blogSlugMap: Record<string, string> = {
   'llojet-e-tavaneve-gipsi-modern': 'types-of-modern-gypsum-ceilings',
   'udhezues-rinovimi-apartamenti': 'apartment-renovation-guide',
   'zgjedhja-e-ngjyrave-per-shtepine': 'choosing-paint-colors-for-your-home',
+  'punime-gipsi-per-sallone': 'gypsum-works-for-living-rooms',
+  'punime-gipsi-per-televizor': 'gypsum-tv-wall-designs',
+  'punime-gipsi-per-dhoma-gjumi': 'gypsum-works-for-bedrooms',
+  'koordinimi-gipsit-me-instalimet-elektrike': 'coordinating-gypsum-with-electrical-installations',
+  'ndertesa-te-reja-tirane-trende-arkitekturore': 'new-buildings-tirana-architectural-trends',
+  'si-te-planifikoni-buxhetin-rinovim': 'renovation-budget-planning-guide',
+  'pse-gipsi-material-kyc-ndertime-moderne': 'why-gypsum-key-material-modern-construction',
+  'rinovimi-apartamentit-cfare-duhet-te-dini': 'apartment-renovation-what-to-know',
 };
 const enToSqSlugMap = Object.fromEntries(
   Object.entries(blogSlugMap).map(([sq, en]) => [en, sq])
@@ -147,49 +155,115 @@ export default async function BlogPostPage({ params }: Props) {
       {/* Content */}
       <section className="section-padding bg-white">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <article
-              className="prose prose-lg prose-primary max-w-none"
-              dangerouslySetInnerHTML={{ __html: contentHtml }}
-            />
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 max-w-5xl mx-auto">
+            <div>
+              <article
+                className="prose prose-lg prose-primary max-w-none"
+                dangerouslySetInnerHTML={{ __html: contentHtml }}
+              />
 
-            {/* Related Service Link */}
-            <div className="mt-12 p-6 bg-primary-50 rounded-xl">
-              <p className="text-text font-medium">
-                {locale === 'sq'
-                  ? 'Keni nevojë për ndihmë profesionale? Shikoni '
-                  : 'Need professional help? Check out our '}
-                {post.tags.includes('gypsum') || post.tags.includes('gips') || post.tags.includes('ceiling') || post.tags.includes('tavan') ? (
-                  <a href={`/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`} className="text-primary font-semibold hover:underline">
-                    {locale === 'sq' ? 'shërbimet tona të punimeve të gipsit' : 'gypsum works services'}
-                  </a>
-                ) : (
-                  <a href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`} className="text-primary font-semibold hover:underline">
-                    {locale === 'sq' ? 'shërbimet tona të patinimit profesional' : 'professional plastering services'}
-                  </a>
-                )}
-                {locale === 'sq' ? ' ose telefononi ' : ' or call us at '}
-                <a href="tel:+355688580058" className="text-primary font-semibold hover:underline">+355 68 858 0058</a>
-                {locale === 'sq' ? ' për konsultë falas.' : ' for a free consultation.'}
-              </p>
+              {/* Related Service Link */}
+              <div className="mt-12 p-6 bg-primary-50 rounded-xl">
+                <p className="text-text font-medium">
+                  {locale === 'sq'
+                    ? 'Keni nevojë për ndihmë profesionale? Shikoni '
+                    : 'Need professional help? Check out our '}
+                  {post.tags.includes('gypsum') || post.tags.includes('gips') || post.tags.includes('ceiling') || post.tags.includes('tavan') ? (
+                    <a href={`/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`} className="text-primary font-semibold hover:underline">
+                      {locale === 'sq' ? 'shërbimet tona të punimeve të gipsit' : 'gypsum works services'}
+                    </a>
+                  ) : (
+                    <a href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`} className="text-primary font-semibold hover:underline">
+                      {locale === 'sq' ? 'shërbimet tona të patinimit profesional' : 'professional plastering services'}
+                    </a>
+                  )}
+                  {locale === 'sq' ? ' ose telefononi ' : ' or call us at '}
+                  <a href="tel:+355688580058" className="text-primary font-semibold hover:underline">+355 68 858 0058</a>
+                  {locale === 'sq' ? ' për konsultë falas.' : ' for a free consultation.'}
+                </p>
+              </div>
+
+              {/* Tags */}
+              {post.tags.length > 0 && (
+                <div className="mt-12 pt-8 border-t">
+                  <h3 className="font-semibold text-primary mb-4">{t('tags')}:</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {post.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-neutral-100 text-text-light text-sm rounded-full"
+                      >
+                        #{tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
 
-            {/* Tags */}
-            {post.tags.length > 0 && (
-              <div className="mt-12 pt-8 border-t">
-                <h3 className="font-semibold text-primary mb-4">{t('tags')}:</h3>
-                <div className="flex flex-wrap gap-2">
-                  {post.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-neutral-100 text-text-light text-sm rounded-full"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
+            {/* Sidebar */}
+            <aside className="hidden lg:block">
+              <div className="sticky top-24 space-y-6">
+                {/* WhatsApp Contact Card */}
+                <div className="bg-white rounded-xl shadow-soft border p-6">
+                  <h3 className="text-lg font-bold text-primary-800 mb-2">
+                    {locale === 'sq' ? 'Konsultë Falas' : 'Free Consultation'}
+                  </h3>
+                  <p className="text-sm text-text-light mb-4">
+                    {locale === 'sq'
+                      ? 'Na shkruani në WhatsApp për konsultë falas dhe ofertë pa detyrim.'
+                      : 'Message us on WhatsApp for a free consultation and no-obligation quote.'}
+                  </p>
+                  <a
+                    href="https://wa.me/355688580058"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
+                  >
+                    {locale === 'sq' ? 'Shkruani në WhatsApp' : 'Message on WhatsApp'}
+                  </a>
+                  <p className="text-xs text-text-light mt-3 text-center">
+                    +355 68 858 0058
+                  </p>
+                </div>
+
+                {/* Services Section */}
+                <div className="bg-white rounded-xl shadow-soft border p-6">
+                  <h3 className="text-lg font-bold text-primary-800 mb-4">
+                    {locale === 'sq' ? 'Shërbimet Tona' : 'Our Services'}
+                  </h3>
+                  <ul className="space-y-3">
+                    <li>
+                      <a
+                        href={`/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`}
+                        className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
+                      >
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
+                        {locale === 'sq' ? 'Punime Gipsi' : 'Gypsum Works'}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`}
+                        className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
+                      >
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
+                        {locale === 'sq' ? 'Patinim Profesional' : 'Professional Plastering'}
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href={`/${locale}/${locale === 'sq' ? 'lyerje' : 'painting'}/`}
+                        className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
+                      >
+                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
+                        {locale === 'sq' ? 'Lyerje Profesionale' : 'Professional Painting'}
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-            )}
+            </aside>
           </div>
         </div>
       </section>

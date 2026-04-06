@@ -135,8 +135,31 @@ export default async function AboutPage({ params }: Props) {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Founder */}
       <section className="py-16 bg-neutral-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-[200px_1fr] gap-8 items-start">
+              <div className="text-center">
+                <div className="w-32 h-32 mx-auto bg-gradient-to-br from-primary to-primary-800 rounded-full flex items-center justify-center mb-3">
+                  <span className="text-4xl font-bold text-white">A</span>
+                </div>
+                <h3 className="font-bold text-primary-800">{t('founder.name')}</h3>
+                <p className="text-sm text-text-light">{t('founder.role')}</p>
+              </div>
+              <div>
+                <h2 className="section-title mb-4">{t('founder.title')}</h2>
+                <p className="text-text-light text-lg leading-relaxed">
+                  {t('founder.content')}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-title mb-6">{t('mission.title')}</h2>

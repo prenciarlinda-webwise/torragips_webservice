@@ -71,36 +71,35 @@ export default async function BlogPage({ params }: Props) {
           {posts.length > 0 ? (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => (
-                <Card key={post.slug} hover>
-                  <CardContent className="p-6">
-                    <div className="mb-4">
-                      <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full">
-                        {post.category}
-                      </span>
-                    </div>
-                    <h2 className="text-xl font-bold text-primary mb-3 line-clamp-2">
-                      {post.title}
-                    </h2>
-                    <p className="text-text-light mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <span className="text-sm text-text-light">
-                        {new Date(post.date).toLocaleDateString(locale === 'sq' ? 'sq-AL' : 'en-US', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric',
-                        })}
-                      </span>
-                      <Link
-                        href={`/blog/${post.slug}`}
-                        className="text-accent font-semibold hover:underline"
-                      >
-                        {t('readMore')} →
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
+                  <Card hover>
+                    <CardContent className="p-6">
+                      <div className="mb-4">
+                        <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full">
+                          {post.category}
+                        </span>
+                      </div>
+                      <h2 className="text-xl font-bold text-primary mb-3 line-clamp-2 group-hover:text-accent transition-colors">
+                        {post.title}
+                      </h2>
+                      <p className="text-text-light mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <span className="text-sm text-text-light">
+                          {new Date(post.date).toLocaleDateString(locale === 'sq' ? 'sq-AL' : 'en-US', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric',
+                          })}
+                        </span>
+                        <span className="text-accent font-semibold group-hover:underline">
+                          {t('readMore')} →
+                        </span>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           ) : (
