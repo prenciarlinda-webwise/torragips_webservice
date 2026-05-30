@@ -192,7 +192,7 @@ export default async function PricingPage({ params }: Props) {
           <Breadcrumbs items={breadcrumbs} />
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
-              {locale === 'sq' ? 'Çmime Orientuese' : 'Indicative Prices'}
+              {locale === 'sq' ? 'Çmime Punime Gipsi, Tavane & Lyerje' : 'Gypsum Works, Ceilings & Painting Prices'}
             </h1>
             <p className="text-xl text-text-light">
               {locale === 'sq'

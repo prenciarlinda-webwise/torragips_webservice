@@ -61,8 +61,8 @@ export default function LocalBusinessSchema({ locale }: LocalBusinessSchemaProps
       ratingValue: '5.0',
       bestRating: '5',
       worstRating: '1',
-      ratingCount: '15',
-      reviewCount: '15',
+      ratingCount: '5',
+      reviewCount: '5',
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',

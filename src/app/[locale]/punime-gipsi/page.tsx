@@ -148,6 +148,18 @@ export default async function GypsumWorksPage({ params }: Props) {
           'Konsultim teknik për zgjidhjen optimale',
         ],
       },
+      {
+        title: 'Punime Gipsi për Shtëpi: Sallone, Dhoma Gjumi dhe Televizor',
+        content: 'Përveç projekteve komerciale, ofrojmë punime gipsi për shtëpi private në Tiranë dhe Durrës. Tavanet e gipsit për sallone, dizajnet me gips për televizor dhe punimet dekorative për dhoma gjumi janë ndër shërbimet më të kërkuara nga klientët tanë rezidencialë.',
+        listItems: [
+          'Punime gipsi për sallone me tavane moderne dhe ndriçim LED',
+          'Dizajne gipsi për televizor - mure dekorative me spote dhe nika',
+          'Tavane gipsi për dhoma gjumi me efekte të buta ndriçimi',
+          'Punime me gips për shtëpi: korniza, nika dhe rafte dekorative',
+          'Tavane të varura me gips për kuzhina dhe korridore',
+          'Zgjidhje të personalizuara sipas stilit të banesës suaj',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -216,6 +228,8 @@ export default async function GypsumWorksPage({ params }: Props) {
     relatedLinks: [
       { href: '/punime-gipsi-tirane', label: 'Punime Gipsi në Tiranë' },
       { href: '/punime-gipsi-durres', label: 'Punime Gipsi në Durrës' },
+      { href: '/blog/punime-gipsi-per-sallone', label: 'Punime Gipsi për Sallone' },
+      { href: '/blog/punime-gipsi-per-televizor', label: 'Punime Gipsi për Televizor' },
       { href: '/patinim', label: 'Patinim Profesional Murash' },
       { href: '/lyerje', label: 'Lyerje Profesionale' },
     ],
@@ -276,6 +290,18 @@ export default async function GypsumWorksPage({ params }: Props) {
           'Solutions for high humidity environments (bathrooms, industrial kitchens)',
           'Certifications according to European and international standards',
           'Technical consulting for the optimal solution',
+        ],
+      },
+      {
+        title: 'Gypsum Works for Homes: Living Rooms, Bedrooms and TV Walls',
+        content: 'Beyond commercial projects, we offer gypsum works for private homes in Tirana and Durrës. Gypsum ceilings for living rooms, gypsum TV wall designs and decorative works for bedrooms are among the most requested services from our residential clients.',
+        listItems: [
+          'Gypsum works for living rooms with modern ceilings and LED lighting',
+          'Gypsum TV wall designs - decorative walls with spotlights and niches',
+          'Gypsum ceilings for bedrooms with soft lighting effects',
+          'Gypsum works for homes: cornices, niches and decorative shelves',
+          'Suspended gypsum ceilings for kitchens and hallways',
+          'Custom solutions tailored to your home style',
         ],
       },
     ],
@@ -346,6 +372,8 @@ export default async function GypsumWorksPage({ params }: Props) {
     relatedLinks: [
       { href: '/gypsum-works-tirana', label: 'Gypsum Works in Tirana' },
       { href: '/gypsum-works-durres', label: 'Gypsum Works in Durrës' },
+      { href: '/blog/gypsum-works-for-living-rooms', label: 'Gypsum Works for Living Rooms' },
+      { href: '/blog/gypsum-tv-wall-designs', label: 'Gypsum TV Wall Designs' },
       { href: '/wall-plastering', label: 'Professional Wall Plastering' },
       { href: '/painting', label: 'Professional Painting Services' },
     ],
