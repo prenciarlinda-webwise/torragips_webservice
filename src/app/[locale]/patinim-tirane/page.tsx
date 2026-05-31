@@ -148,6 +148,30 @@ export default async function PlasteringTiranaPage({ params }: Props) {
           'Kamza dhe rrethinat - ndërtime të reja dhe rinovime',
         ],
       },
+      {
+        title: 'Sa Kushton Patinimi i Mureve në Tiranë?',
+        content: 'Çmimi i patinimit në Tiranë varet nga lloji i suvasë, gjendja e mureve dhe sipërfaqja totale. Si orientim, patinimi me gips për sipërfaqe brendshme varion zakonisht nga 600 deri 1200 Lek/m2, ndërsa suvaja dekorative si stucco veneziano arrin nivele më të larta. Faktorë si lartësia e tavanit, përgatitja paraprake dhe afatet ndikojnë në koston përfundimtare. Ne ofrojmë ofertë të detajuar falas pas matjes në vend, pa kosto të fshehura.',
+        listItems: [
+          'Sipërfaqja totale në m2 e murave dhe tavaneve',
+          'Lloji i suvasë - gips, çimento ose dekorative',
+          'Gjendja fillestare dhe nevoja për riparime paraprake',
+          'Numri i shtresave dhe niveli i lëmimit të kërkuar',
+          'Aksesi në kantier dhe lartësia e ambienteve',
+          'Afati kohor dhe nevoja për punë jashtë orarit',
+        ],
+      },
+      {
+        title: 'Cili Sistem Gipsi Është më i Mirë - Knauf apo Rigips?',
+        content: 'Si Knauf ashtu edhe Rigips janë sisteme gipsi europiane të besueshme që ne përdorim rregullisht në Tiranë. Pllakat standarde të gipsit ofrojnë rezistencë ndaj zjarrit dhe izolim akustik të mirë, ndërsa variantet rezistente ndaj lagështisë janë ideale për banjo dhe kuzhina. Zgjedhja varet nga kërkesat e projektit. Për lyerje përdorim bojëra premium si Dulux, Jotun dhe Caparol, që sigurojnë mbulim rreth 10-12 m2 për litër dhe qëndrueshmëri afatgjatë.',
+        listItems: [
+          'Pllaka standarde gipsi për mure dhe tavane të zakonshme',
+          'Variante rezistente ndaj lagështisë për banjo dhe kuzhina',
+          'Pllaka rezistente ndaj zjarrit për zona të sigurisë',
+          'Profile metalike galvanizuese për struktura të qëndrueshme',
+          'Bojëra Dulux, Jotun dhe Caparol për përfundime cilësore',
+          'Stuko dhe primer të përshtatura me secilin sistem',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +226,14 @@ export default async function PlasteringTiranaPage({ params }: Props) {
       {
         question: 'Si mund të marr ofertë falas për patinim në Tiranë?',
         answer: 'Na kontaktoni në +355 68 858 0058 me telefon ose WhatsApp. Ofrojmë inspektim dhe vlerësim falas në çdo zonë të Tiranës. Sillni matjet ose planin arkitekturor për një ofertë më të saktë.',
+      },
+      {
+        question: 'Sa kohë duhet të thahet patinimi para se të lyhet?',
+        answer: 'Suvaja me gips zakonisht thahet brenda 24-48 orësh në kushte normale, ndërsa suvatë me bazë çimentoje kërkojnë disa ditë më shumë. Para lyerjes këshillojmë pritjen që muri të thahet plotësisht, pasi lyerja e parakohshme shkakton njolla dhe çarje. Ne respektojmë gjithmonë kohët teknike të secilit material.',
+      },
+      {
+        question: 'A jepni garanci për punimet e patinimit në Tiranë?',
+        answer: 'Po, ofrojmë garanci për punimet tona të patinimit. Nëse shfaqen çarje ose defekte nga zbatimi brenda periudhës së garancisë, i riparojmë pa pagesë. Përdorimi i materialeve premium si Knauf, Rigips dhe bojërave Dulux ose Jotun siguron qëndrueshmëri afatgjatë të sipërfaqeve.',
       },
     ],
     sectionTitles: {
@@ -277,6 +309,30 @@ export default async function PlasteringTiranaPage({ params }: Props) {
           'Kamza and surroundings - new constructions and renovations',
         ],
       },
+      {
+        title: 'How Much Does Wall Plastering Cost in Tirana?',
+        content: 'The price of plastering in Tirana depends on the type of plaster, wall condition and total surface area. As a guide, gypsum plastering for interior surfaces typically ranges from 600 to 1200 Lek/m2, while decorative plaster such as Venetian stucco reaches higher levels. Factors like ceiling height, surface preparation and deadlines affect the final cost. We provide a detailed free quote after an on-site measurement, with no hidden costs.',
+        listItems: [
+          'Total surface area in m2 of walls and ceilings',
+          'Type of plaster - gypsum, cement or decorative',
+          'Initial condition and need for preliminary repairs',
+          'Number of coats and the level of smoothness required',
+          'Site access and the height of the spaces',
+          'Timeline and the need for work outside business hours',
+        ],
+      },
+      {
+        title: 'Which Gypsum System Is Better - Knauf or Rigips?',
+        content: 'Both Knauf and Rigips are reliable European gypsum systems that we use regularly in Tirana. Standard gypsum boards offer fire resistance and good acoustic insulation, while moisture-resistant variants are ideal for bathrooms and kitchens. The choice depends on the project requirements. For painting we use premium brands such as Dulux, Jotun and Caparol, which provide coverage of around 10-12 m2 per liter and long-term durability.',
+        listItems: [
+          'Standard gypsum boards for common walls and ceilings',
+          'Moisture-resistant variants for bathrooms and kitchens',
+          'Fire-resistant boards for safety zones',
+          'Galvanized metal profiles for stable structures',
+          'Dulux, Jotun and Caparol paints for quality finishes',
+          'Fillers and primers matched to each system',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -331,6 +387,14 @@ export default async function PlasteringTiranaPage({ params }: Props) {
       {
         question: 'How can I get a free plastering quote in Tirana?',
         answer: 'Contact us at +355 68 858 0058 by phone or WhatsApp. We offer free inspection and assessment in any area of Tirana. Bring measurements or architectural plans for a more accurate quote.',
+      },
+      {
+        question: 'How long should plaster dry before painting?',
+        answer: 'Gypsum plaster typically dries within 24-48 hours under normal conditions, while cement-based plasters need several days more. Before painting we recommend waiting for the wall to dry completely, because premature painting causes stains and cracking. We always respect the technical drying times of each material.',
+      },
+      {
+        question: 'Do you provide a warranty for plastering work in Tirana?',
+        answer: 'Yes, we provide a warranty on our plastering work. If cracks or workmanship defects appear within the warranty period, we repair them free of charge. Using premium materials such as Knauf, Rigips and Dulux or Jotun paints ensures long-term durability of the surfaces.',
       },
     ],
     sectionTitles: {

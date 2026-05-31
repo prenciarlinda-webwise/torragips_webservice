@@ -148,6 +148,30 @@ export default async function PaintingDurresPage({ params }: Props) {
           'Rruga Durrës-Tiranë dhe zonat e reja urbane - projekte të reja ndërtimi',
         ],
       },
+      {
+        title: 'Sa Kushton Lyerja për Metër Katror në Durrës?',
+        content: 'Çmimi i lyerjes në Durrës varet nga gjendja e sipërfaqes, lloji i bojës dhe numri i duarve. Si orientim, lyerja e brendshme me dy duar fillon nga 350 deri 600 Lek për metër katror, ndërsa fasadat bregdetare anti-kripë me bojëra Jotun ose Caparol shkojnë nga 700 deri 1400 Lek për metër katror. Patinimi paraprak dhe trajtimet anti-lagështi shtojnë koston, por zgjasin jetën e përfundimit. Vlerësimi në vend është falas.',
+        listItems: [
+          'Lyerje brendshme me dy duar nga 350 deri 600 Lek për metër katror',
+          'Fasada bregdetare anti-kripë nga 700 deri 1400 Lek për metër katror',
+          'Patinim dhe nivelim i mureve para lyerjes me kosto shtesë sipas gjendjes',
+          'Bojëra premium Dulux, Jotun dhe Caparol rrisin çmimin por zgjasin jetën',
+          'Efektet dekorative dhe muralet çmohen veçmas sipas sipërfaqes dhe teknikës',
+          'Zbritje për projekte të mëdha hotelesh dhe resorteve mbi 500 metra katrorë',
+        ],
+      },
+      {
+        title: 'Sa Zgjat Procesi i Lyerjes dhe Tharja në Durrës?',
+        content: 'Kohëzgjatja varet nga sipërfaqja dhe lloji i bojës. Një ekip ynë lyen rreth 40 deri 60 metra katrorë në ditë me dy duar. Bojërat ujore Dulux thahen në prekje brenda 1 deri 2 orësh dhe lejojnë dorën e dytë pas 4 orësh, ndërsa në klimën e lagësht të Durrësit tharja e plotë mund të zgjasë deri 24 orë. Patinimi kërkon 24 deri 48 orë para lyerjes përfundimtare.',
+        listItems: [
+          'Ekipi lyen rreth 40 deri 60 metra katrorë në ditë me dy duar',
+          'Tharja në prekje e bojërave ujore brenda 1 deri 2 orësh',
+          'Dora e dytë aplikohet pas afërsisht 4 orësh në kushte normale',
+          'Tharja e plotë deri 24 orë për shkak të lagështisë bregdetare të Durrësit',
+          'Patinimi dhe nivelimi kërkojnë 24 deri 48 orë para lyerjes',
+          'Planifikim sezonal për hotele në mënyrë që dhomat të jenë gati para sezonit',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +226,14 @@ export default async function PaintingDurresPage({ params }: Props) {
       {
         question: 'Si mund të marr ofertë për lyerje në Durrës?',
         answer: 'Na telefononi në +355 68 858 0058 ose na shkruani në WhatsApp. Vizita dhe vlerësimi janë falas kudo në Durrës dhe bregdet. Ekipi ynë do të vlerësojë gjendjen e sipërfaqeve dhe do të rekomandojë zgjidhjen më të mirë.',
+      },
+      {
+        question: 'Si duhet përgatitur muri para lyerjes në Durrës?',
+        answer: 'Përgatitja e mirë vendos cilësinë e përfundimit. Pastrojmë sipërfaqen nga pluhuri dhe myshku, mbushim çarjet, aplikojmë patinim për nivelim dhe një dorë primer. Në Durrës shtojmë trajtim anti-lagështi para bojës, gjë që ndalon kthimin e njollave dhe zgjat jetën e ngjyrës.',
+      },
+      {
+        question: 'Çfarë garancie ofroni për punimet e lyerjes në Durrës?',
+        answer: 'Ofrojmë garanci për cilësinë e punës dhe materialeve të aplikuara. Përdorim vetëm bojëra origjinale Dulux, Jotun dhe Caparol me certifikatë. Nëse shfaqen defekte nga zbatimi brenda periudhës së dakorduar, i korrigjojmë pa kosto shtesë për ju.',
       },
     ],
     sectionTitles: {
@@ -277,6 +309,30 @@ export default async function PaintingDurresPage({ params }: Props) {
           'Durrës-Tirana road and new urban zones - new construction projects',
         ],
       },
+      {
+        title: 'How Much Does Painting Cost Per Square Meter in Durrës?',
+        content: 'Painting prices in Durrës depend on surface condition, paint type and the number of coats. As a guide, interior painting with two coats starts from 350 to 600 Lek per square meter, while anti-salt coastal facades using Jotun or Caparol paints range from 700 to 1400 Lek per square meter. Preliminary plastering and anti-moisture treatments add cost but extend the life of the finish. On-site assessment is free.',
+        listItems: [
+          'Interior painting with two coats from 350 to 600 Lek per square meter',
+          'Anti-salt coastal facades from 700 to 1400 Lek per square meter',
+          'Plastering and wall leveling before painting at additional cost by condition',
+          'Premium Dulux, Jotun and Caparol paints raise price but extend lifespan',
+          'Decorative effects and murals priced separately by surface and technique',
+          'Discounts for large hotel and resort projects over 500 square meters',
+        ],
+      },
+      {
+        title: 'How Long Does Painting and Drying Take in Durrës?',
+        content: 'Duration depends on the surface and paint type. One of our teams paints around 40 to 60 square meters per day with two coats. Water-based Dulux paints are touch-dry within 1 to 2 hours and allow a second coat after 4 hours, while in the humid climate of Durrës full curing can take up to 24 hours. Plastering needs 24 to 48 hours before final painting.',
+        listItems: [
+          'A team paints around 40 to 60 square meters per day with two coats',
+          'Water-based paints become touch-dry within 1 to 2 hours',
+          'Second coat applied after roughly 4 hours in normal conditions',
+          'Full curing up to 24 hours due to the coastal humidity of Durrës',
+          'Plastering and leveling need 24 to 48 hours before painting',
+          'Seasonal planning for hotels so rooms are ready before the season',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -331,6 +387,14 @@ export default async function PaintingDurresPage({ params }: Props) {
       {
         question: 'How can I get a painting quote in Durrës?',
         answer: 'Call us at +355 68 858 0058 or write to us on WhatsApp. Visits and assessments are free anywhere in Durrës and along the coast. Our team will assess surface conditions and recommend the best solution.',
+      },
+      {
+        question: 'How should a wall be prepared before painting in Durrës?',
+        answer: 'Good preparation determines finish quality. We clean the surface of dust and mold, fill cracks, apply plaster for leveling and one coat of primer. In Durrës we add anti-moisture treatment before paint, which prevents stains from returning and extends the life of the color.',
+      },
+      {
+        question: 'What warranty do you offer for painting work in Durrës?',
+        answer: 'We offer a warranty on the quality of workmanship and applied materials. We use only certified original Dulux, Jotun and Caparol paints. If defects from application appear within the agreed period, we correct them at no additional cost to you.',
       },
     ],
     sectionTitles: {

@@ -148,6 +148,30 @@ export default async function PaintingTiranaPage({ params }: Props) {
           'Yzberisht, Kamëz dhe Bathore - projekte rezidenciale dhe komerciale',
         ],
       },
+      {
+        title: 'Sa Kushton Lyerja për Metër Katror në Tiranë?',
+        content: 'Çmimi i lyerjes në Tiranë varet nga gjendja e mureve, numri i duarve dhe cilësia e bojës. Si referencë indikative për tregun shqiptar, lyerja e brendshme me përgatitje standarde shkon zakonisht 400-800 Lek për metër katror, ndërsa fasadat e jashtme me bojëra elastike Caparol arrijnë 900-1500 Lek për metër katror. Patinimi paraprak dhe riparimet e çarjeve faturohen veçmas. Vizita në vend dhe vlerësimi janë falas në Tiranë dhe Durrës.',
+        listItems: [
+          'Lyerje brendshme me dy duar - rreth 400-800 Lek për metër katror sipas përgatitjes',
+          'Fasada të jashtme me bojëra elastike - rreth 900-1500 Lek për metër katror',
+          'Patinim dhe nivelim sipërfaqesh - faturohet veçmas sipas gjendjes së murit',
+          'Bojërat premium Dulux, Jotun dhe Caparol ndikojnë në çmimin përfundimtar',
+          'Sipërfaqet e mëdha komerciale përfitojnë çmime më të favorshme për metër katror',
+          'Oferta me shkrim falas pas matjes në vend kudo në Tiranë dhe Durrës',
+        ],
+      },
+      {
+        title: 'Cilat Janë Gabimet më të Shpeshta gjatë Lyerjes?',
+        content: 'Shumë probleme me lyerjen lindin nga përgatitja e nxituar e sipërfaqeve dhe mosrespektimi i kohëve të tharjes. Boja e aplikuar mbi mure me lagështirë ose pluhur shkëputet shpejt, ndërsa duart e shtuara pa pritur tharjen krijojnë çarje dhe njolla. Përdorimi i bojës së lirë me mbulim të dobët shton duar shtesë dhe rrit koston reale. Ekipi ynë në Tiranë respekton kohët e tharjes 2-4 orë mes duarve dhe përgatit murin plotësisht.',
+        listItems: [
+          'Aplikim i bojës mbi mure me lagështirë ose pa primer përshtatës',
+          'Mosrespektimi i kohës së tharjes 2-4 orë midis duarve të bojës',
+          'Përgatitje e dobët e sipërfaqes pa stukim dhe pa zmerilim',
+          'Përdorim i bojës së lirë me mbulim nën 10 metra katrorë për litër',
+          'Mungesa e mbrojtjes së dyshemeve dhe mobilieve gjatë punës',
+          'Lyerje në temperatura nën 10°C ose me lagështirë të lartë ajri',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +226,14 @@ export default async function PaintingTiranaPage({ params }: Props) {
       {
         question: 'Si mund të caktoj një takim për lyerje në Tiranë?',
         answer: 'Na telefononi në +355 68 858 0058 ose na shkruani në WhatsApp. Vizita dhe vlerësimi janë falas kudo në Tiranë. Sillni matjet dhe preferencat tuaja të ngjyrave për ofertë më të saktë.',
+      },
+      {
+        question: 'Sa litra bojë nevojiten për një dhomë në Tiranë?',
+        answer: 'Një litër bojë cilësore mbulon rreth 10-12 metra katrorë me një dorë. Për një dhomë mesatare prej 20 metrash katrorë me dy duar, nevojiten zakonisht 4-5 litra. Ne llogarisim sasinë e saktë gjatë vizitës falas në Tiranë dhe Durrës.',
+      },
+      {
+        question: 'Sa zgjat garancia për lyerjen e bërë nga Torra Gips?',
+        answer: 'Ofrojmë garanci për punimin dhe aplikimin e bojës. Lyerja e brendshme cilësore me bojëra Dulux ose Caparol zgjat zakonisht 5-7 vjet, ndërsa fasadat e jashtme elastike rezistojnë 8-10 vjet kur përgatitja kryhet sipas standardeve.',
       },
     ],
     sectionTitles: {
@@ -277,6 +309,30 @@ export default async function PaintingTiranaPage({ params }: Props) {
           'Yzberisht, Kamëz and Bathore - residential and commercial projects',
         ],
       },
+      {
+        title: 'How Much Does Painting Cost Per Square Meter in Tirana?',
+        content: 'Painting prices in Tirana depend on wall condition, the number of coats and paint quality. As an indicative reference for the Albanian market, interior painting with standard preparation typically runs 400-800 Lek per square meter, while exterior facades with elastic Caparol paints reach 900-1500 Lek per square meter. Plastering and crack repairs are billed separately. On-site visits and assessments are free across Tirana and Durrës.',
+        listItems: [
+          'Interior painting with two coats - around 400-800 Lek per square meter by preparation',
+          'Exterior facades with elastic paints - around 900-1500 Lek per square meter',
+          'Plastering and surface leveling - billed separately based on wall condition',
+          'Premium Dulux, Jotun and Caparol paints influence the final price',
+          'Large commercial surfaces benefit from more favorable per square meter rates',
+          'Free written quote after on-site measurement anywhere in Tirana and Durrës',
+        ],
+      },
+      {
+        title: 'What Are the Most Common Mistakes During Painting?',
+        content: 'Many painting problems arise from rushed surface preparation and ignoring drying times. Paint applied over damp or dusty walls peels quickly, while coats added before the previous one dries create cracks and blotches. Using cheap paint with poor coverage adds extra coats and raises the real cost. Our team in Tirana respects the 2-4 hour drying time between coats and prepares the wall fully before painting.',
+        listItems: [
+          'Applying paint over damp walls or without a suitable primer',
+          'Ignoring the 2-4 hour drying time between paint coats',
+          'Poor surface preparation without filling and sanding',
+          'Using cheap paint with coverage below 10 square meters per liter',
+          'Lack of floor and furniture protection during the work',
+          'Painting in temperatures below 10°C or in high air humidity',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -331,6 +387,14 @@ export default async function PaintingTiranaPage({ params }: Props) {
       {
         question: 'How can I book a painting appointment in Tirana?',
         answer: 'Call us at +355 68 858 0058 or write to us on WhatsApp. Visits and assessments are free anywhere in Tirana. Bring your measurements and color preferences for a more accurate quote.',
+      },
+      {
+        question: 'How many liters of paint does a room in Tirana need?',
+        answer: 'One liter of quality paint covers about 10-12 square meters with a single coat. For an average 20 square meter room with two coats, you typically need 4-5 liters. We calculate the exact quantity during the free visit across Tirana and Durrës.',
+      },
+      {
+        question: 'How long is the warranty for painting by Torra Gips?',
+        answer: 'We offer a warranty on workmanship and paint application. Quality interior painting with Dulux or Caparol paints typically lasts 5-7 years, while elastic exterior facades resist 8-10 years when preparation is carried out to standard.',
       },
     ],
     sectionTitles: {

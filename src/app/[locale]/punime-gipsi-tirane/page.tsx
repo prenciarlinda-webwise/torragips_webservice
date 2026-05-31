@@ -148,6 +148,30 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
           'Kamzë, Paskuqan dhe rrethinat e tjera të Tiranës',
         ],
       },
+      {
+        title: 'Sa Kushtojnë Punimet e Gipsit në Tiranë?',
+        content: 'Çmimet e punimeve të gipsit në Tiranë ndryshojnë sipas llojit të punës, materialeve dhe kompleksitetit. Si orientim për tregun shqiptar, tavanet e thjeshta të varura fillojnë rreth 2100-2300 Lek për metër katror, ndërsa dizajnet me nivele e ndriçim LED arrijnë 2500-4000 Lek. Ndarjet me panele gipsi kushtojnë zakonisht 3500-4500 Lek për metër katror duke përfshirë skeletin dhe izolimin. Faktorët kryesorë janë sasia, lartësia e ambientit dhe zona ku ndodhet projekti.',
+        listItems: [
+          'Lloji i punës - tavan i sheshtë, me nivele apo me ndriçim LED',
+          'Sasia totale e metrave katrorë - projektet e mëdha kanë çmim më të favorshëm',
+          'Materialet e zgjedhura - Knauf dhe Rigips standard apo rezistent ndaj lagështisë',
+          'Lartësia dhe qasja në ambient - tavanet e larta kërkojnë skela shtesë',
+          'Izolimi akustik ose termik i shtuar brenda strukturës',
+          'Zona në Tiranë dhe lehtësia e transportit të materialeve',
+        ],
+      },
+      {
+        title: 'Cili Material Është Më i Mirë, Knauf apo Rigips?',
+        content: 'Knauf dhe Rigips janë dy nga prodhuesit kryesorë europianë të sistemeve të gipsit dhe të dy ofrojnë cilësi të lartë për tregun e Tiranës. Knauf njihet për gamën e gjerë të paneleve të specializuara, përfshirë ato rezistente ndaj zjarrit dhe lagështisë. Rigips ofron sisteme të besueshme me profile metalike precize dhe panele akustike. Zgjedhja varet nga nevoja specifike - për banja dhe kuzhina rekomandojmë panele rezistente ndaj lagështisë, ndërsa për tavane dekorative panelet standarde janë të mjaftueshme.',
+        listItems: [
+          'Knauf - gamë e gjerë panelesh të specializuara dhe sisteme komplete',
+          'Rigips - profile metalike precize dhe panele akustike të besueshme',
+          'Panele rezistente ndaj lagështisë për banja dhe kuzhina',
+          'Panele rezistente ndaj zjarrit deri në 120 minuta sipas tipit',
+          'Panele akustike që reduktojnë zhurmën midis ambienteve',
+          'Të dyja sistemet instalohen me garanci nga ekipi ynë',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +226,14 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
       {
         question: 'A ofroni garanci për punimet e gipsit në Tiranë?',
         answer: 'Po, të gjitha punimet tona në Tiranë mbulohen me garanci të plotë. Garancia përfshin si materialin ashtu edhe punën e instalimit. Jemi të përkushtuar ndaj cilësisë dhe kënaqësisë së çdo klienti.',
+      },
+      {
+        question: 'Sa kohë duhet të thahet gipsi para se të lyhet?',
+        answer: 'Pasi përfundojnë fugat dhe stukimi, gipsi në Tiranë zakonisht thahet brenda 24 deri 48 orësh, varësisht nga lagështia dhe temperatura. Ne presim tharjen e plotë para aplikimit të bojës Dulux, Jotun ose Caparol për një sipërfaqe pa çarje dhe me ngjitje optimale.',
+      },
+      {
+        question: 'Cilat janë gabimet më të shpeshta në punimet e gipsit?',
+        answer: 'Gabimet më të zakonshme janë skeleti metalik i pamjaftueshëm, fugat e papërfunduara mirë dhe lyerja para tharjes së plotë. Këto shkaktojnë çarje dhe shtrembërime me kalimin e kohës. Ekipi ynë ndjek standardet e Knauf dhe Rigips për t i shmangur këto probleme.',
       },
     ],
     sectionTitles: {
@@ -277,6 +309,30 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
           'Kamzë, Paskuqan and other Tirana surroundings',
         ],
       },
+      {
+        title: 'How Much Do Gypsum Works Cost in Tirana?',
+        content: 'Gypsum work prices in Tirana vary by the type of work, materials and complexity. As a guide for the Albanian market, simple suspended ceilings start around 2100-2300 Lek per square meter, while multi-level designs with LED lighting reach 2500-4000 Lek. Gypsum panel partitions typically cost 3500-4500 Lek per square meter including the frame and insulation. The main factors are the total area, ceiling height and the zone where the project is located.',
+        listItems: [
+          'Type of work - flat ceiling, multi-level or with LED lighting',
+          'Total square meters - larger projects receive a more favorable rate',
+          'Selected materials - standard or moisture-resistant Knauf and Rigips',
+          'Ceiling height and access - tall ceilings require extra scaffolding',
+          'Added acoustic or thermal insulation inside the structure',
+          'The Tirana zone and ease of transporting materials',
+        ],
+      },
+      {
+        title: 'Which Material Is Better, Knauf or Rigips?',
+        content: 'Knauf and Rigips are two of the leading European gypsum system manufacturers and both deliver high quality for the Tirana market. Knauf is known for its wide range of specialized boards, including fire-resistant and moisture-resistant types. Rigips offers reliable systems with precise metal profiles and acoustic boards. The choice depends on specific needs - for bathrooms and kitchens we recommend moisture-resistant boards, while for decorative ceilings standard boards are sufficient.',
+        listItems: [
+          'Knauf - a wide range of specialized boards and complete systems',
+          'Rigips - precise metal profiles and reliable acoustic boards',
+          'Moisture-resistant boards for bathrooms and kitchens',
+          'Fire-resistant boards rated up to 120 minutes depending on type',
+          'Acoustic boards that reduce noise between rooms',
+          'Both systems are installed with a warranty from our team',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -331,6 +387,14 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
       {
         question: 'Do you offer warranty for gypsum works in Tirana?',
         answer: 'Yes, all our works in Tirana are covered by a full warranty. The warranty includes both the material and the installation work. We are committed to quality and the satisfaction of every client.',
+      },
+      {
+        question: 'How long should gypsum dry before painting?',
+        answer: 'After the joints and filling are finished, gypsum in Tirana usually dries within 24 to 48 hours, depending on humidity and temperature. We wait for full drying before applying Dulux, Jotun or Caparol paint to achieve a crack-free surface with optimal adhesion.',
+      },
+      {
+        question: 'What are the most common mistakes in gypsum works?',
+        answer: 'The most common mistakes are an insufficient metal frame, poorly finished joints and painting before full drying. These cause cracks and warping over time. Our team follows Knauf and Rigips standards to avoid these problems and ensure a durable result.',
       },
     ],
     sectionTitles: {

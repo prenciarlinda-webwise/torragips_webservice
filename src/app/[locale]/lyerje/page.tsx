@@ -148,6 +148,42 @@ export default async function PaintingPage({ params }: Props) {
           'Lyerje për ambiente ushqimore',
         ],
       },
+      {
+        title: 'Sa Kushton Lyerja për Metër Katror në Tiranë dhe Durrës?',
+        content: 'Cmimi i lyerjes varet nga përgatitja e sipërfaqes, numri i duarve dhe cilësia e bojës. Si orientim, lyerja standarde e brendshme me dy duar fillon zakonisht nga 350 deri 600 Lek për metër katror, ndërsa fasadat dhe efektet dekorative kushtojnë më shumë. Faktorë si patinimi paraprak, lartësia e tavaneve dhe gjendja e mureve ndikojnë në vlerë. Ofrojmë vizitë dhe vlerësim falas në Tiranë e Durrës para çdo oferte.',
+        listItems: [
+          'Lyerje e brendshme standarde: rreth 350-600 Lek/m2',
+          'Patinim para lyerjes: kosto shtesë sipas gjendjes',
+          'Fasada e jashtme me bojëra elastike: cmim më i lartë',
+          'Efektet dekorative dhe mermeri llogariten veçmas',
+          'Sipërfaqet mbi 200 m2 marrin cmime më të favorshme',
+          'Vizita dhe oferta në Bllok, Kashar, Farkë e Plazh janë falas',
+        ],
+      },
+      {
+        title: 'Cilat Janë Gabimet më të Shpeshta gjatë Lyerjes?',
+        content: 'Shumica e problemeve me lyerjen vijnë nga përgatitja e dobët dhe nga ngutja. Aplikimi i bojës mbi sipërfaqe me lagështi, anashkalimi i primerit ose hollimi i tepërt i bojës shkaktojnë zbehje, çarje dhe shtresa të pabarabarta. Gjithashtu, lyerja në temperatura shumë të ulëta ngadalëson tharjen dhe dëmton ngjitjen. Ne respektojmë kohët e tharjes mes duarve, zakonisht 2 deri 4 orë, dhe përgatisim çdo sipërfaqe me kujdes.',
+        listItems: [
+          'Mosaplikimi i primerit mbi suva të reja',
+          'Lyerja mbi mure me lagështi ose pluhur',
+          'Hollimi i tepërt që ul mbulimin e bojës',
+          'Mosrespektimi i kohës së tharjes mes duarve',
+          'Përdorimi i rolerave të papërshtatshëm për sipërfaqen',
+          'Anashkalimi i mbrojtjes së dyshemeve dhe mobilieve',
+        ],
+      },
+      {
+        title: 'Sa Zgjat Lyerja dhe Si Mirëmbahet?',
+        content: 'Një lyerje cilësore me bojëra premium si Dulux, Jotun ose Caparol ruan ngjyrat e gjalla për 5 deri 10 vjet në ambiente të brendshme, ndërsa fasadat e jashtme në Tiranë dhe Durrës zgjasin zakonisht 6 deri 8 vjet para se të kërkojnë rifreskim, për shkak të diellit dhe ajrit bregdetar. Sipërfaqet e lyera me bojë të lavueshme pastrohen lehtë me një leckë të lagësht pa dëmtuar ngjyrën.',
+        listItems: [
+          'Lyerje e brendshme që zgjat 5 deri 10 vjet',
+          'Fasada që rifreskohen çdo 6 deri 8 vjet',
+          'Bojëra të lavueshme që pastrohen me leckë të lagësht',
+          'Riparime me prekje pa rilyer gjithë murin',
+          'Garanci mbi punën dhe materialet e përdorura',
+          'Këshilla për ruajtjen e ngjyrës në kohë',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +238,18 @@ export default async function PaintingPage({ params }: Props) {
       {
         question: 'A ofroni garanci për lyerjen?',
         answer: 'Po, ofrojmë garanci të plotë. Bojërat cilësore që përdorim zgjasin 5-10+ vite pa probleme kur aplikohen siç duhet.',
+      },
+      {
+        question: 'Sa kohë duhet të presim para se të lyejmë suva ose patinim të ri?',
+        answer: 'Suvaja e re kërkon zakonisht 2 deri 4 javë për tharje të plotë para lyerjes, ndërsa patinimi me masë gipsi tharet brenda 24 deri 48 orë. Lyerja shumë herët mbyll lagështinë brenda murit dhe shkakton flluska. Ne testojmë lagështinë para se të fillojmë.',
+      },
+      {
+        question: 'Sa litra bojë nevojiten për të lyer një dhomë?',
+        answer: 'Një litër bojë cilësore mbulon rreth 10 deri 12 metra katror për duar. Për një dhomë 20 metra katror me dy duar nevojiten afërsisht 8 deri 10 litra bojë. Sasia varet nga thithja e murit dhe ngjyra. Ne llogarisim materialin saktë gjatë vlerësimit falas.',
+      },
+      {
+        question: 'A ofroni konsulencë për zgjedhjen e ngjyrave?',
+        answer: 'Po, ofrojmë konsulencë falas për zgjedhjen e ngjyrave sipas ndriçimit, madhësisë së ambientit dhe stilit tuaj. Përdorim bojëra me VOC të ulët, të sigurta për dhoma fëmijësh dhe ambiente pune, dhe mund të përgatisim mostra ngjyrash në mur para se të vendosni për ngjyrën finale.',
       },
     ],
     sectionTitles: {
@@ -280,6 +328,42 @@ export default async function PaintingPage({ params }: Props) {
           'Painting for food service environments',
         ],
       },
+      {
+        title: 'How Much Does Painting Cost Per Square Meter in Tirana and Durres?',
+        content: 'Painting cost depends on surface preparation, number of coats and paint quality. As a guide, standard interior painting with two coats usually starts from 350 to 600 Lek per square meter, while facades and decorative effects cost more. Factors such as prior plastering, ceiling height and wall condition affect the price. We offer a free on-site visit and assessment across Tirana and Durres before any quote.',
+        listItems: [
+          'Standard interior painting: around 350-600 Lek/m2',
+          'Plastering before painting: extra cost by condition',
+          'Exterior facade with elastic paints: higher price',
+          'Decorative and marble effects calculated separately',
+          'Surfaces over 200 m2 receive more favorable rates',
+          'Visits and quotes in Blloku, Kashar, Farke and Plazh are free',
+        ],
+      },
+      {
+        title: 'What Are the Most Common Painting Mistakes?',
+        content: 'Most painting problems come from poor preparation and rushing. Applying paint over damp surfaces, skipping primer or over-thinning the paint causes fading, cracking and uneven layers. Painting in very low temperatures also slows drying and harms adhesion. We respect drying times between coats, usually 2 to 4 hours, and carefully prepare every surface before the first coat.',
+        listItems: [
+          'Not applying primer over new plaster',
+          'Painting over damp or dusty walls',
+          'Over-thinning that reduces paint coverage',
+          'Ignoring drying time between coats',
+          'Using rollers unsuited to the surface',
+          'Skipping protection of floors and furniture',
+        ],
+      },
+      {
+        title: 'How Long Does Painting Last and How Is It Maintained?',
+        content: 'Quality painting with premium paints such as Dulux, Jotun or Caparol keeps colors vivid for 5 to 10 years indoors, while exterior facades in Tirana and Durres typically last 6 to 8 years before needing a refresh due to sun exposure and coastal air. Surfaces painted with washable paint clean easily with a damp cloth without harming the color.',
+        listItems: [
+          'Interior painting that lasts 5 to 10 years',
+          'Facades refreshed every 6 to 8 years',
+          'Washable paints cleaned with a damp cloth',
+          'Touch-up repairs without repainting the whole wall',
+          'Warranty on the work and materials used',
+          'Advice on keeping the color looking new',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -334,6 +418,18 @@ export default async function PaintingPage({ params }: Props) {
       {
         question: 'Do you offer warranty for painting?',
         answer: 'Yes, we offer full warranty. The quality paints we use last 5-10+ years without problems when properly applied.',
+      },
+      {
+        question: 'How long should we wait before painting new plaster or filler?',
+        answer: 'New plaster usually needs 2 to 4 weeks to dry fully before painting, while gypsum filler dries within 24 to 48 hours. Painting too early traps moisture inside the wall and causes blisters. We test moisture before we start any work.',
+      },
+      {
+        question: 'How many liters of paint are needed to paint a room?',
+        answer: 'One liter of quality paint covers about 10 to 12 square meters per coat. For a 20 square meter room with two coats you need roughly 8 to 10 liters. The amount depends on wall absorption and color. We calculate materials precisely during the free assessment.',
+      },
+      {
+        question: 'Do you offer color consultation?',
+        answer: 'Yes, we offer free color consultation based on lighting, room size and your style. We use low VOC paints that are safe for children rooms and workspaces, and we can prepare sample patches on the wall before you decide on the final color.',
       },
     ],
     sectionTitles: {

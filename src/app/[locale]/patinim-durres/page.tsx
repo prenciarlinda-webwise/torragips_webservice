@@ -148,6 +148,30 @@ export default async function PlasteringDurresPage({ params }: Props) {
           'Gjiri i Lalzit - projekte ekskluzive bregdetare dhe turistike',
         ],
       },
+      {
+        title: 'Sa Kushton Patinimi për Metër Katror në Durrës?',
+        content: 'Cmimi i patinimit varet nga gjendja e murit, numri i shtresave dhe lloji i përfundimit. Si referencë indikative për tregun shqiptar, patinimi standard bardh me dy shtresa rrjedh zakonisht ndërmjet 600 dhe 1200 Lek per metër katror, ndërsa suvatë dekorative venecianë ose travertin shkojnë nga 2500 deri mbi 5000 Lek per metër katror. Per ndërtesat bregdetare materialet anti-kripë e rrisin pak koston, por zgjatin shumë jetëgjatësinë. Ofrojmë inspektim falas dhe ofertë të detajuar.',
+        listItems: [
+          'Patinim standard me dy shtresa: rreth 600 deri 1200 Lek per metër katror',
+          'Suva dekorative venecianë ose travertin: 2500 deri 5000 plus Lek per metër katror',
+          'Materialet anti-lagështi për bregdet shtojnë pak ndaj cmimit bazë',
+          'Përgatitja e mureve të dëmtuara faturohet veçmas sipas gjendjes',
+          'Sipërfaqet e mëdha hoteliere përfitojnë cmime më të favorshme per metër katror',
+          'Cdo ofertë jepet me shkrim pas inspektimit falas në vend',
+        ],
+      },
+      {
+        title: 'Cili Material Gipsi Është më i Mirë, Knauf apo Rigips?',
+        content: 'Si Knauf edhe Rigips janë sisteme gipsi europiane të nivelit të lartë që ne i përdorim rregullisht. Pllakat standarde të gipsit ofrojnë rezistencë ndaj zjarrit dhe izolim akustik, ndërsa variantet jeshile rezistente ndaj lagështisë janë ideale per banjot dhe ambientet bregdetare të Durrësit. Zgjedhja varet më shumë nga aplikimi sesa nga marka. Per ngjyrosjen kombinojmë boje cilësore Dulux, Jotun ose Caparol, që mbulojnë rreth 10 deri 12 metra katror per litër dhe thahen brenda dy deri katër orëve.',
+        listItems: [
+          'Knauf dhe Rigips ofrojnë cilësi të krahasueshme dhe rezistencë ndaj zjarrit',
+          'Pllakat jeshile anti-lagështi rekomandohen per banjo dhe ndërtesa pranë detit',
+          'Pllakat me densitet të lartë rrisin izolimin akustik ndërmjet dhomave',
+          'Boja Dulux, Jotun dhe Caparol mbulon rreth 10 deri 12 metra katror per litër',
+          'Cdo shtresë boje thahet zakonisht brenda dy deri katër orëve',
+          'Sugjerojmë materialin e duhur sipas ambientit dhe buxhetit tuaj',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +226,14 @@ export default async function PlasteringDurresPage({ params }: Props) {
       {
         question: 'A ofroni garanci të veçantë për ndërtesat bregdetare?',
         answer: 'Po, ofrojmë garanci të plotë për punën dhe materialet. Për ndërtesat bregdetare përdorim materiale me rezistencë ekstra ndaj kripës dhe lagështisë, të cilat zgjasin me dekada edhe në kushte detare.',
+      },
+      {
+        question: 'Sa kohë duhet që patinimi të thahet para lyerjes?',
+        answer: 'Suvaja bazë e patinimit zakonisht thahet brenda 24 deri 48 orëve, por në klimën e lagësht bregdetare të Durrësit mund të zgjasë pak më shumë. Ne presim derisa sipërfaqja të jetë plotësisht e thatë para se të aplikojmë bojën, që rezultati të jetë i qëndrueshëm dhe pa cara.',
+      },
+      {
+        question: 'Cilat janë gabimet më të shpeshta në patinim?',
+        answer: 'Gabimet më të zakonshme janë lyerja mbi sipërfaqe ende të lagësht, anashkalimi i primerit dhe aplikimi i shtresave shumë të trasha që crregullohen. Ne përgatitim murin me kujdes, përdorim primer të duhur dhe aplikojmë shtresa të holla e të barabarta për një përfundim afatgjatë.',
       },
     ],
     sectionTitles: {
@@ -277,6 +309,30 @@ export default async function PlasteringDurresPage({ params }: Props) {
           'Lalzi Bay - exclusive coastal and tourism projects',
         ],
       },
+      {
+        title: 'How Much Does Plastering Cost Per Square Meter in Durrës?',
+        content: 'Plastering cost depends on wall condition, the number of coats and the type of finish. As an indicative reference for the Albanian market, standard white plastering with two coats typically runs between 600 and 1200 Lek per square meter, while Venetian or travertine decorative plasters range from 2500 to over 5000 Lek per square meter. For coastal buildings, anti-salt materials slightly raise the cost but greatly extend durability. We provide a free inspection and a detailed quote.',
+        listItems: [
+          'Standard two-coat plastering: around 600 to 1200 Lek per square meter',
+          'Venetian or travertine decorative plaster: 2500 to 5000 plus Lek per square meter',
+          'Anti-moisture coastal materials add slightly to the base price',
+          'Repairing damaged walls is quoted separately based on condition',
+          'Large hotel surfaces benefit from more favorable per square meter rates',
+          'Every quote is provided in writing after a free on-site inspection',
+        ],
+      },
+      {
+        title: 'Which Gypsum Material Is Better, Knauf or Rigips?',
+        content: 'Both Knauf and Rigips are high quality European gypsum systems that we use regularly. Standard gypsum boards offer fire resistance and acoustic insulation, while the moisture-resistant green variants are ideal for bathrooms and the coastal environments of Durrës. The choice depends more on the application than on the brand. For painting we combine quality Dulux, Jotun or Caparol paints, which cover roughly 10 to 12 square meters per liter and dry within two to four hours.',
+        listItems: [
+          'Knauf and Rigips offer comparable quality and fire resistance',
+          'Moisture-resistant green boards are recommended for bathrooms and seaside buildings',
+          'High density boards improve acoustic insulation between rooms',
+          'Dulux, Jotun and Caparol paint covers roughly 10 to 12 square meters per liter',
+          'Each coat of paint typically dries within two to four hours',
+          'We recommend the right material based on your environment and budget',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -331,6 +387,14 @@ export default async function PlasteringDurresPage({ params }: Props) {
       {
         question: 'Do you offer special warranty for coastal buildings?',
         answer: 'Yes, we offer full warranty for work and materials. For coastal buildings we use materials with extra resistance to salt and moisture, which last decades even in marine conditions.',
+      },
+      {
+        question: 'How long does plaster need to dry before painting?',
+        answer: 'Base plaster usually dries within 24 to 48 hours, though in the humid coastal climate of Durrës it can take a little longer. We wait until the surface is fully dry before applying paint, so the result stays durable and free of cracks.',
+      },
+      {
+        question: 'What are the most common plastering mistakes?',
+        answer: 'The most common mistakes are painting over surfaces that are still damp, skipping primer and applying coats that are too thick and crack later. We carefully prepare the wall, use the right primer and apply thin even coats for a long-lasting finish.',
       },
     ],
     sectionTitles: {

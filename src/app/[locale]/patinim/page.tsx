@@ -148,6 +148,42 @@ export default async function PlasteringPage({ params }: Props) {
           'Restaurime ndërtesash historike',
         ],
       },
+      {
+        title: 'Sa Kushton Patinimi për Metër Katror në Tiranë dhe Durrës?',
+        content: 'Cmimi i patinimit varet nga sipërfaqja, gjendja e murit dhe lloji i përfundimit. Si orientim për tregun shqiptar, patinimi standard me gips kushton zakonisht 600 deri 1200 Lek për metër katror, ndërsa suvatë dekorative si stucco veneziano shkojnë nga 2500 deri 6000 Lek për metër katror. Faktorë si lartësia e tavanit, riparimet paraprake dhe aksesi në lagje si Blloku ose Komuna e Parisit ndikojnë në buxhet. Ne ofrojmë vlerësim falas në vend para cdo oferte.',
+        listItems: [
+          'Sipërfaqja totale në metra katrorë e ambientit',
+          'Gjendja ekzistuese dhe nevoja për riparime paraprake',
+          'Lloji i përfundimit, nga patinim standard te suva dekorative',
+          'Lartësia e tavaneve dhe nevoja për skela',
+          'Aksesi në lagjet qendrore si Blloku, Sauk ose Plazhi në Durrës',
+          'Afati i dorëzimit dhe puna në turne kur kërkohet shpejtësi',
+        ],
+      },
+      {
+        title: 'Cilat Janë Gabimet më të Shpeshta në Patinim?',
+        content: 'Shumica e problemeve me patinimin vijnë nga përgatitja e nxituar dhe mosrespektimi i kohëve të tharjes. Aplikimi i shtresës së dytë para se e para të jetë tharë krijon plasaritje, ndërsa lyerja mbi suva ende të lagësht shkakton flluska dhe njolla. Mos përdorimi i rrjetës përforcuese te kthesat dhe mungesa e gruntimit cojnë në çarje afatgjata. Ne respektojmë kohët teknike, zakonisht 2 deri 7 ditë tharje sipas trashësisë dhe ajrimit, për një rezultat të qëndrueshëm.',
+        listItems: [
+          'Aplikim i shtresave të reja para tharjes së plotë',
+          'Mungesa e gruntimit përpara patinimit',
+          'Mospërdorimi i rrjetës përforcuese te kthesat dhe çarjet',
+          'Lyerje mbi suva ende të lagësht që shkakton flluska',
+          'Përzierje e gabuar e materialit me ujë',
+          'Mosajrimi i mjaftueshëm i ambientit gjatë tharjes',
+        ],
+      },
+      {
+        title: 'Sa Zgjat Patinimi dhe Si Mirëmbahet?',
+        content: 'Një patinim i kryer profesionalisht zgjat me dekada pa u dëmtuar, sepse baza e përgatitur mirë nuk plasarit dhe nuk shkëputet. Sipërfaqet e brendshme praktikisht nuk kërkojnë mirëmbajtje, ndërsa fasadat e jashtme në Tiranë dhe Durrës rekomandohet të rifreskohen me lyerje çdo 7 deri 10 vjet për shkak të diellit dhe lagështisë bregdetare. Ne ofrojmë garanci për punën dhe këshilla për ruajtjen e rezultatit në kohë.',
+        listItems: [
+          'Patinim i brendshëm pa nevojë mirëmbajtjeje për vite',
+          'Fasada që rifreskohen çdo 7 deri 10 vjet',
+          'Garanci e plotë mbi punën dhe materialet',
+          'Riparime të vogla pa prishur të gjithë sipërfaqen',
+          'Këshilla për pastrim pa dëmtuar suvanë',
+          'Inspektim falas para çdo rifreskimi të madh',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +238,14 @@ export default async function PlasteringPage({ params }: Props) {
       {
         question: 'A ofroni garanci për patinimin?',
         answer: 'Po, ofrojmë garanci të plotë për punën dhe materialet. Patinimi i kryer siç duhet zgjat me dekada pa probleme.',
+      },
+      {
+        question: 'Sa kohë duhet të presim para se të lyejmë murin pas patinimit?',
+        answer: 'Suvaja standarde duhet të thahet plotësisht para lyerjes, zakonisht 2 deri 7 ditë sipas trashësisë, temperaturës dhe ajrimit të ambientit. Për suva me bazë gipsi koha është më e shkurtër. Lyerja mbi mur ende të lagësht shkakton flluska dhe njolla, prandaj presim tharjen e plotë.',
+      },
+      {
+        question: 'Cili është ndryshimi mes patinimit me gips dhe suvasë me çimento?',
+        answer: 'Patinimi me gips jep sipërfaqe shumë të lëmuar, thahet shpejt dhe është ideal për brenda, por nuk përdoret në ambiente shumë të lagësht. Suvaja me çimento është më rezistente ndaj ujit dhe përshtatet për fasada dhe banjo. Ne zgjedhim materialin sipas ambientit specifik.',
       },
     ],
     sectionTitles: {
@@ -279,6 +323,42 @@ export default async function PlasteringPage({ params }: Props) {
           'Historic building restorations',
         ],
       },
+      {
+        title: 'How Much Does Plastering Cost Per Square Meter in Tirana and Durres?',
+        content: 'Plastering cost depends on surface area, wall condition and finish type. As a guide for the Albanian market, standard gypsum plastering usually costs 600 to 1200 Lek per square meter, while decorative plasters such as Venetian stucco range from 2500 to 6000 Lek per square meter. Factors like ceiling height, prior repairs and access in neighborhoods such as Blloku or Komuna e Parisit affect the budget. We offer a free on-site assessment before every quote.',
+        listItems: [
+          'Total surface area of the space in square meters',
+          'Existing condition and need for preparatory repairs',
+          'Finish type, from standard plastering to decorative plaster',
+          'Ceiling height and need for scaffolding',
+          'Access in central zones like Blloku, Sauk or Durres Plazh',
+          'Delivery deadline and shift work when speed is required',
+        ],
+      },
+      {
+        title: 'What Are the Most Common Plastering Mistakes?',
+        content: 'Most plastering problems come from rushed preparation and ignoring drying times. Applying a second coat before the first has dried creates cracks, while painting over plaster that is still damp causes blisters and stains. Skipping reinforcement mesh at corners and missing a primer coat lead to long-term cracking. We respect technical timings, typically 2 to 7 days of drying depending on thickness and ventilation, for a durable result.',
+        listItems: [
+          'Applying new coats before the previous one has fully dried',
+          'Skipping the primer coat before plastering',
+          'Not using reinforcement mesh at corners and cracks',
+          'Painting over plaster that is still damp causing blisters',
+          'Incorrect mixing ratio of material with water',
+          'Insufficient room ventilation during drying',
+        ],
+      },
+      {
+        title: 'How Long Does Plastering Last and How Is It Maintained?',
+        content: 'Professionally applied plaster lasts for decades without damage, because a well prepared base does not crack or detach. Interior surfaces need virtually no maintenance, while exterior facades in Tirana and Durres are best refreshed with paint every 7 to 10 years due to sun exposure and coastal humidity. We provide a warranty on the work and clear advice for keeping the result looking new over time.',
+        listItems: [
+          'Interior plaster needs no maintenance for years',
+          'Facades best refreshed every 7 to 10 years',
+          'Full warranty on workmanship and materials',
+          'Small repairs without redoing the whole surface',
+          'Advice on cleaning without damaging the plaster',
+          'Free inspection before any major refresh',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -333,6 +413,14 @@ export default async function PlasteringPage({ params }: Props) {
       {
         question: 'Do you offer warranty for plastering?',
         answer: 'Yes, we offer full warranty for work and materials. Properly done plastering lasts decades without problems.',
+      },
+      {
+        question: 'How long should we wait before painting a wall after plastering?',
+        answer: 'Standard plaster must dry completely before painting, usually 2 to 7 days depending on thickness, temperature and room ventilation. Gypsum-based plaster dries faster. Painting over a wall that is still damp causes blisters and stains, so we always wait for full drying.',
+      },
+      {
+        question: 'What is the difference between gypsum plastering and cement plaster?',
+        answer: 'Gypsum plastering gives a very smooth surface, dries quickly and is ideal indoors, but it is not used in very humid spaces. Cement plaster is more water-resistant and suits facades and bathrooms. We select the material according to the specific environment.',
       },
     ],
     sectionTitles: {

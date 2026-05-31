@@ -148,6 +148,30 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
           'Golem, Kavajë dhe bregdeti jugor i Durrësit',
         ],
       },
+      {
+        title: 'Sa Kushton Punimi i Gipsit në Durrës?',
+        content: 'Çmimi i punimeve të gipsit në Durrës varet nga lloji i sistemit, materialet dhe kushtet e ambientit bregdetar. Si orientim, tavanet e thjeshta të varura fillojnë nga rreth 2100 deri 2300 Lek/m2, ndarjet e mureve nga 3500 deri 4500 Lek/m2, ndërsa sistemet hidrofuge me panele Knauf ose Rigips për zona me lagështi kushtojnë më shumë. Ofrojmë vlerësim falas në vend dhe ofertë të detajuar pa detyrime.',
+        listItems: [
+          'Tavane të varura standarde - rreth 2100 deri 2300 Lek/m2',
+          'Ndarje mure me sistem dy-fletësh - 3500 deri 4500 Lek/m2',
+          'Panele hidrofuge për bano dhe zona bregdetare - kosto shtesë',
+          'Izolim akustik ose termik shtesë - sipas specifikimeve',
+          'Patinim dhe lyerje me bojëra Dulux, Jotun ose Caparol - veçmas',
+          'Vlerësim falas në vend dhe ofertë e shkruar pa detyrime',
+        ],
+      },
+      {
+        title: 'Cilat Janë Gabimet më të Shpeshta në Punimet e Gipsit?',
+        content: 'Shumë probleme me gipsin në ambientet bregdetare të Durrësit vijnë nga zgjedhja e gabuar e materialit ose nga nxitimi gjatë instalimit. Përdorimi i paneleve standarde në vend të atyre hidrofuge në zona me lagështi shkakton myk dhe deformim. Po ashtu, lyerja para se shtresa e patinimit të thahet plotësisht prodhon çarje. Ekipi ynë i shmang këto duke respektuar kohët e thatjes dhe standardet e prodhuesit.',
+        listItems: [
+          'Përdorimi i paneleve standarde në bano ose pranë detit',
+          'Skelet metalik pa trajtim anti-korrozion në klimë detare',
+          'Lyerje para se patinimi të thahet plotësisht - shkakton çarje',
+          'Distanca shumë e madhe mes profileve mbajtëse',
+          'Mungesa e ventilimit gjatë thatjes së shtresave',
+          'Anashkalimi i shtresës bazë para bojës finale',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -202,6 +226,14 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
       {
         question: 'A ofroni garanci për punimet e gipsit në Durrës?',
         answer: 'Po, të gjitha punimet tona në Durrës mbulohen me garanci të plotë që përfshin materialin dhe instalimin. Materialet Knauf dhe Rigips që përdorim janë të certifikuara dhe të përshtatshme për kushtet klimatike të Durrësit.',
+      },
+      {
+        question: 'Sa kohë duhet që gipsi të thahet para lyerjes?',
+        answer: 'Pas mbylljes së fugave dhe patinimit, shtresat duhet të thahen plotësisht para lyerjes. Në kushtet bregdetare të Durrësit me lagështi më të lartë, kjo zakonisht zgjat 24 deri 48 orë për shtresë, ndërsa ventilimi i mirë e shpejton procesin. Lyerja e parakohshme prodhon çarje dhe ngjyrim të pabarabartë.',
+      },
+      {
+        question: 'Cili sistem është më i mirë, Knauf apo Rigips?',
+        answer: 'Të dy janë sisteme cilësore evropiane me performancë të ngjashme. Knauf ofron gamë të gjerë panelesh hidrofuge dhe zjarrduruese, ndërsa Rigips njihet për lehtësinë e punimit. Për ambientet bregdetare të Durrësit, ne zgjedhim variantin hidrofug të secilit sipas projektit dhe buxhetit tuaj.',
       },
     ],
     sectionTitles: {
@@ -277,6 +309,30 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
           'Golem, Kavajë and the southern coast of Durrës',
         ],
       },
+      {
+        title: 'How Much Do Gypsum Works Cost in Durrës?',
+        content: 'The price of gypsum works in Durrës depends on the system type, materials and the coastal conditions of the site. As a guide, simple suspended ceilings start from around 2100 to 2300 Lek per square meter, wall partitions from 3500 to 4500 Lek per square meter, while hydrophobic systems with Knauf or Rigips panels for humid zones cost more. We provide a free on-site assessment and a detailed quote with no obligation.',
+        listItems: [
+          'Standard suspended ceilings - around 2100 to 2300 Lek per m2',
+          'Double-layer wall partitions - 3500 to 4500 Lek per m2',
+          'Hydrophobic panels for bathrooms and coastal zones - extra cost',
+          'Additional acoustic or thermal insulation - per specification',
+          'Plastering and painting with Dulux, Jotun or Caparol - separate',
+          'Free on-site assessment and written quote with no obligation',
+        ],
+      },
+      {
+        title: 'What Are the Most Common Mistakes in Gypsum Works?',
+        content: 'Many problems with gypsum in the coastal environment of Durrës come from the wrong choice of material or from rushing the installation. Using standard panels instead of hydrophobic ones in humid zones causes mold and warping. Likewise, painting before the plaster layer has fully dried produces cracks. Our team avoids these by respecting drying times and following manufacturer standards on every project.',
+        listItems: [
+          'Using standard panels in bathrooms or near the sea',
+          'Metal frames without anti-corrosion treatment in maritime climate',
+          'Painting before the plaster has fully dried - causes cracking',
+          'Spacing the support profiles too far apart',
+          'Lack of ventilation while the layers are drying',
+          'Skipping the primer coat before the final paint',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -331,6 +387,14 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
       {
         question: 'Do you offer warranty for gypsum works in Durrës?',
         answer: 'Yes, all our works in Durrës are covered by a full warranty that includes both the material and installation. The Knauf and Rigips materials we use are certified and suitable for the climatic conditions of Durrës.',
+      },
+      {
+        question: 'How long does gypsum need to dry before painting?',
+        answer: 'After joint finishing and plastering, the layers must dry fully before painting. In the coastal conditions of Durrës with higher humidity, this usually takes 24 to 48 hours per layer, while good ventilation speeds up the process. Painting too early produces cracks and uneven color.',
+      },
+      {
+        question: 'Which system is better, Knauf or Rigips?',
+        answer: 'Both are quality European systems with similar performance. Knauf offers a wide range of hydrophobic and fire-resistant panels, while Rigips is known for ease of installation. For the coastal environment of Durrës, we select the hydrophobic variant of either system based on your project and budget.',
       },
     ],
     sectionTitles: {

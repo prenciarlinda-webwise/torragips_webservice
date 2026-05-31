@@ -160,6 +160,30 @@ export default async function GypsumWorksPage({ params }: Props) {
           'Zgjidhje të personalizuara sipas stilit të banesës suaj',
         ],
       },
+      {
+        title: 'Sa Kushtojnë Punimet e Gipsit për Metër Katror?',
+        content: 'Kostoja e punimeve të gipsit në Tiranë dhe Durrës varet nga lloji i sistemit, kompleksiteti i dizajnit dhe materialet e zgjedhura. Si tregues orientues, tavanet e thjeshta të varura fillojnë rreth 2100 deri 2300 Lek për metër katror, ndërsa tavanet me nivele dhe ndriçim LED arrijnë 2500 deri 4000 Lek. Ndarjet me panel gipsi dyfaqësh me izolim janë zakonisht 3500 deri 4500 Lek për metër katror. Vizita në vend dhe oferta janë falas.',
+        listItems: [
+          'Tavane të thjeshta të varura: rreth 2100 deri 2300 Lek për metër katror',
+          'Tavane me nivele dhe ndriçim LED: 2500 deri 4000 Lek për metër katror',
+          'Ndarje me panel dyfaqësh dhe izolim: 3500 deri 4500 Lek për metër katror',
+          'Panele rezistente ndaj lagështisë dhe zjarrit kushtojnë më shumë',
+          'Çmimi varet nga lartësia, qasja dhe afati i punimeve',
+          'Kërkoni një ofertë falas pa detyrim përmes WhatsApp në +355 68 858 0058',
+        ],
+      },
+      {
+        title: 'Cili Material Është Më i Mirë: Knauf apo Rigips?',
+        content: 'Të dy sistemet Knauf dhe Rigips janë marka gjermane lider me cilësi të lartë dhe ne i përdorim të dyja sipas nevojës së projektit. Panelet standarde ofrojnë rezistencë ndaj zjarrit deri në 30 minuta, ndërsa panelet speciale rozë antizjarr arrijnë 60 minuta ose më shumë. Për banjot dhe kuzhinat zgjedhim panele jeshile rezistente ndaj lagështisë. Ne kombinojmë sistemin më të përshtatshëm me boje cilësore Dulux, Jotun ose Caparol për përfundim afatgjatë.',
+        listItems: [
+          'Knauf dhe Rigips janë të dyja marka gjermane të certifikuara dhe të besueshme',
+          'Panele standarde: rezistencë ndaj zjarrit deri 30 minuta',
+          'Panele antizjarr (rozë): rezistencë 60 minuta ose më shumë',
+          'Panele rezistente ndaj lagështisë (jeshile) për banjo dhe kuzhina',
+          'Panele akustike për studio, zyra dhe salla konferencash',
+          'Përfundim me boje Dulux, Jotun ose Caparol për qëndrueshmëri',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -214,6 +238,14 @@ export default async function GypsumWorksPage({ params }: Props) {
       {
         question: 'A ofroni garanci për punën tuaj?',
         answer: 'Po, ofrojmë garanci të plotë për të gjitha punimet tona. Garancia mbulon çdo defekt në instalim dhe material. Ne jemi të përkushtuar ndaj cilësisë dhe kënaqësisë së klientit.',
+      },
+      {
+        question: 'Sa kohë duhet të presësh që gipsi dhe boja të thahen?',
+        answer: 'Pas mbylljes së fugave me stuko, çdo shtresë ka nevojë rreth 24 orë për tu tharë para lëmimit. Boja me bazë uji thahet në prekje brenda 2 deri 4 orësh, ndërsa duhen 24 orë midis duarve. Ne planifikojmë afatet që ambienti juaj në Tiranë ose Durrës të jetë gati pa nxitim.',
+      },
+      {
+        question: 'Pse pëlcasin ose çahen tavanet e gipsit me kalimin e kohës?',
+        answer: 'Plasaritjet zakonisht vijnë nga instalimi i dobët, lëkundjet e strukturës ose mungesa e shiritit përforcues në fuga. Ne përdorim profile metalike të standardizuara, shirit fibërglasi dhe stuko cilësore Knauf ose Rigips. Ky proces parandalon plasaritjet dhe siguron një sipërfaqe të qëndrueshme për vite me radhë.',
       },
     ],
     sectionTitles: {
@@ -304,6 +336,30 @@ export default async function GypsumWorksPage({ params }: Props) {
           'Custom solutions tailored to your home style',
         ],
       },
+      {
+        title: 'How Much Do Gypsum Works Cost Per Square Meter?',
+        content: 'The cost of gypsum works in Tirana and Durrës depends on the system type, design complexity and chosen materials. As an indicative guide, simple suspended ceilings start around 2100 to 2300 Lek per square meter, while multi-level ceilings with LED lighting reach 2500 to 4000 Lek. Double-sided gypsum partitions with insulation are typically 3500 to 4500 Lek per square meter. On-site visits and quotes are always free.',
+        listItems: [
+          'Simple suspended ceilings: around 2100 to 2300 Lek per square meter',
+          'Multi-level ceilings with LED lighting: 2500 to 4000 Lek per square meter',
+          'Double-sided partitions with insulation: 3500 to 4500 Lek per square meter',
+          'Moisture-resistant and fire-rated boards cost more',
+          'Price varies with ceiling height, access and project deadline',
+          'Request a free no-obligation quote via WhatsApp at +355 68 858 0058',
+        ],
+      },
+      {
+        title: 'Which Material Is Better: Knauf or Rigips?',
+        content: 'Both Knauf and Rigips are leading German brands with high quality, and we use either one depending on the project needs. Standard boards offer fire resistance up to 30 minutes, while special pink fire-rated boards reach 60 minutes or more. For bathrooms and kitchens we choose green moisture-resistant boards. We pair the most suitable system with quality Dulux, Jotun or Caparol paint for a long-lasting finish.',
+        listItems: [
+          'Knauf and Rigips are both certified, reliable German brands',
+          'Standard boards: fire resistance up to 30 minutes',
+          'Fire-rated boards (pink): resistance of 60 minutes or more',
+          'Moisture-resistant boards (green) for bathrooms and kitchens',
+          'Acoustic boards for studios, offices and conference rooms',
+          'Finish with Dulux, Jotun or Caparol paint for durability',
+        ],
+      },
     ],
     serviceFeatures: [
       {
@@ -358,6 +414,14 @@ export default async function GypsumWorksPage({ params }: Props) {
       {
         question: 'Do you offer warranty for your work?',
         answer: 'Yes, we offer full warranty for all our work. The warranty covers any defects in installation and materials. We are committed to quality and customer satisfaction.',
+      },
+      {
+        question: 'How long does gypsum and paint take to dry?',
+        answer: 'After joints are filled with compound, each coat needs about 24 hours to dry before sanding. Water-based paint is touch dry within 2 to 4 hours, while 24 hours is needed between coats. We schedule timelines so your space in Tirana or Durrës is ready without rushing.',
+      },
+      {
+        question: 'Why do gypsum ceilings crack over time?',
+        answer: 'Cracks usually come from poor installation, structural movement or missing reinforcing tape at the joints. We use standardized metal profiles, fiberglass tape and quality Knauf or Rigips compound. This process prevents cracking and ensures a stable surface that lasts for many years.',
       },
     ],
     sectionTitles: {
