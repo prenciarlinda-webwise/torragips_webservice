@@ -7,6 +7,7 @@ interface ArticleSchemaProps {
   url: string;
   image?: string;
   datePublished: string;
+  dateModified?: string;
   author?: string;
 }
 
@@ -16,16 +17,23 @@ export default function ArticleSchema({
   url,
   image,
   datePublished,
+  dateModified,
   author = COMPANY.name,
 }: ArticleSchemaProps) {
+  const fullUrl = `${SITE_CONFIG.url}${url}`;
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
     description,
-    url: `${SITE_CONFIG.url}${url}`,
+    url: fullUrl,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': fullUrl,
+    },
     ...(image && { image: `${SITE_CONFIG.url}${image}` }),
     datePublished,
+    dateModified: dateModified || datePublished,
     author: {
       '@type': 'Organization',
       name: author,
@@ -34,6 +42,10 @@ export default function ArticleSchema({
       '@type': 'Organization',
       name: COMPANY.name,
       url: SITE_CONFIG.url,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE_CONFIG.url}/images/logo.svg`,
+      },
     },
   };
 
