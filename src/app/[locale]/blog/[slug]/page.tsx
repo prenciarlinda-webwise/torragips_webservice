@@ -5,7 +5,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { Breadcrumbs } from '@/components/layout';
 import { CTA } from '@/components/sections';
-import { BreadcrumbSchema, ArticleSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo';
+import { BreadcrumbSchema, ArticleSchema, FAQSchema } from '@/components/seo';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 
 // Blog post hreflang mapping (sq slug -> en slug)
@@ -123,7 +123,6 @@ export default async function BlogPostPage({ params }: Props) {
         datePublished={post.date}
         author={post.author}
       />
-      <LocalBusinessSchema locale={locale} />
       {post.faq && post.faq.length > 0 && <FAQSchema items={post.faq} />}
 
       {/* Hero */}

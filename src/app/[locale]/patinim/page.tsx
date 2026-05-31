@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { setRequestLocale } from 'next-intl/server';
 import ServicePageTemplate from '@/components/sections/ServicePageTemplate';
-import { ServiceSchema, BreadcrumbSchema } from '@/components/seo';
+import { BreadcrumbSchema } from '@/components/seo';
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -443,12 +443,6 @@ export default async function PlasteringPage({ params }: Props) {
 
   return (
     <>
-      <ServiceSchema
-        name={pageData.serviceName}
-        description={pageData.heroSubtitle}
-        url={`/${locale}/patinim/`}
-        locale={locale}
-      />
       <BreadcrumbSchema
         items={[
           { name: isAlbanian ? 'Kryefaqja' : 'Home', url: `/${locale}/` },
