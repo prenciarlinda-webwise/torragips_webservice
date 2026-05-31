@@ -5,7 +5,7 @@ import { remark } from 'remark';
 import html from 'remark-html';
 import { Breadcrumbs } from '@/components/layout';
 import { CTA } from '@/components/sections';
-import { BreadcrumbSchema, ArticleSchema } from '@/components/seo';
+import { BreadcrumbSchema, ArticleSchema, FAQSchema, LocalBusinessSchema } from '@/components/seo';
 import { getPostBySlug, getAllPosts } from '@/lib/blog';
 
 // Blog post hreflang mapping (sq slug -> en slug)
@@ -123,6 +123,8 @@ export default async function BlogPostPage({ params }: Props) {
         datePublished={post.date}
         author={post.author}
       />
+      <LocalBusinessSchema locale={locale} />
+      {post.faq && post.faq.length > 0 && <FAQSchema items={post.faq} />}
 
       {/* Hero */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-white">
@@ -267,6 +269,27 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      {/* FAQ (rendered when the post defines faq in frontmatter) */}
+      {post.faq && post.faq.length > 0 && (
+        <section className="section-padding bg-neutral-50">
+          <div className="container-custom max-w-3xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-primary-800 mb-8">
+              {locale === 'sq' ? 'Pyetje të Shpeshta' : 'Frequently Asked Questions'}
+            </h2>
+            <div className="space-y-4">
+              {post.faq.map((item, i) => (
+                <details key={i} className="bg-white rounded-xl border p-5">
+                  <summary className="font-semibold text-primary-800 cursor-pointer">
+                    {item.question}
+                  </summary>
+                  <p className="mt-3 text-text-light leading-relaxed">{item.answer}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CTA />
     </>

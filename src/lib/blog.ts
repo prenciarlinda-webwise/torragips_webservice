@@ -14,6 +14,7 @@ export interface BlogPost {
   category: string;
   tags: string[];
   image?: string;
+  faq?: { question: string; answer: string }[];
   locale: string;
 }
 
@@ -46,6 +47,7 @@ export function getPostBySlug(slug: string, locale: string): BlogPost | null {
     category: data.category || '',
     tags: data.tags || [],
     image: data.image,
+    faq: data.faq || [],
     locale,
   };
 }

@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Link } from '@/lib/i18n/navigation';
 import { Button } from '@/components/ui';
-import { FAQSchema } from '@/components/seo';
+import { FAQSchema, LocalBusinessSchema } from '@/components/seo';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -129,6 +129,8 @@ export default function ServicePageTemplate({
 
   return (
     <>
+      <LocalBusinessSchema locale={locale} />
+
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex items-center">
         <div className="absolute inset-0">
