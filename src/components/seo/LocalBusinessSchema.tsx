@@ -84,6 +84,32 @@ export default function LocalBusinessSchema({ locale }: LocalBusinessSchemaProps
       ratingCount: '5',
       reviewCount: '5',
     },
+    review: [
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Esilda Daçi' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'I am very satisfied with your work. I really liked the detailed and high quality work, completed within the time I needed. I will definitely recommend Torra Gips to others.',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Erion Facja' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'I am very satisfied with the service of Torra Gips. Professional work, high quality and meticulous finishes. The team is very friendly and dedicated. I would definitely recommend them for any plastering project!',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Klajdi Hoxha' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: 'Torra Gips completed the plaster works in my premises with high professionalism and maximum dedication from the company and its staff. I recommend it to everyone!',
+      },
+      {
+        '@type': 'Review',
+        author: { '@type': 'Person', name: 'Serxho Harizi' },
+        reviewRating: { '@type': 'Rating', ratingValue: '5', bestRating: '5' },
+        reviewBody: "Very satisfied with Torra Gips' service. Professional work and high quality. I would definitely recommend them!",
+      },
+    ],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: locale === 'sq' ? 'Shërbimet Tona' : 'Our Services',
