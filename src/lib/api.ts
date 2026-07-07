@@ -5,12 +5,31 @@ function getToken(): string | null {
   return localStorage.getItem('tg_token');
 }
 
+// Non-secret presence marker so middleware can gate /dashboard server-side.
+// The real token stays in localStorage and is sent via the Authorization header;
+// this cookie only signals "a session exists" and is never trusted for data access.
+const AUTH_COOKIE = 'tg_auth';
+
+function setAuthCookie() {
+  if (typeof document === 'undefined') return;
+  const secure = location.protocol === 'https:' ? '; Secure' : '';
+  // 12h marker; cleared explicitly on logout / 401.
+  document.cookie = `${AUTH_COOKIE}=1; path=/; max-age=43200; SameSite=Lax${secure}`;
+}
+
+function clearAuthCookie() {
+  if (typeof document === 'undefined') return;
+  document.cookie = `${AUTH_COOKIE}=; path=/; max-age=0; SameSite=Lax`;
+}
+
 export function setToken(token: string) {
   localStorage.setItem('tg_token', token);
+  setAuthCookie();
 }
 
 export function clearToken() {
   localStorage.removeItem('tg_token');
+  clearAuthCookie();
 }
 
 export function isAuthenticated(): boolean {

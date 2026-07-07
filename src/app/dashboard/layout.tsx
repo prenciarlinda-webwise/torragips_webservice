@@ -57,6 +57,11 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
   return (
     <html lang="sq" className={inter.variable}>
+      <head>
+        {/* Belt-and-suspenders with robots.txt: never index the admin panel or
+            leak client names/URLs into search results. */}
+        <meta name="robots" content="noindex, nofollow, noarchive, noimageindex" />
+      </head>
       <body>{content}</body>
     </html>
   );
