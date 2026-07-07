@@ -102,7 +102,16 @@ REST_FRAMEWORK = {
         'rest_framework.filters.SearchFilter',
         'rest_framework.filters.OrderingFilter',
     ],
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    # In production only expose JSON — no public HTML browsable API explorer.
+    'DEFAULT_RENDERER_CLASSES': (
+        [
+            'rest_framework.renderers.JSONRenderer',
+            'rest_framework.renderers.BrowsableAPIRenderer',
+        ] if DEBUG else [
+            'rest_framework.renderers.JSONRenderer',
+        ]
+    ),
+    'DEFAULT_PAGINATION_CLASS': 'core.pagination.StandardPagination',
     'PAGE_SIZE': 25,
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',
@@ -182,6 +191,19 @@ CORS_ALLOW_HEADERS = [
     'x-csrftoken',
     'x-requested-with',
 ]
+
+# ── Production security hardening ──
+# Applied only when DEBUG is off, so local dev over http is unaffected.
+# NOTE: SECURE_SSL_REDIRECT / HSTS are intentionally left out here — enable them
+# in your hosting/proxy config once HTTPS is confirmed (see PRODUCTION_CHECKLIST.md)
+# to avoid redirect loops behind a misconfigured proxy.
+if not DEBUG:
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SESSION_COOKIE_SECURE = True
+    SESSION_COOKIE_HTTPONLY = True
+    CSRF_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
 
 # Unfold admin
 UNFOLD = {
