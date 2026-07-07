@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/punime-gipsi-tirane/',
         en: '/en/gypsum-works-tirana/',
+        'x-default': '/en/gypsum-works-tirana/',
       },
     },
     openGraph: {
@@ -92,7 +93,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Punime Gipsi Tiranë',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Punime Gipsi Profesionale në Tiranë',
+    heroTitle: 'Punime Gipsi Tiranë - Instalim Profesional dhe Konsultë Falas',
     heroSubtitle: 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik për projekte komerciale dhe rezidenciale në Tiranë. Materiale Knauf dhe Rigips. Konsultë falas.',
     introContent: [
       'Punimet e gipsit profesionale në Tiranë janë një nga shërbimet më të kërkuara në industrinë e ndërtimit dhe rinovimit. Si kryeqyteti i Shqipërisë, Tirana ka një treg të gjerë për punime gipsi cilësore në zona si Blloku, Komuna e Parisit, Kashar, Kombinat dhe qendra e Tiranës. Torra Gips ofron zgjidhje të plota për çdo nevojë, nga apartamentet moderne deri te projektet komerciale të mëdha. Me 100+ projekte të përfunduara në të gjithë vendin, përfshirë Aeroportin Ndërkombëtar të Vlorës, Green Coast Resort, Rolling Hills dhe Lion Park, ne sjellim të njëjtin profesionalizëm në çdo projekt në Tiranë.',
@@ -253,7 +254,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
   } : {
     serviceName: 'Gypsum Works Tirana',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Professional Gypsum Works in Tirana',
+    heroTitle: 'Gypsum Works Tirana - Professional Installation and Free Consultation',
     heroSubtitle: 'Suspended ceilings, space partitions, architectural decorations and acoustic insulation for commercial and residential projects in Tirana. Knauf and Rigips materials. Free consultation.',
     introContent: [
       'Professional gypsum works in Tirana are among the most sought-after construction and renovation services in the Albanian capital. As the largest city in Albania, Tirana has a thriving market for quality gypsum work across neighborhoods such as Blloku, Komuna e Parisit, Kashar, Kombinat and the city center. Torra Gips delivers comprehensive solutions for every need, from modern apartments to large-scale commercial projects. With 100+ completed projects nationwide, including Vlora International Airport, Green Coast Resort, Rolling Hills and Lion Park, we bring the same level of professionalism to every project in Tirana.',

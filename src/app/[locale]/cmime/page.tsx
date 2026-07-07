@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/cmime/',
         en: '/en/pricing/',
+        'x-default': '/en/pricing/',
       },
     },
   };

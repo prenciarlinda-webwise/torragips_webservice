@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/lyerje-tirane/',
         en: '/en/painting-tirana/',
+        'x-default': '/en/painting-tirana/',
       },
     },
     openGraph: {

@@ -62,9 +62,7 @@ export default function PrintPage() {
     : 1;
   const fileName = `#${docNr} - ${proj.client_name || 'Klient'} - ${proj.name || 'Projekt'} - ${docLabel}`;
 
-  const grandTotal = showQuantity
-    ? items.reduce((s: number, i: any) => s + (parseFloat(i.quantity || 0) * parseFloat(i.price || 0)), 0)
-    : items.reduce((s: number, i: any) => s + parseFloat(i.price || 0), 0);
+  const grandTotal = items.reduce((s: number, i: any) => s + (parseFloat(i.quantity || 0) * parseFloat(i.price || 0)), 0);
 
   const dateFormatted = doc.date
     ? new Date(doc.date).toLocaleDateString('sq-AL', { day: '2-digit', month: '2-digit', year: 'numeric' })
@@ -374,10 +372,10 @@ export default function PrintPage() {
                 })
               )}
             </tbody>
-            {items.length > 0 && (
+            {items.length > 0 && showQuantity && (
               <tfoot>
                 <tr>
-                  <td colSpan={showQuantity ? 6 : 4} className="text-right">TOTAL:</td>
+                  <td colSpan={6} className="text-right">TOTAL:</td>
                   <td className="text-right">{fmt(grandTotal)} ALL</td>
                 </tr>
               </tfoot>

@@ -42,7 +42,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: {
       default: titles[locale as keyof typeof titles] || titles.sq,
-      template: `%s - ${COMPANY.name}`,
+      // Pages set their own full title (brand already included), so pass it
+      // through unchanged. A `%s - Brand` template here double-printed the brand
+      // (e.g. "… - Torra Gips - Torra Gips").
+      template: '%s',
     },
     description: descriptions[locale as keyof typeof descriptions] || descriptions.sq,
     metadataBase: new URL(SITE_CONFIG.url),

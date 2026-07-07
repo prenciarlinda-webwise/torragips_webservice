@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/kontakt/',
         en: '/en/contact/',
+        'x-default': '/en/contact/',
       },
     },
   };

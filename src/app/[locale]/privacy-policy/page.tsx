@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/politika-privatesia/',
         en: '/en/privacy-policy/',
+        'x-default': '/en/privacy-policy/',
       },
     },
   };

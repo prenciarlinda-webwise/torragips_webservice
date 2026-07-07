@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/punime-gipsi/',
         en: '/en/gypsum-works/',
+        'x-default': '/en/gypsum-works/',
       },
     },
     openGraph: {

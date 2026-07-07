@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/lyerje-durres/',
         en: '/en/painting-durres/',
+        'x-default': '/en/painting-durres/',
       },
     },
     openGraph: {

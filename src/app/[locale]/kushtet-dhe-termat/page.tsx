@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/kushtet-dhe-termat/',
         en: '/en/terms-conditions/',
+        'x-default': '/en/terms-conditions/',
       },
     },
   };

@@ -27,6 +27,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       languages: {
         sq: '/sq/patinim-durres/',
         en: '/en/wall-plastering-durres/',
+        'x-default': '/en/wall-plastering-durres/',
       },
     },
     openGraph: {
