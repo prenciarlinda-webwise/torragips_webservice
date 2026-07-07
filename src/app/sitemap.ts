@@ -61,6 +61,20 @@ const blogAlternates: Record<string, string> = {
   'si-te-planifikoni-buxhetin-rinovim': 'renovation-budget-planning-guide',
   'pse-gipsi-material-kyc-ndertime-moderne': 'why-gypsum-key-material-modern-construction',
   'rinovimi-apartamentit-cfare-duhet-te-dini': 'apartment-renovation-what-to-know',
+  'si-te-zgjidhni-kontraktorin-e-duhur': 'how-to-choose-the-right-contractor',
+  'fazat-e-ndertimit-te-brendshem-gips-patinim-lyerje': 'interior-construction-phases-gypsum-plastering-painting',
+  'ngjyra-fasade-shtepie': 'exterior-facade-paint-colors',
+  'ngjyra-dhe-psikologjia-per-dhoma': 'color-psychology-for-every-room',
+  'knauf-apo-rigips-krahasim': 'knauf-vs-rigips-comparison',
+  'dulux-jotun-caparol-krahasim-bojrash': 'dulux-vs-jotun-vs-caparol-paint-comparison',
+  'trendet-e-dizajnit-te-brendshem-2026': 'interior-design-trends-2026',
+  'stili-minimalist-apo-klasik-per-shtepine': 'minimalist-vs-classic-style-for-your-home',
+  'sa-zgjat-rinovimi-i-nje-apartamenti': 'how-long-does-apartment-renovation-take',
+  'rinovim-apo-ndertim-i-ri-cila-eshte-zgjidhja-e-duhur': 'renovate-or-build-new-which-is-right-for-you',
+  'riparim-plasaritjesh-mure-tavane': 'wall-and-ceiling-crack-repair-guide',
+  'lyerje-komerciale-cfare-duhet-te-dini': 'commercial-painting-what-to-know',
+  'lyerje-fasadash-udhezues': 'facade-painting-guide',
+  'punime-gipsi-komerciale-per-biznese': 'commercial-gypsum-works-for-businesses',
 };
 
 export default function sitemap(): MetadataRoute.Sitemap {
