@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link, usePathname } from '@/lib/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { useQuoteModal } from '@/components/modals';
 import LanguageSwitcher from './LanguageSwitcher';
 import MobileMenu from './MobileMenu';
 
@@ -14,9 +15,11 @@ export default function Header() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { open: openQuote } = useQuoteModal();
 
-  // Pages with dark hero backgrounds (service pages, EN contact, EN about)
-  const hasDarkHero = pathname.includes('/punime-gipsi') ||
+  // Pages with dark hero backgrounds (homepage video hero, service pages, EN contact, EN about)
+  const hasDarkHero = pathname === '/' ||
+                      pathname.includes('/punime-gipsi') ||
                       pathname.includes('/gypsum-works') ||
                       pathname.includes('/patinim') ||
                       pathname.includes('/wall-plastering') ||
@@ -87,14 +90,11 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.webp"
+              src={!isScrolled && !useDarkText ? '/images/logo-white.webp' : '/images/logo.webp'}
               alt="Torra Gips"
               width={120}
               height={120}
-              className={cn(
-                'h-14 w-auto transition-all',
-                !isScrolled && !useDarkText && 'brightness-0 invert'
-              )}
+              className="h-14 w-auto transition-all"
               priority
             />
           </Link>
@@ -170,8 +170,9 @@ export default function Header() {
             <LanguageSwitcher isScrolled={isScrolled || useDarkText} />
 
             {/* CTA Button - Desktop */}
-            <Link
-              href={locale === 'sq' ? '/kontakt' : '/contact'}
+            <button
+              type="button"
+              onClick={openQuote}
               className={cn(
                 'hidden lg:inline-flex px-5 py-2.5 rounded-lg font-semibold transition-colors',
                 isScrolled || useDarkText
@@ -180,7 +181,7 @@ export default function Header() {
               )}
             >
               {locale === 'sq' ? 'Merr Ofertë' : 'Get Quote'}
-            </Link>
+            </button>
 
             {/* Mobile Menu Button */}
             <button

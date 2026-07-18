@@ -1,10 +1,8 @@
-import { useTranslations, useLocale } from 'next-intl';
-import { Link } from '@/lib/i18n/navigation';
-import { Button } from '@/components/ui';
+import { useTranslations } from 'next-intl';
+import { QuoteButton } from '@/components/modals';
 
 export default function CTA() {
   const t = useTranslations('cta');
-  const locale = useLocale();
 
   return (
     <section className="py-20 bg-gradient-to-br from-primary to-dark-800 relative overflow-hidden">
@@ -20,11 +18,9 @@ export default function CTA() {
           <p className="text-xl text-white/80 mb-8">
             {t('subtitle')}
           </p>
-          <Link href={locale === 'sq' ? '/kontakt' : '/contact'}>
-            <Button size="lg" className="!bg-accent !text-white hover:!bg-accent-700">
-              {t('button')}
-            </Button>
-          </Link>
+          <QuoteButton size="lg" className="!bg-accent !text-white hover:!bg-accent-700">
+            {t('button')}
+          </QuoteButton>
         </div>
       </div>
     </section>

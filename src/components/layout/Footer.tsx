@@ -70,11 +70,11 @@ export default function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="inline-block mb-4">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo-white.webp"
                 alt="Torra Gips"
                 width={120}
                 height={120}
-                className="h-16 w-auto brightness-0 invert"
+                className="h-16 w-auto"
               />
             </Link>
             <p className="text-neutral-300 mb-6">

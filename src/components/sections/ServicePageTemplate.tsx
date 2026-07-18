@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { Link } from '@/lib/i18n/navigation';
 import { Button } from '@/components/ui';
+import { QuoteButton } from '@/components/modals';
 import { FAQSchema, LocalBusinessSchema } from '@/components/seo';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
@@ -533,11 +534,9 @@ export default function ServicePageTemplate({
                 +355 68 858 0058
               </Button>
             </a>
-            <Link href={isAlbanian ? '/kontakt' : '/contact'}>
-              <Button size="lg" className="!bg-white !text-dark-800 hover:!bg-neutral-100">
-                {isAlbanian ? 'Dërgo Mesazh' : 'Send Message'}
-              </Button>
-            </Link>
+            <QuoteButton size="lg" className="!bg-white !text-dark-800 hover:!bg-neutral-100">
+              {isAlbanian ? 'Dërgo Mesazh' : 'Send Message'}
+            </QuoteButton>
           </div>
         </div>
       </section>

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 export default function WhyChooseUs() {
@@ -55,8 +56,19 @@ export default function WhyChooseUs() {
   ];
 
   return (
-    <section className="section-padding bg-gradient-to-br from-primary-800 to-primary-900 text-white">
-      <div className="container-custom">
+    <section className="relative section-padding bg-gradient-to-br from-primary-800 to-primary-900 text-white overflow-hidden">
+      {/* Textured project photo background */}
+      <div className="absolute inset-0 opacity-25">
+        <Image
+          src="/images/services/gypsum/punime-gipsi-komerciale-3.webp"
+          alt=""
+          fill
+          className="object-cover"
+        />
+      </div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-900/95" />
+
+      <div className="container-custom relative z-10">
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white">

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useLocale } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
 import { cn } from '@/lib/utils';
+import { useQuoteModal } from '@/components/modals';
 import LanguageSwitcher from './LanguageSwitcher';
 
 interface NavItem {
@@ -20,6 +21,7 @@ interface MobileMenuProps {
 
 export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProps) {
   const locale = useLocale();
+  const { open: openQuote } = useQuoteModal();
 
   // Lock body scroll when menu is open
   useEffect(() => {
@@ -122,13 +124,16 @@ export default function MobileMenu({ isOpen, onClose, navItems }: MobileMenuProp
             <div className="flex justify-center">
               <LanguageSwitcher />
             </div>
-            <Link
-              href={locale === 'sq' ? '/kontakt' : '/contact'}
-              onClick={onClose}
+            <button
+              type="button"
+              onClick={() => {
+                onClose();
+                openQuote();
+              }}
               className="block w-full btn-primary text-center"
             >
               {locale === 'sq' ? 'Merr Ofertë' : 'Get Quote'}
-            </Link>
+            </button>
           </div>
         </div>
       </div>

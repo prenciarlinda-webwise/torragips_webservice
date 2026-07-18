@@ -20,7 +20,7 @@ export default function LocalBusinessSchema({ locale }: LocalBusinessSchemaProps
     url: SITE_CONFIG.url,
     telephone: COMPANY.phone,
     email: COMPANY.email,
-    image: `${SITE_CONFIG.url}/images/logo.svg`,
+    image: `${SITE_CONFIG.url}/images/logo.webp`,
     priceRange: '$$',
     address: {
       '@type': 'PostalAddress',

@@ -37,16 +37,18 @@ export default async function GalleryPage({ params }: Props) {
   const t = await getTranslations('gallery');
   const tNav = await getTranslations('nav');
 
-  // Gallery items with real images
+  // Gallery items - real Torra Gips project photos
   const galleryItems = [
-    { id: '1', src: '/images/gallery/project-1.webp', alt: locale === 'sq' ? 'Mur dekorativ me harqe mermeri' : 'Decorative wall with marble arches', category: 'plastering' as const, title: locale === 'sq' ? 'Mur Dekorativ' : 'Decorative Wall' },
-    { id: '2', src: '/images/gallery/project-2.webp', alt: locale === 'sq' ? 'Recepsion me banak mermeri' : 'Reception with marble counter', category: 'plastering' as const, title: locale === 'sq' ? 'Recepsion Luksoz' : 'Luxury Reception' },
-    { id: '3', src: '/images/gallery/project-3.webp', alt: locale === 'sq' ? 'Hapje harku me rafte' : 'Arched openings with shelving', category: 'gypsum' as const, title: locale === 'sq' ? 'Dizajn Modern' : 'Modern Design' },
-    { id: '4', src: '/images/gallery/project-4.webp', alt: locale === 'sq' ? 'Mur gipsi i lakuar' : 'Curved gypsum wall', category: 'gypsum' as const, title: locale === 'sq' ? 'Mur i Lakuar' : 'Curved Wall' },
-    { id: '5', src: '/images/gallery/project-5.webp', alt: locale === 'sq' ? 'Instalim gipsi komercial' : 'Commercial gypsum installation', category: 'gypsum' as const, title: locale === 'sq' ? 'Hapësirë Komerciale' : 'Commercial Space' },
-    { id: '6', src: '/images/gallery/project-6.webp', alt: locale === 'sq' ? 'Lyerje e jashtme komerciale' : 'Commercial exterior painting', category: 'painting' as const, title: locale === 'sq' ? 'Fasadë Komerciale' : 'Commercial Facade' },
-    { id: '7', src: '/images/gallery/project-7.webp', alt: locale === 'sq' ? 'Mur i lakuar me ndriçim LED' : 'Curved wall with LED lighting', category: 'plastering' as const, title: locale === 'sq' ? 'Ndriçim Modern' : 'Modern Lighting' },
-    { id: '8', src: '/images/gallery/project-8.webp', alt: locale === 'sq' ? 'Banak mermeri me ndriçim' : 'Marble counter with lighting', category: 'plastering' as const, title: locale === 'sq' ? 'Detaje Luksoze' : 'Luxury Details' },
+    { id: '1', src: '/images/services/gypsum/tavane-te-varura-me-led-1.webp', alt: locale === 'sq' ? 'Tavan i varur me ndriçim LED cove' : 'Suspended ceiling with LED cove lighting', category: 'gypsum' as const, title: locale === 'sq' ? 'Tavan me Ndriçim LED' : 'LED Cove Ceiling' },
+    { id: '2', src: '/images/services/gypsum/punime-gipsi-per-televizor-1.webp', alt: locale === 'sq' ? 'Mur gipsi për televizor me oxhak' : 'Gypsum TV wall with fireplace niche', category: 'gypsum' as const, title: locale === 'sq' ? 'Mur Gipsi për Televizor' : 'TV Wall in Gypsum' },
+    { id: '3', src: '/images/services/gypsum/punime-gipsi-komerciale-4.webp', alt: locale === 'sq' ? 'Mur gipsi i lakuar në hapësirë komerciale' : 'Curved gypsum wall in a commercial space', category: 'gypsum' as const, title: locale === 'sq' ? 'Mur Gipsi i Lakuar' : 'Curved Gypsum Wall' },
+    { id: '4', src: '/images/services/gypsum/modele-gipsi-per-sallone-1.webp', alt: locale === 'sq' ? 'Raft gipsi me porosi për sallon' : 'Custom built-in gypsum shelving for a living room', category: 'gypsum' as const, title: locale === 'sq' ? 'Raft Gipsi me Porosi' : 'Custom Gypsum Shelving' },
+    { id: '5', src: '/images/services/gypsum/tavan-gipsi-per-sallon-1.webp', alt: locale === 'sq' ? 'Tavan gipsi për sallon me ndriçim' : 'Gypsum ceiling for a living room with lighting', category: 'gypsum' as const, title: locale === 'sq' ? 'Tavan Gipsi për Sallon' : 'Gypsum Ceiling for Living Room' },
+    { id: '6', src: '/images/services/gypsum/patinimi-i-mureve-1.webp', alt: locale === 'sq' ? 'Patinim korridori i përfunduar' : 'Finished hallway plastering', category: 'plastering' as const, title: locale === 'sq' ? 'Patinim Korridori' : 'Hallway Plastering' },
+    { id: '7', src: '/images/services/gypsum/patinimi-i-mureve-3.webp', alt: locale === 'sq' ? 'Patinim hapësire komerciale me pamje nga Tirana' : 'Commercial space plastering with a Tirana view', category: 'plastering' as const, title: locale === 'sq' ? 'Patinim Hapësire Komerciale' : 'Commercial Space Plastering' },
+    { id: '8', src: '/images/services/gypsum/dhome-gjumi-tavan-gipsi-1.webp', alt: locale === 'sq' ? 'Dhomë gjumi me tavan gipsi të lartë' : 'Bedroom with a vaulted gypsum ceiling', category: 'gypsum' as const, title: locale === 'sq' ? 'Dhomë Gjumi me Tavan Gipsi' : 'Bedroom with Gypsum Ceiling' },
+    { id: '9', src: '/images/services/gypsum/ngjyra-fasada-e-jashtme-1.webp', alt: locale === 'sq' ? 'Lyerje fasade e jashtme e një vile moderne' : 'Exterior facade painting of a modern villa', category: 'painting' as const, title: locale === 'sq' ? 'Lyerje Fasade e Jashtme' : 'Exterior Facade Painting' },
+    { id: '10', src: '/images/services/gypsum/punime-gipsi-komerciale-1.webp', alt: locale === 'sq' ? 'Ndarje gipsi në ambient komercial' : 'Gypsum partition wall in a commercial space', category: 'gypsum' as const, title: locale === 'sq' ? 'Ndarje Gipsi Komerciale' : 'Commercial Gypsum Partition' },
   ];
 
   const breadcrumbs = [{ label: tNav('gallery') }];

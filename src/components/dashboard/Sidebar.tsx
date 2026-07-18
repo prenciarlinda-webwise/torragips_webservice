@@ -33,7 +33,7 @@ function SidebarContent({ onNavigate }: { onNavigate?: () => void }) {
     <>
       <div className="p-5 border-b border-white/10">
         <div className="flex items-center gap-3">
-          <img src="/images/logo.webp" alt="Torra Gips" className="w-9 h-9 object-contain brightness-0 invert" />
+          <img src="/images/logo-icon-white.webp" alt="Torra Gips" className="w-9 h-9 object-contain" />
           <div>
             <h1 className="text-base font-bold tracking-widest text-white">TORRA GIPS</h1>
             <p className="text-[10px] text-white/40 tracking-wide">Menaxhim</p>
@@ -106,7 +106,7 @@ export default function Sidebar() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
-          <img src="/images/logo.webp" alt="Torra Gips" className="w-7 h-7 object-contain brightness-0 invert" />
+          <img src="/images/logo-icon-white.webp" alt="Torra Gips" className="w-7 h-7 object-contain" />
           <span className="text-sm font-bold tracking-widest text-white">TORRA GIPS</span>
         </div>
         <div className="w-1 h-4 bg-[#d97706] rounded-full" />

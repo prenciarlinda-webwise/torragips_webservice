@@ -10,6 +10,7 @@ import { COMPANY, SITE_CONFIG } from '@/lib/constants';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import WhatsAppButton from '@/components/features/WhatsAppButton';
+import { QuoteModalProvider, QuoteModal, EngagementPopup } from '@/components/modals';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -116,10 +117,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </noscript>
         <div className="min-h-screen flex flex-col bg-neutral-50">
           <NextIntlClientProvider messages={messages}>
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-            <WhatsAppButton />
+            <QuoteModalProvider>
+              <Header />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <WhatsAppButton />
+              <QuoteModal />
+              <EngagementPopup />
+            </QuoteModalProvider>
           </NextIntlClientProvider>
         </div>
       </body>

@@ -44,7 +44,7 @@ export default function ArticleSchema({
       url: SITE_CONFIG.url,
       logo: {
         '@type': 'ImageObject',
-        url: `${SITE_CONFIG.url}/images/logo.svg`,
+        url: `${SITE_CONFIG.url}/images/logo.webp`,
       },
     },
   };
