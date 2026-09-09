@@ -235,7 +235,7 @@ export default function Footer() {
                 <a
                   href="https://www.websiteandseoagency.com/"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="nofollow noopener noreferrer"
                   className="text-neutral-400 hover:text-white transition-colors"
                 >
                   Website & SEO Agency
