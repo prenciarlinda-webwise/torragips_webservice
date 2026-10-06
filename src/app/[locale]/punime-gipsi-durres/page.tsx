@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Punime Gipsi Durrës - +355 68 858 0058 - Torra Gips'
-      : 'Gypsum Works Durrës - +355 68 858 0058 - Torra Gips',
+      ? 'Punime Gipsi Durrës - Torra Gips'
+      : 'Gypsum Works Durrës - Torra Gips',
     description: locale === 'sq'
       ? 'Punime gipsi profesionale në Durrës. Tavane të varura, ndarja hapësirash dhe dekorime për hotele, resorte dhe projekte rezidenciale. 100+ projekte të përfunduara. Konsultë falas.'
       : 'Professional gypsum works in Durrës. Suspended ceilings, space partitions and decorations for hotels, resorts and residential projects. 100+ completed projects. Free consultation.',
@@ -102,7 +102,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Punimesh Gipsi Ofrojmë në Durrës?',
+        title: 'Tavane, Ndarje dhe Dekorime Gipsi në Durrës',
         content: 'Në Durrës ofrojmë shërbime të specializuara gipsi që i përshtaten nevojave unike të qytetit bregdetar. Hotelet dhe resortet në zonën e plazhit kanë kërkesa të veçanta për cilësi dhe estetikë, ndërsa bizneset në qendër të Durrësit kërkojnë zgjidhje moderne dhe funksionale.',
         listItems: [
           'Tavane të varura për lobira hotelesh, restorante dhe salla konferencash',
@@ -114,7 +114,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Si Realizohen Tavanet e Gipsit në Durrës?',
+        title: 'Tavane Gipsi në Durrës',
         content: 'Instalimi i tavaneve të gipsit në Durrës kërkon vëmendje të veçantë ndaj kushteve klimatike bregdetare. Ekipi ynë përdor teknika të adaptuara që sigurojnë qëndrueshmëri afatgjatë edhe në ambientin detar. Para fillimit të punës, bëjmë një vlerësim të plotë të ambientit duke marrë parasysh lagështinë, ventilimin dhe ekspozimin ndaj diellit.',
         listItems: [
           'Vlerësim i kushteve klimatike dhe lagështisë së ambientit',
@@ -126,7 +126,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse të Zgjidhni Gipsin për Projektin Tuaj në Durrës?',
+        title: 'Përparësitë e Punimeve me Gips',
         content: 'Gipsi është zgjidhja ideale për projektet në Durrës falë aftësisë së tij për t\'u adaptuar me kushtet bregdetare. Hotelet, resortet dhe banesat pranë detit kanë nevojë për materiale që ofrojnë performancë të lartë edhe në kushte lagështie. Panelet e gipsit hidrofug nga Knauf dhe Rigips janë zgjidhja perfekte.',
         listItems: [
           'Rezistencë e lartë ndaj lagështisë - ideal për kushte bregdetare',
@@ -138,7 +138,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Zona të Durrësit Mbulojmë?',
+        title: 'Zonat e Durrësit ku Punojmë',
         content: 'Torra Gips ofron shërbime në të gjitha zonat e Durrësit dhe rrethinave, duke përfshirë zonat turistike bregdetare dhe qendrën e qytetit. Ekipi ynë njeh mirë gjeografinë e Durrësit dhe është i gatshëm të vijë në çdo lokacion.',
         listItems: [
           'Plazhi i Durrësit - hotele, resorte, restorante dhe bare bregdetare',
@@ -150,7 +150,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Punimi i Gipsit në Durrës?',
+        title: 'Çmimi i Punimeve të Gipsit në Durrës',
         content: 'Çmimi i punimeve të gipsit në Durrës varet nga lloji i sistemit, materialet dhe kushtet e ambientit bregdetar. Si orientim, tavanet e thjeshta të varura fillojnë nga rreth 2100 deri 2300 Lek/m2, ndarjet e mureve nga 3500 deri 4500 Lek/m2, ndërsa sistemet hidrofuge me panele Knauf ose Rigips për zona me lagështi kushtojnë më shumë. Ofrojmë vlerësim falas në vend dhe ofertë të detajuar pa detyrime.',
         listItems: [
           'Tavane të varura standarde - rreth 2100 deri 2300 Lek/m2',
@@ -162,7 +162,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Janë Gabimet më të Shpeshta në Punimet e Gipsit?',
+        title: 'Gabimet më të Shpeshta në Punimet e Gipsit',
         content: 'Shumë probleme me gipsin në ambientet bregdetare të Durrësit vijnë nga zgjedhja e gabuar e materialit ose nga nxitimi gjatë instalimit. Përdorimi i paneleve standarde në vend të atyre hidrofuge në zona me lagështi shkakton myk dhe deformim. Po ashtu, lyerja para se shtresa e patinimit të thahet plotësisht prodhon çarje. Ekipi ynë i shmang këto duke respektuar kohët e thatjes dhe standardet e prodhuesit.',
         listItems: [
           'Përdorimi i paneleve standarde në bano ose pranë detit',
@@ -238,13 +238,13 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Gipsi Ofrojmë në Durrës?',
-      commercialExperience: 'Ku Kemi Punuar me Gips në Durrës?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips në Durrës?',
-      howWeWork: 'Si Funksionon Procesi Ynë në Durrës?',
-      serviceAreas: 'Cilat Zona të Durrësit Mbulojmë?',
-      faq: 'Pyetje të Shpeshta për Punimet e Gipsit në Durrës',
-      readyToStart: 'Gati për Projektin Tuaj të Gipsit në Durrës?',
+      whatWeOffer: 'Shërbime Gipsi në Durrës',
+      commercialExperience: 'Projekte Gipsi të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Punime Gipsi',
     },
     relatedLinks: [
       { href: '/punime-gipsi-tirane', label: 'Punime Gipsi në Tiranë' },
@@ -263,7 +263,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Gypsum Works Do We Offer in Durrës?',
+        title: 'Gypsum Ceilings, Partitions and Decorations in Durrës',
         content: 'In Durrës we offer specialized gypsum services tailored to the unique needs of the coastal city. Hotels and resorts in the beach area have particular requirements for quality and aesthetics, while businesses in central Durrës seek modern and functional solutions.',
         listItems: [
           'Suspended ceilings for hotel lobbies, restaurants and conference halls',
@@ -275,7 +275,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Are Gypsum Ceilings Installed in Durrës?',
+        title: 'Gypsum Ceilings in Durrës',
         content: 'Gypsum ceiling installation in Durrës requires special attention to coastal climatic conditions. Our team uses adapted techniques that ensure long-term durability even in the maritime environment. Before starting work, we carry out a complete assessment of the environment considering humidity, ventilation and sun exposure.',
         listItems: [
           'Assessment of climatic conditions and ambient humidity',
@@ -287,7 +287,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Choose Gypsum for Your Durrës Project?',
+        title: 'Benefits of Gypsum Works',
         content: 'Gypsum is the ideal solution for projects in Durrës thanks to its ability to adapt to coastal conditions. Hotels, resorts and residences near the sea need materials that offer high performance even in humid conditions. Hydrophobic gypsum panels from Knauf and Rigips are the perfect solution.',
         listItems: [
           'High moisture resistance - ideal for coastal conditions',
@@ -299,7 +299,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Areas of Durrës Do We Cover?',
+        title: 'Durrës Areas We Work In',
         content: 'Torra Gips provides services across all areas of Durrës and surroundings, including coastal tourism zones and the city center. Our team knows the geography of Durrës well and is ready to come to any location.',
         listItems: [
           'Durrës Beach - hotels, resorts, restaurants and coastal bars',
@@ -311,7 +311,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Do Gypsum Works Cost in Durrës?',
+        title: 'Gypsum Works Prices in Durrës',
         content: 'The price of gypsum works in Durrës depends on the system type, materials and the coastal conditions of the site. As a guide, simple suspended ceilings start from around 2100 to 2300 Lek per square meter, wall partitions from 3500 to 4500 Lek per square meter, while hydrophobic systems with Knauf or Rigips panels for humid zones cost more. We provide a free on-site assessment and a detailed quote with no obligation.',
         listItems: [
           'Standard suspended ceilings - around 2100 to 2300 Lek per m2',
@@ -323,7 +323,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Are the Most Common Mistakes in Gypsum Works?',
+        title: 'Most Common Gypsum Works Mistakes',
         content: 'Many problems with gypsum in the coastal environment of Durrës come from the wrong choice of material or from rushing the installation. Using standard panels instead of hydrophobic ones in humid zones causes mold and warping. Likewise, painting before the plaster layer has fully dried produces cracks. Our team avoids these by respecting drying times and following manufacturer standards on every project.',
         listItems: [
           'Using standard panels in bathrooms or near the sea',
@@ -399,13 +399,13 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Gypsum Services Do We Offer in Durrës?',
-      commercialExperience: 'Where Have We Done Gypsum Work in Durrës?',
-      whyChooseUs: 'Why Choose Torra Gips in Durrës?',
-      howWeWork: 'How Does Our Process Work in Durrës?',
-      serviceAreas: 'What Areas of Durrës Do We Cover?',
-      faq: 'Frequently Asked Questions About Gypsum Works in Durrës',
-      readyToStart: 'Ready for Your Gypsum Project in Durrës?',
+      whatWeOffer: 'Gypsum Services in Durrës',
+      commercialExperience: 'Completed Gypsum Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Gypsum Works',
     },
     relatedLinks: [
       { href: '/gypsum-works-tirana', label: 'Gypsum Works in Tirana' },
@@ -426,6 +426,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
 
       <ServicePageTemplate
         locale={locale}
+        videos='gips'
         {...pageData}
       />
     </>

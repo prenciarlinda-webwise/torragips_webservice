@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Patinim Profesional Durrës - +355 68 858 0058 - Torra Gips'
-      : 'Professional Plastering Durrës - +355 68 858 0058 - Torra Gips',
+      ? 'Patinim Durrës - Torra Gips'
+      : 'Wall Plastering Durrës - Torra Gips',
     description: locale === 'sq'
       ? 'Patinim profesional murash në Durrës. Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për hotele, resorte dhe projekte rezidenciale. 100+ projekte. Konsultë falas.'
       : 'Professional wall plastering in Durrës. Interior and exterior plastering, decorative plaster and wall repairs for hotels, resorts and residential projects. 100+ projects. Free consultation.',
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: locale === 'sq'
-        ? 'Patinim Profesional Durrës - Torra Gips'
-        : 'Professional Plastering Durrës - Torra Gips',
+        ? 'Patinim Durrës - Torra Gips'
+        : 'Wall Plastering Durrës - Torra Gips',
       description: locale === 'sq'
         ? 'Patinim profesional murash në Durrës. Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për hotele dhe resorte. 100+ projekte.'
         : 'Professional wall plastering in Durrës. Interior and exterior plastering, decorative plaster and wall repairs for hotels and resorts. 100+ projects.',
@@ -93,7 +93,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Patinim Durrës',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Patinim Profesional Murash në Durrës',
+    heroTitle: 'Patinim Durrës',
     heroSubtitle: 'Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për hotele, resorte dhe projekte rezidenciale në Durrës. 100+ projekte të përfunduara përfshirë Green Coast Resort. Materiale premium europiane. Konsultë falas.',
     introContent: [
       'Patinimi profesional i mureve në Durrës është thelbësor për industrinë e turizmit dhe ndërtimit bregdetar që po lulëzon në qytetin më të madh portual të Shqipërisë. Torra Gips ofron shërbime patinimi të nivelit më të lartë në të gjitha zonat e Durrësit, duke përfshirë Plazhin, Currilën, Shkozet, Porto Romanon dhe gjithë bregdetin deri në Golem e Kavajë. Me përvojën tonë në projekte si Green Coast Resort, Aeroporti Ndërkombëtar i Vlorës, Rolling Hills dhe Lion Park, ne jemi partneri ideal për çdo projekt në zonën bregdetare.',
@@ -102,7 +102,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Përfshin Patinimi Brendshëm në Durrës?',
+        title: 'Patinim i Brendshëm në Durrës',
         content: 'Patinimi brendshëm në Durrës kërkon vëmendje të veçantë ndaj lagështisë bregdetare. Hotelet, resortet dhe apartamentet e pushimit kanë nevojë për sipërfaqe që jo vetëm duken mirë, por gjithashtu rezistojnë kushteve të veçanta klimatike të bregdetit.',
         listItems: [
           'Patinim me gips anti-lagështi për hotele dhe resorte bregdetare',
@@ -114,7 +114,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është i Rëndësishëm Patinimi Jashtëm në Durrës?',
+        title: 'Patinim i Jashtëm në Durrës',
         content: 'Fasadat e ndërtesave në Durrës përballen me sfida unike: kripa detare, erërat e forta bregdetare dhe lagështia e lartë. Patinimi jashtëm duhet të jetë i nivelit të lartë për të mbrojtur strukturën dhe ruajtur pamjen estetike të ndërtesave turistike.',
         listItems: [
           'Suva e jashtme rezistente ndaj kripës detare dhe korrozionit',
@@ -126,7 +126,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Efektesh Ofrojnë Suvat Dekorative në Durrës?',
+        title: 'Suva Dekorative në Durrës',
         content: 'Industria turistike e Durrësit kërkon përfundime luksoze dhe tërheqëse. Suvaja dekorative transformon lobby-t e hoteleve, restorantet bregdetare, dhoma VIP dhe vilat me pamje nga deti në hapësira mbresëlënëse.',
         listItems: [
           'Efekt mermeri venecian për lobby-t e hoteleve luksoze',
@@ -138,7 +138,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Zona të Durrësit Mbulojmë për Patinim?',
+        title: 'Zonat e Durrësit ku Punojmë',
         content: 'Torra Gips ofron mbulim të plotë në gjithë zonën e Durrësit dhe bregdetin përreth. Nga qendra historike te resortet e reja në Golem dhe Gjirin e Lalzit, ekipi ynë arrin kudo me shpejtësi.',
         listItems: [
           'Plazhi i Durrësit - hotele, resorte dhe komplekse apartamentesh',
@@ -150,7 +150,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Patinimi për Metër Katror në Durrës?',
+        title: 'Çmimi i Patinimit të Mureve në Durrës',
         content: 'Cmimi i patinimit varet nga gjendja e murit, numri i shtresave dhe lloji i përfundimit. Si referencë indikative për tregun shqiptar, patinimi standard bardh me dy shtresa rrjedh zakonisht ndërmjet 600 dhe 1200 Lek per metër katror, ndërsa suvatë dekorative venecianë ose travertin shkojnë nga 2500 deri mbi 5000 Lek per metër katror. Per ndërtesat bregdetare materialet anti-kripë e rrisin pak koston, por zgjatin shumë jetëgjatësinë. Ofrojmë inspektim falas dhe ofertë të detajuar.',
         listItems: [
           'Patinim standard me dy shtresa: rreth 600 deri 1200 Lek per metër katror',
@@ -162,7 +162,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cili Material Gipsi Është më i Mirë, Knauf apo Rigips?',
+        title: 'Knauf apo Rigips',
         content: 'Si Knauf edhe Rigips janë sisteme gipsi europiane të nivelit të lartë që ne i përdorim rregullisht. Pllakat standarde të gipsit ofrojnë rezistencë ndaj zjarrit dhe izolim akustik, ndërsa variantet jeshile rezistente ndaj lagështisë janë ideale per banjot dhe ambientet bregdetare të Durrësit. Zgjedhja varet më shumë nga aplikimi sesa nga marka. Per ngjyrosjen kombinojmë boje cilësore Dulux, Jotun ose Caparol, që mbulojnë rreth 10 deri 12 metra katror per litër dhe thahen brenda dy deri katër orëve.',
         listItems: [
           'Knauf dhe Rigips ofrojnë cilësi të krahasueshme dhe rezistencë ndaj zjarrit',
@@ -238,13 +238,13 @@ export default async function PlasteringDurresPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Patinimi Ofrojmë në Durrës?',
-      commercialExperience: 'Ku Kemi Kryer Patinim Komercial në Durrës?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Patinimin në Durrës?',
-      howWeWork: 'Si Funksionon Procesi i Patinimit në Durrës?',
-      serviceAreas: 'Ku Ofrojmë Shërbime Patinimi në Durrës?',
-      faq: 'Pyetje të Shpeshta për Patinimin në Durrës',
-      readyToStart: 'Gati për Projektin Tuaj të Patinimit në Durrës?',
+      whatWeOffer: 'Shërbime Patinimi në Durrës',
+      commercialExperience: 'Projekte Patinimi të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Patinim',
     },
     relatedLinks: [
       { href: '/patinim-tirane', label: 'Patinim Profesional në Tiranë' },
@@ -254,7 +254,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
   } : {
     serviceName: 'Plastering Durrës',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Professional Wall Plastering in Durrës',
+    heroTitle: 'Wall Plastering Durrës',
     heroSubtitle: 'Interior and exterior plastering, decorative plaster and wall repairs for hotels, resorts and residential projects in Durrës. 100+ completed projects including Green Coast Resort. Premium European materials. Free consultation.',
     introContent: [
       'Professional wall plastering in Durrës is essential for the booming tourism and coastal construction industry in Albania\'s largest port city. Torra Gips delivers the highest level plastering services across all areas of Durrës, including Plazhi, Currila, Shkozet, Porto Romano and the entire coastline to Golem and Kavaja. With our experience on projects like Green Coast Resort, Vlora International Airport, Rolling Hills and Lion Park, we are the ideal partner for any project in the coastal zone.',
@@ -263,7 +263,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Does Interior Plastering Include in Durrës?',
+        title: 'Interior Wall Plastering in Durrës',
         content: 'Interior plastering in Durrës requires special attention to coastal humidity. Hotels, resorts and vacation apartments need surfaces that not only look great but also withstand the unique climatic conditions of the seaside.',
         listItems: [
           'Anti-moisture gypsum plastering for coastal hotels and resorts',
@@ -275,7 +275,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Exterior Plastering Important in Durrës?',
+        title: 'Exterior Plastering in Durrës',
         content: 'Building facades in Durrës face unique challenges: sea salt, strong coastal winds and high humidity. Exterior plastering must be of the highest quality to protect the structure and maintain the aesthetic appearance of tourism buildings.',
         listItems: [
           'Exterior plaster resistant to sea salt and corrosion',
@@ -287,7 +287,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Effects Do Decorative Plasters Offer in Durrës?',
+        title: 'Decorative Plasters in Durrës',
         content: 'The tourism industry in Durrës demands luxury and attractive finishes. Decorative plaster transforms hotel lobbies, seaside restaurants, VIP rooms and sea-view villas into impressive spaces.',
         listItems: [
           'Venetian marble effect for luxury hotel lobbies',
@@ -299,7 +299,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Areas of Durrës Do We Cover for Plastering?',
+        title: 'Durrës Areas We Work In',
         content: 'Torra Gips offers full coverage across all of Durrës and the surrounding coastline. From the historic center to the new resorts in Golem and Lalzi Bay, our team arrives anywhere promptly.',
         listItems: [
           'Durrës Beach - hotels, resorts and apartment complexes',
@@ -311,7 +311,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Does Plastering Cost Per Square Meter in Durrës?',
+        title: 'Wall Plastering Prices in Durrës',
         content: 'Plastering cost depends on wall condition, the number of coats and the type of finish. As an indicative reference for the Albanian market, standard white plastering with two coats typically runs between 600 and 1200 Lek per square meter, while Venetian or travertine decorative plasters range from 2500 to over 5000 Lek per square meter. For coastal buildings, anti-salt materials slightly raise the cost but greatly extend durability. We provide a free inspection and a detailed quote.',
         listItems: [
           'Standard two-coat plastering: around 600 to 1200 Lek per square meter',
@@ -323,7 +323,7 @@ export default async function PlasteringDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Gypsum Material Is Better, Knauf or Rigips?',
+        title: 'Knauf vs Rigips',
         content: 'Both Knauf and Rigips are high quality European gypsum systems that we use regularly. Standard gypsum boards offer fire resistance and acoustic insulation, while the moisture-resistant green variants are ideal for bathrooms and the coastal environments of Durrës. The choice depends more on the application than on the brand. For painting we combine quality Dulux, Jotun or Caparol paints, which cover roughly 10 to 12 square meters per liter and dry within two to four hours.',
         listItems: [
           'Knauf and Rigips offer comparable quality and fire resistance',
@@ -399,13 +399,13 @@ export default async function PlasteringDurresPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Plastering Services Do We Offer in Durrës?',
-      commercialExperience: 'Where Have We Done Commercial Plastering in Durrës?',
-      whyChooseUs: 'Why Choose Torra Gips for Plastering in Durrës?',
-      howWeWork: 'How Does the Plastering Process Work in Durrës?',
-      serviceAreas: 'Where Do We Offer Plastering Services in Durrës?',
-      faq: 'Frequently Asked Questions About Plastering in Durrës',
-      readyToStart: 'Ready for Your Plastering Project in Durrës?',
+      whatWeOffer: 'Plastering Services in Durrës',
+      commercialExperience: 'Completed Plastering Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Plastering',
     },
     relatedLinks: [
       { href: '/wall-plastering-tirana', label: 'Professional Plastering in Tirana' },

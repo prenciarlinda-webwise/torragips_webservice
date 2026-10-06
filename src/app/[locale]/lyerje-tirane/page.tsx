@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Lyerje Profesionale Tiranë - +355 68 858 0058 - Torra Gips'
-      : 'Professional Painting Tirana - +355 68 858 0058 - Torra Gips',
+      ? 'Lyerje Tiranë - Torra Gips'
+      : 'Painting Tirana - Torra Gips',
     description: locale === 'sq'
       ? 'Lyerje profesionale në Tiranë. Lyerje brendshme dhe jashtme, bojëra ekologjike dhe efekte dekorative për projekte komerciale dhe rezidenciale. 100+ projekte. Konsultë falas.'
       : 'Professional painting in Tirana. Interior and exterior painting, eco-friendly paints and decorative effects for commercial and residential projects. 100+ projects. Free consultation.',
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: locale === 'sq'
-        ? 'Lyerje Profesionale Tiranë - Torra Gips'
-        : 'Professional Painting Tirana - Torra Gips',
+        ? 'Lyerje Tiranë - Torra Gips'
+        : 'Painting Tirana - Torra Gips',
       description: locale === 'sq'
         ? 'Lyerje profesionale në Tiranë. Lyerje brendshme dhe jashtme, bojëra ekologjike dhe efekte dekorative. 100+ projekte të përfunduara.'
         : 'Professional painting in Tirana. Interior and exterior painting, eco-friendly paints and decorative effects. 100+ completed projects.',
@@ -93,7 +93,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Lyerje Tiranë',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Lyerje Profesionale në Tiranë',
+    heroTitle: 'Lyerje Tiranë',
     heroSubtitle: 'Lyerje brendshme dhe jashtme për biznese dhe banesa në Tiranë. Mbulojmë Bllokun, Komunën e Parisit, Kashar dhe gjithë zonat urbane. 100+ projekte të përfunduara. Bojëra Dulux, Jotun dhe Caparol. Konsultë falas.',
     introContent: [
       'Lyerja profesionale në Tiranë është një shërbim thelbësor për çdo projekt ndërtimi ose rinovimi në kryeqytetin shqiptar. Torra Gips ofron shërbime lyerjeje të nivelit më të lartë për biznese, zyra, hotele, restorante dhe banesa në të gjitha lagjet e Tiranës. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort, Rolling Hills dhe Lion Park, ekipi ynë garanton cilësi vizuale që bën përshtypje në çdo ambient.',
@@ -102,7 +102,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Përfshin Lyerja Brendshme në Tiranë?',
+        title: 'Lyerje e Brendshme në Tiranë',
         content: 'Lyerja brendshme në Tiranë kërkon njohuri të veçanta për tipologjitë e ndërtesave urbane. Nga apartamentet moderne në pallate deri tek zyrat e biznesit në zonën qendrore, ne ofrojmë zgjidhje të personalizuara për çdo hapësirë.',
         listItems: [
           'Lyerje murash, tavanesh dhe elementeve arkitekturore në apartamente dhe zyra',
@@ -114,7 +114,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është e Rëndësishme Lyerja Jashtme në Tiranë?',
+        title: 'Lyerje e Jashtme në Tiranë',
         content: 'Klima kontinentale e Tiranës me verëra të nxehta dhe dimra të ftohtë kërkon bojëra jashtme cilësore. Fasadat e ndërtesave në Tiranë ekspozohen ndaj ndryshimeve të mëdha të temperaturës, shiut dhe pluhurit urban.',
         listItems: [
           'Bojëra elastike që përballojnë ndryshimet e temperaturës -5°C deri +40°C të Tiranës',
@@ -126,7 +126,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Efektesh Dekorative Ofrojmë në Tiranë?',
+        title: 'Efekte Dekorative në Tiranë',
         content: 'Tirana është qyteti ku dizajni i brendshëm po evoluon me shpejtësi. Bizneset dhe pronarët kërkojnë efekte dekorative unike që dallojnë ambientet e tyre. Ne sjellim teknikat më të reja për klientët më kërkues të kryeqytetit.',
         listItems: [
           'Efekt mermeri dhe guri natyral për lobi zyrtare dhe hotele në qendër',
@@ -138,7 +138,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Zona të Tiranës Mbulojmë për Lyerje?',
+        title: 'Zonat e Tiranës ku Punojmë',
         content: 'Torra Gips ofron shërbime lyerjeje në të gjitha zonat e Tiranës dhe rrethinave. Pavarësisht se ku ndodhet projekti juaj, ekipi ynë arrin shpejt dhe fillon punën menjëherë.',
         listItems: [
           'Blloku dhe qendra historike e Tiranës - zyra, restorante, hotele',
@@ -150,7 +150,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Lyerja për Metër Katror në Tiranë?',
+        title: 'Çmimi i Lyerjes në Tiranë',
         content: 'Çmimi i lyerjes në Tiranë varet nga gjendja e mureve, numri i duarve dhe cilësia e bojës. Si referencë indikative për tregun shqiptar, lyerja e brendshme me përgatitje standarde shkon zakonisht 400-800 Lek për metër katror, ndërsa fasadat e jashtme me bojëra elastike Caparol arrijnë 900-1500 Lek për metër katror. Patinimi paraprak dhe riparimet e çarjeve faturohen veçmas. Vizita në vend dhe vlerësimi janë falas në Tiranë dhe Durrës.',
         listItems: [
           'Lyerje brendshme me dy duar - rreth 400-800 Lek për metër katror sipas përgatitjes',
@@ -162,7 +162,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Janë Gabimet më të Shpeshta gjatë Lyerjes?',
+        title: 'Gabimet më të Shpeshta gjatë Lyerjes',
         content: 'Shumë probleme me lyerjen lindin nga përgatitja e nxituar e sipërfaqeve dhe mosrespektimi i kohëve të tharjes. Boja e aplikuar mbi mure me lagështirë ose pluhur shkëputet shpejt, ndërsa duart e shtuara pa pritur tharjen krijojnë çarje dhe njolla. Përdorimi i bojës së lirë me mbulim të dobët shton duar shtesë dhe rrit koston reale. Ekipi ynë në Tiranë respekton kohët e tharjes 2-4 orë mes duarve dhe përgatit murin plotësisht.',
         listItems: [
           'Aplikim i bojës mbi mure me lagështirë ose pa primer përshtatës',
@@ -177,13 +177,13 @@ export default async function PaintingTiranaPage({ params }: Props) {
     serviceFeatures: [
       {
         icon: 'ceiling' as const,
-        title: 'Lyerje Apartamentesh në Tiranë',
+        title: 'Lyerje Apartamentesh',
         description: 'Ngjyra moderne për apartamentet e reja në Bllok dhe Komunë. Bojëra ekologjike Dulux ideale për familje me fëmijë.',
         features: ['Apartamente të reja', 'VOC i ulët', 'Sigurt për familjen', 'Ngjyra moderne'],
       },
       {
         icon: 'partition' as const,
-        title: 'Fasada Pallatesh Urbane',
+        title: 'Fasada Pallatesh',
         description: 'Lyerje e jashtme për kullat e reja dhe pallatet ekzistuese të Tiranës. Bojëra anti-pluhur Caparol për zonën urbane.',
         features: ['Kulla moderne', 'Anti-pluhur', 'Rezistencë temperature', 'Pallate ekzistuese'],
       },
@@ -238,13 +238,13 @@ export default async function PaintingTiranaPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Lyerjeje Ofrojmë në Tiranë?',
-      commercialExperience: 'Ku Kemi Kryer Lyerje Komerciale në Tiranë?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Lyerje në Tiranë?',
-      howWeWork: 'Si Funksionon Procesi i Lyerjes në Tiranë?',
-      serviceAreas: 'Cilat Zona të Tiranës Mbulojmë?',
-      faq: 'Pyetje të Shpeshta për Lyerjen në Tiranë',
-      readyToStart: 'Gati për Projektin Tuaj të Lyerjes në Tiranë?',
+      whatWeOffer: 'Shërbime Lyerjeje në Tiranë',
+      commercialExperience: 'Projekte Lyerjeje të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Lyerje',
     },
     relatedLinks: [
       { href: '/lyerje-durres', label: 'Lyerje Profesionale në Durrës' },
@@ -254,7 +254,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
   } : {
     serviceName: 'Painting Tirana',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Professional Painting in Tirana',
+    heroTitle: 'Painting Tirana',
     heroSubtitle: 'Interior and exterior painting for businesses and homes in Tirana. We cover Blloku, Komuna e Parisit, Kashar and all urban areas. 100+ completed projects. Dulux, Jotun and Caparol paints. Free consultation.',
     introContent: [
       'Professional painting in Tirana is an essential service for any construction or renovation project in the Albanian capital. Torra Gips delivers the highest standard of painting services for businesses, offices, hotels, restaurants and homes across all neighborhoods of Tirana. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort, Rolling Hills and Lion Park, our team guarantees visual quality that impresses in every environment.',
@@ -263,7 +263,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Does Interior Painting Include in Tirana?',
+        title: 'Interior Painting in Tirana',
         content: 'Interior painting in Tirana requires specialized knowledge of urban building typologies. From modern apartments in residential towers to business offices in the central zone, we provide customized solutions for every space.',
         listItems: [
           'Painting of walls, ceilings and architectural elements in apartments and offices',
@@ -275,7 +275,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Exterior Painting Important in Tirana?',
+        title: 'Exterior Painting in Tirana',
         content: 'Tirana\'s continental climate with hot summers and cold winters demands quality exterior paints. Building facades in Tirana are exposed to large temperature variations, rain and urban dust.',
         listItems: [
           'Elastic paints that withstand Tirana\'s temperature variations from -5°C to +40°C',
@@ -287,7 +287,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Decorative Painting Effects Do We Offer in Tirana?',
+        title: 'Decorative Effects in Tirana',
         content: 'Tirana is a city where interior design is evolving rapidly. Businesses and homeowners seek unique decorative effects that distinguish their spaces. We bring the latest techniques for the most demanding clients in the capital.',
         listItems: [
           'Marble and natural stone effects for official lobbies and hotels in the center',
@@ -299,7 +299,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Areas of Tirana Do We Cover for Painting?',
+        title: 'Tirana Areas We Work In',
         content: 'Torra Gips provides painting services across all areas of Tirana and its surroundings. Regardless of where your project is located, our team arrives quickly and starts work immediately.',
         listItems: [
           'Blloku and the historic center of Tirana - offices, restaurants, hotels',
@@ -311,7 +311,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Does Painting Cost Per Square Meter in Tirana?',
+        title: 'Painting Prices in Tirana',
         content: 'Painting prices in Tirana depend on wall condition, the number of coats and paint quality. As an indicative reference for the Albanian market, interior painting with standard preparation typically runs 400-800 Lek per square meter, while exterior facades with elastic Caparol paints reach 900-1500 Lek per square meter. Plastering and crack repairs are billed separately. On-site visits and assessments are free across Tirana and Durrës.',
         listItems: [
           'Interior painting with two coats - around 400-800 Lek per square meter by preparation',
@@ -323,7 +323,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Are the Most Common Mistakes During Painting?',
+        title: 'Most Common Painting Mistakes',
         content: 'Many painting problems arise from rushed surface preparation and ignoring drying times. Paint applied over damp or dusty walls peels quickly, while coats added before the previous one dries create cracks and blotches. Using cheap paint with poor coverage adds extra coats and raises the real cost. Our team in Tirana respects the 2-4 hour drying time between coats and prepares the wall fully before painting.',
         listItems: [
           'Applying paint over damp walls or without a suitable primer',
@@ -338,13 +338,13 @@ export default async function PaintingTiranaPage({ params }: Props) {
     serviceFeatures: [
       {
         icon: 'ceiling' as const,
-        title: 'Tirana Apartment Painting',
+        title: 'Apartment Painting',
         description: 'Modern colors for new apartments in Blloku and Komuna. Eco-friendly Dulux paints ideal for families with children.',
         features: ['New apartments', 'Low VOC', 'Family safe', 'Modern colors'],
       },
       {
         icon: 'partition' as const,
-        title: 'Urban Building Facades',
+        title: 'Building Facades',
         description: 'Exterior painting for Tirana\'s new towers and existing buildings. Anti-dust Caparol paints for the urban zone.',
         features: ['Modern towers', 'Anti-dust', 'Temperature resistance', 'Existing buildings'],
       },
@@ -399,13 +399,13 @@ export default async function PaintingTiranaPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Painting Services Do We Offer in Tirana?',
-      commercialExperience: 'Where Have We Done Commercial Painting in Tirana?',
-      whyChooseUs: 'Why Choose Torra Gips for Painting in Tirana?',
-      howWeWork: 'How Does the Painting Process Work in Tirana?',
-      serviceAreas: 'Which Areas of Tirana Do We Cover?',
-      faq: 'Frequently Asked Questions About Painting in Tirana',
-      readyToStart: 'Ready for Your Painting Project in Tirana?',
+      whatWeOffer: 'Painting Services in Tirana',
+      commercialExperience: 'Completed Painting Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Painting',
     },
     relatedLinks: [
       { href: '/painting-durres', label: 'Professional Painting in Durrës' },
@@ -426,6 +426,7 @@ export default async function PaintingTiranaPage({ params }: Props) {
 
       <ServicePageTemplate
         locale={locale}
+        videos='lyerje'
         {...pageData}
       />
     </>

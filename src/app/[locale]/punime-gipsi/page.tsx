@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Punime Gipsi Profesionale Tiranë & Durrës - +355 68 858 0058 - Torra Gips'
-      : 'Professional Gypsum Works Tirana & Durrës - +355 68 858 0058 - Torra Gips',
+      ? 'Punime Gipsi Tiranë & Durrës - Torra Gips'
+      : 'Gypsum Works Tirana & Durrës - Torra Gips',
     description: locale === 'sq'
       ? 'Punime gipsi profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
       : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: locale === 'sq'
-        ? 'Punime Gipsi Profesionale Tiranë & Durrës - Torra Gips'
-        : 'Professional Gypsum Works Tirana & Durrës - Torra Gips',
+        ? 'Punime Gipsi Tiranë & Durrës - Torra Gips'
+        : 'Gypsum Works Tirana & Durrës - Torra Gips',
       description: locale === 'sq'
         ? 'Punime gipsi profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës.'
         : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport.',
@@ -93,7 +93,7 @@ export default async function GypsumWorksPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Punime Gipsi',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Punime Gipsi Profesionale në Tiranë dhe Durrës',
+    heroTitle: 'Punime Gipsi',
     heroSubtitle: 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Materiale Knauf dhe Rigips. Konsultë falas.',
     introContent: [
       'Punimet e gipsit profesionale janë zgjidhja ideale për projekte moderne komerciale dhe rezidenciale. Torra Gips është kompania lider për punime gipsi në Shqipëri, me fokus të veçantë në projektet komerciale të mëdha. Kemi pasur nderin të punojmë në disa nga projektet më prestigjioze të vendit, duke përfshirë Aeroportin Ndërkombëtar të Vlorës, resortin Green Coast, kompleksin Rolling Hills dhe qendrën komerciale Lion Park.',
@@ -102,7 +102,7 @@ export default async function GypsumWorksPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Janë Tavanet e Varura me Gips?',
+        title: 'Tavane të Varura me Gips',
         content: 'Tavanet e varura me gips janë specialiteti ynë kryesor dhe një nga shërbimet më të kërkuara për projekte komerciale. Në aeroportet, hotelet dhe zyrat moderne, tavanet e gipsit luajnë një rol kyç në estetikë dhe funksionalitet. Ne ofrojmë dizajne të personalizuara që integrojnë sisteme ndriçimi, ajrimi dhe zjarri në mënyrë elegante.',
         listItems: [
           'Tavane me nivele të shumta për efekt vizual dramatik',
@@ -114,7 +114,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Si Funksionojnë Ndarjet e Hapësirash me Gips?',
+        title: 'Ndarje Hapësirash me Gips',
         content: 'Ndarjet me panel gipsi janë zgjidhja ideale për riorganizimin e hapësirave komerciale dhe rezidenciale. Për zyra moderne që kërkojnë fleksibilitet, hotele që kanë nevojë për dhoma shtesë, ose qendra tregtare që ndryshojnë konfigurimin, ndarjet tona ofrojnë instalim të shpejtë pa ndërhyrje strukturore.',
         listItems: [
           'Instalim i shpejtë dhe i pastër - minimizojmë ndërprerjen e aktivitetit tuaj',
@@ -126,7 +126,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Dekorimesh Arkitekturore Ofron Gipsi?',
+        title: 'Dekorime Arkitekturore me Gips',
         content: 'Për projekte që kërkojnë diçka të veçantë, ofrojmë dekorime arkitekturore me gips që shtojnë karakter dhe elegancë hapësirave. Nga lobi-t e hoteleve deri te sallat e konferencave, detajet dekorative krijojnë atmosferë unike.',
         listItems: [
           'Korniza dhe profile dekorative për ambiente elegante',
@@ -138,7 +138,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është i Rëndësishëm Izolimi Akustik me Gips?',
+        title: 'Izolim Akustik me Gips',
         content: 'Izolimi është veçanërisht i rëndësishëm për projekte komerciale ku komforti dhe funksionaliteti janë prioritet. Ne ofrojmë zgjidhje të specializuara që përmirësojnë ndjeshëm performancën e ndërtesave.',
         listItems: [
           'Izolim akustik për zyra, studio regjistrimi dhe ambiente konferencash',
@@ -150,7 +150,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Punime Gipsi për Shtëpi: Sallone, Dhoma Gjumi dhe Televizor',
+        title: 'Punime Gipsi për Sallone, Dhoma Gjumi dhe Televizor',
         content: 'Përveç projekteve komerciale, ofrojmë punime gipsi për shtëpi private në Tiranë dhe Durrës. Tavanet e gipsit për sallone, dizajnet me gips për televizor dhe punimet dekorative për dhoma gjumi janë ndër shërbimet më të kërkuara nga klientët tanë rezidencialë.',
         listItems: [
           'Punime gipsi për sallone me tavane moderne dhe ndriçim LED',
@@ -162,7 +162,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushtojnë Punimet e Gipsit për Metër Katror?',
+        title: 'Çmimi i Punimeve të Gipsit',
         content: 'Kostoja e punimeve të gipsit në Tiranë dhe Durrës varet nga lloji i sistemit, kompleksiteti i dizajnit dhe materialet e zgjedhura. Si tregues orientues, tavanet e thjeshta të varura fillojnë rreth 2100 deri 2300 Lek për metër katror, ndërsa tavanet me nivele dhe ndriçim LED arrijnë 2500 deri 4000 Lek. Ndarjet me panel gipsi dyfaqësh me izolim janë zakonisht 3500 deri 4500 Lek për metër katror. Vizita në vend dhe oferta janë falas.',
         listItems: [
           'Tavane të thjeshta të varura: rreth 2100 deri 2300 Lek për metër katror',
@@ -174,7 +174,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cili Material Është Më i Mirë: Knauf apo Rigips?',
+        title: 'Knauf apo Rigips',
         content: 'Të dy sistemet Knauf dhe Rigips janë marka gjermane lider me cilësi të lartë dhe ne i përdorim të dyja sipas nevojës së projektit. Panelet standarde ofrojnë rezistencë ndaj zjarrit deri në 30 minuta, ndërsa panelet speciale rozë antizjarr arrijnë 60 minuta ose më shumë. Për banjot dhe kuzhinat zgjedhim panele jeshile rezistente ndaj lagështisë. Ne kombinojmë sistemin më të përshtatshëm me boje cilësore Dulux, Jotun ose Caparol për përfundim afatgjatë.',
         listItems: [
           'Knauf dhe Rigips janë të dyja marka gjermane të certifikuara dhe të besueshme',
@@ -250,13 +250,13 @@ export default async function GypsumWorksPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Gipsi Ofrojmë?',
-      commercialExperience: 'Ku Kemi Punuar me Gips Komercial?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Punime Gipsi?',
-      howWeWork: 'Si Funksionon Procesi i Punimeve të Gipsit?',
-      serviceAreas: 'Ku Ofrojmë Shërbime Punimesh Gipsi?',
-      faq: 'Pyetje të Shpeshta për Punimet e Gipsit',
-      readyToStart: 'Gati për Projektin Tuaj të Gipsit?',
+      whatWeOffer: 'Shërbime Gipsi',
+      commercialExperience: 'Projekte Gipsi Komerciale',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Punime Gipsi',
     },
     relatedLinks: [
       { href: '/punime-gipsi-tirane', label: 'Punime Gipsi në Tiranë' },
@@ -269,7 +269,7 @@ export default async function GypsumWorksPage({ params }: Props) {
   } : {
     serviceName: 'Gypsum Works',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Professional Gypsum Works in Tirana and Durrës',
+    heroTitle: 'Gypsum Works',
     heroSubtitle: 'Suspended ceilings, space partitions, architectural decorations and acoustic insulation for commercial and residential projects. 100+ completed projects including Vlora Airport. Knauf and Rigips materials. Free consultation.',
     introContent: [
       'Professional gypsum works are the ideal solution for modern commercial and residential projects. Torra Gips is the leading company for gypsum works in Albania, with a special focus on large commercial projects. We have had the honor of working on some of the most prestigious projects in the country, including Vlora International Airport, Green Coast Resort, Rolling Hills complex and Lion Park commercial center.',
@@ -278,7 +278,7 @@ export default async function GypsumWorksPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Are Suspended Gypsum Ceilings?',
+        title: 'Suspended Gypsum Ceilings',
         content: 'Suspended gypsum ceilings are our main specialty and one of the most requested services for commercial projects. In airports, hotels and modern offices, gypsum ceilings play a key role in aesthetics and functionality. We offer customized designs that elegantly integrate lighting, ventilation and fire systems.',
         listItems: [
           'Multi-level ceilings for dramatic visual effect',
@@ -290,7 +290,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Do Gypsum Space Partitions Work?',
+        title: 'Gypsum Space Partitions',
         content: 'Gypsum panel partitions are the ideal solution for reorganizing commercial and residential spaces. For modern offices requiring flexibility, hotels needing extra rooms, or shopping centers changing configurations, our partitions offer quick installation without structural intervention.',
         listItems: [
           'Fast and clean installation - we minimize disruption to your business',
@@ -302,7 +302,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Architectural Decorations Does Gypsum Offer?',
+        title: 'Architectural Gypsum Decorations',
         content: 'For projects that require something special, we offer architectural gypsum decorations that add character and elegance to spaces. From hotel lobbies to conference halls, decorative details create a unique atmosphere.',
         listItems: [
           'Decorative frames and profiles for elegant environments',
@@ -314,7 +314,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Acoustic Insulation with Gypsum Important?',
+        title: 'Acoustic Insulation with Gypsum',
         content: 'Insulation is especially important for commercial projects where comfort and functionality are priorities. We offer specialized solutions that significantly improve building performance.',
         listItems: [
           'Acoustic insulation for offices, recording studios and conference rooms',
@@ -326,7 +326,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Gypsum Works for Homes: Living Rooms, Bedrooms and TV Walls',
+        title: 'Gypsum Works for Living Rooms, Bedrooms and TV Walls',
         content: 'Beyond commercial projects, we offer gypsum works for private homes in Tirana and Durrës. Gypsum ceilings for living rooms, gypsum TV wall designs and decorative works for bedrooms are among the most requested services from our residential clients.',
         listItems: [
           'Gypsum works for living rooms with modern ceilings and LED lighting',
@@ -338,7 +338,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Do Gypsum Works Cost Per Square Meter?',
+        title: 'Gypsum Works Prices',
         content: 'The cost of gypsum works in Tirana and Durrës depends on the system type, design complexity and chosen materials. As an indicative guide, simple suspended ceilings start around 2100 to 2300 Lek per square meter, while multi-level ceilings with LED lighting reach 2500 to 4000 Lek. Double-sided gypsum partitions with insulation are typically 3500 to 4500 Lek per square meter. On-site visits and quotes are always free.',
         listItems: [
           'Simple suspended ceilings: around 2100 to 2300 Lek per square meter',
@@ -350,7 +350,7 @@ export default async function GypsumWorksPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Material Is Better: Knauf or Rigips?',
+        title: 'Knauf vs Rigips',
         content: 'Both Knauf and Rigips are leading German brands with high quality, and we use either one depending on the project needs. Standard boards offer fire resistance up to 30 minutes, while special pink fire-rated boards reach 60 minutes or more. For bathrooms and kitchens we choose green moisture-resistant boards. We pair the most suitable system with quality Dulux, Jotun or Caparol paint for a long-lasting finish.',
         listItems: [
           'Knauf and Rigips are both certified, reliable German brands',
@@ -426,13 +426,13 @@ export default async function GypsumWorksPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Gypsum Services Do We Offer?',
-      commercialExperience: 'Where Have We Done Commercial Gypsum Work?',
-      whyChooseUs: 'Why Choose Torra Gips for Gypsum Works?',
-      howWeWork: 'How Does the Gypsum Works Process Work?',
-      serviceAreas: 'Where Do We Offer Gypsum Works Services?',
-      faq: 'Frequently Asked Questions About Gypsum Works',
-      readyToStart: 'Ready for Your Gypsum Project?',
+      whatWeOffer: 'Gypsum Services',
+      commercialExperience: 'Commercial Gypsum Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Gypsum Works',
     },
     relatedLinks: [
       { href: '/gypsum-works-tirana', label: 'Gypsum Works in Tirana' },
@@ -455,6 +455,7 @@ export default async function GypsumWorksPage({ params }: Props) {
 
       <ServicePageTemplate
         locale={locale}
+        videos='gips'
         {...pageData}
       />
     </>

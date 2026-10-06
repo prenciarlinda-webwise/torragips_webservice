@@ -6,3 +6,4 @@ export { default as Testimonials } from './Testimonials';
 export { default as ServiceAreas } from './ServiceAreas';
 export { default as FAQ } from './FAQ';
 export { default as CTA } from './CTA';
+export { default as VideoShowcase } from './VideoShowcase';

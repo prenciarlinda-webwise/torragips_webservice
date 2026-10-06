@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Patinim Profesional Tiranë - +355 68 858 0058 - Torra Gips'
-      : 'Professional Plastering Tirana - +355 68 858 0058 - Torra Gips',
+      ? 'Patinim Tiranë - Torra Gips'
+      : 'Wall Plastering Tirana - Torra Gips',
     description: locale === 'sq'
       ? 'Patinim profesional murash në Tiranë. Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për projekte komerciale dhe rezidenciale. 100+ projekte. Konsultë falas.'
       : 'Professional wall plastering in Tirana. Interior and exterior plastering, decorative plaster and wall repairs for commercial and residential projects. 100+ projects. Free consultation.',
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: locale === 'sq'
-        ? 'Patinim Profesional Tiranë - Torra Gips'
-        : 'Professional Plastering Tirana - Torra Gips',
+        ? 'Patinim Tiranë - Torra Gips'
+        : 'Wall Plastering Tirana - Torra Gips',
       description: locale === 'sq'
         ? 'Patinim profesional murash në Tiranë. Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash. 100+ projekte.'
         : 'Professional wall plastering in Tirana. Interior and exterior plastering, decorative plaster and wall repairs. 100+ projects.',
@@ -93,7 +93,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Patinim Tiranë',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Patinim Profesional Murash në Tiranë',
+    heroTitle: 'Patinim Tiranë',
     heroSubtitle: 'Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash në të gjithë Tiranën. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës dhe Lion Park. Materiale premium europiane. Konsultë falas.',
     introContent: [
       'Patinimi profesional i mureve në Tiranë është një shërbim thelbësor për ndërtimet e reja dhe rinovimet që po transformojnë kryeqytetin. Torra Gips ofron patinim të nivelit më të lartë në të gjitha zonat e Tiranës, duke përfshirë Bllokun, Komunën e Parisit, Kasharin, qendrën e Tiranës dhe lagjet e reja rezidenciale. Me përvojën tonë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort, Rolling Hills dhe Lion Park, ne kemi provuar se jemi zgjedhja e duhur për çdo projekt në Tiranë.',
@@ -102,7 +102,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Përfshin Patinimi Brendshëm në Tiranë?',
+        title: 'Patinim i Brendshëm në Tiranë',
         content: 'Patinimi brendshëm në Tiranë kërkon njohuri të veçanta për shkak të varietetit të ndërtesave, nga pallatet e vjetra të qendrës te kullat e reja moderne. Ne ofrojmë sipërfaqe të lëmuara dhe uniforme për apartamente, zyra, dyqane dhe çdo ambient tjetër në kryeqytet.',
         listItems: [
           'Patinim me gips për sipërfaqe ultra të lëmuara në apartamente të reja',
@@ -114,7 +114,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është i Rëndësishëm Patinimi Jashtëm në Tiranë?',
+        title: 'Patinim i Jashtëm në Tiranë',
         content: 'Klimatika e Tiranës me verëra të nxehta dhe dimra me lagështi kërkon patinim jashtëm të cilësisë së lartë. Fasadat e ndërtesave në Tiranë duhet të përballojnë luhatjet e temperaturës dhe reshjet e shiut, ndërsa ruajnë pamjen estetike.',
         listItems: [
           'Suva e jashtme rezistente ndaj kushteve klimatike të Tiranës',
@@ -126,7 +126,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Efektesh Ofrojnë Suvat Dekorative në Tiranë?',
+        title: 'Suva Dekorative në Tiranë',
         content: 'Tregu i Tiranës kërkon gjithnjë e më shumë përfundime luksoze dhe dekorative. Suvaja dekorative është zgjedhja ideale për lobby-t e kullave, restorantet e Bllokut, zyrat përfaqësuese dhe vilat luksoze në periferi të kryeqytetit.',
         listItems: [
           'Efekt mermeri venecian për ambientet më prestigjioze të Tiranës',
@@ -138,7 +138,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Zona të Tiranës Mbulojmë për Patinim?',
+        title: 'Zonat e Tiranës ku Punojmë',
         content: 'Torra Gips ofron mbulim të plotë në të gjithë Tiranën dhe rrethinat. Pavarësisht nëse projekti juaj ndodhet në zemrën e kryeqytetit apo në zonat e reja të urbanizuara, ekipi ynë arrin kudo me shpejtësi dhe profesionalizëm.',
         listItems: [
           'Qendra e Tiranës dhe Blloku - projekte komerciale dhe rezidenciale',
@@ -150,7 +150,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Patinimi i Mureve në Tiranë?',
+        title: 'Çmimi i Patinimit të Mureve në Tiranë',
         content: 'Çmimi i patinimit në Tiranë varet nga lloji i suvasë, gjendja e mureve dhe sipërfaqja totale. Si orientim, patinimi me gips për sipërfaqe brendshme varion zakonisht nga 600 deri 1200 Lek/m2, ndërsa suvaja dekorative si stucco veneziano arrin nivele më të larta. Faktorë si lartësia e tavanit, përgatitja paraprake dhe afatet ndikojnë në koston përfundimtare. Ne ofrojmë ofertë të detajuar falas pas matjes në vend, pa kosto të fshehura.',
         listItems: [
           'Sipërfaqja totale në m2 e murave dhe tavaneve',
@@ -162,7 +162,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cili Sistem Gipsi Është më i Mirë - Knauf apo Rigips?',
+        title: 'Knauf apo Rigips',
         content: 'Si Knauf ashtu edhe Rigips janë sisteme gipsi europiane të besueshme që ne përdorim rregullisht në Tiranë. Pllakat standarde të gipsit ofrojnë rezistencë ndaj zjarrit dhe izolim akustik të mirë, ndërsa variantet rezistente ndaj lagështisë janë ideale për banjo dhe kuzhina. Zgjedhja varet nga kërkesat e projektit. Për lyerje përdorim bojëra premium si Dulux, Jotun dhe Caparol, që sigurojnë mbulim rreth 10-12 m2 për litër dhe qëndrueshmëri afatgjatë.',
         listItems: [
           'Pllaka standarde gipsi për mure dhe tavane të zakonshme',
@@ -177,13 +177,13 @@ export default async function PlasteringTiranaPage({ params }: Props) {
     serviceFeatures: [
       {
         icon: 'ceiling' as const,
-        title: 'Patinim për Apartamente Tiranëse',
+        title: 'Patinim Apartamentesh',
         description: 'Sipërfaqe të lëmuara për apartamentet e reja dhe rinovimet në Bllok, Komunë dhe Kashar. Bazë perfekte për lyerje cilësore.',
         features: ['Apartamente të reja', 'Rinovime në qendër', 'Bazë për lyerje', 'Sipërfaqe ultra-lëmuara'],
       },
       {
         icon: 'partition' as const,
-        title: 'Fasada Pallatesh në Tiranë',
+        title: 'Fasada Pallatesh',
         description: 'Patinim jashtëm për kullat e reja dhe pallatet ekzistuese. Suva izoluese termike për kursim energjie në klimën e Tiranës.',
         features: ['Kulla moderne', 'Izolim termik', 'Rezistencë pluhuri', 'Pallate ekzistuese'],
       },
@@ -195,7 +195,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
       },
       {
         icon: 'insulation' as const,
-        title: 'Rinovime Muraturash Urbane',
+        title: 'Rinovime Muraturash',
         description: 'Riparime çarjesh dhe dëmtimesh lagështie në pallate dhe ndërtesa të vjetra të Tiranës. Restaurim pa ndërhyrje strukturore.',
         features: ['Pallate të vjetra', 'Çarje lagështie', 'Restaurim fasadash', 'Rinovim i plotë'],
       },
@@ -204,6 +204,10 @@ export default async function PlasteringTiranaPage({ params }: Props) {
     benefits,
     processSteps,
     faqItems: [
+      {
+        question: 'Sa kushton patinimi me gips në Tiranë?',
+        answer: 'Patinimi standard me gips (patinim gipsi) kushton zakonisht 600 deri 1200 Lek për metër katror në Tiranë, ndërsa suvatë dekorative kushtojnë më shumë. Çmimi varet nga gjendja e murit, lartësia e tavanit dhe riparimet paraprake. Vlerësimi në vend është falas.',
+      },
       {
         question: 'A ofroni patinim në të gjitha lagjet e Tiranës?',
         answer: 'Po, mbulojmë të gjithë Tiranën dhe rrethinat përfshirë Bllokun, Komunën e Parisit, Kasharin, Farkën, Saukun, Porcelanin, Kombinatin dhe Kamzën. Ekipi ynë arrin kudo brenda ditës për inspektim falas.',
@@ -238,13 +242,13 @@ export default async function PlasteringTiranaPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Patinimi Ofrojmë në Tiranë?',
-      commercialExperience: 'Ku Kemi Kryer Patinim Komercial në Tiranë?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Patinimin në Tiranë?',
-      howWeWork: 'Si Funksionon Procesi i Patinimit në Tiranë?',
-      serviceAreas: 'Ku Ofrojmë Shërbime Patinimi në Tiranë?',
-      faq: 'Pyetje të Shpeshta për Patinimin në Tiranë',
-      readyToStart: 'Gati për Projektin Tuaj të Patinimit në Tiranë?',
+      whatWeOffer: 'Shërbime Patinimi në Tiranë',
+      commercialExperience: 'Projekte Patinimi të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Patinim',
     },
     relatedLinks: [
       { href: '/patinim-durres', label: 'Patinim Profesional në Durrës' },
@@ -254,7 +258,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
   } : {
     serviceName: 'Plastering Tirana',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Professional Wall Plastering in Tirana',
+    heroTitle: 'Wall Plastering Tirana',
     heroSubtitle: 'Interior and exterior plastering, decorative plaster and wall repairs across all of Tirana. 100+ completed projects including Vlora Airport and Lion Park. Premium European materials. Free consultation.',
     introContent: [
       'Professional wall plastering in Tirana is an essential service for new constructions and renovations that are transforming the capital city. Torra Gips delivers the highest level plastering across all areas of Tirana, including Blloku, Komuna e Parisit, Kashar, the city center and new residential neighborhoods. With our experience on prestigious projects such as Vlora International Airport, Green Coast Resort, Rolling Hills and Lion Park, we have proven ourselves as the right choice for any project in Tirana.',
@@ -263,7 +267,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Does Interior Plastering Include in Tirana?',
+        title: 'Interior Wall Plastering in Tirana',
         content: 'Interior plastering in Tirana requires specialized knowledge due to the variety of buildings, from old apartment blocks in the center to new modern towers. We offer smooth and uniform surfaces for apartments, offices, shops and every other environment in the capital.',
         listItems: [
           'Gypsum plastering for ultra-smooth surfaces in new apartments',
@@ -275,7 +279,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Exterior Plastering Important in Tirana?',
+        title: 'Exterior Plastering in Tirana',
         content: 'Tirana\'s climate with hot summers and humid winters demands high-quality exterior plastering. Building facades in Tirana must withstand temperature fluctuations and rainfall while maintaining their aesthetic appearance.',
         listItems: [
           'Weather-resistant exterior plaster suited to Tirana\'s climate',
@@ -287,7 +291,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Effects Do Decorative Plasters Offer in Tirana?',
+        title: 'Decorative Plasters in Tirana',
         content: 'Tirana\'s market increasingly demands luxury and decorative finishes. Decorative plaster is the ideal choice for tower lobbies, Blloku restaurants, representative offices and luxury villas on the outskirts of the capital.',
         listItems: [
           'Venetian marble effect for Tirana\'s most prestigious environments',
@@ -299,7 +303,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Areas of Tirana Do We Cover for Plastering?',
+        title: 'Tirana Areas We Work In',
         content: 'Torra Gips offers full coverage across all of Tirana and surrounding areas. Whether your project is in the heart of the capital or in newly urbanized zones, our team arrives anywhere promptly and professionally.',
         listItems: [
           'Tirana Center and Blloku - commercial and residential projects',
@@ -311,7 +315,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Does Wall Plastering Cost in Tirana?',
+        title: 'Wall Plastering Prices in Tirana',
         content: 'The price of plastering in Tirana depends on the type of plaster, wall condition and total surface area. As a guide, gypsum plastering for interior surfaces typically ranges from 600 to 1200 Lek/m2, while decorative plaster such as Venetian stucco reaches higher levels. Factors like ceiling height, surface preparation and deadlines affect the final cost. We provide a detailed free quote after an on-site measurement, with no hidden costs.',
         listItems: [
           'Total surface area in m2 of walls and ceilings',
@@ -323,7 +327,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Gypsum System Is Better - Knauf or Rigips?',
+        title: 'Knauf vs Rigips',
         content: 'Both Knauf and Rigips are reliable European gypsum systems that we use regularly in Tirana. Standard gypsum boards offer fire resistance and good acoustic insulation, while moisture-resistant variants are ideal for bathrooms and kitchens. The choice depends on the project requirements. For painting we use premium brands such as Dulux, Jotun and Caparol, which provide coverage of around 10-12 m2 per liter and long-term durability.',
         listItems: [
           'Standard gypsum boards for common walls and ceilings',
@@ -338,13 +342,13 @@ export default async function PlasteringTiranaPage({ params }: Props) {
     serviceFeatures: [
       {
         icon: 'ceiling' as const,
-        title: 'Plastering for Tirana Apartments',
+        title: 'Apartment Plastering',
         description: 'Smooth surfaces for new apartments and renovations in Blloku, Komuna and Kashar. Perfect base for quality painting.',
         features: ['New apartments', 'Center renovations', 'Paint base', 'Ultra-smooth surfaces'],
       },
       {
         icon: 'partition' as const,
-        title: 'Tirana Building Facades',
+        title: 'Building Facades',
         description: 'Exterior plastering for new towers and existing buildings. Thermal insulation plaster for energy savings in Tirana\'s climate.',
         features: ['Modern towers', 'Thermal insulation', 'Dust resistance', 'Existing buildings'],
       },
@@ -356,7 +360,7 @@ export default async function PlasteringTiranaPage({ params }: Props) {
       },
       {
         icon: 'insulation' as const,
-        title: 'Urban Wall Renovations',
+        title: 'Wall Renovations',
         description: 'Crack and moisture damage repairs in older Tirana buildings and apartment blocks. Restoration without structural intervention.',
         features: ['Older buildings', 'Moisture cracks', 'Facade restoration', 'Complete renovation'],
       },
@@ -365,6 +369,10 @@ export default async function PlasteringTiranaPage({ params }: Props) {
     benefits,
     processSteps,
     faqItems: [
+      {
+        question: 'How much does gypsum plastering cost in Tirana?',
+        answer: 'Standard gypsum plastering (patinim gipsi) usually costs 600 to 1200 Lek per square meter in Tirana, while decorative plasters cost more. The price depends on wall condition, ceiling height and prior repairs. The on-site assessment is free.',
+      },
       {
         question: 'Do you offer plastering in all neighborhoods of Tirana?',
         answer: 'Yes, we cover all of Tirana and surrounding areas including Blloku, Komuna e Parisit, Kashar, Farka, Sauk, Porcelan, Kombinat and Kamza. Our team arrives anywhere within the day for a free inspection.',
@@ -399,13 +407,13 @@ export default async function PlasteringTiranaPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Plastering Services Do We Offer in Tirana?',
-      commercialExperience: 'Where Have We Done Commercial Plastering in Tirana?',
-      whyChooseUs: 'Why Choose Torra Gips for Plastering in Tirana?',
-      howWeWork: 'How Does the Plastering Process Work in Tirana?',
-      serviceAreas: 'Where Do We Offer Plastering Services in Tirana?',
-      faq: 'Frequently Asked Questions About Plastering in Tirana',
-      readyToStart: 'Ready for Your Plastering Project in Tirana?',
+      whatWeOffer: 'Plastering Services in Tirana',
+      commercialExperience: 'Completed Plastering Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Plastering',
     },
     relatedLinks: [
       { href: '/wall-plastering-durres', label: 'Professional Plastering in Durrës' },

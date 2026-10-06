@@ -7,6 +7,7 @@ import { QuoteButton } from '@/components/modals';
 import { FAQSchema, LocalBusinessSchema } from '@/components/seo';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
+import VideoShowcase from './VideoShowcase';
 
 type ServiceFeature = {
   title: string;
@@ -61,6 +62,7 @@ type ServicePageProps = {
   contentSections?: ContentSection[];
   sectionTitles?: SectionTitles;
   relatedLinks?: RelatedLink[];
+  videos?: 'gips' | 'lyerje';
 };
 
 const icons = {
@@ -124,6 +126,7 @@ export default function ServicePageTemplate({
   contentSections,
   sectionTitles,
   relatedLinks,
+  videos,
 }: ServicePageProps) {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
   const isAlbanian = locale === 'sq';
@@ -148,9 +151,9 @@ export default function ServicePageTemplate({
         </div>
 
         <div className="container-custom relative z-10 py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div>
             {/* Text Content */}
-            <div>
+            <div className="max-w-3xl">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 {heroTitle}
               </h1>
@@ -168,28 +171,6 @@ export default function ServicePageTemplate({
                     WhatsApp
                   </Button>
                 </a>
-              </div>
-            </div>
-
-            {/* Right Side - Stats */}
-            <div className="hidden lg:flex justify-end">
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
-                  <div className="text-4xl font-bold text-accent mb-2">100+</div>
-                  <div className="text-white/70 text-sm">{isAlbanian ? 'Projekte' : 'Projects'}</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
-                  <div className="text-4xl font-bold text-accent mb-2">5+</div>
-                  <div className="text-white/70 text-sm">{isAlbanian ? 'Vite' : 'Years'}</div>
-                </div>
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/10">
-                  <div className="text-4xl font-bold text-accent mb-2">100%</div>
-                  <div className="text-white/70 text-sm">{isAlbanian ? 'Kënaqësi' : 'Satisfaction'}</div>
-                </div>
-                <div className="bg-accent/20 backdrop-blur-sm rounded-2xl p-6 text-center border border-accent/30">
-                  <div className="text-4xl font-bold text-white mb-2">24/7</div>
-                  <div className="text-white/70 text-sm">{isAlbanian ? 'Mbështetje' : 'Support'}</div>
-                </div>
               </div>
             </div>
           </div>
@@ -440,6 +421,8 @@ export default function ServicePageTemplate({
           </div>
         </div>
       </section>
+
+      {videos && <VideoShowcase locale={locale} category={videos} />}
 
       {/* FAQ Schema for SEO */}
       <FAQSchema items={faqItems} />

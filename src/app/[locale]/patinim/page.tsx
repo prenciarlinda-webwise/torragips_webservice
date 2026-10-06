@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Patinim Profesional Murash Tiranë & Durrës - +355 68 858 0058 - Torra Gips'
-      : 'Professional Wall Plastering Tirana & Durrës - +355 68 858 0058 - Torra Gips',
+      ? 'Patinim i Mureve Tiranë & Durrës - Torra Gips'
+      : 'Wall Plastering Tirana & Durrës - Torra Gips',
     description: locale === 'sq'
       ? 'Patinim profesional murash për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
       : 'Professional wall plastering for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: locale === 'sq'
-        ? 'Patinim Profesional Murash Tiranë & Durrës - Torra Gips'
-        : 'Professional Wall Plastering Tirana & Durrës - Torra Gips',
+        ? 'Patinim i Mureve Tiranë & Durrës - Torra Gips'
+        : 'Wall Plastering Tirana & Durrës - Torra Gips',
       description: locale === 'sq'
         ? 'Patinim profesional murash për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara.'
         : 'Professional wall plastering for commercial and residential projects in Tirana and Durrës. 100+ completed projects.',
@@ -93,7 +93,7 @@ export default async function PlasteringPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Patinim',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Patinim Profesional Murash në Tiranë dhe Durrës',
+    heroTitle: 'Patinim i Mureve',
     heroSubtitle: 'Patinim brendshëm dhe jashtëm, suva dekorative dhe riparime muraturash për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Materiale premium europiane. Konsultë falas.',
     introContent: [
       'Patinimi profesional i mureve është baza për çdo projekt ndërtimi cilësor. Torra Gips ofron shërbime Patinimi të nivelit më të lartë për projekte komerciale dhe rezidenciale në Tiranë, Durrës dhe gjithë Shqipërinë qendrore. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort dhe Rolling Hills, ne garantojmë cilësi që tejkalon pritshmëritë.',
@@ -102,7 +102,7 @@ export default async function PlasteringPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Përfshini Patinimin Brendshëm?',
+        title: 'Patinim i Brendshëm i Mureve',
         content: 'Patinimi brendshëm është baza për çdo përfundim të brendshëm cilësor. Ne ofrojmë sipërfaqe të lëmuara dhe uniforme që janë perfekte për lyerje, tapiceri ose çdo përfundim tjetër. Për ambiente komerciale, sigurojmë që çdo cep dhe qoshe të jetë e përsosur.',
         listItems: [
           'Patinim me gips për sipërfaqe ultra të lëmuara',
@@ -114,7 +114,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është i Rëndësishëm Patinimi Jashtëm?',
+        title: 'Patinim i Jashtëm i Fasadave',
         content: 'Patinimi jashtëm duhet të kombinojë estetikën me funksionalitetin. Produktet tona të specializuara mbrojnë muraturën nga kushtet atmosferike të Shqipërisë, duke ruajtur pamjen elegante për vite të tëra.',
         listItems: [
           'Suva e jashtme rezistente ndaj kushteve atmosferike',
@@ -126,7 +126,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Efektesh Ofrojnë Suvat Dekorative?',
+        title: 'Suva Dekorative',
         content: 'Suvaja dekorative transformon muraturën e zakonshme në vepra arti. Ne ofrojmë një gamë të gjerë efektesh dhe teksturash për ambiente komerciale dhe rezidenciale që kërkojnë diçka të veçantë.',
         listItems: [
           'Efekt mermeri venecian (stucco veneziano)',
@@ -138,7 +138,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Kur Keni Nevojë për Riparime Patinimi?',
+        title: 'Riparime Patinimi',
         content: 'Jo çdo projekt ka nevojë për patinim të plotë. Ne ofrojmë shërbime riparimesh dhe restaurimesh për muratura ekzistuese, duke rivendosur pamjen origjinale pa pasur nevojë për ndërhyrje të mëdha.',
         listItems: [
           'Riparime çarjesh dhe plasaritjesh',
@@ -150,7 +150,19 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Patinimi për Metër Katror në Tiranë dhe Durrës?',
+        title: 'Patinim Gipsi',
+        content: 'Patinimi me gips (patinim gipsi) është procesi i aplikimit të masës së gipsit mbi mure dhe tavane për të krijuar një sipërfaqe krejtësisht të lëmuar, gati për lyerje. Përdorim masa të përzgjedhura Knauf dhe Rigips, të aplikuara në shtresa të holla dhe të lëmuara me kujdes, që heqin plasaritjet, shtrembërimet dhe pabarazitë e murit. Patinimi me gips përdoret si në apartamente të reja ashtu edhe në rinovime, para lyerjes ose para vendosjes së tapetit.',
+        listItems: [
+          'Patinim gipsi për mure dhe tavane të brendshme',
+          'Masë gipsi Knauf dhe Rigips në dy ose tri shtresa',
+          'Lëmim i imët për sipërfaqe pa pika dhe pa valëzime',
+          'Përgatitje e përsosur para lyerjes me Dulux, Jotun ose Caparol',
+          'Riparim i plasaritjeve dhe i vrazhdësive para patinimit',
+          'Vlerësim falas në vend në Tiranë dhe Durrës',
+        ],
+      },
+      {
+        title: 'Çmimi i Patinimit të Mureve',
         content: 'Cmimi i patinimit varet nga sipërfaqja, gjendja e murit dhe lloji i përfundimit. Si orientim për tregun shqiptar, patinimi standard me gips kushton zakonisht 600 deri 1200 Lek për metër katror, ndërsa suvatë dekorative si stucco veneziano shkojnë nga 2500 deri 6000 Lek për metër katror. Faktorë si lartësia e tavanit, riparimet paraprake dhe aksesi në lagje si Blloku ose Komuna e Parisit ndikojnë në buxhet. Ne ofrojmë vlerësim falas në vend para cdo oferte.',
         listItems: [
           'Sipërfaqja totale në metra katrorë e ambientit',
@@ -162,7 +174,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Janë Gabimet më të Shpeshta në Patinim?',
+        title: 'Gabimet më të Shpeshta në Patinim',
         content: 'Shumica e problemeve me patinimin vijnë nga përgatitja e nxituar dhe mosrespektimi i kohëve të tharjes. Aplikimi i shtresës së dytë para se e para të jetë tharë krijon plasaritje, ndërsa lyerja mbi suva ende të lagësht shkakton flluska dhe njolla. Mos përdorimi i rrjetës përforcuese te kthesat dhe mungesa e gruntimit cojnë në çarje afatgjata. Ne respektojmë kohët teknike, zakonisht 2 deri 7 ditë tharje sipas trashësisë dhe ajrimit, për një rezultat të qëndrueshëm.',
         listItems: [
           'Aplikim i shtresave të reja para tharjes së plotë',
@@ -174,7 +186,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Zgjat Patinimi dhe Si Mirëmbahet?',
+        title: 'Kohëzgjatja dhe Mirëmbajtja e Patinimit',
         content: 'Një patinim i kryer profesionalisht zgjat me dekada pa u dëmtuar, sepse baza e përgatitur mirë nuk plasarit dhe nuk shkëputet. Sipërfaqet e brendshme praktikisht nuk kërkojnë mirëmbajtje, ndërsa fasadat e jashtme në Tiranë dhe Durrës rekomandohet të rifreskohen me lyerje çdo 7 deri 10 vjet për shkak të diellit dhe lagështisë bregdetare. Ne ofrojmë garanci për punën dhe këshilla për ruajtjen e rezultatit në kohë.',
         listItems: [
           'Patinim i brendshëm pa nevojë mirëmbajtjeje për vite',
@@ -250,13 +262,13 @@ export default async function PlasteringPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Patinimi Ofrojmë?',
-      commercialExperience: 'Ku Kemi Kryer Patinim Komercial?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Patinimin?',
-      howWeWork: 'Si Funksionon Procesi i Patinimit?',
-      serviceAreas: 'Ku Ofrojmë Shërbime Patinimi?',
-      faq: 'Pyetje të Shpeshta për Patinimin',
-      readyToStart: 'Gati për Projektin Tuaj të Patinimit?',
+      whatWeOffer: 'Shërbime Patinimi',
+      commercialExperience: 'Projekte Patinimi të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Patinim',
     },
     relatedLinks: [
       { href: '/patinim-tirane', label: 'Patinim Profesional në Tiranë' },
@@ -268,7 +280,7 @@ export default async function PlasteringPage({ params }: Props) {
   } : {
     serviceName: 'Plastering',
     heroImage: '/images/services/plastering/accent-wall.webp',
-    heroTitle: 'Professional Wall Plastering in Tirana and Durrës',
+    heroTitle: 'Wall Plastering',
     heroSubtitle: 'Interior and exterior plastering, decorative plaster and wall repairs for commercial and residential projects. 100+ completed projects including Vlora Airport. Premium European materials. Free consultation.',
     introContent: [
       'Professional wall plastering is the foundation of every quality construction project. Torra Gips offers the highest level plastering services for commercial and residential projects in Tirana, Durrës and all of central Albania. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort and Rolling Hills, we guarantee quality that exceeds expectations.',
@@ -277,7 +289,7 @@ export default async function PlasteringPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Does Interior Plastering Include?',
+        title: 'Interior Wall Plastering',
         content: 'Interior plastering is the foundation for any quality interior finish. We offer smooth and uniform surfaces that are perfect for painting, wallpaper or any other finish. For commercial environments, we ensure that every corner is perfect.',
         listItems: [
           'Gypsum plastering for ultra-smooth surfaces',
@@ -289,7 +301,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Exterior Plastering Important?',
+        title: 'Exterior Facade Plastering',
         content: 'Exterior plastering must combine aesthetics with functionality. Our specialized products protect masonry from Albanian weather conditions, maintaining an elegant appearance for years.',
         listItems: [
           'Weather-resistant exterior plaster',
@@ -301,7 +313,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Effects Do Decorative Plasters Offer?',
+        title: 'Decorative Plasters',
         content: 'Decorative plaster transforms ordinary masonry into works of art. We offer a wide range of effects and textures for commercial and residential environments that require something special.',
         listItems: [
           'Venetian marble effect (stucco veneziano)',
@@ -313,7 +325,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'When Do You Need Plastering Repairs?',
+        title: 'Plastering Repairs',
         content: 'Not every project needs complete plastering. We offer repair and restoration services for existing walls, restoring the original appearance without major interventions.',
         listItems: [
           'Crack and split repairs',
@@ -325,7 +337,19 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Does Plastering Cost Per Square Meter in Tirana and Durres?',
+        title: 'Gypsum Plastering',
+        content: 'Gypsum plastering (patinim gipsi) is the process of applying gypsum compound over walls and ceilings to create a completely smooth surface, ready for painting. We use selected Knauf and Rigips compounds, applied in thin coats and carefully sanded, which remove cracks, warping and uneven spots in the wall. Gypsum plastering is used in new apartments as well as renovations, before painting or before hanging wallpaper.',
+        listItems: [
+          'Gypsum plastering for interior walls and ceilings',
+          'Knauf and Rigips compound in two or three coats',
+          'Fine sanding for a surface without marks or waves',
+          'Perfect preparation before painting with Dulux, Jotun or Caparol',
+          'Repair of cracks and rough spots before plastering',
+          'Free on-site assessment in Tirana and Durrës',
+        ],
+      },
+      {
+        title: 'Wall Plastering Prices',
         content: 'Plastering cost depends on surface area, wall condition and finish type. As a guide for the Albanian market, standard gypsum plastering usually costs 600 to 1200 Lek per square meter, while decorative plasters such as Venetian stucco range from 2500 to 6000 Lek per square meter. Factors like ceiling height, prior repairs and access in neighborhoods such as Blloku or Komuna e Parisit affect the budget. We offer a free on-site assessment before every quote.',
         listItems: [
           'Total surface area of the space in square meters',
@@ -337,7 +361,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Are the Most Common Plastering Mistakes?',
+        title: 'Most Common Plastering Mistakes',
         content: 'Most plastering problems come from rushed preparation and ignoring drying times. Applying a second coat before the first has dried creates cracks, while painting over plaster that is still damp causes blisters and stains. Skipping reinforcement mesh at corners and missing a primer coat lead to long-term cracking. We respect technical timings, typically 2 to 7 days of drying depending on thickness and ventilation, for a durable result.',
         listItems: [
           'Applying new coats before the previous one has fully dried',
@@ -349,7 +373,7 @@ export default async function PlasteringPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Long Does Plastering Last and How Is It Maintained?',
+        title: 'Plastering Lifespan and Maintenance',
         content: 'Professionally applied plaster lasts for decades without damage, because a well prepared base does not crack or detach. Interior surfaces need virtually no maintenance, while exterior facades in Tirana and Durres are best refreshed with paint every 7 to 10 years due to sun exposure and coastal humidity. We provide a warranty on the work and clear advice for keeping the result looking new over time.',
         listItems: [
           'Interior plaster needs no maintenance for years',
@@ -425,13 +449,13 @@ export default async function PlasteringPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Plastering Services Do We Offer?',
-      commercialExperience: 'Where Have We Done Commercial Plastering?',
-      whyChooseUs: 'Why Choose Torra Gips for Plastering?',
-      howWeWork: 'How Does the Plastering Process Work?',
-      serviceAreas: 'Where Do We Offer Plastering Services?',
-      faq: 'Frequently Asked Questions About Plastering',
-      readyToStart: 'Ready for Your Plastering Project?',
+      whatWeOffer: 'Plastering Services',
+      commercialExperience: 'Completed Plastering Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Plastering',
     },
     relatedLinks: [
       { href: '/wall-plastering-tirana', label: 'Professional Plastering in Tirana' },

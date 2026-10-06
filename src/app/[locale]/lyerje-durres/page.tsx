@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Lyerje Profesionale Durrës - +355 68 858 0058 - Torra Gips'
-      : 'Professional Painting Durrës - +355 68 858 0058 - Torra Gips',
+      ? 'Lyerje Durrës - Torra Gips'
+      : 'Painting Durrës - Torra Gips',
     description: locale === 'sq'
       ? 'Lyerje profesionale në Durrës. Lyerje brendshme dhe jashtme për hotele, resorte dhe prona bregdetare. Bojëra rezistente ndaj klimës detare. 100+ projekte. Konsultë falas.'
       : 'Professional painting in Durrës. Interior and exterior painting for hotels, resorts and coastal properties. Paints resistant to maritime climate. 100+ projects. Free consultation.',
@@ -32,8 +32,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     openGraph: {
       title: locale === 'sq'
-        ? 'Lyerje Profesionale Durrës - Torra Gips'
-        : 'Professional Painting Durrës - Torra Gips',
+        ? 'Lyerje Durrës - Torra Gips'
+        : 'Painting Durrës - Torra Gips',
       description: locale === 'sq'
         ? 'Lyerje profesionale në Durrës. Lyerje brendshme dhe jashtme për hotele, resorte dhe prona bregdetare. 100+ projekte të përfunduara.'
         : 'Professional painting in Durrës. Interior and exterior painting for hotels, resorts and coastal properties. 100+ completed projects.',
@@ -93,7 +93,7 @@ export default async function PaintingDurresPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Lyerje Durrës',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Lyerje Profesionale në Durrës',
+    heroTitle: 'Lyerje Durrës',
     heroSubtitle: 'Lyerje brendshme dhe jashtme për hotele, resorte dhe prona bregdetare në Durrës. Bojëra të specializuara kundër klimës detare, kripës dhe lagështisë. 100+ projekte përfshirë Green Coast Resort. Konsultë falas.',
     introContent: [
       'Lyerja profesionale në Durrës është veçanërisht e rëndësishme për shkak të klimës bregdetare që sjell sfida unike për çdo sipërfaqe të lyer. Torra Gips ofron shërbime lyerjeje të specializuara për industrinë turistike, hotelet, resortet dhe pronat bregdetare në të gjithë zonën e Durrësit. Me përvojë në projekte si Green Coast Resort, Rolling Hills dhe Lion Park, ne dimë si të mbrojmë dhe zbukurojmë ndërtesat në kushte detare.',
@@ -102,7 +102,7 @@ export default async function PaintingDurresPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Përfshin Lyerja Brendshme në Durrës?',
+        title: 'Lyerje e Brendshme në Durrës',
         content: 'Lyerja brendshme në Durrës kërkon vëmendje të veçantë ndaj lagështisë që karakterizon klimën bregdetare. Ambientet e hoteleve, resorteve dhe banesave pranë detit kanë nevojë për bojëra anti-lagështirë dhe trajtime të veçanta.',
         listItems: [
           'Lyerje me bojëra anti-lagështirë për dhoma hoteli dhe apartamente bregdetare',
@@ -114,7 +114,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është e Rëndësishme Lyerja Jashtme në Durrës?',
+        title: 'Lyerje e Jashtme në Durrës',
         content: 'Fasadat në Durrës përballen me sfidat më të ashpra: ajri i kripur i detit, lagështira e lartë, rrezet UV intensive dhe erërat e forta bregdetare. Bojërat e zakonshme degradohen shpejt në këto kushte, ndaj nevojiten zgjidhje profesionale.',
         listItems: [
           'Bojëra speciale anti-kripë që mbrojnë fasadat nga korozioni i ajrit detar',
@@ -126,7 +126,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Efektesh Dekorative Ofrojmë në Durrës?',
+        title: 'Efekte Dekorative në Durrës',
         content: 'Industria turistike e Durrësit kërkon ambiente me karakter dhe stil. Hotelet, resortet dhe restorantet bregdetare përfitojnë nga efekte dekorative që krijojnë atmosferën mesdhetare dhe luksoze që turistët kërkojnë.',
         listItems: [
           'Efekt guri natyral dhe mermeri për lobi hotelesh dhe resortesh bregdetare',
@@ -138,7 +138,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Zona të Durrësit Mbulojmë për Lyerje?',
+        title: 'Zonat e Durrësit ku Punojmë',
         content: 'Torra Gips ofron shërbime lyerjeje në të gjithë qytetin e Durrësit, bregdetin dhe zonat përreth. Nga hotelet e vijës bregdetare deri tek pronat industriale në porto, mbulojmë çdo zonë.',
         listItems: [
           'Plazhi i Durrësit dhe vija bregdetare - hotele, resorte, vila turistike',
@@ -150,7 +150,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Lyerja për Metër Katror në Durrës?',
+        title: 'Çmimi i Lyerjes në Durrës',
         content: 'Çmimi i lyerjes në Durrës varet nga gjendja e sipërfaqes, lloji i bojës dhe numri i duarve. Si orientim, lyerja e brendshme me dy duar fillon nga 350 deri 600 Lek për metër katror, ndërsa fasadat bregdetare anti-kripë me bojëra Jotun ose Caparol shkojnë nga 700 deri 1400 Lek për metër katror. Patinimi paraprak dhe trajtimet anti-lagështi shtojnë koston, por zgjasin jetën e përfundimit. Vlerësimi në vend është falas.',
         listItems: [
           'Lyerje brendshme me dy duar nga 350 deri 600 Lek për metër katror',
@@ -162,7 +162,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Zgjat Procesi i Lyerjes dhe Tharja në Durrës?',
+        title: 'Kohëzgjatja e Lyerjes',
         content: 'Kohëzgjatja varet nga sipërfaqja dhe lloji i bojës. Një ekip ynë lyen rreth 40 deri 60 metra katrorë në ditë me dy duar. Bojërat ujore Dulux thahen në prekje brenda 1 deri 2 orësh dhe lejojnë dorën e dytë pas 4 orësh, ndërsa në klimën e lagësht të Durrësit tharja e plotë mund të zgjasë deri 24 orë. Patinimi kërkon 24 deri 48 orë para lyerjes përfundimtare.',
         listItems: [
           'Ekipi lyen rreth 40 deri 60 metra katrorë në ditë me dy duar',
@@ -238,13 +238,13 @@ export default async function PaintingDurresPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Lyerjeje Ofrojmë në Durrës?',
-      commercialExperience: 'Ku Kemi Kryer Lyerje Komerciale në Durrës?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Lyerje në Durrës?',
-      howWeWork: 'Si Funksionon Procesi i Lyerjes në Durrës?',
-      serviceAreas: 'Cilat Zona të Durrësit Mbulojmë?',
-      faq: 'Pyetje të Shpeshta për Lyerjen në Durrës',
-      readyToStart: 'Gati për Projektin Tuaj të Lyerjes në Durrës?',
+      whatWeOffer: 'Shërbime Lyerjeje në Durrës',
+      commercialExperience: 'Projekte Lyerjeje të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Lyerje',
     },
     relatedLinks: [
       { href: '/lyerje-tirane', label: 'Lyerje Profesionale në Tiranë' },
@@ -254,7 +254,7 @@ export default async function PaintingDurresPage({ params }: Props) {
   } : {
     serviceName: 'Painting Durrës',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Professional Painting in Durrës',
+    heroTitle: 'Painting Durrës',
     heroSubtitle: 'Interior and exterior painting for hotels, resorts and coastal properties in Durrës. Specialized paints against maritime climate, salt air and humidity. 100+ projects including Green Coast Resort. Free consultation.',
     introContent: [
       'Professional painting in Durrës is particularly important due to the coastal climate that brings unique challenges for every painted surface. Torra Gips offers specialized painting services for the tourism industry, hotels, resorts and coastal properties throughout the Durrës area. With experience in projects like Green Coast Resort, Rolling Hills and Lion Park, we know how to protect and beautify buildings in maritime conditions.',
@@ -263,7 +263,7 @@ export default async function PaintingDurresPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Does Interior Painting Include in Durrës?',
+        title: 'Interior Painting in Durrës',
         content: 'Interior painting in Durrës requires special attention to the humidity that characterizes the coastal climate. Hotel rooms, resort interiors and seaside residences need anti-moisture paints and specialized treatments.',
         listItems: [
           'Painting with anti-moisture paints for hotel rooms and coastal apartments',
@@ -275,7 +275,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Exterior Painting Important in Durrës?',
+        title: 'Exterior Painting in Durrës',
         content: 'Facades in Durrës face the harshest challenges: salt air from the sea, high humidity, intensive UV rays and strong coastal winds. Ordinary paints degrade quickly in these conditions, which is why professional solutions are needed.',
         listItems: [
           'Special anti-salt paints that protect facades from sea air corrosion',
@@ -287,7 +287,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Decorative Painting Effects Do We Offer in Durrës?',
+        title: 'Decorative Effects in Durrës',
         content: 'Durrës\'s tourism industry demands environments with character and style. Coastal hotels, resorts and restaurants benefit from decorative effects that create the Mediterranean and luxurious atmosphere that tourists seek.',
         listItems: [
           'Natural stone and marble effects for coastal hotel and resort lobbies',
@@ -299,7 +299,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Areas of Durrës Do We Cover for Painting?',
+        title: 'Durrës Areas We Work In',
         content: 'Torra Gips provides painting services across the entire city of Durrës, the coastline and surrounding areas. From beachfront hotels to industrial properties at the port, we cover every zone.',
         listItems: [
           'Durrës Beach and the coastline - hotels, resorts, tourist villas',
@@ -311,7 +311,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Does Painting Cost Per Square Meter in Durrës?',
+        title: 'Painting Prices in Durrës',
         content: 'Painting prices in Durrës depend on surface condition, paint type and the number of coats. As a guide, interior painting with two coats starts from 350 to 600 Lek per square meter, while anti-salt coastal facades using Jotun or Caparol paints range from 700 to 1400 Lek per square meter. Preliminary plastering and anti-moisture treatments add cost but extend the life of the finish. On-site assessment is free.',
         listItems: [
           'Interior painting with two coats from 350 to 600 Lek per square meter',
@@ -323,7 +323,7 @@ export default async function PaintingDurresPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Long Does Painting and Drying Take in Durrës?',
+        title: 'Painting Duration',
         content: 'Duration depends on the surface and paint type. One of our teams paints around 40 to 60 square meters per day with two coats. Water-based Dulux paints are touch-dry within 1 to 2 hours and allow a second coat after 4 hours, while in the humid climate of Durrës full curing can take up to 24 hours. Plastering needs 24 to 48 hours before final painting.',
         listItems: [
           'A team paints around 40 to 60 square meters per day with two coats',
@@ -399,13 +399,13 @@ export default async function PaintingDurresPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Painting Services Do We Offer in Durrës?',
-      commercialExperience: 'Where Have We Done Commercial Painting in Durrës?',
-      whyChooseUs: 'Why Choose Torra Gips for Painting in Durrës?',
-      howWeWork: 'How Does the Painting Process Work in Durrës?',
-      serviceAreas: 'Which Areas of Durrës Do We Cover?',
-      faq: 'Frequently Asked Questions About Painting in Durrës',
-      readyToStart: 'Ready for Your Painting Project in Durrës?',
+      whatWeOffer: 'Painting Services in Durrës',
+      commercialExperience: 'Completed Painting Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Painting',
     },
     relatedLinks: [
       { href: '/painting-tirana', label: 'Professional Painting in Tirana' },
@@ -426,6 +426,7 @@ export default async function PaintingDurresPage({ params }: Props) {
 
       <ServicePageTemplate
         locale={locale}
+        videos='lyerje'
         {...pageData}
       />
     </>

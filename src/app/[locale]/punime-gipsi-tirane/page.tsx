@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Punime Gipsi Tiranë - +355 68 858 0058 - Torra Gips'
-      : 'Gypsum Works Tirana - +355 68 858 0058 - Torra Gips',
+      ? 'Punime Gipsi Tiranë - Torra Gips'
+      : 'Gypsum Works Tirana - Torra Gips',
     description: locale === 'sq'
       ? 'Punime gipsi profesionale në Tiranë. Tavane të varura, ndarja hapësirash dhe dekorime për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara. Konsultë falas.'
       : 'Professional gypsum works in Tirana. Suspended ceilings, space partitions and decorations for commercial and residential projects. 100+ completed projects. Free consultation.',
@@ -61,29 +61,29 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
   ];
 
   const benefits = isAlbanian ? [
-    { title: 'Njohje e Tregut të Tiranës', description: 'Njohim çdo lagje të Tiranës - nga Blloku te Kashari, dimë çfarë funksionon për çdo zonë.' },
-    { title: 'Materiale për Klimën Urbane', description: 'Panele Knauf dhe Rigips të zgjedhura për izolim termik në verët e nxehta të Tiranës.' },
-    { title: 'Ekip Lokal në Tiranë', description: 'Mjeshtrat tanë janë të bazuar në Tiranë - vijnë shpejt dhe pa kosto shtesë transporti.' },
-    { title: 'Pa Ndërprerje Aktiviteti', description: 'Punojmë në mbrëmje e fundjavë për zyrat dhe bizneset që nuk mund të mbyllen.' },
-    { title: 'Projekte Rezidenciale & Komerciale', description: 'Nga apartamenti 2+1 në Komunë te zyra 500m² në Bllok - trajtojmë çdo madhësi.' },
-    { title: 'Konsultë Falas në Tiranë', description: 'Vizitë falas brenda ditës në çdo zonë të Tiranës për vlerësim dhe ofertë.' },
+    { title: 'Njohim Tiranën', description: 'Njohim çdo lagje të Tiranës - nga Blloku te Kashari, dimë çfarë funksionon për çdo zonë.' },
+    { title: 'Materiale Knauf dhe Rigips', description: 'Panele Knauf dhe Rigips të zgjedhura për izolim termik në verët e nxehta të Tiranës.' },
+    { title: 'Ekip Lokal', description: 'Mjeshtrat tanë janë të bazuar në Tiranë - vijnë shpejt dhe pa kosto shtesë transporti.' },
+    { title: 'Punë pa Ndërprerje', description: 'Punojmë në mbrëmje e fundjavë për zyrat dhe bizneset që nuk mund të mbyllen.' },
+    { title: 'Projekte Rezidenciale dhe Komerciale', description: 'Nga apartamenti 2+1 në Komunë te zyra 500m² në Bllok - trajtojmë çdo madhësi.' },
+    { title: 'Konsultë Falas', description: 'Vizitë falas brenda ditës në çdo zonë të Tiranës për vlerësim dhe ofertë.' },
   ] : [
-    { title: 'Tirana Market Knowledge', description: 'We know every neighborhood in Tirana - from Blloku to Kashar, we know what works for each zone.' },
-    { title: 'Materials for Urban Climate', description: 'Knauf and Rigips panels selected for thermal insulation in Tirana\'s hot summers.' },
-    { title: 'Local Team in Tirana', description: 'Our craftsmen are based in Tirana - they arrive quickly with no extra transport costs.' },
+    { title: 'Local Market Knowledge', description: 'We know every neighborhood in Tirana - from Blloku to Kashar, we know what works for each zone.' },
+    { title: 'Knauf and Rigips Materials', description: 'Knauf and Rigips panels selected for thermal insulation in Tirana\'s hot summers.' },
+    { title: 'Local Team', description: 'Our craftsmen are based in Tirana - they arrive quickly with no extra transport costs.' },
     { title: 'No Business Disruption', description: 'We work evenings and weekends for offices and businesses that cannot close.' },
     { title: 'Residential & Commercial Projects', description: 'From a 2+1 apartment in Komuna to a 500m² office in Bllok - we handle every size.' },
-    { title: 'Free Consultation in Tirana', description: 'Same-day free visit to any area of Tirana for assessment and quote.' },
+    { title: 'Free Consultation', description: 'Same-day free visit to any area of Tirana for assessment and quote.' },
   ];
 
   const processSteps = isAlbanian ? [
-    { step: '1', title: 'Vizitë në Tiranë', description: 'Vlerësim falas në lokacionin tuaj' },
+    { step: '1', title: 'Vizitë Falas', description: 'Vlerësim falas në lokacionin tuaj' },
     { step: '2', title: 'Projekt Teknik', description: 'Matje precize dhe dizajn i detajuar' },
     { step: '3', title: 'Zgjedhje Materialesh', description: 'Panele Knauf & Rigips cilësore' },
     { step: '4', title: 'Instalim i Pastër', description: 'Punë pa ndërhyrje strukturore' },
     { step: '5', title: 'Inspektim Final', description: 'Garanci e plotë pune dhe materiali' },
   ] : [
-    { step: '1', title: 'Tirana Visit', description: 'Free assessment at your location' },
+    { step: '1', title: 'Free Site Visit', description: 'Free assessment at your location' },
     { step: '2', title: 'Technical Design', description: 'Precise measurements and detailed design' },
     { step: '3', title: 'Material Selection', description: 'Quality Knauf & Rigips panels' },
     { step: '4', title: 'Clean Installation', description: 'Work without structural intervention' },
@@ -93,7 +93,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Punime Gipsi Tiranë',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Punime Gipsi Tiranë - Instalim Profesional dhe Konsultë Falas',
+    heroTitle: 'Punime Gipsi Tiranë',
     heroSubtitle: 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik për projekte komerciale dhe rezidenciale në Tiranë. Materiale Knauf dhe Rigips. Konsultë falas.',
     introContent: [
       'Punimet e gipsit profesionale në Tiranë janë një nga shërbimet më të kërkuara në industrinë e ndërtimit dhe rinovimit. Si kryeqyteti i Shqipërisë, Tirana ka një treg të gjerë për punime gipsi cilësore në zona si Blloku, Komuna e Parisit, Kashar, Kombinat dhe qendra e Tiranës. Torra Gips ofron zgjidhje të plota për çdo nevojë, nga apartamentet moderne deri te projektet komerciale të mëdha. Me 100+ projekte të përfunduara në të gjithë vendin, përfshirë Aeroportin Ndërkombëtar të Vlorës, Green Coast Resort, Rolling Hills dhe Lion Park, ne sjellim të njëjtin profesionalizëm në çdo projekt në Tiranë.',
@@ -102,7 +102,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Punimesh Gipsi Ofrojmë në Tiranë?',
+        title: 'Tavane, Ndarje dhe Dekorime Gipsi në Tiranë',
         content: 'Në Tiranë ofrojmë gamën e plotë të punimeve të gipsit për projekte rezidenciale dhe komerciale. Nga apartamentet e reja në zonat e zhvillimit si Kashar dhe Farkë, deri te zyrat moderne në qendër të Tiranës, çdo projekt përfiton nga përvoja jonë e gjerë dhe materialet cilësore Knauf dhe Rigips.',
         listItems: [
           'Tavane të varura me dizajne moderne dhe klasike për çdo ambient',
@@ -114,7 +114,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Si Realizohen Tavanet e Gipsit në Tiranë?',
+        title: 'Tavane Gipsi në Tiranë',
         content: 'Procesi i instalimit të tavaneve të gipsit në Tiranë ndiqet me rigorozitet të plotë teknik. Ekipi ynë vlerëson strukturën ekzistuese, matë me precizion hapësirat dhe harton dizajnin optimal duke marrë parasysh ndriçimin natyror, lartësinë e ambientit dhe kërkesat estetike të klientit. Për ndërtesat e larta në qendër të Tiranës apo vilat në periferi, adaptojmë teknikat tona për çdo situatë.',
         listItems: [
           'Vlerësim teknik i strukturës ekzistuese para instalimit',
@@ -126,7 +126,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse të Zgjidhni Gipsin për Projektin Tuaj në Tiranë?',
+        title: 'Përparësitë e Punimeve me Gips',
         content: 'Gipsi është materiali ideal për projektet në Tiranë për arsye të shumta. Klima e Tiranës, me verë të nxehtë dhe dimër të lagësht, kërkon materiale që ofrojnë izolim termik efikas. Gipsi ofron mbrojtje të shkëlqyer termike që ndihmon në kursimin e energjisë për ngrohje dhe ftohje, veçanërisht i rëndësishëm për ndërtesat e larta në qendër të qytetit.',
         listItems: [
           'Izolim termik superior - kurseni në faturat e energjisë gjatë gjithë vitit',
@@ -138,7 +138,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Zona të Tiranës Mbulojmë?',
+        title: 'Lagjet e Tiranës ku Punojmë',
         content: 'Torra Gips ofron shërbime punimesh gipsi në të gjitha zonat e Tiranës dhe rrethinave. Ekipi ynë është i gatshëm të vijë në çdo lokacion brenda qytetit dhe periferisë, duke ofruar konsultë falas në vend për vlerësimin e projektit tuaj.',
         listItems: [
           'Blloku dhe qendra e Tiranës - apartamente luksoz dhe zyra moderne',
@@ -150,7 +150,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushtojnë Punimet e Gipsit në Tiranë?',
+        title: 'Çmimi i Punimeve të Gipsit në Tiranë',
         content: 'Çmimet e punimeve të gipsit në Tiranë ndryshojnë sipas llojit të punës, materialeve dhe kompleksitetit. Si orientim për tregun shqiptar, tavanet e thjeshta të varura fillojnë rreth 2100-2300 Lek për metër katror, ndërsa dizajnet me nivele e ndriçim LED arrijnë 2500-4000 Lek. Ndarjet me panele gipsi kushtojnë zakonisht 3500-4500 Lek për metër katror duke përfshirë skeletin dhe izolimin. Faktorët kryesorë janë sasia, lartësia e ambientit dhe zona ku ndodhet projekti.',
         listItems: [
           'Lloji i punës - tavan i sheshtë, me nivele apo me ndriçim LED',
@@ -162,7 +162,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cili Material Është Më i Mirë, Knauf apo Rigips?',
+        title: 'Knauf apo Rigips',
         content: 'Knauf dhe Rigips janë dy nga prodhuesit kryesorë europianë të sistemeve të gipsit dhe të dy ofrojnë cilësi të lartë për tregun e Tiranës. Knauf njihet për gamën e gjerë të paneleve të specializuara, përfshirë ato rezistente ndaj zjarrit dhe lagështisë. Rigips ofron sisteme të besueshme me profile metalike precize dhe panele akustike. Zgjedhja varet nga nevoja specifike - për banja dhe kuzhina rekomandojmë panele rezistente ndaj lagështisë, ndërsa për tavane dekorative panelet standarde janë të mjaftueshme.',
         listItems: [
           'Knauf - gamë e gjerë panelesh të specializuara dhe sisteme komplete',
@@ -177,25 +177,25 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
     serviceFeatures: [
       {
         icon: 'ceiling' as const,
-        title: 'Tavane Gipsi për Apartamente në Tiranë',
+        title: 'Tavane Gipsi',
         description: 'Tavane moderne ideale për apartamentet e reja në Bllok, Komunën e Parisit dhe Kashar. Dizajne që maksimizojnë lartësinë vizuale të ambienteve urbane.',
         features: ['Ideale për apartamente', 'Lartësi vizuale', 'LED i integruar', 'Dizajne urbane'],
       },
       {
         icon: 'partition' as const,
-        title: 'Ndarja Zyrash & Apartamentesh',
+        title: 'Ndarje me Gips',
         description: 'Zgjidhja perfekte për zyrat open-space në qendër të Tiranës dhe ndarjen e dhomave në apartamente të reja. Izolim akustik midis fqinjëve.',
         features: ['Zyra open-space', 'Ndarja dhomash', 'Izolim ndërmjet katesh', 'Pa zhurma'],
       },
       {
         icon: 'decoration' as const,
-        title: 'Dekorime për Hapësira Rezidenciale',
+        title: 'Dekorime Gipsi',
         description: 'Korniza dhe profile moderne për apartamentet luksoz në Tiranë. Stili minimalist urban që kërkohet në projektet e reja rezidenciale.',
         features: ['Stil urban modern', 'Profile minimaliste', 'Ndriçim indirekt', 'Detaje elegante'],
       },
       {
         icon: 'insulation' as const,
-        title: 'Izolim Termik për Klimën e Tiranës',
+        title: 'Izolim Termik dhe Akustik',
         description: 'Panele termoizoluese që mbrojnë nga vapët verore dhe të ftohti dimëror i Tiranës. Kurseni deri në 30% në faturat e energjisë.',
         features: ['Mbrojtje nga vapa', 'Kursim energjie 30%', 'Izolim akustik urban', 'Mbrojtje zjarri'],
       },
@@ -238,13 +238,13 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Gipsi Ofrojmë në Tiranë?',
-      commercialExperience: 'Ku Kemi Punuar me Gips në Tiranë?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips në Tiranë?',
-      howWeWork: 'Si Funksionon Procesi Ynë në Tiranë?',
-      serviceAreas: 'Cilat Zona të Tiranës Mbulojmë?',
-      faq: 'Pyetje të Shpeshta për Punimet e Gipsit në Tiranë',
-      readyToStart: 'Gati për Projektin Tuaj të Gipsit në Tiranë?',
+      whatWeOffer: 'Shërbime Gipsi në Tiranë',
+      commercialExperience: 'Projekte Gipsi të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Punime Gipsi',
     },
     relatedLinks: [
       { href: '/punime-gipsi-durres', label: 'Punime Gipsi në Durrës' },
@@ -254,7 +254,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
   } : {
     serviceName: 'Gypsum Works Tirana',
     heroImage: '/images/services/gypsum/commercial-space-1.webp',
-    heroTitle: 'Gypsum Works Tirana - Professional Installation and Free Consultation',
+    heroTitle: 'Gypsum Works Tirana',
     heroSubtitle: 'Suspended ceilings, space partitions, architectural decorations and acoustic insulation for commercial and residential projects in Tirana. Knauf and Rigips materials. Free consultation.',
     introContent: [
       'Professional gypsum works in Tirana are among the most sought-after construction and renovation services in the Albanian capital. As the largest city in Albania, Tirana has a thriving market for quality gypsum work across neighborhoods such as Blloku, Komuna e Parisit, Kashar, Kombinat and the city center. Torra Gips delivers comprehensive solutions for every need, from modern apartments to large-scale commercial projects. With 100+ completed projects nationwide, including Vlora International Airport, Green Coast Resort, Rolling Hills and Lion Park, we bring the same level of professionalism to every project in Tirana.',
@@ -263,7 +263,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Gypsum Works Do We Offer in Tirana?',
+        title: 'Gypsum Ceilings, Partitions and Decorations in Tirana',
         content: 'In Tirana we offer the full range of gypsum works for residential and commercial projects. From new apartments in developing areas like Kashar and Farkë to modern offices in the city center, every project benefits from our extensive experience and quality Knauf and Rigips materials.',
         listItems: [
           'Suspended ceilings with modern and classic designs for any environment',
@@ -275,7 +275,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Are Gypsum Ceilings Installed in Tirana?',
+        title: 'Gypsum Ceilings in Tirana',
         content: 'The gypsum ceiling installation process in Tirana follows rigorous technical standards. Our team evaluates the existing structure, precisely measures the spaces and designs the optimal layout considering natural lighting, ceiling height and the client\'s aesthetic requirements. For tall buildings in central Tirana or suburban villas, we adapt our techniques to each situation.',
         listItems: [
           'Technical assessment of the existing structure before installation',
@@ -287,7 +287,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Choose Gypsum for Your Tirana Project?',
+        title: 'Benefits of Gypsum Works',
         content: 'Gypsum is the ideal material for projects in Tirana for numerous reasons. Tirana\'s climate, with hot summers and damp winters, demands materials that provide efficient thermal insulation. Gypsum offers excellent thermal protection that helps save energy on heating and cooling, particularly important for tall buildings in the city center.',
         listItems: [
           'Superior thermal insulation - save on energy bills throughout the year',
@@ -299,7 +299,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Areas of Tirana Do We Cover?',
+        title: 'Tirana Neighborhoods We Work In',
         content: 'Torra Gips provides gypsum works services across all areas of Tirana and its surroundings. Our team is ready to come to any location within the city and its periphery, offering a free on-site consultation for your project assessment.',
         listItems: [
           'Blloku and central Tirana - luxury apartments and modern offices',
@@ -311,7 +311,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Do Gypsum Works Cost in Tirana?',
+        title: 'Gypsum Works Prices in Tirana',
         content: 'Gypsum work prices in Tirana vary by the type of work, materials and complexity. As a guide for the Albanian market, simple suspended ceilings start around 2100-2300 Lek per square meter, while multi-level designs with LED lighting reach 2500-4000 Lek. Gypsum panel partitions typically cost 3500-4500 Lek per square meter including the frame and insulation. The main factors are the total area, ceiling height and the zone where the project is located.',
         listItems: [
           'Type of work - flat ceiling, multi-level or with LED lighting',
@@ -323,7 +323,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
         ],
       },
       {
-        title: 'Which Material Is Better, Knauf or Rigips?',
+        title: 'Knauf vs Rigips',
         content: 'Knauf and Rigips are two of the leading European gypsum system manufacturers and both deliver high quality for the Tirana market. Knauf is known for its wide range of specialized boards, including fire-resistant and moisture-resistant types. Rigips offers reliable systems with precise metal profiles and acoustic boards. The choice depends on specific needs - for bathrooms and kitchens we recommend moisture-resistant boards, while for decorative ceilings standard boards are sufficient.',
         listItems: [
           'Knauf - a wide range of specialized boards and complete systems',
@@ -338,25 +338,25 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
     serviceFeatures: [
       {
         icon: 'ceiling' as const,
-        title: 'Gypsum Ceilings for Tirana Apartments',
+        title: 'Gypsum Ceilings',
         description: 'Modern ceilings ideal for new apartments in Blloku, Komuna e Parisit and Kashar. Designs that maximize the visual height of urban spaces.',
         features: ['Ideal for apartments', 'Visual height', 'Integrated LED', 'Urban designs'],
       },
       {
         icon: 'partition' as const,
-        title: 'Office & Apartment Partitions',
+        title: 'Gypsum Partitions',
         description: 'The perfect solution for open-space offices in central Tirana and room divisions in new apartments. Acoustic insulation between neighbors.',
         features: ['Open-space offices', 'Room dividers', 'Floor-to-floor insulation', 'Noise-free'],
       },
       {
         icon: 'decoration' as const,
-        title: 'Residential Space Decorations',
+        title: 'Gypsum Decorations',
         description: 'Modern frames and profiles for luxury apartments in Tirana. Urban minimalist style demanded in new residential developments.',
         features: ['Urban modern style', 'Minimalist profiles', 'Indirect lighting', 'Elegant details'],
       },
       {
         icon: 'insulation' as const,
-        title: 'Thermal Insulation for Tirana Climate',
+        title: 'Thermal and Acoustic Insulation',
         description: 'Thermal insulation panels that protect from Tirana\'s summer heat and winter cold. Save up to 30% on energy bills.',
         features: ['Heat protection', '30% energy savings', 'Urban acoustic insulation', 'Fire protection'],
       },
@@ -399,13 +399,13 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Gypsum Services Do We Offer in Tirana?',
-      commercialExperience: 'Where Have We Done Gypsum Work in Tirana?',
-      whyChooseUs: 'Why Choose Torra Gips in Tirana?',
-      howWeWork: 'How Does Our Process Work in Tirana?',
-      serviceAreas: 'What Areas of Tirana Do We Cover?',
-      faq: 'Frequently Asked Questions About Gypsum Works in Tirana',
-      readyToStart: 'Ready for Your Gypsum Project in Tirana?',
+      whatWeOffer: 'Gypsum Services in Tirana',
+      commercialExperience: 'Completed Gypsum Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Gypsum Works',
     },
     relatedLinks: [
       { href: '/gypsum-works-durres', label: 'Gypsum Works in Durrës' },
@@ -426,6 +426,7 @@ export default async function GypsumWorksTiranaPage({ params }: Props) {
 
       <ServicePageTemplate
         locale={locale}
+        videos='gips'
         {...pageData}
       />
     </>

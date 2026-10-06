@@ -17,8 +17,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: locale === 'sq'
-      ? 'Lyerje Profesionale Tiranë & Durrës - +355 68 858 0058 - Torra Gips'
-      : 'Professional Painting Tirana & Durrës - +355 68 858 0058 - Torra Gips',
+      ? 'Lyerje Profesionale Tiranë & Durrës - Torra Gips'
+      : 'Professional Painting Tirana & Durrës - Torra Gips',
     description: locale === 'sq'
       ? 'Lyerje profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
       : 'Professional painting for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
@@ -93,7 +93,7 @@ export default async function PaintingPage({ params }: Props) {
   const pageData = isAlbanian ? {
     serviceName: 'Lyerje',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Lyerje Profesionale në Tiranë dhe Durrës',
+    heroTitle: 'Lyerje Profesionale',
     heroSubtitle: 'Lyerje brendshme dhe jashtme, bojëra ekologjike dhe efekte dekorative për projekte komerciale dhe rezidenciale. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Bojëra Dulux, Jotun dhe Caparol. Konsultë falas.',
     introContent: [
       'Lyerja profesionale është faza përfundimtare që jep jetë çdo projekti. Torra Gips ofron shërbime lyerjeje të nivelit më të lartë për projekte komerciale dhe rezidenciale në Tiranë, Durrës dhe gjithë Shqipërinë qendrore. Me përvojë të gjerë në projekte prestigjioze si Aeroporti Ndërkombëtar i Vlorës, Green Coast Resort dhe Rolling Hills, ne garantojmë cilësi vizuale që bën përshtypje.',
@@ -102,8 +102,8 @@ export default async function PaintingPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'Çfarë Përfshin Lyerja Brendshme Profesionale?',
-        content: 'Lyerja brendshme transformon plotësisht ambientet, duke krijuar atmosferën e dëshiruar dhe duke reflektuar identitetin e biznesit ose stilin personal. Ne ofrojmë konsultim ngjyrash profesional dhe ekzekutim të përsosur.',
+        title: 'Lyerje Shtëpie nga Brenda',
+        content: 'Lyerja e shtëpisë nga brenda transformon plotësisht ambientet, duke krijuar atmosferën e dëshiruar dhe duke reflektuar identitetin e biznesit ose stilin personal. Ne ofrojmë konsultim ngjyrash profesional dhe ekzekutim të përsosur.',
         listItems: [
           'Lyerje murash, tavanesh dhe elementeve arkitekturore',
           'Përfundime mat, saten dhe me shkëlqim',
@@ -114,8 +114,8 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Pse Është e Rëndësishme Lyerja Jashtme?',
-        content: 'Lyerja jashtme duhet të kombinojë estetikën me mbrojtjen afatgjatë. Bojërat tona të specializuara mbrojnë fasadat nga kushtet e ashpra atmosferike të Shqipërisë, duke ruajtur ngjyrat e gjalla për vite.',
+        title: 'Lyerje Shtëpie nga Jashtë',
+        content: 'Lyerja e shtëpisë nga jashtë dhe e fasadave duhet të kombinojë estetikën me mbrojtjen afatgjatë. Bojërat tona të specializuara mbrojnë fasadat nga kushtet e ashpra atmosferike të Shqipërisë, duke ruajtur ngjyrat e gjalla për vite.',
         listItems: [
           'Bojëra elastike që përballojnë ndryshimet e temperaturës',
           'Rezistencë ndaj rrezeve UV dhe zbehjes',
@@ -126,7 +126,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Çfarë Efektesh Dekorative Ofrojmë?',
+        title: 'Efekte Dekorative',
         content: 'Për klientët që kërkojnë diçka më shumë se lyerja e thjeshtë, ofrojmë efekte dekorative që transformojnë muret në vepra arti. Ideale për lobi hotele, restorante, dyqane luksoze dhe ambiente të veçanta.',
         listItems: [
           'Efekt mermeri dhe guri natyral',
@@ -138,7 +138,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Kur Keni Nevojë për Lyerje Industriale?',
+        title: 'Lyerje Industriale',
         content: 'Për ambiente industriale dhe aplikime të veçanta, ofrojmë zgjidhje të specializuara që plotësojnë kërkesat teknike më të rrepta.',
         listItems: [
           'Lyerje dyshemesh epoksi për garazhe dhe magazine',
@@ -150,7 +150,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Kushton Lyerja për Metër Katror në Tiranë dhe Durrës?',
+        title: 'Çmimi i Lyerjes së Shtëpisë',
         content: 'Cmimi i lyerjes varet nga përgatitja e sipërfaqes, numri i duarve dhe cilësia e bojës. Si orientim, lyerja standarde e brendshme me dy duar fillon zakonisht nga 350 deri 600 Lek për metër katror, ndërsa fasadat dhe efektet dekorative kushtojnë më shumë. Faktorë si patinimi paraprak, lartësia e tavaneve dhe gjendja e mureve ndikojnë në vlerë. Ofrojmë vizitë dhe vlerësim falas në Tiranë e Durrës para çdo oferte.',
         listItems: [
           'Lyerje e brendshme standarde: rreth 350-600 Lek/m2',
@@ -162,7 +162,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Cilat Janë Gabimet më të Shpeshta gjatë Lyerjes?',
+        title: 'Gabimet më të Shpeshta gjatë Lyerjes',
         content: 'Shumica e problemeve me lyerjen vijnë nga përgatitja e dobët dhe nga ngutja. Aplikimi i bojës mbi sipërfaqe me lagështi, anashkalimi i primerit ose hollimi i tepërt i bojës shkaktojnë zbehje, çarje dhe shtresa të pabarabarta. Gjithashtu, lyerja në temperatura shumë të ulëta ngadalëson tharjen dhe dëmton ngjitjen. Ne respektojmë kohët e tharjes mes duarve, zakonisht 2 deri 4 orë, dhe përgatisim çdo sipërfaqe me kujdes.',
         listItems: [
           'Mosaplikimi i primerit mbi suva të reja',
@@ -174,7 +174,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Sa Zgjat Lyerja dhe Si Mirëmbahet?',
+        title: 'Kohëzgjatja dhe Mirëmbajtja e Lyerjes',
         content: 'Një lyerje cilësore me bojëra premium si Dulux, Jotun ose Caparol ruan ngjyrat e gjalla për 5 deri 10 vjet në ambiente të brendshme, ndërsa fasadat e jashtme në Tiranë dhe Durrës zgjasin zakonisht 6 deri 8 vjet para se të kërkojnë rifreskim, për shkak të diellit dhe ajrit bregdetar. Sipërfaqet e lyera me bojë të lavueshme pastrohen lehtë me një leckë të lagësht pa dëmtuar ngjyrën.',
         listItems: [
           'Lyerje e brendshme që zgjat 5 deri 10 vjet',
@@ -249,18 +249,22 @@ export default async function PaintingPage({ params }: Props) {
         answer: 'Një litër bojë cilësore mbulon rreth 10 deri 12 metra katror për duar. Për një dhomë 20 metra katror me dy duar nevojiten afërsisht 8 deri 10 litra bojë. Sasia varet nga thithja e murit dhe ngjyra. Ne llogarisim materialin saktë gjatë vlerësimit falas.',
       },
       {
+        question: 'Sa kushton lyerja e shtëpisë?',
+        answer: 'Lyerja e brendshme standarde me dy duar kushton zakonisht 350 deri 600 Lek për metër katror, ndërsa lyerja e shtëpisë nga jashtë dhe efektet dekorative kushtojnë më shumë. Çmimi final varet nga përgatitja e mureve, lartësia e tavaneve dhe cilësia e bojës. Vlerësimi në vend është falas në Tiranë dhe Durrës.',
+      },
+      {
         question: 'A ofroni konsulencë për zgjedhjen e ngjyrave?',
         answer: 'Po, ofrojmë konsulencë falas për zgjedhjen e ngjyrave sipas ndriçimit, madhësisë së ambientit dhe stilit tuaj. Përdorim bojëra me VOC të ulët, të sigurta për dhoma fëmijësh dhe ambiente pune, dhe mund të përgatisim mostra ngjyrash në mur para se të vendosni për ngjyrën finale.',
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'Çfarë Shërbimesh Lyerjeje Ofrojmë?',
-      commercialExperience: 'Ku Kemi Kryer Lyerje Komerciale?',
-      whyChooseUs: 'Pse të Zgjidhni Torra Gips për Lyerjen?',
-      howWeWork: 'Si Funksionon Procesi i Lyerjes?',
-      serviceAreas: 'Ku Ofrojmë Shërbime Lyerjeje?',
-      faq: 'Pyetje të Shpeshta për Lyerjen',
-      readyToStart: 'Gati për Projektin Tuaj të Lyerjes?',
+      whatWeOffer: 'Shërbime Lyerjeje',
+      commercialExperience: 'Projekte Lyerjeje të Realizuara',
+      whyChooseUs: 'Pse Torra Gips',
+      howWeWork: 'Si Punojmë',
+      serviceAreas: 'Zonat që Mbulojmë',
+      faq: 'Pyetje të Shpeshta',
+      readyToStart: 'Kërkoni Ofertë për Lyerje',
     },
     relatedLinks: [
       { href: '/lyerje-tirane', label: 'Lyerje Profesionale në Tiranë' },
@@ -273,7 +277,7 @@ export default async function PaintingPage({ params }: Props) {
   } : {
     serviceName: 'Painting',
     heroImage: '/images/services/painting/commercial-exterior-2.webp',
-    heroTitle: 'Professional Painting in Tirana and Durrës',
+    heroTitle: 'Professional Painting',
     heroSubtitle: 'Interior and exterior painting, eco-friendly paints and decorative effects for commercial and residential projects. 100+ completed projects including Vlora Airport. Dulux, Jotun and Caparol paints. Free consultation.',
     introContent: [
       'Professional painting is the final phase that brings every project to life. Torra Gips offers the highest level painting services for commercial and residential projects in Tirana, Durrës and all of central Albania. With extensive experience in prestigious projects like Vlora International Airport, Green Coast Resort and Rolling Hills, we guarantee visual quality that impresses.',
@@ -282,8 +286,8 @@ export default async function PaintingPage({ params }: Props) {
     ],
     contentSections: [
       {
-        title: 'What Does Professional Interior Painting Include?',
-        content: 'Interior painting completely transforms environments, creating the desired atmosphere and reflecting business identity or personal style. We offer professional color consultation and perfect execution.',
+        title: 'House Painting Interior',
+        content: 'Interior house painting completely transforms environments, creating the desired atmosphere and reflecting business identity or personal style. We offer professional color consultation and perfect execution.',
         listItems: [
           'Painting of walls, ceilings and architectural elements',
           'Matte, satin and gloss finishes',
@@ -294,8 +298,8 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'Why Is Exterior Painting Important?',
-        content: 'Exterior painting must combine aesthetics with long-term protection. Our specialized paints protect facades from harsh Albanian weather conditions, keeping colors vibrant for years.',
+        title: 'House Painting Exterior',
+        content: 'Exterior house and facade painting must combine aesthetics with long-term protection. Our specialized paints protect facades from harsh Albanian weather conditions, keeping colors vibrant for years.',
         listItems: [
           'Elastic paints that withstand temperature changes',
           'UV resistance and fade prevention',
@@ -306,7 +310,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Decorative Painting Effects Do We Offer?',
+        title: 'Decorative Effects',
         content: 'For clients seeking more than simple painting, we offer decorative effects that transform walls into works of art. Ideal for hotel lobbies, restaurants, luxury stores and special environments.',
         listItems: [
           'Marble and natural stone effects',
@@ -318,7 +322,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'When Do You Need Industrial Painting?',
+        title: 'Industrial Painting',
         content: 'For industrial environments and special applications, we offer specialized solutions that meet the strictest technical requirements.',
         listItems: [
           'Epoxy floor painting for garages and warehouses',
@@ -330,7 +334,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Much Does Painting Cost Per Square Meter in Tirana and Durres?',
+        title: 'House Painting Prices',
         content: 'Painting cost depends on surface preparation, number of coats and paint quality. As a guide, standard interior painting with two coats usually starts from 350 to 600 Lek per square meter, while facades and decorative effects cost more. Factors such as prior plastering, ceiling height and wall condition affect the price. We offer a free on-site visit and assessment across Tirana and Durres before any quote.',
         listItems: [
           'Standard interior painting: around 350-600 Lek/m2',
@@ -342,7 +346,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'What Are the Most Common Painting Mistakes?',
+        title: 'Most Common Painting Mistakes',
         content: 'Most painting problems come from poor preparation and rushing. Applying paint over damp surfaces, skipping primer or over-thinning the paint causes fading, cracking and uneven layers. Painting in very low temperatures also slows drying and harms adhesion. We respect drying times between coats, usually 2 to 4 hours, and carefully prepare every surface before the first coat.',
         listItems: [
           'Not applying primer over new plaster',
@@ -354,7 +358,7 @@ export default async function PaintingPage({ params }: Props) {
         ],
       },
       {
-        title: 'How Long Does Painting Last and How Is It Maintained?',
+        title: 'Painting Lifespan and Maintenance',
         content: 'Quality painting with premium paints such as Dulux, Jotun or Caparol keeps colors vivid for 5 to 10 years indoors, while exterior facades in Tirana and Durres typically last 6 to 8 years before needing a refresh due to sun exposure and coastal air. Surfaces painted with washable paint clean easily with a damp cloth without harming the color.',
         listItems: [
           'Interior painting that lasts 5 to 10 years',
@@ -429,18 +433,22 @@ export default async function PaintingPage({ params }: Props) {
         answer: 'One liter of quality paint covers about 10 to 12 square meters per coat. For a 20 square meter room with two coats you need roughly 8 to 10 liters. The amount depends on wall absorption and color. We calculate materials precisely during the free assessment.',
       },
       {
+        question: 'How much does house painting cost?',
+        answer: 'Standard interior painting with two coats usually costs 350 to 600 Lek per square meter, while exterior house painting and decorative effects cost more. The final price depends on wall preparation, ceiling height and paint quality. The on-site assessment is free in Tirana and Durrës.',
+      },
+      {
         question: 'Do you offer color consultation?',
         answer: 'Yes, we offer free color consultation based on lighting, room size and your style. We use low VOC paints that are safe for children rooms and workspaces, and we can prepare sample patches on the wall before you decide on the final color.',
       },
     ],
     sectionTitles: {
-      whatWeOffer: 'What Painting Services Do We Offer?',
-      commercialExperience: 'Where Have We Done Commercial Painting?',
-      whyChooseUs: 'Why Choose Torra Gips for Painting?',
-      howWeWork: 'How Does the Painting Process Work?',
-      serviceAreas: 'Where Do We Offer Painting Services?',
-      faq: 'Frequently Asked Questions About Painting',
-      readyToStart: 'Ready for Your Painting Project?',
+      whatWeOffer: 'Painting Services',
+      commercialExperience: 'Completed Painting Projects',
+      whyChooseUs: 'Why Torra Gips',
+      howWeWork: 'How We Work',
+      serviceAreas: 'Areas We Cover',
+      faq: 'Frequently Asked Questions',
+      readyToStart: 'Request a Quote for Painting',
     },
     relatedLinks: [
       { href: '/painting-tirana', label: 'Professional Painting in Tirana' },
@@ -463,6 +471,7 @@ export default async function PaintingPage({ params }: Props) {
 
       <ServicePageTemplate
         locale={locale}
+        videos='lyerje'
         {...pageData}
       />
     </>

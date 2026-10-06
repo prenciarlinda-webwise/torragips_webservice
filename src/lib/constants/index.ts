@@ -43,7 +43,7 @@ export const SERVICES = {
     },
     icon: 'paintbrush',
     priceRange: {
-      min: 500,
+      min: 350,
       max: 1500,
       currency: 'ALL',
     },

@@ -9,6 +9,7 @@ import {
   ServiceAreas,
   FAQ,
   CTA,
+  VideoShowcase,
 } from '@/components/sections';
 import { LocalBusinessSchema, OrganizationSchema } from '@/components/seo';
 
@@ -47,6 +48,7 @@ export default async function HomePage({ params }: Props) {
       <ServicesOverview />
       <FeaturedProjects />
       <WhyChooseUs />
+      <VideoShowcase locale={locale} limit={6} />
       <Testimonials />
       <ServiceAreas />
       <FAQ />
