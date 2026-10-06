@@ -2,6 +2,8 @@
 import PaintingTiranaPage, { generateMetadata } from '../lyerje-tirane/page';
 
 // Only generate this page for English locale
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ locale: 'en' }];
 }

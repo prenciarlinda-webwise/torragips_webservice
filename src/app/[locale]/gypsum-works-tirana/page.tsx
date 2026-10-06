@@ -2,6 +2,8 @@
 import GypsumWorksTiranaPage, { generateMetadata } from '../punime-gipsi-tirane/page';
 
 // Only generate this page for English locale
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ locale: 'en' }];
 }

@@ -7,6 +7,9 @@ export const routing = defineRouting({
   locales,
   defaultLocale: 'sq',
   localePrefix: 'always',
+  // hreflang is declared per page in generateMetadata; the auto-generated Link header
+  // would point at non-existent cross-locale slugs.
+  alternateLinks: false,
 });
 
 export const pathnames = {

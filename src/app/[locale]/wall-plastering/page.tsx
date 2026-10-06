@@ -2,6 +2,8 @@
 import PlasteringPage, { generateMetadata } from '../patinim/page';
 
 // Only generate this page for English locale
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ locale: 'en' }];
 }

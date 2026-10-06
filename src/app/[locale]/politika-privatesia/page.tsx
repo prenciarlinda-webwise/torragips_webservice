@@ -9,6 +9,8 @@ type Props = {
 };
 
 // Only generate this page for Albanian locale
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return [{ locale: 'sq' }];
 }
