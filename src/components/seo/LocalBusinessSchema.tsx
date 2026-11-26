@@ -3,9 +3,16 @@ import JsonLd from './JsonLd';
 
 interface LocalBusinessSchemaProps {
   locale: string;
+  // City pages declare a single served city; default is Tiranë + Durrës.
+  city?: 'Tiranë' | 'Durrës';
 }
 
-export default function LocalBusinessSchema({ locale }: LocalBusinessSchemaProps) {
+const CITIES = [
+  { '@type': 'City', name: 'Tiranë', '@id': 'https://www.wikidata.org/wiki/Q19689' },
+  { '@type': 'City', name: 'Durrës', '@id': 'https://www.wikidata.org/wiki/Q179923' },
+] as const;
+
+export default function LocalBusinessSchema({ locale, city }: LocalBusinessSchemaProps) {
   const descriptions = {
     sq: 'Shërbime profesionale të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës.',
     en: 'Professional gypsum works, plastering and painting services in Tirana and Durrës.',
@@ -33,18 +40,7 @@ export default function LocalBusinessSchema({ locale }: LocalBusinessSchemaProps
       latitude: 41.3275,
       longitude: 19.8187,
     },
-    areaServed: [
-      {
-        '@type': 'City',
-        name: 'Tiranë',
-        '@id': 'https://www.wikidata.org/wiki/Q19689',
-      },
-      {
-        '@type': 'City',
-        name: 'Durrës',
-        '@id': 'https://www.wikidata.org/wiki/Q179923',
-      },
-    ],
+    areaServed: city ? CITIES.find((c) => c.name === city) : CITIES,
     openingHoursSpecification: {
       '@type': 'OpeningHoursSpecification',
       dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],

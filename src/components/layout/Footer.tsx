@@ -3,6 +3,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
 import { COMPANY, SOCIAL_LINKS } from '@/lib/constants';
 import AgencyCreditLink from './AgencyCreditLink';
+import HiringNotice from '@/components/features/HiringNotice';
 
 export default function Footer() {
   const t = useTranslations();
@@ -31,18 +32,10 @@ export default function Footer() {
     {
       href: locale === 'sq' ? '/patinim' : '/wall-plastering',
       label: t('nav.servicesItems.plastering'),
-      locations: [
-        { href: locale === 'sq' ? '/patinim-tirane' : '/wall-plastering-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
-        { href: locale === 'sq' ? '/patinim-durres' : '/wall-plastering-durres', label: 'Durrës' },
-      ],
     },
     {
       href: locale === 'sq' ? '/lyerje' : '/painting',
       label: t('nav.servicesItems.painting'),
-      locations: [
-        { href: locale === 'sq' ? '/lyerje-tirane' : '/painting-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
-        { href: locale === 'sq' ? '/lyerje-durres' : '/painting-durres', label: 'Durrës' },
-      ],
     },
   ];
 
@@ -223,6 +216,8 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
+      <HiringNotice locale={locale} />
+
       <div className="border-t border-white/10">
         <div className="container-custom py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">

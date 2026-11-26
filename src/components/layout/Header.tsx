@@ -56,18 +56,10 @@ export default function Header() {
         {
           href: locale === 'sq' ? '/patinim' : '/wall-plastering',
           label: t('servicesItems.plastering'),
-          children: [
-            { href: locale === 'sq' ? '/patinim-tirane' : '/wall-plastering-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
-            { href: locale === 'sq' ? '/patinim-durres' : '/wall-plastering-durres', label: 'Durrës' },
-          ],
         },
         {
           href: locale === 'sq' ? '/lyerje' : '/painting',
           label: t('servicesItems.painting'),
-          children: [
-            { href: locale === 'sq' ? '/lyerje-tirane' : '/painting-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
-            { href: locale === 'sq' ? '/lyerje-durres' : '/painting-durres', label: 'Durrës' },
-          ],
         },
       ],
     },

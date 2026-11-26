@@ -8,6 +8,27 @@ const intlMiddleware = createMiddleware(routing);
 // Cloudflare sets the visitor country in the `CF-IPCountry` header.
 const SQ_COUNTRIES = new Set(['AL', 'XK', 'MK']); // Albania, Kosovo, North Macedonia
 
+// Retired URLs (no trailing slash) → canonical target. Unprefixed forms are covered too.
+const RETIRED: Record<string, string> = Object.fromEntries(
+  Object.entries({
+    // Gypsum hubs: the homepages own "punime gipsi" / "gypsum works"
+    '/sq/punime-gipsi': '/sq/',
+    '/en/gypsum-works': '/en/',
+    // Plastering and painting city pages: consolidated into the service hubs
+    '/sq/patinim-tirane': '/sq/patinim/',
+    '/sq/patinim-durres': '/sq/patinim/',
+    '/en/wall-plastering-tirana': '/en/wall-plastering/',
+    '/en/wall-plastering-durres': '/en/wall-plastering/',
+    '/sq/lyerje-tirane': '/sq/lyerje/',
+    '/sq/lyerje-durres': '/sq/lyerje/',
+    '/en/painting-tirana': '/en/painting/',
+    '/en/painting-durres': '/en/painting/',
+  }).flatMap(([from, to]) => [
+    [from, to],
+    [from.replace(/^\/(sq|en)/, ''), to],
+  ])
+);
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
@@ -56,16 +77,12 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 307);
   }
 
-  // ── Retired gypsum hubs: the homepages own "punime gipsi" / "gypsum works" ──
-  // Mirrored in both locales to keep hreflang 1:1. Runs before the trailing-slash rule.
-  if (/^\/(sq\/)?punime-gipsi\/?$/.test(pathname)) {
+  // ── Retired pages → their owning page (single 301, mirrored in both locales) ──
+  // Runs before the trailing-slash rule. Keep sq/en pairs together for 1:1 hreflang.
+  const target = RETIRED[pathname.replace(/\/$/, '')];
+  if (target) {
     const url = request.nextUrl.clone();
-    url.pathname = '/sq/';
-    return NextResponse.redirect(url, 301);
-  }
-  if (/^\/(en\/)?gypsum-works\/?$/.test(pathname)) {
-    const url = request.nextUrl.clone();
-    url.pathname = '/en/';
+    url.pathname = target;
     return NextResponse.redirect(url, 301);
   }
 

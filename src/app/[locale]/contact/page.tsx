@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import HiringNotice from '@/components/features/HiringNotice';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Breadcrumbs } from '@/components/layout';
 import { Card, CardContent } from '@/components/ui';
@@ -253,6 +254,8 @@ export default async function ContactPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <HiringNotice locale={locale} variant="page" />
     </>
   );
 }

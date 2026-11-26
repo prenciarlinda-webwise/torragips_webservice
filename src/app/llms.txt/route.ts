@@ -13,15 +13,11 @@ const SECTIONS = {
       ['Gypsum Works', '/en/', 'Suspended ceilings, space partitions, architectural decorations and acoustic/thermal insulation.'],
       ['Wall Plastering', '/en/wall-plastering/', 'Interior and exterior plastering, decorative plaster, wall repairs and restorations.'],
       ['Painting', '/en/painting/', 'Interior and exterior painting, decorative effects and durable finishes.'],
-      ['Pricing', '/en/pricing/', 'Indicative prices per m² (in Lek) for gypsum cladding, partition walls, suspended ceilings and finishing.'],
+      ['Pricing', '/en/pricing/', 'What determines the price of gypsum works, plastering and painting, and how to get a free quote within 24 hours.'],
     ],
     areas: [
       ['Gypsum Works in Tirana', '/en/gypsum-works-tirana/'],
       ['Gypsum Works in Durrës', '/en/gypsum-works-durres/'],
-      ['Wall Plastering in Tirana', '/en/wall-plastering-tirana/'],
-      ['Wall Plastering in Durrës', '/en/wall-plastering-durres/'],
-      ['Painting in Tirana', '/en/painting-tirana/'],
-      ['Painting in Durrës', '/en/painting-durres/'],
     ],
     company: [
       ['About Torra Gips', '/en/about/'],
@@ -34,15 +30,11 @@ const SECTIONS = {
       ['Punime Gipsi', '/sq/', 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik e termik.'],
       ['Patinim', '/sq/patinim/', 'Patinim i brendshëm dhe i jashtëm, suva dekorative, riparime dhe restaurime muraturash.'],
       ['Lyerje', '/sq/lyerje/', 'Lyerje e brendshme dhe e jashtme, efekte dekorative dhe përfundime të qëndrueshme.'],
-      ['Çmime', '/sq/cmime/', 'Çmime orientuese për m² (në Lek) për veshje gipsi, mure ndarëse, tavane të varura dhe finitura.'],
+      ['Çmime', '/sq/cmime/', 'Çfarë përcakton çmimin e punimeve të gipsit, patinimit dhe lyerjes, dhe si të merrni preventiv falas brenda 24 orësh.'],
     ],
     areas: [
       ['Punime Gipsi në Tiranë', '/sq/punime-gipsi-tirane/'],
       ['Punime Gipsi në Durrës', '/sq/punime-gipsi-durres/'],
-      ['Patinim në Tiranë', '/sq/patinim-tirane/'],
-      ['Patinim në Durrës', '/sq/patinim-durres/'],
-      ['Lyerje në Tiranë', '/sq/lyerje-tirane/'],
-      ['Lyerje në Durrës', '/sq/lyerje-durres/'],
     ],
     company: [
       ['Rreth Nesh', '/sq/rreth-nesh/'],

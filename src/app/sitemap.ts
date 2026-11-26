@@ -27,10 +27,6 @@ const pages: PageEntry[] = [
   // Location pages
   { sq: '/punime-gipsi-tirane', en: '/gypsum-works-tirana', priority: 0.8, changeFrequency: 'monthly' },
   { sq: '/punime-gipsi-durres', en: '/gypsum-works-durres', priority: 0.8, changeFrequency: 'monthly' },
-  { sq: '/patinim-tirane', en: '/wall-plastering-tirana', priority: 0.8, changeFrequency: 'monthly' },
-  { sq: '/patinim-durres', en: '/wall-plastering-durres', priority: 0.8, changeFrequency: 'monthly' },
-  { sq: '/lyerje-tirane', en: '/painting-tirana', priority: 0.8, changeFrequency: 'monthly' },
-  { sq: '/lyerje-durres', en: '/painting-durres', priority: 0.8, changeFrequency: 'monthly' },
 
   // Support pages
   { sq: '/sherbime', en: '/services', priority: 0.7, changeFrequency: 'monthly' },
