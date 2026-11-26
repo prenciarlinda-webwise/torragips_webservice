@@ -20,7 +20,7 @@ const pages: PageEntry[] = [
   { sq: '', en: '', priority: 1.0, changeFrequency: 'weekly' },
 
   // Main service pages
-  { sq: '/punime-gipsi', en: '/gypsum-works', priority: 0.9, changeFrequency: 'weekly' },
+  // Gypsum hubs (/sq/punime-gipsi/, /en/gypsum-works/) 301 to the homepages, which own the keyword.
   { sq: '/patinim', en: '/wall-plastering', priority: 0.9, changeFrequency: 'weekly' },
   { sq: '/lyerje', en: '/painting', priority: 0.9, changeFrequency: 'weekly' },
 

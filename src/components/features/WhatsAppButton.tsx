@@ -2,13 +2,16 @@
 
 import { useTranslations } from 'next-intl';
 import { useQuoteModal } from '@/components/modals';
+import { usePathname } from '@/lib/i18n/navigation';
 
 export default function WhatsAppButton() {
   const t = useTranslations();
   const { open } = useQuoteModal();
+  // Home has a sticky mobile call bar; keep this button above it.
+  const isHome = usePathname() === '/';
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end space-y-3">
+    <div className={`fixed ${isHome ? 'bottom-20 md:bottom-6' : 'bottom-6'} right-6 z-50 flex flex-col items-end space-y-3`}>
       {/* Quick Contact Button - opens the shared quote form */}
       <button
         onClick={open}

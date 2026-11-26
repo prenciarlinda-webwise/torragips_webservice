@@ -25,9 +25,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? 'Punime gipsi profesionale për projekte komerciale dhe rezidenciale në Tiranë e Durrës. 100+ projekte të përfunduara përfshirë Aeroportin e Vlorës. Telefononi për ofertë falas.'
       : 'Professional gypsum works for commercial and residential projects in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free quote.',
     alternates: {
+      // Unreachable: /sq/punime-gipsi/ and /en/gypsum-works/ 301 to the homepages (src/middleware.ts).
       canonical: `/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`,
       languages: {
-        sq: '/sq/punime-gipsi/',
         en: '/en/gypsum-works/',
         'x-default': '/en/gypsum-works/',
       },
@@ -451,7 +451,7 @@ export default async function GypsumWorksPage({ params }: Props) {
       <BreadcrumbSchema
         items={[
           { name: isAlbanian ? 'Kryefaqja' : 'Home', url: `/${locale}/` },
-          { name: pageData.serviceName, url: `/${locale}/punime-gipsi/` },
+          { name: pageData.serviceName, url: `/${locale}/${isAlbanian ? 'punime-gipsi' : 'gypsum-works'}/` },
         ]}
       />
 

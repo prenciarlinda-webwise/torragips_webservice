@@ -31,13 +31,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
 
   const titles = {
-    sq: 'Punime Gipsi, Patinim & Lyerje në Tiranë dhe Durrës - Torra Gips',
-    en: 'Gypsum Works, Plastering & Painting in Tirana and Durrës - Torra Gips',
+    sq: `Punime Gipsi - ${COMPANY.phone} - Torra Gips`,
+    en: `Gypsum Works - ${COMPANY.phone} - Torra Gips`,
   };
 
   const descriptions = {
-    sq: 'Torra Gips ofron shërbime profesionale të punimeve të gipsit, patinimit dhe lyerjes në Tiranë dhe Durrës. Cilësi e lartë dhe ekip profesional.',
-    en: 'Torra Gips offers professional gypsum works, plastering and painting services in Tirana and Durrës. High quality and professional team.',
+    sq: `Punime gipsi në Tiranë dhe Durrës, me tavane të varura, mure ndarëse dhe dekorime, plus patinim dhe lyerje. 100+ projekte të përfunduara. Telefononi ${COMPANY.phone} për ofertë falas.`,
+    en: `Gypsum works in Tirana and Durrës, with suspended ceilings, partition walls and decorative gypsum, plus plastering and painting. 100+ completed projects. Call ${COMPANY.phone} for a free quote.`,
   };
 
   return {

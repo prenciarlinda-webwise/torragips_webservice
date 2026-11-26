@@ -276,7 +276,7 @@ export default async function PlasteringPage({ params }: Props) {
       { href: '/patinim-tirane', label: 'Patinim Profesional në Tiranë' },
       { href: '/patinim-durres', label: 'Patinim Profesional në Durrës' },
       { href: '/blog/perfitimet-patinimit-profesional', label: 'Përfitimet e Patinimit të Mureve' },
-      { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
+      { href: '/', label: 'Punime Gipsi Profesionale' },
       { href: '/lyerje', label: 'Lyerje Profesionale' },
     ],
   } : {
@@ -463,7 +463,7 @@ export default async function PlasteringPage({ params }: Props) {
       { href: '/wall-plastering-tirana', label: 'Professional Plastering in Tirana' },
       { href: '/wall-plastering-durres', label: 'Professional Plastering in Durrës' },
       { href: '/blog/benefits-professional-plastering', label: 'Benefits of Professional Wall Plastering' },
-      { href: '/gypsum-works', label: 'Professional Gypsum Works' },
+      { href: '/', label: 'Professional Gypsum Works' },
       { href: '/painting', label: 'Professional Painting Services' },
     ],
   };

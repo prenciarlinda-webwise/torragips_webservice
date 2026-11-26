@@ -10,7 +10,7 @@ export default function ServicesOverview() {
   const services = [
     {
       id: 'gypsum',
-      href: locale === 'sq' ? '/punime-gipsi' : '/gypsum-works',
+      href: '/',
       image: '/images/services/gypsum/tavane-te-varura-me-led-1.webp',
       imageAlt: locale === 'sq' ? 'Tavan i varur me ndriçim LED nga Torra Gips' : 'Suspended gypsum ceiling with LED lighting by Torra Gips',
       features: locale === 'sq'

@@ -140,3 +140,10 @@
 ::selection {
   @apply bg-primary/20 text-dark-800;
 }
+
+/* Keep page bottom (footer credit) clear of the sticky mobile call bar */
+@media (max-width: 767px) {
+  body:has(#sticky-mobile-cta) {
+    padding-bottom: 4.5rem;
+  }
+}

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useTranslations, useLocale } from 'next-intl';
 import { Link } from '@/lib/i18n/navigation';
 import { COMPANY, SOCIAL_LINKS } from '@/lib/constants';
+import AgencyCreditLink from './AgencyCreditLink';
 
 export default function Footer() {
   const t = useTranslations();
@@ -20,7 +21,7 @@ export default function Footer() {
 
   const services = [
     {
-      href: locale === 'sq' ? '/punime-gipsi' : '/gypsum-works',
+      href: '/',
       label: t('nav.servicesItems.gypsum'),
       locations: [
         { href: locale === 'sq' ? '/punime-gipsi-tirane' : '/gypsum-works-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },
@@ -232,14 +233,7 @@ export default function Footer() {
               <span className="hidden sm:inline text-neutral-600 text-sm">|</span>
               <p className="text-neutral-500 text-sm">
                 {locale === 'sq' ? 'Ndërtuar nga' : 'Built by'}{' '}
-                <a
-                  href="https://www.websiteandseoagency.com/"
-                  target="_blank"
-                  rel="nofollow noopener noreferrer"
-                  className="text-neutral-400 hover:text-white transition-colors"
-                >
-                  Website & SEO Agency
-                </a>
+                <AgencyCreditLink />
               </p>
             </div>
             <div className="flex space-x-6">

@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "title": "Gypsum Works, Plastering & Painting Tirana & Durrës - +355 68 858 0058 - Torra Gips",
-    "description": "Professional gypsum works, plastering and painting in Tirana and Durrës. 100+ completed projects including Vlora Airport. Call for a free consultation.",
+    "title": "Gypsum Works - +355 68 858 0058 - Torra Gips",
+    "description": "Gypsum works with Knauf and Rigips materials for homes, offices and commercial buildings. Free measurement and quote. Call: +355 68 858 0058.",
     "keywords": "gypsum works, plastering, painting, gypsum, Tirana, Durrës, construction, renovation"
   },
   "common": {
@@ -40,11 +40,15 @@
     "blog": "Blog"
   },
   "hero": {
-    "title": "Gypsum Works, Plastering & Painting in Tirana and Durrës",
-    "subtitle": "Professional gypsum works, wall plastering and painting for commercial and residential projects. 100+ completed projects including Vlora Airport and Green Coast Resort. Contact us for a free consultation.",
+    "title": "Gypsum Works",
+    "subtitle": "Torra Gips delivers gypsum works with certified Knauf and Rigips materials, with on-site measurement and a free quote within 24 hours.",
     "cta": "Get Free Quote",
     "secondaryCta": "View Our Work",
-    "trustedBy": "Satisfied clients in Tirana and Durrës"
+    "trustedBy": "Satisfied clients in Tirana and Durrës",
+    "trust": "100+ completed projects · 5+ years of experience · Knauf and Rigips materials",
+    "callCta": "Call: +355 68 858 0058",
+    "whatsappCta": "Send Your Floor Plan on WhatsApp",
+    "whatsappMessage": "Hello Torra Gips, I would like to send you my floor plan for gypsum works."
   },
   "services": {
     "title": "What Services Does Torra Gips Offer?",

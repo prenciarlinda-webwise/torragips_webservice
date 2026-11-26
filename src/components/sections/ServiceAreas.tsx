@@ -1,4 +1,5 @@
 import { useTranslations, useLocale } from 'next-intl';
+import { Link } from '@/lib/i18n/navigation';
 
 export default function ServiceAreas() {
   const t = useTranslations('areas');
@@ -22,6 +23,33 @@ export default function ServiceAreas() {
         <div className="text-center mb-12">
           <h2 className="section-title">{t('title')}</h2>
           <p className="section-subtitle mx-auto">{t('subtitle')}</p>
+          <p className="text-lg text-text-light max-w-3xl mx-auto mt-4">
+            {locale === 'sq' ? (
+              <>
+                Kryejmë{' '}
+                <Link href="/punime-gipsi-tirane" className="font-semibold text-primary hover:underline">
+                  punime gipsi në Tiranë
+                </Link>{' '}
+                dhe{' '}
+                <Link href="/punime-gipsi-durres" className="font-semibold text-primary hover:underline">
+                  punime gipsi në Durrës
+                </Link>
+                , me matje dhe preventiv falas në objekt.
+              </>
+            ) : (
+              <>
+                We carry out{' '}
+                <Link href="/gypsum-works-tirana" className="font-semibold text-primary hover:underline">
+                  gypsum works in Tirana
+                </Link>{' '}
+                and{' '}
+                <Link href="/gypsum-works-durres" className="font-semibold text-primary hover:underline">
+                  gypsum works in Durrës
+                </Link>
+                , with free on-site measurement and quote.
+              </>
+            )}
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 items-start">

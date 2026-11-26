@@ -1,4 +1,5 @@
 export { default as Hero } from './Hero';
+export { default as HomeGypsumContent } from './HomeGypsumContent';
 export { default as ServicesOverview } from './ServicesOverview';
 export { default as FeaturedProjects } from './FeaturedProjects';
 export { default as WhyChooseUs } from './WhyChooseUs';

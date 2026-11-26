@@ -10,7 +10,7 @@ const BASE = SITE_CONFIG.url;
 const SECTIONS = {
   en: {
     services: [
-      ['Gypsum Works', '/en/gypsum-works/', 'Suspended ceilings, space partitions, architectural decorations and acoustic/thermal insulation.'],
+      ['Gypsum Works', '/en/', 'Suspended ceilings, space partitions, architectural decorations and acoustic/thermal insulation.'],
       ['Wall Plastering', '/en/wall-plastering/', 'Interior and exterior plastering, decorative plaster, wall repairs and restorations.'],
       ['Painting', '/en/painting/', 'Interior and exterior painting, decorative effects and durable finishes.'],
       ['Pricing', '/en/pricing/', 'Indicative prices per m² (in Lek) for gypsum cladding, partition walls, suspended ceilings and finishing.'],
@@ -31,7 +31,7 @@ const SECTIONS = {
   },
   sq: {
     services: [
-      ['Punime Gipsi', '/sq/punime-gipsi/', 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik e termik.'],
+      ['Punime Gipsi', '/sq/', 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik e termik.'],
       ['Patinim', '/sq/patinim/', 'Patinim i brendshëm dhe i jashtëm, suva dekorative, riparime dhe restaurime muraturash.'],
       ['Lyerje', '/sq/lyerje/', 'Lyerje e brendshme dhe e jashtme, efekte dekorative dhe përfundime të qëndrueshme.'],
       ['Çmime', '/sq/cmime/', 'Çmime orientuese për m² (në Lek) për veshje gipsi, mure ndarëse, tavane të varura dhe finitura.'],

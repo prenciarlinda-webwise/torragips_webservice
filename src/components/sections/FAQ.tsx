@@ -12,9 +12,11 @@ interface FAQItem {
 
 interface FAQProps {
   items?: FAQItem[];
+  title?: string;
+  subtitle?: string;
 }
 
-export default function FAQ({ items }: FAQProps) {
+export default function FAQ({ items, title, subtitle }: FAQProps) {
   const t = useTranslations('faq');
   const locale = useLocale();
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -73,8 +75,8 @@ export default function FAQ({ items }: FAQProps) {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h2 className="section-title">{t('title')}</h2>
-          <p className="section-subtitle mx-auto">{t('subtitle')}</p>
+          <h2 className="section-title">{title ?? t('title')}</h2>
+          <p className="section-subtitle mx-auto">{subtitle ?? t('subtitle')}</p>
         </div>
 
         {/* FAQ Items */}

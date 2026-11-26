@@ -46,7 +46,7 @@ export default function Header() {
       label: t('services'),
       children: [
         {
-          href: locale === 'sq' ? '/punime-gipsi' : '/gypsum-works',
+          href: '/',
           label: t('servicesItems.gypsum'),
           children: [
             { href: locale === 'sq' ? '/punime-gipsi-tirane' : '/gypsum-works-tirana', label: locale === 'sq' ? 'Tiranë' : 'Tirana' },

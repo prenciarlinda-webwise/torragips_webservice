@@ -273,7 +273,7 @@ export default async function PaintingPage({ params }: Props) {
       { href: '/lyerje-durres', label: 'Lyerje Profesionale në Durrës' },
       { href: '/blog/zgjedhja-e-ngjyrave-per-shtepine', label: 'Si të Zgjidhni Ngjyrat për Shtëpinë' },
       { href: '/blog/si-te-pergatisni-muret-per-lyerje', label: 'Si të Përgatisni Muret për Lyerje' },
-      { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
+      { href: '/', label: 'Punime Gipsi Profesionale' },
       { href: '/patinim', label: 'Patinim Profesional Murash' },
     ],
   } : {
@@ -457,7 +457,7 @@ export default async function PaintingPage({ params }: Props) {
       { href: '/painting-durres', label: 'Professional Painting in Durrës' },
       { href: '/blog/choosing-paint-colors-for-your-home', label: 'Choosing Paint Colors for Your Home' },
       { href: '/blog/how-to-prepare-walls-for-painting', label: 'How to Prepare Walls for Painting' },
-      { href: '/gypsum-works', label: 'Professional Gypsum Works' },
+      { href: '/', label: 'Professional Gypsum Works' },
       { href: '/wall-plastering', label: 'Professional Wall Plastering' },
     ],
   };

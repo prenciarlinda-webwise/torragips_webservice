@@ -56,6 +56,19 @@ export default function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 307);
   }
 
+  // ── Retired gypsum hubs: the homepages own "punime gipsi" / "gypsum works" ──
+  // Mirrored in both locales to keep hreflang 1:1. Runs before the trailing-slash rule.
+  if (/^\/(sq\/)?punime-gipsi\/?$/.test(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/sq/';
+    return NextResponse.redirect(url, 301);
+  }
+  if (/^\/(en\/)?gypsum-works\/?$/.test(pathname)) {
+    const url = request.nextUrl.clone();
+    url.pathname = '/en/';
+    return NextResponse.redirect(url, 301);
+  }
+
   // ── Public site: enforce trailing slash with 301 (skip files and API routes) ──
   if (
     !pathname.endsWith('/') &&

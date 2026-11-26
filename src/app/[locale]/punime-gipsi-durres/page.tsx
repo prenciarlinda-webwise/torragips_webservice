@@ -250,7 +250,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
     },
     relatedLinks: [
       { href: '/punime-gipsi-tirane', label: 'Punime Gipsi në Tiranë' },
-      { href: '/punime-gipsi', label: 'Punime Gipsi Profesionale' },
+      { href: '/', label: 'Punime Gipsi Profesionale' },
       { href: '/patinim-durres', label: 'Patinim Profesional në Durrës' },
     ],
   } : {
@@ -411,7 +411,7 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
     },
     relatedLinks: [
       { href: '/gypsum-works-tirana', label: 'Gypsum Works in Tirana' },
-      { href: '/gypsum-works', label: 'Professional Gypsum Works' },
+      { href: '/', label: 'Professional Gypsum Works' },
       { href: '/wall-plastering-durres', label: 'Professional Plastering in Durrës' },
     ],
   };
@@ -421,7 +421,6 @@ export default async function GypsumWorksDurresPage({ params }: Props) {
       <BreadcrumbSchema
         items={[
           { name: isAlbanian ? 'Kryefaqja' : 'Home', url: `/${locale}/` },
-          { name: isAlbanian ? 'Punime Gipsi' : 'Gypsum Works', url: `/${locale}/${isAlbanian ? 'punime-gipsi' : 'gypsum-works'}/` },
           { name: isAlbanian ? 'Punime Gipsi Durrës' : 'Gypsum Works Durrës', url: `/${locale}/${isAlbanian ? 'punime-gipsi-durres' : 'gypsum-works-durres'}/` },
         ]}
       />

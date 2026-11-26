@@ -187,7 +187,7 @@ export default async function BlogPostPage({ params }: Props) {
                     ? 'Keni nevojë për ndihmë profesionale? Shikoni '
                     : 'Need professional help? Check out our '}
                   {post.tags.includes('gypsum') || post.tags.includes('gips') || post.tags.includes('ceiling') || post.tags.includes('tavan') ? (
-                    <a href={`/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`} className="text-primary font-semibold hover:underline">
+                    <a href={`/${locale}/`} className="text-primary font-semibold hover:underline">
                       {locale === 'sq' ? 'shërbimet tona të punimeve të gipsit' : 'gypsum works services'}
                     </a>
                   ) : (
@@ -253,7 +253,7 @@ export default async function BlogPostPage({ params }: Props) {
                   <ul className="space-y-3">
                     <li>
                       <a
-                        href={`/${locale}/${locale === 'sq' ? 'punime-gipsi' : 'gypsum-works'}/`}
+                        href={`/${locale}/`}
                         className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
                       >
                         <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
