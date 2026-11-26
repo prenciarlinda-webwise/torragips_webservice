@@ -25,13 +25,13 @@ export const punimeGipsiDurres: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Tavane dhe Mure Kundër Lagështirës (Pllaka Jeshile H2)',
             text: 'Për apartamentet buzë detit, vilat e pushimit që qëndrojnë të mbyllura gjatë dimrit, banjat dhe kuzhinat, instalojmë pllaka gipsi të impregnura kundër lagështirës (Knauf/Rigips H2) me konstruksion metalik të zinkuar 0.6mm dhe vida fosfatuese rezistente ndaj ndryshkut. Kjo mbron strukturën e brendshme nga kondensimi dhe myku gjatë gjithë vitit.',
-            image: `${IMG}/punime-gipsi-durres-pllake-kunder-lageshtires.webp`,
+            image: `${IMG}/dhome-gjumi-tavan-gipsi-4.webp`,
             alt: 'Punime gipsi në Durrës: tavan me pllakë kundër lagështirës',
           },
           {
             title: 'Punime Gipsi për Apartamente Pushimi, Airbnb dhe Hotele',
             text: 'Zonat turistike të Durrësit dhe Golemit kërkojnë punime moderne dhe afate të rrepta dorëzimi përpara sezonit veror. Realizojmë tavane të varura me ndriçim LED të fshehur, kuti perdesh, ndarje dhomash me izolim akustik mes dhomave të hotelit dhe mure dekorative për recepsione e sallone. Ekzekutimi i shpejtë dhe i pastër ju lejon ta fusni pronën në qira ose shfrytëzim pa vonesa.',
-            image: `${IMG}/punime-gipsi-durres-apartament-pushimi.webp`,
+            image: `${IMG}/dhome-gjumi-tavan-gipsi-5.webp`,
             alt: 'Punime gipsi në Durrës: tavan me LED për apartament pushimi',
           },
           {
@@ -46,11 +46,11 @@ export const punimeGipsiDurres: Record<'sq' | 'en', SpecPageContent> = {
         table: {
           head: ['Zona në Durrës', 'Fokusi i Punimeve', 'Koha e Matjes në Vend'],
           rows: [
-            ['Qendra e Durrësit, Vollga, Currila, Lagjja 1-18', 'Rikonstruksion apartamentesh, tavane LED dhe mure ndarëse', 'Brenda 24 orësh'],
-            ['Plazh (Iliria, Hekurudha, Plepa)', 'Sisteme kundër lagështirës H2, apartamente pushimi dhe hotele', 'Brenda 24 orësh'],
-            ['Golem, Mali i Robit, Qerret', 'Resorte, apartamente turistike, izolim akustik dhe tavane moderne', 'Brenda 24 orësh'],
-            ['Gjiri i Lalzit, Hamallaj, San Pietro', 'Vila luksoze, tavane me nivele, izolim termik dhe akustik', 'Brenda 24 orësh'],
-            ['Shkozet, Spitalle, Sukth, Shijak', 'Objekte komerciale, zyra, shtëpi private dhe magazina', 'Brenda 24 orësh'],
+            ['Qendra e Durrësit, Vollga, Currila, Lagjja 1-18', 'Rikonstruksion apartamentesh, tavane LED dhe mure ndarëse', 'Brenda 48 orësh'],
+            ['Plazh (Iliria, Hekurudha, Plepa)', 'Sisteme kundër lagështirës H2, apartamente pushimi dhe hotele', 'Brenda 48 orësh'],
+            ['Golem, Mali i Robit, Qerret', 'Resorte, apartamente turistike, izolim akustik dhe tavane moderne', 'Brenda 48 orësh'],
+            ['Gjiri i Lalzit, Hamallaj, San Pietro', 'Vila luksoze, tavane me nivele, izolim termik dhe akustik', 'Brenda 48 orësh'],
+            ['Shkozet, Spitalle, Sukth, Shijak', 'Objekte komerciale, zyra, shtëpi private dhe magazina', 'Brenda 48 orësh'],
           ],
         },
       },
@@ -66,7 +66,7 @@ export const punimeGipsiDurres: Record<'sq' | 'en', SpecPageContent> = {
           },
           {
             title: 'Preventivi i Detajuar në WhatsApp',
-            text: 'Brenda 24 orësh merrni ofertën e qartë (material + montim ose vetëm krah pune) me datën fikse të dorëzimit.',
+            text: 'Brenda 48 orësh merrni ofertën e qartë (material + montim ose vetëm krah pune) me datën fikse të dorëzimit.',
           },
           {
             title: 'Raportim me Foto dhe Video',
@@ -128,13 +128,13 @@ export const punimeGipsiDurres: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Moisture-Resistant Ceilings and Walls (Green H2 Boards)',
             text: 'For seafront apartments, holiday villas that stay closed over winter, bathrooms and kitchens, we install moisture-impregnated gypsum boards (Knauf/Rigips H2) on 0.6mm galvanized metal framing with rust-resistant phosphated screws. This protects the internal structure from condensation and mold all year round.',
-            image: `${IMG}/punime-gipsi-durres-pllake-kunder-lageshtires.webp`,
+            image: `${IMG}/dhome-gjumi-tavan-gipsi-4.webp`,
             alt: 'Gypsum works in Durrës: ceiling with moisture-resistant board',
           },
           {
             title: 'Gypsum Works for Holiday Apartments, Airbnb and Hotels',
             text: 'The tourist areas of Durrës and Golem need modern work and strict handover deadlines before the summer season. We build suspended ceilings with hidden LED lighting, curtain pockets, acoustically insulated partitions between hotel rooms and decorative walls for receptions and lounges. Fast, clean execution lets you rent out or use the property without delays.',
-            image: `${IMG}/punime-gipsi-durres-apartament-pushimi.webp`,
+            image: `${IMG}/dhome-gjumi-tavan-gipsi-5.webp`,
             alt: 'Gypsum works in Durrës: LED ceiling for a holiday apartment',
           },
           {
@@ -149,11 +149,11 @@ export const punimeGipsiDurres: Record<'sq' | 'en', SpecPageContent> = {
         table: {
           head: ['Area in Durrës', 'Work Focus', 'On-Site Measurement Time'],
           rows: [
-            ['Durrës Center, Vollga, Currila, Neighborhoods 1-18', 'Apartment renovations, LED ceilings and partition walls', 'Within 24 hours'],
-            ['Plazh (Iliria, Hekurudha, Plepa)', 'H2 moisture-resistant systems, holiday apartments and hotels', 'Within 24 hours'],
-            ['Golem, Mali i Robit, Qerret', 'Resorts, tourist apartments, acoustic insulation and modern ceilings', 'Within 24 hours'],
-            ['Gulf of Lalzi, Hamallaj, San Pietro', 'Luxury villas, multi-level ceilings, thermal and acoustic insulation', 'Within 24 hours'],
-            ['Shkozet, Spitalle, Sukth, Shijak', 'Commercial buildings, offices, private houses and warehouses', 'Within 24 hours'],
+            ['Durrës Center, Vollga, Currila, Neighborhoods 1-18', 'Apartment renovations, LED ceilings and partition walls', 'Within 48 hours'],
+            ['Plazh (Iliria, Hekurudha, Plepa)', 'H2 moisture-resistant systems, holiday apartments and hotels', 'Within 48 hours'],
+            ['Golem, Mali i Robit, Qerret', 'Resorts, tourist apartments, acoustic insulation and modern ceilings', 'Within 48 hours'],
+            ['Gulf of Lalzi, Hamallaj, San Pietro', 'Luxury villas, multi-level ceilings, thermal and acoustic insulation', 'Within 48 hours'],
+            ['Shkozet, Spitalle, Sukth, Shijak', 'Commercial buildings, offices, private houses and warehouses', 'Within 48 hours'],
           ],
         },
       },
@@ -169,7 +169,7 @@ export const punimeGipsiDurres: Record<'sq' | 'en', SpecPageContent> = {
           },
           {
             title: 'Detailed Quote on WhatsApp',
-            text: 'Within 24 hours you receive a clear quote (materials + installation, or labor only) with a fixed handover date.',
+            text: 'Within 48 hours you receive a clear quote (materials + installation, or labor only) with a fixed handover date.',
           },
           {
             title: 'Photo and Video Reporting',

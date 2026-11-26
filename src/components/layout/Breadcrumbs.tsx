@@ -17,13 +17,13 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
   const allItems = [{ label: t('home'), href: '/' }, ...items];
 
   return (
-    <nav aria-label="Breadcrumb" className={`py-4 ${className}`}>
-      <ol className="flex flex-wrap items-center space-x-2 text-sm">
+    <nav aria-label="Breadcrumb" className={className}>
+      <ol className="flex flex-wrap items-center text-sm">
         {allItems.map((item, index) => (
           <li key={index} className="flex items-center">
             {index > 0 && (
               <svg
-                className="w-4 h-4 text-neutral-400 mx-2"
+                className="mx-2.5 h-3 w-3 opacity-50"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -34,12 +34,12 @@ export default function Breadcrumbs({ items, className = '' }: BreadcrumbsProps)
             {item.href && index < allItems.length - 1 ? (
               <Link
                 href={item.href}
-                className="text-text-light hover:text-accent transition-colors"
+                className="opacity-70 transition-opacity hover:opacity-100"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-primary font-medium">{item.label}</span>
+              <span className="font-semibold">{item.label}</span>
             )}
           </li>
         ))}

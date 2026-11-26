@@ -142,74 +142,71 @@ export default async function BlogPostPage({ params }: Props) {
       />
       {post.faq && post.faq.length > 0 && <FAQSchema items={post.faq} />}
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div className="container-custom">
-          <Breadcrumbs items={breadcrumbs} />
-          <div className="max-w-3xl">
-            <div className="mb-4">
-              <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full">
-                {post.category}
-              </span>
-            </div>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-800 mb-6">
-              {post.title}
-            </h1>
-            <div className="flex items-center space-x-4 text-text-light">
-              <span>{post.author}</span>
-              <span>•</span>
-              <span>
-                {new Date(post.date).toLocaleDateString(locale === 'sq' ? 'sq-AL' : 'en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                })}
-              </span>
-            </div>
+      <section className="pt-[4.5rem]">
+        <div className="container-custom pb-14 pt-10 md:pb-20 md:pt-14">
+          <Breadcrumbs items={breadcrumbs} className="mb-8 text-ink-800 md:mb-12" />
+          <div className="mb-5">
+            <span className="text-sm font-semibold text-tint">
+              {post.category}
+            </span>
+          </div>
+          <h1 className="h2 max-w-4xl !text-[clamp(2rem,4.4vw,3.75rem)]">
+            {post.title}
+          </h1>
+          <div className="mt-8 flex flex-wrap items-center gap-x-3 text-sm text-ink-500">
+            <span>{post.author}</span>
+            <span className="text-ink-300">•</span>
+            <span>
+              {new Date(post.date).toLocaleDateString(locale === 'sq' ? 'sq-AL' : 'en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+              })}
+            </span>
           </div>
         </div>
       </section>
 
       {/* Content */}
-      <section className="section-padding bg-white">
+      <section className="pb-16 md:pb-24 lg:pb-28">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-8 max-w-5xl mx-auto">
-            <div>
+          <div className="grid grid-cols-1 gap-x-16 gap-y-12 border-t border-ink-900 pt-10 md:pt-14 lg:grid-cols-12">
+            <div className="min-w-0 lg:col-span-8">
               <article
-                className="prose prose-lg prose-primary max-w-none"
+                className="prose prose-lg max-w-3xl prose-headings:font-semibold prose-img:w-full"
                 dangerouslySetInnerHTML={{ __html: contentHtml }}
               />
 
               {/* Related Service Link */}
-              <div className="mt-12 p-6 bg-primary-50 rounded-xl">
-                <p className="text-text font-medium">
+              <div className="mt-12 max-w-3xl border-l-2 border-tint pl-6">
+                <p className="text-lg font-medium leading-relaxed text-ink-900">
                   {locale === 'sq'
                     ? 'Keni nevojë për ndihmë profesionale? Shikoni '
                     : 'Need professional help? Check out our '}
                   {post.tags.includes('gypsum') || post.tags.includes('gips') || post.tags.includes('ceiling') || post.tags.includes('tavan') ? (
-                    <a href={`/${locale}/`} className="text-primary font-semibold hover:underline">
+                    <a href={`/${locale}/`} className="link font-semibold">
                       {locale === 'sq' ? 'shërbimet tona të punimeve të gipsit' : 'gypsum works services'}
                     </a>
                   ) : (
-                    <a href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`} className="text-primary font-semibold hover:underline">
+                    <a href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`} className="link font-semibold">
                       {locale === 'sq' ? 'shërbimet tona të patinimit profesional' : 'professional plastering services'}
                     </a>
                   )}
                   {locale === 'sq' ? ' ose telefononi ' : ' or call us at '}
-                  <a href="tel:+355688580058" className="text-primary font-semibold hover:underline">+355 68 858 0058</a>
+                  <a href="tel:+355688580058" className="link font-semibold">+355 68 858 0058</a>
                   {locale === 'sq' ? ' për konsultë falas.' : ' for a free consultation.'}
                 </p>
               </div>
 
               {/* Tags */}
               {post.tags.length > 0 && (
-                <div className="mt-12 pt-8 border-t">
-                  <h3 className="font-semibold text-primary mb-4">{t('tags')}:</h3>
-                  <div className="flex flex-wrap gap-2">
+                <div className="mt-12 max-w-3xl border-t border-line pt-6">
+                  <h3 className="mb-3 text-sm font-semibold text-ink-900">{t('tags')}:</h3>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1">
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="px-3 py-1 bg-neutral-100 text-text-light text-sm rounded-full"
+                        className="text-sm text-ink-500"
                       >
                         #{tag}
                       </span>
@@ -220,14 +217,14 @@ export default async function BlogPostPage({ params }: Props) {
             </div>
 
             {/* Sidebar */}
-            <aside className="hidden lg:block">
-              <div className="sticky top-24 space-y-6">
+            <aside className="hidden lg:col-span-4 lg:block">
+              <div className="sticky top-28">
                 {/* WhatsApp Contact Card */}
-                <div className="bg-white rounded-xl shadow-soft border p-6">
-                  <h3 className="text-lg font-bold text-primary-800 mb-2">
+                <div className="border-t border-ink-900 pb-10 pt-6">
+                  <h3 className="mb-2 text-xl font-semibold text-ink-900">
                     {locale === 'sq' ? 'Konsultë Falas' : 'Free Consultation'}
                   </h3>
-                  <p className="text-sm text-text-light mb-4">
+                  <p className="mb-5 text-[0.9375rem] leading-relaxed text-ink-600">
                     {locale === 'sq'
                       ? 'Na shkruani në WhatsApp për konsultë falas dhe ofertë pa detyrim.'
                       : 'Message us on WhatsApp for a free consultation and no-obligation quote.'}
@@ -236,45 +233,42 @@ export default async function BlogPostPage({ params }: Props) {
                     href="https://wa.me/355688580058"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block w-full text-center bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors"
+                    className="btn-ink w-full"
                   >
                     {locale === 'sq' ? 'Shkruani në WhatsApp' : 'Message on WhatsApp'}
                   </a>
-                  <p className="text-xs text-text-light mt-3 text-center">
+                  <p className="mt-3 text-sm text-ink-500">
                     +355 68 858 0058
                   </p>
                 </div>
 
                 {/* Services Section */}
-                <div className="bg-white rounded-xl shadow-soft border p-6">
-                  <h3 className="text-lg font-bold text-primary-800 mb-4">
+                <div className="border-t border-ink-900 pt-6">
+                  <h3 className="mb-2 text-xl font-semibold text-ink-900">
                     {locale === 'sq' ? 'Shërbimet Tona' : 'Our Services'}
                   </h3>
-                  <ul className="space-y-3">
-                    <li>
+                  <ul>
+                    <li className="border-b border-line">
                       <a
                         href={`/${locale}/`}
-                        className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
+                        className="block py-3 text-[0.9375rem] font-medium text-ink-800 transition-colors hover:text-tint"
                       >
-                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
                         {locale === 'sq' ? 'Punime Gipsi' : 'Gypsum Works'}
                       </a>
                     </li>
-                    <li>
+                    <li className="border-b border-line">
                       <a
                         href={`/${locale}/${locale === 'sq' ? 'patinim' : 'wall-plastering'}/`}
-                        className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
+                        className="block py-3 text-[0.9375rem] font-medium text-ink-800 transition-colors hover:text-tint"
                       >
-                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
                         {locale === 'sq' ? 'Patinim Profesional' : 'Professional Plastering'}
                       </a>
                     </li>
-                    <li>
+                    <li className="border-b border-line">
                       <a
                         href={`/${locale}/${locale === 'sq' ? 'lyerje' : 'painting'}/`}
-                        className="flex items-center text-sm font-medium text-text hover:text-accent transition-colors"
+                        className="block py-3 text-[0.9375rem] font-medium text-ink-800 transition-colors hover:text-tint"
                       >
-                        <span className="w-2 h-2 bg-accent rounded-full mr-3 flex-shrink-0" />
                         {locale === 'sq' ? 'Lyerje Profesionale' : 'Professional Painting'}
                       </a>
                     </li>
@@ -288,20 +282,24 @@ export default async function BlogPostPage({ params }: Props) {
 
       {/* FAQ (rendered when the post defines faq in frontmatter) */}
       {post.faq && post.faq.length > 0 && (
-        <section className="section-padding bg-neutral-50">
-          <div className="container-custom max-w-3xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-primary-800 mb-8">
+        <section className="section-padding bg-plaster-100">
+          <div className="container-custom">
+            <div className="section-head">
+            <div className="lg:col-span-4">
+            <h2 className="h2">
               {locale === 'sq' ? 'Pyetje të Shpeshta' : 'Frequently Asked Questions'}
             </h2>
-            <div className="space-y-4">
+            </div>
+            <div className="lg:col-span-8">
               {post.faq.map((item, i) => (
-                <details key={i} className="bg-white rounded-xl border p-5">
-                  <summary className="font-semibold text-primary-800 cursor-pointer">
+                <details key={i} className="group border-t border-line py-6 first:border-t-0 first:pt-0">
+                  <summary className="h3 cursor-pointer list-none marker:hidden [&::-webkit-details-marker]:hidden">
                     {item.question}
                   </summary>
-                  <p className="mt-3 text-text-light leading-relaxed">{item.answer}</p>
+                  <p className="copy mt-3 max-w-3xl">{item.answer}</p>
                 </details>
               ))}
+            </div>
             </div>
           </div>
         </section>

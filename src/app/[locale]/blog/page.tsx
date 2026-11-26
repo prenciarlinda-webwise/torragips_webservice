@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/lib/i18n/navigation';
-import { Breadcrumbs } from '@/components/layout';
-import { Card, CardContent } from '@/components/ui';
+import { PageHeader } from '@/components/layout';
 import { CTA } from '@/components/sections';
 import { BreadcrumbSchema } from '@/components/seo';
 import { getAllPosts } from '@/lib/blog';
@@ -51,61 +51,58 @@ export default async function BlogPage({ params }: Props) {
         ]}
       />
 
-      {/* Hero */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div className="container-custom">
-          <Breadcrumbs items={breadcrumbs} />
-          <div className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-6">
-              {t('title')}
-            </h1>
-            <p className="text-xl text-text-light">
-              {t('subtitle')}
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader title={t('title')} subtitle={t('subtitle')} breadcrumbs={breadcrumbs} />
 
       {/* Blog Posts */}
-      <section className="section-padding bg-white">
+      <section className="pb-16 md:pb-24 lg:pb-28">
         <div className="container-custom">
           {posts.length > 0 ? (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {posts.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="block group">
-                  <Card hover>
-                    <CardContent className="p-6">
-                      <div className="mb-4">
-                        <span className="inline-block px-3 py-1 bg-accent/10 text-accent text-sm font-medium rounded-full">
-                          {post.category}
-                        </span>
-                      </div>
-                      <h2 className="text-xl font-bold text-primary mb-3 line-clamp-2 group-hover:text-accent transition-colors">
-                        {post.title}
-                      </h2>
-                      <p className="text-text-light mb-4 line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <span className="text-sm text-text-light">
-                          {new Date(post.date).toLocaleDateString(locale === 'sq' ? 'sq-AL' : 'en-US', {
+            <div className="grid gap-x-8 gap-y-14 border-t border-ink-900 pt-10 md:grid-cols-2 md:pt-14 lg:grid-cols-3">
+              {posts.map((post, index) => (
+                <Link
+                  key={post.slug}
+                  href={`/blog/${post.slug}`}
+                  className={`group flex flex-col ${index === 0 ? 'md:col-span-2 lg:col-span-3 lg:grid lg:grid-cols-12 lg:items-end lg:gap-x-12' : ''}`}
+                >
+                  {post.image && (
+                    <div className={`frame ${index === 0 ? 'aspect-[3/4] lg:col-span-4' : 'aspect-[3/4]'}`}>
+                      <Image
+                        src={post.image}
+                        alt=""
+                        fill
+                        sizes={index === 0 ? '(min-width: 1024px) 55vw, 100vw' : '(min-width: 1024px) 30vw, (min-width: 768px) 45vw, 100vw'}
+                      />
+                    </div>
+                  )}
+                  <div className={index === 0 ? 'mt-6 lg:col-span-5 lg:mt-0' : 'mt-6 flex flex-1 flex-col'}>
+                    <p className="text-sm font-semibold text-tint">
+                      <span>{post.category}</span>
+                    </p>
+                    <h2 className={`mt-3 font-semibold text-ink-900 transition-colors group-hover:text-tint ${index === 0 ? 'text-3xl md:text-4xl' : 'line-clamp-3 text-xl md:text-[1.375rem]'}`}>
+                      {post.title}
+                    </h2>
+                    <p className={`copy mt-3 ${index === 0 ? '' : 'mb-6 line-clamp-3'}`}>
+                      {post.excerpt}
+                    </p>
+                    <div className={`flex flex-wrap items-center justify-between gap-x-6 gap-y-3 border-t border-line pt-4 ${index === 0 ? 'mt-7' : 'mt-auto'}`}>
+                    <span className="text-sm text-ink-500">
+                        {new Date(post.date).toLocaleDateString(locale === 'sq' ? 'sq-AL' : 'en-US', {
                             year: 'numeric',
                             month: 'long',
                             day: 'numeric',
                           })}
-                        </span>
-                        <span className="text-accent font-semibold group-hover:underline">
-                          {t('readMore')} →
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
+                    </span>
+                    <span className="link-rule">
+                      {t('readMore')} →
+                    </span>
+                    </div>
+                  </div>
                 </Link>
               ))}
             </div>
           ) : (
-            <div className="text-center py-12">
-              <p className="text-text-light text-lg">
+            <div className="border-t border-ink-900 py-12">
+              <p className="lead">
                 {locale === 'sq' ? 'Nuk ka postime aktualisht.' : 'No posts available yet.'}
               </p>
             </div>

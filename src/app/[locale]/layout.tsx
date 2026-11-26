@@ -13,7 +13,7 @@ import WhatsAppButton from '@/components/features/WhatsAppButton';
 import { QuoteModalProvider, QuoteModal, EngagementPopup } from '@/components/modals';
 
 const inter = Inter({
-  subsets: ['latin'],
+  subsets: ['latin', 'latin-ext'],
   display: 'swap',
   variable: '--font-inter',
 });
@@ -115,7 +115,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
-        <div className="min-h-screen flex flex-col bg-neutral-50">
+        <div className="site min-h-screen flex flex-col bg-plaster-50 text-ink-800">
           <NextIntlClientProvider messages={messages}>
             <QuoteModalProvider>
               <Header />

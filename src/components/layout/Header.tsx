@@ -17,25 +17,10 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { open: openQuote } = useQuoteModal();
 
-  // Pages with dark hero backgrounds (homepage video hero, service pages, EN contact, EN about)
-  const hasDarkHero = pathname === '/' ||
-                      pathname.includes('/punime-gipsi') ||
-                      pathname.includes('/gypsum-works') ||
-                      pathname.includes('/patinim') ||
-                      pathname.includes('/wall-plastering') ||
-                      pathname.includes('/lyerje') ||
-                      pathname.includes('/painting') ||
-                      pathname.includes('/contact') ||
-                      pathname.includes('/about');
-
-  // Use dark text on light backgrounds (homepage, etc.) when not scrolled
-  const useDarkText = !hasDarkHero && !isScrolled;
-
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener('scroll', handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 8);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -71,133 +56,101 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-soft'
-          : 'bg-transparent'
+        'fixed inset-x-0 top-0 z-50 border-b bg-plaster-50 transition-shadow duration-200',
+        isScrolled ? 'border-line shadow-[0_1px_12px_rgba(17,21,18,0.06)]' : 'border-line'
       )}
     >
       <div className="container-custom">
-        <nav className="flex items-center justify-between h-20">
-          {/* Logo */}
-          <Link href="/" className="flex items-center">
+        <nav className="flex h-[4.5rem] items-center justify-between gap-6">
+          <Link href="/" className="flex shrink-0 items-center">
             <Image
-              src={!isScrolled && !useDarkText ? '/images/logo-white.webp' : '/images/logo.webp'}
+              src="/images/logo.webp"
               alt="Torra Gips"
               width={120}
               height={120}
-              className="h-14 w-auto transition-all"
+              className="h-14 w-auto"
               priority
             />
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-1">
-            {navItems.map((item) => (
-              <div key={item.href} className="relative group">
-                <Link
-                  href={item.href}
-                  className={cn(
-                    'px-4 py-2 rounded-lg font-medium transition-colors',
-                    pathname === item.href
-                      ? isScrolled || useDarkText
-                        ? 'text-primary bg-primary/10'
-                        : 'text-white bg-white/20'
-                      : isScrolled || useDarkText
-                        ? 'text-dark-800 hover:text-primary hover:bg-primary/5'
-                        : 'text-white/90 hover:text-white hover:bg-white/10'
-                  )}
-                >
-                  {item.label}
+          {/* Desktop navigation */}
+          <div className="hidden items-stretch gap-8 self-stretch lg:flex">
+            {navItems.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <div key={item.href} className="group relative flex items-center">
+                  <Link
+                    href={item.href}
+                    className={cn(
+                      'relative flex h-full items-center gap-1.5 text-[0.9375rem] font-medium transition-colors',
+                      active ? 'text-ink-900' : 'text-ink-600 hover:text-ink-900'
+                    )}
+                  >
+                    {item.label}
+                    {item.children && (
+                      <svg className="h-3 w-3" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+                        <path d="M2 4.5l4 4 4-4" />
+                      </svg>
+                    )}
+                    <span
+                      className={cn(
+                        'absolute inset-x-0 bottom-0 h-0.5 origin-left bg-tint transition-transform duration-200',
+                        active ? 'scale-x-100' : 'scale-x-0 group-hover:scale-x-100'
+                      )}
+                    />
+                  </Link>
                   {item.children && (
-                    <svg
-                      className="inline-block ml-1 w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  )}
-                </Link>
-                {item.children && (
-                  <div className="absolute top-full left-0 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                    <div className="bg-white rounded-xl shadow-medium py-2 min-w-[240px]">
-                      {item.children.map((child) => (
-                        <div key={child.href}>
-                          <Link
-                            href={child.href}
-                            className="block px-4 py-2 text-dark-800 font-medium hover:text-primary hover:bg-primary/5 transition-colors"
-                          >
-                            {child.label}
-                          </Link>
-                          {child.children && (
-                            <div className="flex gap-1 px-4 pb-2">
-                              {child.children.map((loc, i) => (
-                                <span key={loc.href} className="flex items-center">
-                                  <Link
-                                    href={loc.href}
-                                    className="text-xs text-text-light hover:text-primary transition-colors"
-                                  >
-                                    {loc.label}
-                                  </Link>
-                                  {i < (child.children?.length ?? 0) - 1 && (
-                                    <span className="text-neutral-300 mx-1 text-xs">·</span>
-                                  )}
-                                </span>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
+                    <div className="invisible absolute left-0 top-full -ml-6 opacity-0 transition-opacity duration-150 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                      <div className="min-w-[17rem] border border-t-0 border-line bg-plaster-50">
+                        {item.children.map((child) => (
+                          <div key={child.href} className="border-t border-line px-6 py-4 first:border-t-0">
+                            <Link href={child.href} className="block font-semibold text-ink-900 hover:text-tint">
+                              {child.label}
+                            </Link>
+                            {child.children && (
+                              <div className="mt-1.5 flex gap-1">
+                                {child.children.map((loc, i) => (
+                                  <span key={loc.href} className="flex items-center">
+                                    <Link href={loc.href} className="text-sm text-ink-500 hover:text-tint">
+                                      {loc.label}
+                                    </Link>
+                                    {i < (child.children?.length ?? 0) - 1 && (
+                                      <span className="mx-1.5 text-sm text-ink-300">·</span>
+                                    )}
+                                  </span>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              );
+            })}
           </div>
 
-          {/* Right Section */}
-          <div className="flex items-center space-x-4">
-            <LanguageSwitcher isScrolled={isScrolled || useDarkText} />
+          <div className="flex items-center gap-5">
+            <LanguageSwitcher />
 
-            {/* CTA Button - Desktop */}
-            <button
-              type="button"
-              onClick={openQuote}
-              className={cn(
-                'hidden lg:inline-flex px-5 py-2.5 rounded-lg font-semibold transition-colors',
-                isScrolled || useDarkText
-                  ? 'bg-primary text-white hover:bg-primary-700'
-                  : 'bg-accent text-white hover:bg-accent-700'
-              )}
-            >
+            <button type="button" onClick={openQuote} className="btn-ink hidden lg:inline-flex">
               {locale === 'sq' ? 'Merr Ofertë' : 'Get Quote'}
             </button>
 
-            {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(true)}
-              className={cn(
-                'lg:hidden p-2 rounded-lg transition-colors',
-                isScrolled || useDarkText ? 'hover:bg-neutral-100' : 'hover:bg-white/10'
-              )}
+              className="-mr-2 p-2 text-ink-900 lg:hidden"
               aria-label="Open menu"
             >
-              <svg
-                className={cn('w-6 h-6', isScrolled || useDarkText ? 'text-dark-800' : 'text-white')}
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} aria-hidden="true">
+                <path d="M3 8h18M3 16h18" strokeLinecap="square" />
               </svg>
             </button>
           </div>
         </nav>
       </div>
 
-      {/* Mobile Menu */}
       <MobileMenu
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}

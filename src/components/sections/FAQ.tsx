@@ -70,53 +70,48 @@ export default function FAQ({ items, title, subtitle }: FAQProps) {
   const faqItems = items || defaultItems;
 
   return (
-    <section className="section-padding bg-neutral-50">
+    <section className="section-padding bg-plaster-100">
       <FAQSchema items={faqItems} />
       <div className="container-custom">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="section-title">{title ?? t('title')}</h2>
-          <p className="section-subtitle mx-auto">{subtitle ?? t('subtitle')}</p>
+        <div className="sec-head is-center">
+          <h2 className="h2">{title ?? t('title')}</h2>
+          <p className="lead">{subtitle ?? t('subtitle')}</p>
         </div>
 
-        {/* FAQ Items */}
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqItems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-xl shadow-soft overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-neutral-50 transition-colors"
-              >
-                <span className="font-semibold text-dark-800 pr-4">
-                  {item.question}
-                </span>
-                <svg
-                  className={cn(
-                    'w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300',
-                    openIndex === index && 'rotate-180'
-                  )}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+        <div className="mx-auto max-w-3xl space-y-3">
+          <div className="contents">
+            {faqItems.map((item, index) => (
+              <div key={index} className="card px-6">
+                <button
+                  onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                  aria-expanded={openIndex === index}
+                  className="flex w-full items-start justify-between gap-6 py-5 text-left"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div
-                className={cn(
-                  'overflow-hidden transition-all duration-300',
-                  openIndex === index ? 'max-h-96' : 'max-h-0'
-                )}
-              >
-                <p className="px-6 pb-4 text-text-light">
-                  {item.answer}
-                </p>
+                  <span className="h3">{item.question}</span>
+                  <svg
+                    className={cn('mt-1.5 h-4 w-4 shrink-0 text-ink-900 transition-transform duration-300', openIndex === index && 'rotate-45')}
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
+                  >
+                    <path d="M8 1v14M1 8h14" />
+                  </svg>
+                </button>
+                <div
+                  className={cn(
+                    'grid transition-[grid-template-rows] duration-300',
+                    openIndex === index ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+                  )}
+                >
+                  <div className="overflow-hidden">
+                    <p className="copy pb-6">{item.answer}</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

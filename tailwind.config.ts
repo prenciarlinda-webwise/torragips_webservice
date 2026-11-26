@@ -1,5 +1,53 @@
 import type { Config } from 'tailwindcss';
 
+// Palette: dark blue + charcoal on white, amber call-to-action, green only on buttons.
+// NOTE: the `sage` scale below is the dark-blue brand scale (name kept for compatibility).
+const sage = {
+  DEFAULT: '#1E3F73',
+  50: '#F1F5FA',
+  100: '#E1E9F4',
+  200: '#C4D3E8',
+  300: '#9BB3D4',
+  400: '#6A8BBB',
+  500: '#3F629B',
+  600: '#1E3F73',
+  700: '#19355F',
+  800: '#152C4F',
+  900: '#0F2140',
+};
+
+// ink (text) and plaster (surfaces) resolve through CSS variables so a scope can flip
+// between the light and dark theme (see globals.css). Values are RGB triplets.
+const v = (name: string) => `rgb(var(${name}) / <alpha-value>)`;
+
+const ink = {
+  DEFAULT: v('--ink-800'),
+  50: v('--ink-50'),
+  100: v('--ink-100'),
+  200: v('--ink-200'),
+  300: v('--ink-300'),
+  400: v('--ink-400'),
+  500: v('--ink-500'),
+  600: v('--ink-600'),
+  700: v('--ink-700'),
+  800: v('--ink-800'),
+  900: v('--ink-900'),
+};
+
+const plaster = {
+  DEFAULT: v('--plaster-100'),
+  50: v('--plaster-50'),
+  100: v('--plaster-100'),
+  200: v('--plaster-200'),
+  300: v('--plaster-300'),
+  400: v('--plaster-400'),
+  500: v('--plaster-500'),
+  600: v('--plaster-600'),
+  700: v('--plaster-700'),
+  800: v('--plaster-800'),
+  900: v('--plaster-900'),
+};
+
 const config: Config = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
@@ -9,67 +57,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#1a365d',
-          50: '#f0f4f8',
-          100: '#d9e2ec',
-          200: '#bcccdc',
-          300: '#9fb3c8',
-          400: '#829ab1',
-          500: '#627d98',
-          600: '#486581',
-          700: '#334e68',
-          800: '#1a365d',
-          900: '#102a43',
-        },
-        dark: {
-          DEFAULT: '#1f2937',
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
-        },
-        accent: {
-          DEFAULT: '#d97706',
-          50: '#fffbeb',
-          100: '#fef3c7',
-          200: '#fde68a',
-          300: '#fcd34d',
-          400: '#fbbf24',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
-          800: '#92400e',
-          900: '#78350f',
-        },
-        neutral: {
-          DEFAULT: '#f8f9fa',
-          50: '#ffffff',
-          100: '#f8f9fa',
-          200: '#e9ecef',
-          300: '#dee2e6',
-          400: '#ced4da',
-          500: '#adb5bd',
-          600: '#6c757d',
-          700: '#495057',
-          800: '#343a40',
-          900: '#212529',
-        },
+        sage,
+        ink,
+        plaster,
+        line: v('--line'),
+        tint: v('--tint'),
+        night: '#101211',
+        // Bold call-to-action colour (buttons only).
+        cta: { DEFAULT: '#F5A30A', dark: '#DC8F00', ink: '#16130A' },
+        // Green is reserved for buttons (WhatsApp actions).
+        go: { DEFAULT: '#1FAF54', dark: '#17994A' },
+        // Legacy names, kept so older markup resolves to the same palette.
+        primary: sage,
+        accent: { ...sage, DEFAULT: sage[600] },
+        dark: ink,
+        neutral: plaster,
         text: {
-          DEFAULT: '#1f2937',
-          light: '#4b5563',
-          muted: '#9ca3af',
+          DEFAULT: v('--ink-800'),
+          light: v('--ink-600'),
+          muted: v('--ink-400'),
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-inter)', 'system-ui', 'sans-serif'],
       },
       spacing: {
         '18': '4.5rem',
@@ -77,13 +88,13 @@ const config: Config = {
         '112': '28rem',
         '128': '32rem',
       },
-      borderRadius: {
-        '4xl': '2rem',
+      maxWidth: {
+        site: '84rem',
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-        'medium': '0 4px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 25px -5px rgba(0, 0, 0, 0.04)',
-        'strong': '0 10px 40px -10px rgba(0, 0, 0, 0.15), 0 20px 40px -15px rgba(0, 0, 0, 0.1)',
+        soft: 'none',
+        medium: 'none',
+        strong: '0 24px 60px -24px rgba(20, 22, 21, 0.35)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-in-out',

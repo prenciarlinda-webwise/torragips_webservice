@@ -9,7 +9,7 @@ export const home: Record<'sq' | 'en', SpecPageContent> = {
       'Punime gipsi me materiale Knauf dhe Rigips për shtëpi, zyra dhe objekte komerciale. Matje dhe preventiv falas. Telefononi: +355 68 858 0058.',
     h1: 'Punime Gipsi',
     answer:
-      'Torra Gips realizon punime gipsi me materiale të certifikuara Knauf dhe Rigips, me matje në vend dhe preventiv falas brenda 24 orësh.',
+      'Torra Gips realizon punime gipsi me materiale të certifikuara Knauf dhe Rigips, me matje në vend dhe preventiv falas brenda 48 orësh.',
     cta: {
       call: 'Telefono Tani: +355 68 858 0058',
       whatsapp: 'Dërgo Planimetrinë në WhatsApp',
@@ -25,25 +25,25 @@ export const home: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Tavane të Varura me Gips',
             text: 'Montojmë tavane të varura të sheshta, akustike dhe me struktura të përforcuara. Përdorim profile metalike të zinkuara me trashësi 0.6mm (UD dhe CD) dhe varëse me fiksim të sigurt në soletë, duke eliminuar rrezikun e lëshimit ose çarjes me kalimin e kohës. Për banja, kuzhina dhe ambiente me lagështi të lartë aplikojmë pllaka gipsi jeshile (H2) rezistente ndaj ujit, ndërsa për zyra dhe lokale instalojmë panele akustike që thithin zhurmën.',
-            image: `${IMG}/tavan-gipsi-banjo-1.webp`,
+            image: `${IMG}/dhome-gjumi-tavan-gipsi-4.webp`,
             alt: 'Tavan i varur me gips kundër lagështirës në banjo',
           },
           {
             title: 'Punime Gipsi për Sallone dhe Ndriçim LED',
             text: 'Salloni është hapësira ku saktësia e montimit duket menjëherë. Realizojmë tavane dekorative me nivele, kanale të fshehura për shirita LED, profile hije (shadow gap) rreth perimetrit të murit, kuti të fshehura për perde dhe mure televizori me gips. Çdo kënd dhe bashkim nivelohet me lazer 360 gradë dhe përforcohet me këndore alumini ose letre me metal, në mënyrë që drita anësore e LED-it të mos nxjerrë asnjë defekt.',
-            image: `${IMG}/tavan-gipsi-per-sallon-1.webp`,
+            image: '/images/gallery/tavan-gipsi-dekorativ-kaseta-1.jpeg',
             alt: 'Punime gipsi për sallon me ndriçim LED të fshehur',
           },
           {
             title: 'Mure Ndarëse me Gips dhe Izolim Akustik e Termik',
             text: 'Ndërtojmë mure ndarëse me gips që zëvendësojnë plotësisht muraturën tradicionale me tullë, me peshë më të ulët dhe izolim shumë më të lartë. Konstruksioni realizohet me profile CW dhe UW (50mm, 75mm ose 100mm), shirit akustik izolues në të gjithë perimetrin, mbushje me lesh guri me dendësi të lartë dhe veshje me pllakë gipsi të dyfishtë 12.5mm nga të dyja anët. Ky sistem garanton qetësi maksimale mes dhomave të gjumit, zyrave dhe ambienteve shëndetësore.',
-            image: `${IMG}/wall-installation-1.webp`,
+            image: '/images/gallery/tavan-gipsi-korridor-profil-led-1.jpeg',
             alt: 'Mur ndarës me gips dhe izolim me lesh guri',
           },
           {
             title: 'Veshje Muresh me Gips dhe Sisteme Kundër Zjarrit',
             text: 'Për mure të shtrembra prej betoni ose tulle, aplikojmë veshje me konstruksion metalik (kartonxhesi) dhe izolim termik të brendshëm, duke krijuar sipërfaqe plotësisht të drejta gati për finiturë. Për ambiente komerciale, kafaze shkallësh, dhoma teknike dhe oxhaqe montojmë pllaka gipsi të kuqe (DF) rezistente ndaj zjarrit, të certifikuara sipas standardeve evropiane të sigurisë.',
-            image: `${IMG}/punime-gipsi-komerciale-1.webp`,
+            image: '/images/gallery/panele-3d-mur-dekorativ-led-1.jpeg',
             alt: 'Veshje muresh me gips në objekt komercial',
           },
         ],
@@ -72,7 +72,7 @@ export const home: Record<'sq' | 'en', SpecPageContent> = {
             text: 'Ekipi ynë vjen falas në objektin tuaj, mat me saktësi sipërfaqet dhe kontrollon lartësitë, tubacionet e kondicionimit dhe pikën e instalimeve elektrike.',
           },
           {
-            title: 'Preventivi i Detajuar brenda 24 Orësh',
+            title: 'Preventivi i Detajuar brenda 48 Orësh',
             text: 'Përgatisim ofertën e qartë me listën e materialeve Knauf/Rigips dhe afatin e saktë të përfundimit, pa kosto të fshehura.',
           },
           {
@@ -130,7 +130,7 @@ export const home: Record<'sq' | 'en', SpecPageContent> = {
       'Gypsum works with Knauf and Rigips materials for homes, offices and commercial buildings. Free measurement and quote. Call: +355 68 858 0058.',
     h1: 'Gypsum Works',
     answer:
-      'Torra Gips delivers gypsum works with certified Knauf and Rigips materials, with on-site measurement and a free quote within 24 hours.',
+      'Torra Gips delivers gypsum works with certified Knauf and Rigips materials, with on-site measurement and a free quote within 48 hours.',
     cta: {
       call: 'Call Now: +355 68 858 0058',
       whatsapp: 'Send Your Floor Plan on WhatsApp',
@@ -146,25 +146,25 @@ export const home: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Suspended Gypsum Ceilings',
             text: 'We install flat, acoustic and reinforced suspended ceilings. We use 0.6mm galvanized metal profiles (UD and CD) and hangers securely fixed to the slab, eliminating the risk of sagging or cracking over time. For bathrooms, kitchens and high-humidity spaces we fit green moisture-resistant (H2) gypsum boards, while for offices and venues we install sound-absorbing acoustic panels.',
-            image: `${IMG}/tavan-gipsi-banjo-1.webp`,
+            image: `${IMG}/dhome-gjumi-tavan-gipsi-4.webp`,
             alt: 'Moisture-resistant suspended gypsum ceiling in a bathroom',
           },
           {
             title: 'Gypsum Works for Living Rooms and LED Lighting',
             text: 'The living room is where installation accuracy shows immediately. We build multi-level decorative ceilings, hidden LED strip channels, shadow gap profiles around the wall perimeter, concealed curtain pockets and gypsum TV walls. Every corner and joint is leveled with a 360-degree laser and reinforced with aluminium or metal-paper corner beads, so the grazing LED light reveals no defects.',
-            image: `${IMG}/tavan-gipsi-per-sallon-1.webp`,
+            image: '/images/gallery/tavan-gipsi-dekorativ-kaseta-1.jpeg',
             alt: 'Living room gypsum ceiling with hidden LED lighting',
           },
           {
             title: 'Gypsum Partition Walls with Acoustic and Thermal Insulation',
             text: 'We build gypsum partition walls that fully replace traditional brick masonry, with lower weight and far better insulation. The framing uses CW and UW profiles (50mm, 75mm or 100mm), acoustic sealing tape around the entire perimeter, high-density rock wool infill and double 12.5mm gypsum boards on both sides. This system delivers maximum quiet between bedrooms, offices and healthcare spaces.',
-            image: `${IMG}/wall-installation-1.webp`,
+            image: '/images/gallery/tavan-gipsi-korridor-profil-led-1.jpeg',
             alt: 'Gypsum partition wall with rock wool insulation',
           },
           {
             title: 'Gypsum Wall Lining and Fire-Resistant Systems',
             text: 'For uneven concrete or brick walls, we apply metal-framed drywall lining with internal thermal insulation, creating perfectly straight surfaces ready for finishing. For commercial spaces, stairwells, technical rooms and chimneys we install red fire-resistant (DF) gypsum boards, certified to European safety standards.',
-            image: `${IMG}/punime-gipsi-komerciale-1.webp`,
+            image: '/images/gallery/panele-3d-mur-dekorativ-led-1.jpeg',
             alt: 'Gypsum wall lining in a commercial building',
           },
         ],
@@ -193,7 +193,7 @@ export const home: Record<'sq' | 'en', SpecPageContent> = {
             text: 'Our team visits your property for free, measures the surfaces precisely and checks ceiling heights, air-conditioning ducts and electrical points.',
           },
           {
-            title: 'Detailed Quote within 24 Hours',
+            title: 'Detailed Quote within 48 Hours',
             text: 'We prepare a clear quote with the list of Knauf/Rigips materials and the exact completion timeline, with no hidden costs.',
           },
           {

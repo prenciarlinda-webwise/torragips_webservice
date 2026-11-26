@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 
 const PATHS = { sq: '/sq/cmime/', en: '/en/pricing/' };
-const HERO = '/images/services/gypsum/commercial-space-1.webp';
+const HERO = '/images/gallery/rolling-hills-projekt.webp';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

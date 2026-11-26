@@ -6,15 +6,17 @@ import RichText, { stripLinks } from './RichText';
 // so search engines and AI answer engines can extract each pair.
 export default function SpecFAQ({ title, items }: { title: string; items: FaqItem[] }) {
   return (
-    <section className="section-padding bg-neutral-50">
+    <section className="section-padding bg-plaster-100">
       <FAQSchema items={items.map((i) => ({ question: i.question, answer: stripLinks(i.answer) }))} />
       <div className="container-custom max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-8">{title}</h2>
+        <div className="sec-head">
+          <h2 className="h2">{title}</h2>
+        </div>
         <div className="space-y-4">
           {items.map((item) => (
-            <div key={item.question} className="bg-white rounded-xl shadow-soft p-6">
-              <h3 className="text-lg font-bold text-dark-800 mb-2">{item.question}</h3>
-              <p className="text-text-light leading-relaxed">
+            <div key={item.question} className="card p-6 md:p-7">
+              <h3 className="h3 mb-2">{item.question}</h3>
+              <p className="copy">
                 <RichText text={item.answer} />
               </p>
             </div>

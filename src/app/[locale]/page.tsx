@@ -10,6 +10,8 @@ import {
   VideoShowcase,
 } from '@/components/sections';
 import SpecSections from '@/components/sections/SpecSections';
+import KleringRibbon from '@/components/sections/KleringRibbon';
+import JobApply from '@/components/sections/JobApply';
 import SpecFAQ from '@/components/sections/SpecFAQ';
 import { specMetadata } from '@/components/sections/SpecPage';
 import StickyMobileCTA from '@/components/features/StickyMobileCTA';
@@ -44,14 +46,22 @@ export default async function HomePage({ params }: Props) {
       <OrganizationSchema />
       <LocalBusinessSchema locale={locale} />
 
-      <Hero title={c.h1} answer={c.answer} cta={c.cta} trust={trust} />
+      <Hero
+        title={c.h1}
+        answer={c.answer}
+        cta={c.cta}
+        trust={trust}
+        image="/images/gallery/projekt_komercial_torra_gips.webp"
+      />
+      <ServicesOverview />
+      <KleringRibbon />
+      <Testimonials />
       <SpecSections sections={c.sections} />
       <FeaturedProjects />
       <WhyChooseUs />
       <VideoShowcase locale={locale} limit={6} />
-      <Testimonials />
-      <ServicesOverview />
       <SpecFAQ title={c.faq.title} items={c.faq.items} />
+      <JobApply />
       <CTA />
       <StickyMobileCTA cta={c.cta} />
     </>

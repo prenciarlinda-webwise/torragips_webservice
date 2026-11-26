@@ -15,7 +15,7 @@ export function generateStaticParams() {
 }
 
 const PATHS = { sq: '/sq/patinim/', en: '/en/wall-plastering/' };
-const HERO = '/images/services/plastering/accent-wall.webp';
+const HERO = '/images/gallery/tavan-gipsi-sallon-profile-led-1.jpeg';
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;

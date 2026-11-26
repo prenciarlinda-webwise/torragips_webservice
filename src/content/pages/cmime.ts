@@ -4,7 +4,7 @@ export const cmime: Record<'sq' | 'en', SpecPageContent> = {
   sq: {
     metaTitle: 'Punime Gipsi Çmimi - +355 68 858 0058 - Torra Gips',
     metaDescription:
-      'Zbuloni çfarë ndikon në çmimin e punimeve të gipsit, patinimit dhe lyerjes. Kërkoni matje në vend dhe preventiv falas brenda 24 orësh: +355 68 858 0058.',
+      'Zbuloni çfarë ndikon në çmimin e punimeve të gipsit, patinimit dhe lyerjes. Kërkoni matje në vend dhe preventiv falas brenda 48 orësh: +355 68 858 0058.',
     h1: 'Punime Gipsi Çmimi dhe Preventiv Falas',
     answer:
       'Çmimi për punime gipsi, patinim dhe lyerje llogaritet saktësisht pas matjes falas në objektin tuaj, bazuar në sipërfaqen totale (m²), sistemin e materialeve Knauf/Rigips dhe kompleksitetin e dizajnit.',
@@ -50,7 +50,7 @@ export const cmime: Record<'sq' | 'en', SpecPageContent> = {
         ],
       },
       {
-        title: 'Si të Merrni Preventivin Tuaj Brenda 24 Orësh',
+        title: 'Si të Merrni Preventivin Tuaj Brenda 48 Orësh',
         steps: [
           {
             title: 'Kontakti Fillestar',
@@ -62,7 +62,7 @@ export const cmime: Record<'sq' | 'en', SpecPageContent> = {
           },
           {
             title: 'Dorëzimi i Preventivit',
-            text: 'Brenda 24 orësh merrni ofertën e qartë me ndarjen e zërave të punës dhe datën e saktë të fillimit e dorëzimit.',
+            text: 'Brenda 48 orësh merrni ofertën e qartë me ndarjen e zërave të punës dhe datën e saktë të fillimit e dorëzimit.',
           },
         ],
       },
@@ -102,7 +102,7 @@ export const cmime: Record<'sq' | 'en', SpecPageContent> = {
   en: {
     metaTitle: 'Gypsum Works Prices - +355 68 858 0058 - Torra Gips',
     metaDescription:
-      'Find out what affects the price of gypsum works, plastering and painting. Request an on-site measurement and a free quote within 24 hours: +355 68 858 0058.',
+      'Find out what affects the price of gypsum works, plastering and painting. Request an on-site measurement and a free quote within 48 hours: +355 68 858 0058.',
     h1: 'Gypsum Works Prices and Free Quote',
     answer:
       'The price of gypsum works, plastering and painting is calculated exactly after a free measurement at your property, based on the total area (m²), the Knauf/Rigips material system and the complexity of the design.',
@@ -148,7 +148,7 @@ export const cmime: Record<'sq' | 'en', SpecPageContent> = {
         ],
       },
       {
-        title: 'How to Get Your Quote Within 24 Hours',
+        title: 'How to Get Your Quote Within 48 Hours',
         steps: [
           {
             title: 'First Contact',
@@ -160,7 +160,7 @@ export const cmime: Record<'sq' | 'en', SpecPageContent> = {
           },
           {
             title: 'Quote Delivery',
-            text: 'Within 24 hours you receive a clear quote with the work items broken down and the exact start and completion dates.',
+            text: 'Within 48 hours you receive a clear quote with the work items broken down and the exact start and completion dates.',
           },
         ],
       },

@@ -1,7 +1,5 @@
 import type { SpecPageContent } from './types';
 
-const IMG = '/images/services/gypsum';
-
 export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
   sq: {
     metaTitle: 'Punime Gipsi Tiranë - +355 68 858 0058 - Torra Gips',
@@ -9,7 +7,7 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
       'Punime gipsi në Tiranë me materiale Knauf dhe Rigips për apartamente, vila dhe zyra. Matje falas në të gjitha lagjet. Telefononi: +355 68 858 0058.',
     h1: 'Punime Gipsi Tiranë',
     answer:
-      'Torra Gips ofron punime gipsi në Tiranë me materiale origjinale Knauf dhe Rigips, me ekip të dedikuar në kryeqytet, matje falas brenda ditës dhe preventiv të saktë brenda 24 orësh.',
+      'Torra Gips ofron punime gipsi në Tiranë me materiale origjinale Knauf dhe Rigips, me ekip të dedikuar në kryeqytet, matje falas brenda ditës dhe preventiv të saktë brenda 48 orësh.',
     cta: {
       call: 'Telefono Tani: +355 68 858 0058',
       whatsapp: 'Dërgo Planimetrinë në WhatsApp',
@@ -25,13 +23,13 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Tavane të Varura dhe Ndriçim LED në Pallatet e Reja të Tiranës',
             text: 'Në komplekset e reja rezidenciale, tavani i varur me gips zgjidh njëkohësisht estetikën dhe funksionalitetin. Realizojmë tavane të sheshta me profile hije (shadow gap), kanale të fshehura për ndriçim LED, kuti të fshehura për perde dhe hapje teknike inspektimi për sistemet e kondicionimit (fan-coil ose chiller). Përdorim vetëm profile të zinkuara 0.6mm (UD/CD) dhe pllaka Knauf ose Rigips 12.5mm, të niveluara me lazer 360 gradë.',
-            image: `${IMG}/punime-gipsi-tirane-tavan-led.webp`,
+            image: '/images/gallery/tavan-gipsi-sallon-proces-1.jpeg',
             alt: 'Punime gipsi në Tiranë: tavan i varur me ndriçim LED',
           },
           {
             title: 'Izolim Akustik dhe Mure Ndarëse për Apartamente dhe Zyra',
             text: 'Zhurma urbane dhe izolimi i dobët mes apartamenteve janë ndër problemet më të shpeshta në Tiranë. Ndërtojmë mure ndarëse dhe veshje akustike me konstruksion metalik të dyfishtë, shirit izolues perimetral, lesh guri me dendësi të lartë dhe pllakë gipsi të dyfishtë 12.5mm. Ky sistem përdoret gjerësisht për ndarje dhomash në apartamente, zyra korporatash, klinika dentare dhe ambiente shërbimi ku privatësia akustike është kritike.',
-            image: `${IMG}/punime-gipsi-tirane-mur-ndares.webp`,
+            image: '/images/services/plastering/hallway-modern.webp',
             alt: 'Punime gipsi në Tiranë: mur ndarës me izolim akustik',
           },
           {
@@ -48,12 +46,12 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
         table: {
           head: ['Zona në Tiranë', 'Lloji Kryesor i Projekteve', 'Koha e Matjes në Vend'],
           rows: [
-            ['Blloku, Qendra, Myslym Shyri, 21 Dhjetori', 'Rikonstruksion apartamentesh, zyra, klinika dhe dyqane', 'Brenda 24 orësh'],
-            ['Komuna e Parisit, Liqeni i Thatë, Selitë', 'Tavane moderne me LED, izolim akustik dhe mure TV', 'Brenda 24 orësh'],
-            ['Astir (Unaza e Re), Don Bosko, Yzberisht', 'Punime të plota gipsi për apartamente të reja 1+1 dhe 2+1', 'Brenda 24 orësh'],
-            ['Fresku, Porcelan, Ali Demi, Shkozë', 'Tavane të varura, kuti perdesh dhe veshje muresh', 'Brenda 24 orësh'],
-            ['Lundër, TEG, Farkë, Sauk, Mjull-Bathore', 'Vila private, tavane me lartësi të madhe dhe izolim termik', 'Brenda 24 orësh'],
-            ['Kashar, Kamëz, Vorë, Autostrada Tiranë-Durrës', 'Projekte komerciale, showroom-e, magazina dhe zyra', 'Brenda 24 orësh'],
+            ['Blloku, Qendra, Myslym Shyri, 21 Dhjetori', 'Rikonstruksion apartamentesh, zyra, klinika dhe dyqane', 'Brenda 48 orësh'],
+            ['Komuna e Parisit, Liqeni i Thatë, Selitë', 'Tavane moderne me LED, izolim akustik dhe mure TV', 'Brenda 48 orësh'],
+            ['Astir (Unaza e Re), Don Bosko, Yzberisht', 'Punime të plota gipsi për apartamente të reja 1+1 dhe 2+1', 'Brenda 48 orësh'],
+            ['Fresku, Porcelan, Ali Demi, Shkozë', 'Tavane të varura, kuti perdesh dhe veshje muresh', 'Brenda 48 orësh'],
+            ['Lundër, TEG, Farkë, Sauk, Mjull-Bathore', 'Vila private, tavane me lartësi të madhe dhe izolim termik', 'Brenda 48 orësh'],
+            ['Kashar, Kamëz, Vorë, Autostrada Tiranë-Durrës', 'Projekte komerciale, showroom-e, magazina dhe zyra', 'Brenda 48 orësh'],
           ],
         },
       },
@@ -65,7 +63,7 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
             text: 'Telefononi në [+355 68 858 0058](tel:+355688580058) ose dërgoni lokacionin dhe planimetrinë në WhatsApp. Tekniku ynë vjen në objekt për matje me lazer.',
           },
           {
-            title: 'Preventiv i Qartë brenda 24 Orësh',
+            title: 'Preventiv i Qartë brenda 48 Orësh',
             text: 'Merrni ofertën me specifikimin e materialeve Knauf/Rigips (paketë e plotë me transport ose vetëm krah pune) dhe datën e saktë të fillimit.',
           },
           {
@@ -87,7 +85,7 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
       items: [
         {
           question: 'Sa shpejt mund të vini për matje në Tiranë?',
-          answer: 'Për të gjitha lagjet e Tiranës, matja në objekt realizohet brenda 24 orësh nga momenti i kontaktit, 100% falas dhe pa detyrim.',
+          answer: 'Për të gjitha lagjet e Tiranës, matja në objekt realizohet brenda 48 orësh nga momenti i kontaktit, 100% falas dhe pa detyrim.',
         },
         {
           question: 'A merrni përsipër edhe apartamente të vogla (1+1) apo vetëm objekte të mëdha?',
@@ -114,7 +112,7 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
       'Gypsum works in Tirana with Knauf and Rigips materials for apartments, villas and offices. Free measurement in every neighborhood. Call: +355 68 858 0058.',
     h1: 'Gypsum Works Tirana',
     answer:
-      'Torra Gips delivers gypsum works in Tirana with original Knauf and Rigips materials, a dedicated team in the capital, same-day free measurement and an exact quote within 24 hours.',
+      'Torra Gips delivers gypsum works in Tirana with original Knauf and Rigips materials, a dedicated team in the capital, same-day free measurement and an exact quote within 48 hours.',
     cta: {
       call: 'Call Now: +355 68 858 0058',
       whatsapp: 'Send Your Floor Plan on WhatsApp',
@@ -130,13 +128,13 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: "Suspended Ceilings and LED Lighting in Tirana's New Apartment Blocks",
             text: 'In new residential complexes, a suspended gypsum ceiling solves aesthetics and function at the same time. We build flat ceilings with shadow gap profiles, hidden LED lighting channels, concealed curtain pockets and technical inspection hatches for air-conditioning systems (fan-coil or chiller). We use only 0.6mm galvanized profiles (UD/CD) and Knauf or Rigips 12.5mm boards, leveled with a 360-degree laser.',
-            image: `${IMG}/punime-gipsi-tirane-tavan-led.webp`,
+            image: '/images/gallery/tavan-gipsi-sallon-proces-1.jpeg',
             alt: 'Gypsum works in Tirana: suspended ceiling with LED lighting',
           },
           {
             title: 'Acoustic Insulation and Partition Walls for Apartments and Offices',
             text: 'Urban noise and poor insulation between apartments are among the most common problems in Tirana. We build partition walls and acoustic linings with double metal framing, perimeter sealing tape, high-density rock wool and double 12.5mm gypsum boards. This system is widely used for room divisions in apartments, corporate offices, dental clinics and service spaces where acoustic privacy is critical.',
-            image: `${IMG}/punime-gipsi-tirane-mur-ndares.webp`,
+            image: '/images/services/plastering/hallway-modern.webp',
             alt: 'Gypsum works in Tirana: partition wall with acoustic insulation',
           },
           {
@@ -153,12 +151,12 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
         table: {
           head: ['Area in Tirana', 'Main Project Types', 'On-Site Measurement Time'],
           rows: [
-            ['Blloku, Center, Myslym Shyri, 21 Dhjetori', 'Apartment renovations, offices, clinics and shops', 'Within 24 hours'],
-            ['Komuna e Parisit, Liqeni i Thatë, Selitë', 'Modern LED ceilings, acoustic insulation and TV walls', 'Within 24 hours'],
-            ['Astir (New Ring Road), Don Bosko, Yzberisht', 'Full gypsum works for new 1-bedroom and 2-bedroom apartments', 'Within 24 hours'],
-            ['Fresku, Porcelan, Ali Demi, Shkozë', 'Suspended ceilings, curtain pockets and wall linings', 'Within 24 hours'],
-            ['Lundër, TEG, Farkë, Sauk, Mjull-Bathore', 'Private villas, high ceilings and thermal insulation', 'Within 24 hours'],
-            ['Kashar, Kamëz, Vorë, Tirana-Durrës Highway', 'Commercial projects, showrooms, warehouses and offices', 'Within 24 hours'],
+            ['Blloku, Center, Myslym Shyri, 21 Dhjetori', 'Apartment renovations, offices, clinics and shops', 'Within 48 hours'],
+            ['Komuna e Parisit, Liqeni i Thatë, Selitë', 'Modern LED ceilings, acoustic insulation and TV walls', 'Within 48 hours'],
+            ['Astir (New Ring Road), Don Bosko, Yzberisht', 'Full gypsum works for new 1-bedroom and 2-bedroom apartments', 'Within 48 hours'],
+            ['Fresku, Porcelan, Ali Demi, Shkozë', 'Suspended ceilings, curtain pockets and wall linings', 'Within 48 hours'],
+            ['Lundër, TEG, Farkë, Sauk, Mjull-Bathore', 'Private villas, high ceilings and thermal insulation', 'Within 48 hours'],
+            ['Kashar, Kamëz, Vorë, Tirana-Durrës Highway', 'Commercial projects, showrooms, warehouses and offices', 'Within 48 hours'],
           ],
         },
       },
@@ -170,7 +168,7 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
             text: 'Call [+355 68 858 0058](tel:+355688580058) or send your location and floor plan on WhatsApp. Our technician visits the property for a laser measurement.',
           },
           {
-            title: 'Clear Quote within 24 Hours',
+            title: 'Clear Quote within 48 Hours',
             text: 'Receive a quote with the Knauf/Rigips material specification (full package with delivery, or labor only) and the exact start date.',
           },
           {
@@ -190,7 +188,7 @@ export const punimeGipsiTirane: Record<'sq' | 'en', SpecPageContent> = {
       items: [
         {
           question: 'How quickly can you come to measure in Tirana?',
-          answer: 'For every neighborhood in Tirana, the on-site measurement takes place within 24 hours of contact, 100% free and with no obligation.',
+          answer: 'For every neighborhood in Tirana, the on-site measurement takes place within 48 hours of contact, 100% free and with no obligation.',
         },
         {
           question: 'Do you take on small apartments (1-bedroom) or only large projects?',

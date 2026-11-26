@@ -13,7 +13,7 @@ const SECTIONS = {
       ['Gypsum Works', '/en/', 'Suspended ceilings, space partitions, architectural decorations and acoustic/thermal insulation.'],
       ['Wall Plastering', '/en/wall-plastering/', 'Interior and exterior plastering, decorative plaster, wall repairs and restorations.'],
       ['Painting', '/en/painting/', 'Interior and exterior painting, decorative effects and durable finishes.'],
-      ['Pricing', '/en/pricing/', 'What determines the price of gypsum works, plastering and painting, and how to get a free quote within 24 hours.'],
+      ['Pricing', '/en/pricing/', 'What determines the price of gypsum works, plastering and painting, and how to get a free quote within 48 hours.'],
     ],
     areas: [
       ['Gypsum Works in Tirana', '/en/gypsum-works-tirana/'],
@@ -30,7 +30,7 @@ const SECTIONS = {
       ['Punime Gipsi', '/sq/', 'Tavane të varura, ndarja hapësirash, dekorime arkitekturore dhe izolim akustik e termik.'],
       ['Patinim', '/sq/patinim/', 'Patinim i brendshëm dhe i jashtëm, suva dekorative, riparime dhe restaurime muraturash.'],
       ['Lyerje', '/sq/lyerje/', 'Lyerje e brendshme dhe e jashtme, efekte dekorative dhe përfundime të qëndrueshme.'],
-      ['Çmime', '/sq/cmime/', 'Çfarë përcakton çmimin e punimeve të gipsit, patinimit dhe lyerjes, dhe si të merrni preventiv falas brenda 24 orësh.'],
+      ['Çmime', '/sq/cmime/', 'Çfarë përcakton çmimin e punimeve të gipsit, patinimit dhe lyerjes, dhe si të merrni preventiv falas brenda 48 orësh.'],
     ],
     areas: [
       ['Punime Gipsi në Tiranë', '/sq/punime-gipsi-tirane/'],

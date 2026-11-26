@@ -3,3 +3,4 @@ export { default as Footer } from './Footer';
 export { default as LanguageSwitcher } from './LanguageSwitcher';
 export { default as MobileMenu } from './MobileMenu';
 export { default as Breadcrumbs } from './Breadcrumbs';
+export { default as PageHeader } from './PageHeader';

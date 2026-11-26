@@ -43,7 +43,7 @@ export default function Modal({ isOpen, onClose, children, title, size = 'md' }:
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+        className="absolute inset-0 bg-black/75"
         onClick={onClose}
         aria-hidden="true"
       />
@@ -51,7 +51,7 @@ export default function Modal({ isOpen, onClose, children, title, size = 'md' }:
       {/* Modal */}
       <div
         className={cn(
-          'relative w-full bg-white rounded-2xl shadow-strong animate-slide-up',
+          'relative max-h-[calc(100svh-2rem)] w-full overflow-y-auto bg-plaster-50 shadow-strong animate-slide-up',
           sizes[size]
         )}
         role="dialog"
@@ -60,13 +60,13 @@ export default function Modal({ isOpen, onClose, children, title, size = 'md' }:
       >
         {/* Header */}
         {title && (
-          <div className="flex items-center justify-between p-6 border-b">
-            <h2 id="modal-title" className="text-xl font-bold text-primary">
+          <div className="flex items-center justify-between border-b border-line px-6 py-5 md:px-8">
+            <h2 id="modal-title" className="text-xl font-semibold text-ink-900 md:text-2xl">
               {title}
             </h2>
             <button
               onClick={onClose}
-              className="p-2 rounded-lg text-text-light hover:text-text hover:bg-neutral-100 transition-colors"
+              className="-mr-2 p-2 text-ink-500 transition-colors hover:text-ink-900"
               aria-label="Close modal"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -81,7 +81,7 @@ export default function Modal({ isOpen, onClose, children, title, size = 'md' }:
           {!title && (
             <button
               onClick={onClose}
-              className="absolute top-4 right-4 p-2 rounded-lg text-text-light hover:text-text hover:bg-neutral-100 transition-colors"
+              className="absolute right-3 top-3 z-10 p-2 text-ink-500 transition-colors hover:text-ink-900"
               aria-label="Close modal"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

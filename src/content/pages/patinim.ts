@@ -9,7 +9,7 @@ export const patinim: Record<'sq' | 'en', SpecPageContent> = {
       'Patinim profesional për mure dhe tavane me cilësi Q3 dhe Q4. Sipërfaqe perfekte gati për lyerje, pa pluhur. Preventiv falas: +355 68 858 0058.',
     h1: 'Patinim Muresh dhe Tavanesh',
     answer:
-      'Torra Gips kryen patinim profesional të mureve dhe tavaneve me standardin Q3 dhe Q4, me zmerilim me vakum pa pluhur dhe preventiv falas brenda 24 orësh.',
+      'Torra Gips kryen patinim profesional të mureve dhe tavaneve me standardin Q3 dhe Q4, me zmerilim me vakum pa pluhur dhe preventiv falas brenda 48 orësh.',
     cta: {
       call: 'Telefono Tani: +355 68 858 0058',
       whatsapp: 'Kërko Matje Falas në WhatsApp',
@@ -122,7 +122,7 @@ export const patinim: Record<'sq' | 'en', SpecPageContent> = {
       'Professional plastering for walls and ceilings to Q3 and Q4 quality. Perfect surfaces ready for painting, dust-free. Free quote: +355 68 858 0058.',
     h1: 'Wall and Ceiling Plastering',
     answer:
-      'Torra Gips delivers professional wall and ceiling plastering to the Q3 and Q4 standard, with dust-free vacuum sanding and a free quote within 24 hours.',
+      'Torra Gips delivers professional wall and ceiling plastering to the Q3 and Q4 standard, with dust-free vacuum sanding and a free quote within 48 hours.',
     cta: {
       call: 'Call Now: +355 68 858 0058',
       whatsapp: 'Request a Free Measurement on WhatsApp',

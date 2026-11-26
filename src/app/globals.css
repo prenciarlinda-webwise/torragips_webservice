@@ -3,10 +3,60 @@
 @tailwind utilities;
 
 @layer base {
+  /* Light theme (default, used outside the public site). RGB triplets. */
   :root {
-    --color-primary: 26 54 93;
-    --color-dark: 31 41 55;
-    --color-accent: 217 119 6;
+    --ink-50: 255 255 255;
+    --ink-100: 245 246 245;
+    --ink-200: 235 237 235;
+    --ink-300: 208 212 208;
+    --ink-400: 140 146 141;
+    --ink-500: 100 107 102;
+    --ink-600: 68 75 70;
+    --ink-700: 45 51 47;
+    --ink-800: 28 33 30;
+    --ink-900: 17 21 18;
+    --plaster-50: 255 255 255;
+    --plaster-100: 244 246 250;
+    --plaster-200: 232 236 243;
+    --plaster-300: 214 221 232;
+    --plaster-400: 176 181 177;
+    --plaster-500: 154 158 152;
+    --plaster-600: 106 111 106;
+    --plaster-700: 71 76 72;
+    --plaster-800: 44 48 45;
+    --plaster-900: 29 32 30;
+    --line: 219 225 234;
+    --tint: 30 63 115;
+  }
+
+  /*
+   * Dark-blue bands (trust strip, projects, ribbon). The scales flip inside the scope, so
+   * markup written as "ink text on plaster surface" renders light-on-dark there.
+   */
+  .on-dark {
+    --ink-50: 21 44 79;
+    --ink-100: 34 68 118;
+    --ink-200: 52 90 146;
+    --ink-300: 106 139 187;
+    --ink-400: 160 182 214;
+    --ink-500: 190 206 228;
+    --ink-600: 222 231 243;
+    --ink-700: 236 241 248;
+    --ink-800: 245 248 252;
+    --ink-900: 255 255 255;
+    --plaster-50: 25 53 95;
+    --plaster-100: 21 44 79;
+    --plaster-200: 34 68 118;
+    --plaster-300: 52 90 146;
+    --plaster-400: 106 139 187;
+    --plaster-500: 124 131 125;
+    --plaster-600: 152 158 152;
+    --plaster-700: 188 191 184;
+    --plaster-800: 214 214 207;
+    --plaster-900: 234 232 226;
+    --line: 46 82 136;
+    --tint: 255 196 77;
+    color-scheme: dark;
   }
 
   html {
@@ -14,95 +64,214 @@
   }
 
   body {
-    @apply text-text antialiased;
+    @apply text-ink-800 antialiased;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading font-bold text-dark-800;
+    @apply font-heading font-bold text-ink-900;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
   }
 }
 
 @layer components {
   .container-custom {
-    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+    @apply mx-auto max-w-site px-5 sm:px-8 lg:px-12;
   }
 
   .section-padding {
     @apply py-16 md:py-20 lg:py-24;
   }
 
+  /* Type scale */
+  .display {
+    @apply font-extrabold text-ink-900;
+    font-size: clamp(2.25rem, 4.4vw, 3.75rem);
+    line-height: 1.08;
+    letter-spacing: -0.025em;
+  }
+
+  .h2 {
+    @apply font-bold text-ink-900;
+    font-size: clamp(1.75rem, 2.7vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+  }
+
+  .h3 {
+    @apply text-lg md:text-xl font-bold text-ink-900 leading-snug;
+  }
+
+  .lead {
+    @apply text-lg leading-relaxed text-ink-600;
+  }
+
+  .copy {
+    @apply text-base leading-[1.7] text-ink-600;
+  }
+
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-dark-800 mb-4;
+    @apply h2 mb-4;
   }
 
   .section-subtitle {
-    @apply text-lg md:text-xl text-text-light max-w-2xl;
+    @apply lead max-w-2xl;
   }
 
+  /* Section header: heading on the left, supporting copy on the right, over a full-width rule. */
+  .section-head {
+    @apply grid gap-x-12 gap-y-5 border-t border-line pt-8 md:pt-10 lg:grid-cols-12;
+  }
+
+  /* Grid children must be allowed to shrink, or a wide table pushes the page sideways on phones. */
+  .section-head > * {
+    min-width: 0;
+  }
+
+    /* Stacked section header: title, intro underneath. Add .is-center to centre it. */
+  .sec-head {
+    @apply mb-10 flex max-w-3xl flex-col gap-4 md:mb-12;
+  }
+
+  .sec-head.is-center {
+    @apply mx-auto items-center text-center;
+  }
+
+
+  .sec-head h2::after {
+    content: '';
+    @apply mt-4 block h-1 w-14 bg-cta;
+  }
+
+  .sec-head.is-center h2::after {
+    @apply mx-auto;
+  }
+
+  /* Buttons: flat, square, one weight. */
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center gap-2.5 px-6 py-3.5 text-[0.9375rem] font-bold leading-none transition-colors duration-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-tint disabled:cursor-not-allowed disabled:opacity-50;
+    letter-spacing: -0.005em;
   }
 
+  .btn-lg {
+    @apply px-7 py-[1.125rem] text-base;
+  }
+
+  .btn-ink {
+    @apply btn bg-cta text-cta-ink hover:bg-cta-dark;
+  }
+
+  .btn-sage {
+    @apply btn bg-cta text-cta-ink hover:bg-cta-dark;
+  }
+
+  .btn-line {
+    @apply btn border border-ink-400 text-ink-900 hover:border-ink-900 hover:bg-ink-900 hover:text-plaster-50;
+  }
+
+  .btn-light {
+    @apply btn bg-cta text-cta-ink hover:bg-cta-dark;
+  }
+
+  .btn-line-light {
+    @apply btn border border-ink-400 text-ink-900 hover:border-ink-900 hover:bg-ink-900 hover:text-plaster-50;
+  }
+
+  /* Legacy button names */
   .btn-primary {
-    @apply btn bg-primary text-white hover:bg-primary-700 focus:ring-primary shadow-md hover:shadow-lg;
+    @apply btn-sage;
   }
 
   .btn-secondary {
-    @apply btn bg-dark-800 text-white hover:bg-dark-700 focus:ring-dark shadow-md hover:shadow-lg;
+    @apply btn-ink;
   }
 
   .btn-outline {
-    @apply btn border-2 border-dark-800 text-dark-800 hover:bg-dark-800 hover:text-white focus:ring-dark;
+    @apply btn-line;
   }
 
   .btn-ghost {
-    @apply btn text-dark-800 hover:bg-neutral-100 focus:ring-dark;
+    @apply btn text-ink-900 hover:bg-plaster-100;
   }
 
   .btn-accent {
-    @apply btn bg-accent text-white hover:bg-accent-700 focus:ring-accent shadow-md hover:shadow-lg;
+    @apply btn-sage;
+  }
+
+  /* Text link with a rule that thickens on hover */
+  .link-rule {
+    @apply inline-flex items-center gap-2 border-b border-ink-500 pb-1 text-[0.9375rem] font-semibold text-ink-900 transition-colors hover:border-tint hover:text-tint;
   }
 
   .card {
-    @apply bg-white rounded-2xl shadow-soft hover:shadow-medium transition-shadow duration-300;
+    @apply border border-line bg-plaster-50 transition-[border-color,box-shadow] duration-200;
+  }
+
+  .card:hover {
+    @apply border-sage-400;
+    box-shadow: 0 10px 30px -18px rgb(25 53 95 / 0.45);
   }
 
   .card-hover {
-    @apply card hover:-translate-y-1 transition-all duration-300;
+    @apply card;
   }
 
   .input {
-    @apply w-full px-4 py-3 rounded-lg border border-neutral-300 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors outline-none;
+    @apply w-full border border-ink-300 bg-plaster-50 px-4 py-3.5 text-ink-900 outline-none transition-colors placeholder:text-ink-400 focus:border-ink-900;
   }
 
   .input-error {
-    @apply border-red-500 focus:border-red-500 focus:ring-red-500/20;
+    @apply border-red-600 focus:border-red-600;
   }
 
   .label {
-    @apply block text-sm font-medium text-text mb-2;
+    @apply mb-2 block text-sm font-semibold text-ink-900;
   }
 
   .link {
-    @apply text-primary hover:text-primary-700 transition-colors underline-offset-2 hover:underline;
+    @apply text-ink-900 underline decoration-tint underline-offset-4 transition-colors hover:text-tint;
   }
 
-  .gradient-primary {
-    @apply bg-gradient-to-r from-primary to-primary-700;
+  /* Photo frame: fixed ratio, hard edges. Photos are never cropped: the whole image
+     is shown inside the frame (most photos are 3:4, so a 3:4 frame fills exactly). */
+  .frame {
+    @apply relative overflow-hidden bg-plaster-200;
   }
 
-  .gradient-accent {
-    @apply bg-gradient-to-r from-accent to-accent-600;
+  .frame > img {
+    @apply object-contain transition-transform duration-[900ms] ease-out;
   }
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent;
+  .group:hover .frame > img {
+    transform: scale(1.03);
   }
+
+  /* Numbered lists: the numerals are generated in CSS so they add no words to the page. */
+  .numbered {
+    counter-reset: item;
+  }
+
+  .numbered > * {
+    counter-increment: item;
+  }
+
+  .numbered > * > .num::before {
+    content: counter(item, decimal-leading-zero);
+  }
+
+  .num {
+    @apply flex h-11 w-11 items-center justify-center bg-sage-600 text-base font-bold tabular-nums text-white;
+  }
+
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .wide {
+    letter-spacing: -0.02em;
   }
 
   .animate-in {
@@ -114,39 +283,73 @@
   }
 }
 
+/*
+ * The public site has no rounded boxes. This also squares off any older markup
+ * (blog, legal pages) that still carries rounded-* utilities. Circles stay circles;
+ * the footer keeps its original rounded icon buttons.
+ */
+.site [class*='rounded']:not(.rounded-full):not(.keep-radius *) {
+  border-radius: 0;
+}
+
+.site .prose {
+  --tw-prose-body: rgb(var(--ink-600));
+  --tw-prose-headings: rgb(var(--ink-900));
+  --tw-prose-lead: rgb(var(--ink-700));
+  --tw-prose-links: rgb(var(--ink-900));
+  --tw-prose-bold: rgb(var(--ink-900));
+  --tw-prose-quotes: rgb(var(--ink-800));
+  --tw-prose-quote-borders: rgb(var(--tint));
+  --tw-prose-bullets: rgb(var(--tint));
+  --tw-prose-counters: rgb(var(--tint));
+  --tw-prose-captions: rgb(var(--ink-500));
+  --tw-prose-code: rgb(var(--ink-900));
+  --tw-prose-hr: rgb(var(--line));
+  --tw-prose-th-borders: rgb(var(--ink-400));
+  --tw-prose-td-borders: rgb(var(--line));
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-neutral-100;
+  @apply bg-plaster-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-neutral-400 rounded-full;
+  @apply bg-plaster-400;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-neutral-500;
+  @apply bg-plaster-500;
 }
 
-/* Focus visible styles */
 :focus-visible {
-  @apply outline-2 outline-offset-2 outline-primary;
+  @apply outline-2 outline-offset-2 outline-tint;
 }
 
-/* Selection */
 ::selection {
-  @apply bg-primary/20 text-dark-800;
+  @apply bg-cta text-cta-ink;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .frame > img {
+    transition: none;
+  }
 }
 
 /* Keep page bottom (footer credit) clear of the sticky mobile call bar */
 @media (max-width: 767px) {
   body:has(#sticky-mobile-cta) {
-    padding-bottom: 4.5rem;
+    padding-bottom: 4rem;
   }
   body:has(#sticky-mobile-cta) #floating-quote {
-    bottom: 5rem;
+    bottom: 4.75rem;
   }
 }

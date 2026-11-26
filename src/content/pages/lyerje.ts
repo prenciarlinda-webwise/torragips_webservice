@@ -41,7 +41,7 @@ export const lyerje: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Lyerje Dekorative dhe Stukime Speciale',
             text: 'Për mure fokale në sallone, dhoma gjumi ose recepsione biznesesh aplikojmë bojëra dekorative moderne (efekt betoni, efekt kadifeje, saten mat dhe kombinime dy-ngjyrëshe) mbi sipërfaqe të përgatitura më parë me [patinim muresh](/sq/patinim/) në standardin Q4.',
-            image: '/images/services/plastering/accent-wall.webp',
+            image: '/images/services/plastering/ceiling-pendant.webp',
             alt: 'Lyerje dekorative e murit fokal',
           },
         ],
@@ -154,7 +154,7 @@ export const lyerje: Record<'sq' | 'en', SpecPageContent> = {
           {
             title: 'Decorative Painting and Special Finishes',
             text: 'For feature walls in living rooms, bedrooms or business receptions we apply modern decorative paints (concrete effect, velvet effect, satin matt and two-tone combinations) on surfaces prepared beforehand with Q4 [wall plastering](/en/wall-plastering/).',
-            image: '/images/services/plastering/accent-wall.webp',
+            image: '/images/services/plastering/ceiling-pendant.webp',
             alt: 'Decorative feature wall painting',
           },
         ],

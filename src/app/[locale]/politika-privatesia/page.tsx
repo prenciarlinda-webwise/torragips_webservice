@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { setRequestLocale, getTranslations } from 'next-intl/server';
-import { Breadcrumbs } from '@/components/layout';
+import { PageHeader } from '@/components/layout';
 import { BreadcrumbSchema } from '@/components/seo';
 import { COMPANY } from '@/lib/constants';
 
@@ -50,23 +50,16 @@ export default async function PrivacyPolicyPage({ params }: Props) {
         ]}
       />
 
-      <section className="pt-32 pb-16 bg-gradient-to-br from-primary-50 to-white">
-        <div className="container-custom">
-          <Breadcrumbs items={breadcrumbs} />
-          <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-800 mb-4">
-              {t('title')}
-            </h1>
-            <p className="text-text-light">
-              {t('lastUpdated')}: Janar 2024
-            </p>
-          </div>
-        </div>
-      </section>
+      <PageHeader title={t('title')} breadcrumbs={breadcrumbs}>
+        <p className="mt-6 text-sm text-ink-500">
+          {t('lastUpdated')}: Janar 2024
+        </p>
+      </PageHeader>
 
-      <section className="section-padding bg-white">
+      <section className="pb-16 md:pb-24 lg:pb-28">
         <div className="container-custom">
-          <div className="max-w-3xl prose prose-lg">
+          <div className="border-t border-ink-900" />
+          <div className="prose prose-lg max-w-3xl pt-10 md:pt-14 lg:ml-[33.333%]">
             <h2>1. Informacioni që Mbledhim</h2>
             <p>
               Kur na kontaktoni përmes formularit të kontaktit ose WhatsApp, ne mbledhim:

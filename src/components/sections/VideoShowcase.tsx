@@ -2,6 +2,7 @@
 
 import { useRef } from 'react';
 import { JsonLd } from '@/components/seo';
+import { ArrowIcon } from '@/components/ui/Icons';
 import { SHORT_VIDEOS, YOUTUBE_CHANNEL_URL, type ShortVideo } from '@/lib/constants/videos';
 
 type Props = {
@@ -47,77 +48,59 @@ export default function VideoShowcase({ locale, category, limit = 8 }: Props) {
     publisher: { '@id': 'https://www.torragips.com/#business' },
   }));
 
+  const arrowBtn =
+    'flex h-11 w-11 items-center justify-center border border-ink-400 text-ink-900 transition-colors hover:border-ink-900 hover:bg-ink-900 hover:text-plaster-50';
+
   return (
-    <section className="py-16 bg-white">
+    <section className="section-padding">
       <JsonLd data={schema as unknown as Record<string, any>} />
       <div className="container-custom">
-        <div className="text-center mb-10 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-3">{heading}</h2>
-          <p className="text-neutral-600">{intro}</p>
+        <div className="sec-head is-center">
+          <h2 className="h2">{heading}</h2>
+          <p className="lead">{intro}</p>
         </div>
 
-        {/* Slider: swipe on touch, arrows on desktop. Each card opens the Short on YouTube. */}
         <div className="relative">
-          <button
-            type="button"
-            onClick={() => scrollBy(-1)}
-            aria-label={isSq ? 'Videoja e mëparshme' : 'Previous videos'}
-            className="hidden md:flex absolute -left-5 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center text-primary hover:bg-neutral-50"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" /></svg>
-          </button>
-          <button
-            type="button"
-            onClick={() => scrollBy(1)}
-            aria-label={isSq ? 'Videoja tjetër' : 'Next videos'}
-            className="hidden md:flex absolute -right-5 top-1/2 -translate-y-1/2 z-10 w-11 h-11 rounded-full bg-white shadow-lg items-center justify-center text-primary hover:bg-neutral-50"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
-          </button>
-
-          <div
-            ref={trackRef}
-            className="flex gap-4 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-          >
-            {videos.map((v) => (
-              <a
-                key={v.id}
-                href={`https://www.youtube.com/shorts/${v.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={`${isSq ? 'Shiko në YouTube' : 'Watch on YouTube'}: ${title(v)}`}
-                className="group snap-start shrink-0 w-[46%] sm:w-[31%] md:w-[23%] lg:w-[18.5%]"
-              >
-                <div className="relative aspect-[9/16] rounded-2xl overflow-hidden bg-dark-800 shadow-md">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={thumb(v.id)}
-                    alt={title(v)}
-                    loading="lazy"
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <span className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <span className="w-14 h-14 rounded-full bg-white/90 flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform">
-                      <svg className="w-6 h-6 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                    </span>
-                  </span>
-                  <span className="absolute bottom-0 left-0 right-0 p-3 text-white text-sm font-medium leading-snug">
-                    {title(v)}
-                  </span>
-                </div>
-              </a>
-            ))}
+          <div className="contents">
+            <div className="absolute -top-16 right-0 hidden gap-2 md:flex">
+              <button type="button" onClick={() => scrollBy(-1)} aria-label={isSq ? 'Videoja e mëparshme' : 'Previous videos'} className={arrowBtn}>
+                <ArrowIcon className="h-4 w-4 rotate-180" />
+              </button>
+              <button type="button" onClick={() => scrollBy(1)} aria-label={isSq ? 'Videoja tjetër' : 'Next videos'} className={arrowBtn}>
+                <ArrowIcon className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         </div>
 
-        <div className="text-center mt-6">
-          <a
-            href={YOUTUBE_CHANNEL_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary font-semibold hover:underline"
-          >
+        {/* Slider: swipe on touch, arrows on desktop. Each card opens the Short on YouTube. */}
+        <div
+          ref={trackRef}
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth pb-2 [scrollbar-width:none] md:gap-5 [&::-webkit-scrollbar]:hidden"
+        >
+          {videos.map((v) => (
+            <a
+              key={v.id}
+              href={`https://www.youtube.com/shorts/${v.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${isSq ? 'Shiko në YouTube' : 'Watch on YouTube'}: ${title(v)}`}
+              className="group w-[62%] shrink-0 snap-start sm:w-[38%] md:w-[28%] lg:w-[19%]"
+            >
+              <div className="frame aspect-[9/16]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={thumb(v.id)} alt={title(v)} loading="lazy" className="absolute inset-0 h-full w-full" />
+                <span className="absolute bottom-0 left-0 flex h-12 w-12 items-center justify-center bg-cta text-cta-ink">
+                  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z" /></svg>
+                </span>
+              </div>
+              <span className="mt-3 block text-sm font-medium leading-snug text-ink-800">{title(v)}</span>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <a href={YOUTUBE_CHANNEL_URL} target="_blank" rel="noopener noreferrer" className="link-rule">
             {isSq ? 'Shiko të gjitha videot në YouTube' : 'Watch all videos on YouTube'} →
           </a>
         </div>

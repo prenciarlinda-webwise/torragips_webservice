@@ -11,7 +11,7 @@ export default function RichText({ text }: { text: string }) {
     const i = m.index ?? 0;
     if (i > last) parts.push(text.slice(last, i));
     parts.push(
-      <a key={i} href={m[2]} className="font-semibold text-primary hover:underline">
+      <a key={i} href={m[2]} className="link font-medium">
         {m[1]}
       </a>
     );

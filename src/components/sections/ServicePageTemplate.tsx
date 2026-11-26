@@ -136,7 +136,7 @@ export default function ServicePageTemplate({
       <LocalBusinessSchema locale={locale} />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center">
+      <section className="relative flex min-h-[70vh] items-center pt-[4.5rem]">
         <div className="absolute inset-0">
           <Image
             src={heroImage}
@@ -146,28 +146,27 @@ export default function ServicePageTemplate({
             priority
           />
           {/* Strong overlay to hide image quality issues */}
-          <div className="absolute inset-0 bg-dark-900/85" />
-          <div className="absolute inset-0 bg-gradient-to-b from-dark-900/30 via-transparent to-dark-900/50" />
+          <div className="absolute inset-0 bg-plaster-50/85" />
         </div>
 
         <div className="container-custom relative z-10 py-24 lg:py-32">
           <div>
             {/* Text Content */}
             <div className="max-w-3xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+              <h1 className="display mb-7">
                 {heroTitle}
               </h1>
-              <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed">
+              <p className="lead mb-9 max-w-2xl">
                 {heroSubtitle}
               </p>
               <div className="flex flex-wrap gap-4">
                 <a href="tel:+355688580058">
-                  <Button size="lg" className="!bg-accent !text-white hover:!bg-accent-700">
+                  <Button size="lg" variant="secondary">
                     +355 68 858 0058
                   </Button>
                 </a>
                 <a href="https://wa.me/355688580058" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="!bg-green-600 hover:!bg-green-700 !text-white">
+                  <Button size="lg" variant="outline">
                     WhatsApp
                   </Button>
                 </a>
@@ -178,28 +177,24 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 bg-white">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          <div className="mb-10 border-t border-ink-900 pt-8 md:mb-14 md:pt-10">
+            <h2 className="h2 mb-4">
               {sectionTitles?.whatWeOffer || (isAlbanian ? 'Çfarë Ofrojmë' : 'What We Offer')}
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid gap-x-8 md:grid-cols-2 lg:grid-cols-4">
             {serviceFeatures.map((service, index) => (
               <div
                 key={index}
-                className="group p-6 bg-neutral-50 rounded-xl border border-neutral-200 hover:border-primary/30 hover:shadow-lg transition-all"
+                className="border-t border-line py-7"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:bg-primary group-hover:text-white transition-colors">
-                  {icons[service.icon]}
-                </div>
-                <h3 className="text-lg font-bold text-dark-800 mb-2">{service.title}</h3>
-                <p className="text-text-light text-sm mb-4">{service.description}</p>
-                <ul className="space-y-1.5">
+                <h3 className="h3 mb-2">{service.title}</h3>
+                <p className="mb-5 text-[0.9375rem] leading-relaxed text-ink-600">{service.description}</p>
+                <ul className="border-t border-line">
                   {service.features.slice(0, 3).map((feature, i) => (
-                    <li key={i} className="flex items-center text-xs text-text">
-                      <span className="w-1 h-1 bg-accent rounded-full mr-2" />
+                    <li key={i} className="border-b border-line py-2.5 text-sm text-ink-800">
                       {feature}
                     </li>
                   ))}
@@ -212,13 +207,13 @@ export default function ServicePageTemplate({
 
       {/* Detailed Content Sections - MOVED UP */}
       {contentSections && contentSections.length > 0 && (
-        <section className="py-16 bg-neutral-50">
+        <section className="section-padding bg-plaster-100">
           <div className="container-custom">
             {introContent && introContent.length > 0 && (
-              <div className="max-w-4xl mx-auto mb-16">
+              <div className="mb-16 max-w-3xl">
                 <div className="prose prose-lg max-w-none">
                   {introContent.map((paragraph, index) => (
-                    <p key={index} className="text-text-light leading-relaxed mb-4">
+                    <p key={index} className="copy mb-4">
                       {paragraph}
                     </p>
                   ))}
@@ -228,23 +223,22 @@ export default function ServicePageTemplate({
 
             <div className="space-y-12">
               {contentSections.map((section, index) => (
-                <div key={index} className="max-w-4xl mx-auto">
-                  <h2 className="text-2xl font-bold text-dark-800 mb-4">{section.title}</h2>
-                  <p className="text-text-light leading-relaxed mb-6">{section.content}</p>
+                <div key={index} className="grid gap-x-12 gap-y-4 border-t border-line pt-8 lg:grid-cols-12">
+                  <h2 className="text-2xl font-semibold text-ink-900 md:text-3xl lg:col-span-4">{section.title}</h2>
+                  <div className="lg:col-span-8">
+                  <p className="copy mb-6">{section.content}</p>
                   {section.listItems && section.listItems.length > 0 && (
-                    <div className="bg-white rounded-xl p-6 border border-neutral-200">
-                      <ul className="grid md:grid-cols-2 gap-3">
+                    <div>
+                      <ul className="grid gap-x-8 border-t border-line md:grid-cols-2">
                         {section.listItems.map((item, i) => (
-                          <li key={i} className="flex items-start">
-                            <svg className="w-5 h-5 text-primary mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-text">{item}</span>
+                          <li key={i} className="border-b border-line py-3">
+                            <span className="text-ink-800">{item}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -253,28 +247,25 @@ export default function ServicePageTemplate({
       )}
 
       {/* Commercial Experience Section */}
-      <section className="py-16 bg-dark-900">
+      <section className="section-padding on-dark bg-plaster-50 text-ink-800">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <div className="mb-10 border-t border-ink-900 pt-8 md:mb-14 md:pt-10">
+            <h2 className="h2 mb-4">
               {sectionTitles?.commercialExperience || (isAlbanian ? 'Përvojë në Projekte Komerciale' : 'Commercial Project Experience')}
             </h2>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
+            <p className="lead max-w-2xl">
               {isAlbanian
                 ? 'Kemi përvojë të gjerë në projekte komerciale të çdo lloji dhe shkalle.'
                 : 'We have extensive experience in commercial projects of all types and scales.'}
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 border-t border-ink-900 md:grid-cols-4">
             {commercialCategories.map((category, index) => (
               <div
                 key={index}
-                className="p-6 bg-dark-800 rounded-xl text-center hover:bg-dark-700 transition-colors"
+                className="border-b border-line py-7 md:border-b-0 md:border-l md:px-8 md:first:border-l-0 md:first:pl-0"
               >
-                <div className="w-14 h-14 mx-auto bg-primary/20 rounded-xl flex items-center justify-center text-primary mb-3">
-                  {commercialIcons[category.icon]}
-                </div>
-                <h3 className="text-white font-semibold">{category.title}</h3>
+                <h3 className="text-xl font-semibold text-ink-900 md:text-2xl">{category.title}</h3>
               </div>
             ))}
           </div>
@@ -282,24 +273,20 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 bg-white">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          <div className="mb-10 border-t border-ink-900 pt-8 md:mb-14 md:pt-10">
+            <h2 className="h2 mb-4">
               {sectionTitles?.whyChooseUs || (isAlbanian ? 'Pse të Na Zgjidhni' : 'Why Choose Us')}
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="numbered grid gap-x-10 md:grid-cols-2 lg:grid-cols-3">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start p-5 bg-neutral-50 rounded-xl border border-neutral-200">
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center text-primary mr-4 flex-shrink-0">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
+              <div key={index} className="border-t border-line py-7">
+                <span className="num mb-4" aria-hidden="true" />
                 <div>
-                  <h3 className="font-bold text-dark-800 mb-1">{benefit.title}</h3>
-                  <p className="text-sm text-text-light">{benefit.description}</p>
+                  <h3 className="h3 mb-2">{benefit.title}</h3>
+                  <p className="text-[0.9375rem] leading-relaxed text-ink-600">{benefit.description}</p>
                 </div>
               </div>
             ))}
@@ -308,21 +295,21 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Process Section */}
-      <section className="py-16 bg-neutral-50">
+      <section className="section-padding bg-plaster-100">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          <div className="mb-10 border-t border-ink-900 pt-8 md:mb-14 md:pt-10">
+            <h2 className="h2 mb-4">
               {sectionTitles?.howWeWork || (isAlbanian ? 'Si Punojmë' : 'How We Work')}
             </h2>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 gap-x-8 md:grid-cols-5">
             {processSteps.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-lg font-bold mb-3">
+              <div key={index} className="border-t border-ink-900 py-6">
+                <div className="wide mb-4 text-4xl font-semibold leading-none tracking-tight text-tint">
                   {item.step}
                 </div>
-                <h3 className="font-bold text-dark-800 mb-1">{item.title}</h3>
-                <p className="text-sm text-text-light">{item.description}</p>
+                <h3 className="mb-1 text-lg font-semibold text-ink-900">{item.title}</h3>
+                <p className="text-[0.9375rem] leading-relaxed text-ink-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -330,13 +317,13 @@ export default function ServicePageTemplate({
       </section>
 
       {/* Service Areas with Maps - MOVED DOWN */}
-      <section className="py-16 bg-white">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          <div className="mb-10 border-t border-ink-900 pt-8 md:mb-14 md:pt-10">
+            <h2 className="h2 mb-4">
               {sectionTitles?.serviceAreas || (isAlbanian ? 'Zonat e Shërbimit' : 'Service Areas')}
             </h2>
-            <p className="text-text-light max-w-2xl mx-auto">
+            <p className="lead max-w-2xl">
               {isAlbanian
                 ? 'Ofrojmë shërbime në Tiranë, Durrës dhe zonat përreth.'
                 : 'We offer services in Tirana, Durrës and surrounding areas.'}
@@ -345,14 +332,10 @@ export default function ServicePageTemplate({
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div>
-              <h3 className="text-lg font-bold text-dark-800 mb-4 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+              <h3 className="h3 mb-4">
                 Tiranë
               </h3>
-              <div className="rounded-xl overflow-hidden border border-neutral-200">
+              <div className="border border-line">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95765.98846961377!2d19.74884565!3d41.3275459!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350310470fac5db%3A0x40092af10653720!2sTirana%2C%20Albania!5e0!3m2!1sen!2s!4v1706000000000!5m2!1sen!2s"
                   width="100%"
@@ -364,18 +347,14 @@ export default function ServicePageTemplate({
                   title="Tirana"
                 />
               </div>
-              <p className="text-sm text-text-light mt-2">Tiranë, Kashar, Kamëz, Farkë, Vaqarr</p>
+              <p className="mt-3 text-sm text-ink-500">Tiranë, Kashar, Kamëz, Farkë, Vaqarr</p>
             </div>
 
             <div>
-              <h3 className="text-lg font-bold text-dark-800 mb-4 flex items-center">
-                <svg className="w-5 h-5 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+              <h3 className="h3 mb-4">
                 Durrës
               </h3>
-              <div className="rounded-xl overflow-hidden border border-neutral-200">
+              <div className="border border-line">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47832.14076418837!2d19.4147244!3d41.3234893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135031a5c0eb2dc7%3A0x55e9f75c1e9e3359!2sDurr%C3%ABs%2C%20Albania!5e0!3m2!1sen!2s!4v1706000000000!5m2!1sen!2s"
                   width="100%"
@@ -387,33 +366,33 @@ export default function ServicePageTemplate({
                   title="Durrës"
                 />
               </div>
-              <p className="text-sm text-text-light mt-2">Durrës, Shkozet, Plazh, Golem, Kavajë</p>
+              <p className="mt-3 text-sm text-ink-500">Durrës, Shkozet, Plazh, Golem, Kavajë</p>
             </div>
           </div>
 
           {/* Inline CTA */}
-          <div className="bg-gradient-to-r from-primary to-primary-700 rounded-2xl p-8 md:p-12 text-center">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <div className="on-dark bg-plaster-50 text-ink-800 p-8 md:p-12">
+            <h3 className="h2 mb-4">
               {isAlbanian ? 'Kërkoni një Ofertë Falas' : 'Request a Free Quote'}
             </h3>
-            <p className="text-white/80 mb-6 max-w-xl mx-auto">
+            <p className="lead mb-8 max-w-xl">
               {isAlbanian
                 ? 'Për një vlerësim të saktë, sillni matjet dhe planin arkitekturor nëse disponohet.'
                 : 'For an accurate estimate, bring measurements and architectural plan if available.'}
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap gap-3">
               <a href="tel:+355688580058">
-                <Button size="lg" className="!bg-white !text-primary hover:!bg-neutral-100">
+                <Button size="lg" variant="secondary">
                   +355 68 858 0058
                 </Button>
               </a>
               <a href="https://wa.me/355688580058" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" className="!bg-green-600 hover:!bg-green-700 !text-white">
+                <Button size="lg" variant="outline">
                   WhatsApp
                 </Button>
               </a>
               <a href="mailto:torragips@gmail.com">
-                <Button size="lg" className="!bg-dark-800 hover:!bg-dark-700 !text-white">
+                <Button size="lg" variant="outline">
                   Email
                 </Button>
               </a>
@@ -428,28 +407,28 @@ export default function ServicePageTemplate({
       <FAQSchema items={faqItems} />
 
       {/* FAQ Section */}
-      <section className="py-16 bg-neutral-50">
+      <section className="section-padding bg-plaster-100">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-800 mb-4">
+          <div className="mb-10 border-t border-ink-900 pt-8 md:mb-14 md:pt-10">
+            <h2 className="h2 mb-4">
               {sectionTitles?.faq || (isAlbanian ? 'Pyetje të Shpeshta' : 'Frequently Asked Questions')}
             </h2>
           </div>
 
-          <div className="max-w-3xl mx-auto space-y-3">
+          <div className="max-w-4xl">
             {faqItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl border border-neutral-200 overflow-hidden"
+                className="border-b border-line"
               >
                 <button
                   onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-neutral-50 transition-colors"
+                  className="flex w-full items-center justify-between py-6 text-left"
                 >
-                  <span className="font-semibold text-dark-800 pr-4">{item.question}</span>
+                  <span className="h3 pr-6">{item.question}</span>
                   <svg
                     className={cn(
-                      'w-5 h-5 text-primary flex-shrink-0 transition-transform duration-300',
+                      'h-5 w-5 flex-shrink-0 text-ink-900 transition-transform duration-300',
                       openFaqIndex === index && 'rotate-180'
                     )}
                     fill="none"
@@ -465,7 +444,7 @@ export default function ServicePageTemplate({
                     openFaqIndex === index ? 'max-h-96' : 'max-h-0'
                   )}
                 >
-                  <p className="px-6 pb-4 text-text-light">{item.answer}</p>
+                  <p className="copy max-w-3xl pb-6">{item.answer}</p>
                 </div>
               </div>
             ))}
@@ -475,21 +454,21 @@ export default function ServicePageTemplate({
 
       {/* Related Services */}
       {relatedLinks && relatedLinks.length > 0 && (
-        <section className="py-16 bg-white">
+        <section className="section-padding">
           <div className="container-custom">
-            <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-dark-800 mb-8">
+            <div className="border-t border-ink-900 pt-8 md:pt-10">
+              <h2 className="h2 mb-8">
                 {isAlbanian ? 'Shërbime të Lidhura' : 'Related Services'}
               </h2>
-              <div className="flex flex-wrap justify-center gap-4">
+              <div className="flex flex-wrap gap-3">
                 {relatedLinks.map((link, index) => (
                   <Link
                     key={index}
                     href={link.href}
-                    className="inline-flex items-center px-6 py-3 bg-primary/10 text-primary font-semibold rounded-xl hover:bg-primary hover:text-white transition-colors"
+                    className="btn-line"
                   >
                     {link.label}
-                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -501,23 +480,23 @@ export default function ServicePageTemplate({
       )}
 
       {/* Final CTA */}
-      <section className="py-16 bg-dark-900">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+      <section className="section-padding on-dark bg-plaster-50 text-ink-800">
+        <div className="container-custom">
+          <h2 className="h2 mb-4">
             {sectionTitles?.readyToStart || (isAlbanian ? 'Gati për të Filluar?' : 'Ready to Start?')}
           </h2>
-          <p className="text-neutral-400 mb-8 max-w-xl mx-auto">
+          <p className="lead mb-8 max-w-xl">
             {isAlbanian
               ? 'Na kontaktoni për një konsultë falas. Ekipi ynë është i gatshëm t\'ju ndihmojë.'
               : 'Contact us for a free consultation. Our team is ready to help you.'}
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap gap-3">
             <a href="tel:+355688580058">
-              <Button size="lg" className="!bg-accent !text-white hover:!bg-accent-700">
+              <Button size="lg" variant="secondary">
                 +355 68 858 0058
               </Button>
             </a>
-            <QuoteButton size="lg" className="!bg-white !text-dark-800 hover:!bg-neutral-100">
+            <QuoteButton size="lg" variant="outline">
               {isAlbanian ? 'Dërgo Mesazh' : 'Send Message'}
             </QuoteButton>
           </div>
